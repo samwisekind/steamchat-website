@@ -1,30 +1,47 @@
 /******* ADJUSTMENTS *******/
 
-#header, #header #header_wrapper {
+#header.latest, #header.latest #header_wrapper {
 	height: 400px !important; }
 
-#header {
-	background: url(http://www.flamov.com/steamcast/img/episode100_latest_image.jpg) center top no-repeat #000000 !important;
+#header.latest {
+	background: url(../img/episode100_latest_image.jpg) center top no-repeat #000000 !important;
 	border-bottom: solid 5px #0064BF !important; }
 
-#header #header_wrapper {
+#header.latest #header_wrapper {
 	width: 1000px !important;
 	padding: 0 !important; }
 	
-#header #header_wrapper #menu #menu_wrapper {
+#header.latest #menu_wrapper {
 	background-image: url(../img/episode100_latest_overlay.png) !important;
 	box-shadow: none !important; }
 
 
 /******* LATEST PLAYER *******/
 
-#header #header_wrapper #controls {
+#header.latest #latest_controls {
 	position: absolute;
 	bottom: 0;
 	width: 1000px;
 	height: 400px; }
 
-#header #header_wrapper #controls h1 {
+#header.latest #latest_audio_toggle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+	z-index: 100;
+	width: 100px;
+	height: 100px;
+	background: url(../img/latest_toggle.png) no-repeat; }
+
+#header.latest #latest_audio_toggle:hover {
+	cursor: pointer;
+	background-position-x: right; }
+
+#header.latest #latest_audio_toggle.latest_playing {
+	background-position-y: bottom; }
+
+#header.latest h1 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -32,26 +49,45 @@
 	display: table-cell;
 	overflow: hidden;
 	margin: 0;
-	padding: 10px 15px 5px 15px;
-	max-width: 600px;
-	max-height: 60px;
+	padding: 0;
+	max-width: 660px;
 	background: #0064BF;
 	color: #FFFFFF;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-weight: 700;
-	font-size: 50px;
+	font-size: 55px;
 	font-family: 'Open Sans', Arial, sans-serif; }
 
-#header #header_wrapper #controls h1 a {
+#header.latest h1 a {
+	padding: 10px; }
+
+#header.latest h2 {
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	display: inline-block;
+	margin: 0;
+	padding; 0;
+	background: #0064BF;
+	color: #FFFFFF;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: 'Open Sans', Arial, sans-serif; }
+
+#header.latest h2 a {
+	padding: 10px; }
+
+#header.latest h1 a, #header.latest h2 a {
+	display: block;
 	color: #FFFFFF;
 	text-decoration: none; }
 
-#header #header_wrapper #controls h1 a:hover {
+#header.latest h1 a:hover, #header.latest h2 a:hover {
 	color: inherit;
 	text-decoration: underline; }
 
-#header #header_wrapper #controls h2 {
+#header.latest h3 {
 	position: absolute;
 	right: 0;
 	bottom: 15px;
@@ -73,28 +109,15 @@
 	-webkit-user-select: none;
 	user-select: none; }
 
-#header #header_wrapper #controls #latest_audio_control {
-	position: absolute;
-	right: 425px;
-	bottom: 150px;
-	z-index: 100;
-	margin-bottom: 10px;
-	width: 100px;
-	height: 100px;
-	background: url(../img/latest_toggle.png) top left no-repeat;
-	cursor: pointer; }
-
-#header #header_wrapper #controls #latest_audio_control:hover {
-	background-position-x: right; }
-
-#header #latest_progress_wrapper {
+#header.latest #latest_progress_wrapper {
+	overflow: hidden;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 400px;
 	cursor: pointer; }
 
-#header #latest_progress_wrapper #latest_progress_line {
+#header.latest #latest_progress_line {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -105,7 +128,7 @@
 	opacity: 0;
 	pointer-events: none; }
 
-#header #latest_progress_wrapper #latest_progress {
+#header.latest #latest_progress {
 	position: absolute;
 	top: 0;
 	z-index: 10;
@@ -113,30 +136,11 @@
 	height: 400px;
 	background: url(../img/raster.png) left center repeat rgba(0, 100, 191, 0.25); }
 
-#subheader {
-	margin: 0 auto 0 auto;
-	width: 1000px; }
-
-#subheader h1 {
-	display: table-cell;
-	padding: 5px 10px 10px 10px;
-	background: #0064BF;
-	color: #FFFFFF;
-	font-weight: 300;
-	font-size: 20px;
-	font-family: 'Open Sans', Arial, sans-serif; }
-
-#subheader h1 a {
-	text-decoration: none;
-	color: inherit; }
-
-#subheader h1 a:hover {
-	text-decoration: underline; }
 
 
 
 
-
+/*
 
 #wrapper #latest #latest_volume {
 	float: right;
@@ -167,3 +171,5 @@
 	height: 15px;
 	background: #FFFFFF;
 	cursor: pointer; }
+
+*/

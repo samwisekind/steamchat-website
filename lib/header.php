@@ -1,13 +1,13 @@
 <html>
 <head>
 <title>Steamcast<?php if ($pagetitle==null) {} else { echo ': ' , $pagetitle; }; ?></title>
-<link rel="stylesheet" href="lib/style.css" type="text/css" media="screen">
-<?php if ($frontpage==true) { echo '<link rel="stylesheet" href="lib/style_latest.css" type="text/css" media="screen">';} else {}; ?>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<?php if ($frontpage==true) { echo '<link rel="stylesheet" href="css/style_latest.css" type="text/css" media="screen">';} else {}; ?>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript" src="lib/scripts.js"></script>
-<?php if ($frontpage==true) { echo '<script type="text/javascript" src="lib/latestplayer.js"></script>';} else {}; ?>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<?php if ($frontpage==true) { echo '<script type="text/javascript" src="js/latestplayer.js"></script>';} else {}; ?>
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 	
 	</div>
 	
-    <div id="header">
+    <div id="header" <?php if ($frontpage==true) { echo 'class="latest"'; }; ?>>
 		
         <div id="header_wrapper">
 			
@@ -67,13 +67,13 @@
 		
 			</div>
 			
-			<?php if ($headertitle==null) {} else { echo '<h1>' , $headertitle, '</h1>'; }; ?>
+			<?php if ($headertitle==null) {} else { echo '<h1 class="pagetitle">' , $headertitle, '</h1>'; }; ?>
 			
 			<?php
 
 				if ($frontpage==true) {
 					
-					echo '<div id="controls"><audio id="latest_audio"><source src="lib/test2.mp3" type="audio/mp3"></audio><div id="latest_audio_control" onclick="latest_toggle();"></div><h1><a href="#">#100: Rise and Shine</a></h1><h2><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:00:00</span></h2></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="lib/test.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle" onclick="latest_toggle();"></div><h1><a href="#">#100: Rise and Shine</a></h1><h2><a href="#">Published 1st December 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:00:00</span></h3></div>';
 				
 				}
 				
@@ -96,15 +96,3 @@
 			?>
 	
 	</div>
-
-	<?php
-		
-		if ($frontpage==true) {
-			
-			echo '<div id="subheader"><h1><a href="#">Published 1st December 2013</a></h1></div>';
-				
-		}
-			
-		else {};
-			
-	?>

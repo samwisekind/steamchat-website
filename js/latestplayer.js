@@ -41,7 +41,7 @@ function latest_update(smooth) {
 
         window.clearInterval(window.latest_update_interval);
 
-        $("#latest_audio_control").css("background-position-y", "top");
+        $("#latest_audio_toggle").removeClass("latest_playing");
 
     }
 
@@ -57,7 +57,7 @@ function latest_toggle() {
 
         $("#latest_audio")[0].play();
 
-        $("#latest_audio_control").css("background-position-y", "bottom");
+        $("#latest_audio_toggle").addClass("latest_playing");
 
         latest_update(false);
         latest_update_interval = setInterval(latest_update, 1000);
@@ -73,7 +73,7 @@ function latest_toggle() {
 
         $("#latest_audio")[0].pause();
 
-        $("#latest_audio_control").css("background-position-y", "top");
+        $("#latest_audio_toggle").removeClass("latest_playing");
 
     };
 
@@ -83,14 +83,9 @@ function latest_toggle() {
 // Functions on document load
 $(window).load(function () {
 
-    latest_audio.volume = 0.8;
-    
-    //Temporary, remove later
-    setTimeout(function () {
+    //latest_audio.volume = 0.8;
 
-        $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
-
-    }, 2000);
+    $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
 
     // Bind for clicking on the audio player to track the audio time
     $('#latest_progress_wrapper').bind('click', function (e) {
@@ -102,15 +97,10 @@ $(window).load(function () {
         window.clearInterval(window.latest_update_interval);
         latest_update(true);
 
-        if ($("#latest_audio")[0].paused || $("#latest_audio")[0].ended) {
-            
-            console.log("this SHOULD happen");
-            
-        }
+        if ($("#latest_audio")[0].paused || $("#latest_audio")[0].ended) { }
         
         else {
 
-            console.log("this should not happen");
             latest_update_interval = setInterval(latest_update, 1000);
 
         };
@@ -243,7 +233,7 @@ $(window).load(function () {
 // Function to add the latest episode menu overlaying image smoothly
 var latest_image = new Image();
 
-latest_image.src = 'http://www.flamov.com/steamcast/img/episode100_latest_image.jpg';
+latest_image.src = 'img/episode100_latest_image.jpg';
 
 latest_image.onload = function() {
 	
