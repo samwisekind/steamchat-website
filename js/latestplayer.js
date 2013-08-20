@@ -83,7 +83,7 @@ function latest_toggle() {
 // Functions on document load
 $(window).load(function () {
 
-    //latest_audio.volume = 0.8;
+    latest_audio.volume = 0.8;
 
     $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
 
@@ -166,13 +166,13 @@ $(window).load(function () {
 
         if (parseInt($("#volume_slider").css("left")) == 0) {
 
-            $("#volume_button").css("background-position", "bottom center");
+            $("#volume_button").addClass("volume_muted");
 
         }
 
         else {
 
-            $("#volume_button").css("background-position", "top center");
+            $("#volume_button").removeClass("volume_muted");
 
         };
 
@@ -181,7 +181,7 @@ $(window).load(function () {
     // Bind for changing volume by clicking inside the volume bar
     $("#volume_bar").bind('click', function (e) {
 
-        var x = e.pageX - this.offsetLeft;
+        var x = Math.round(e.clientX - $(this).offset().left);
 
         latest_audio.volume = x / 100;
 
@@ -202,13 +202,13 @@ $(window).load(function () {
 
             if (latest_volume == 0) {
 
-                $("#volume_button").css("background-position", "bottom center");
+                $("#volume_button").addClass("volume_muted");
 
             }
 
             else {
 
-                $("#volume_button").css("background-position", "top center");
+                $("#volume_button").removeClass("volume_muted");
 
             };
 
@@ -222,7 +222,7 @@ $(window).load(function () {
             $("#volume_slider").stop();
             $('#volume_slider').animate({ left: "0px" }, 250, 'easeOutExpo');
 
-            $("#volume_button").css("background-position", "bottom center");
+            $("#volume_button").addClass("volume_muted");
 
         };
 

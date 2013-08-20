@@ -8,17 +8,7 @@
 
 		<!-- <div id="latest">
 
-			<div id="latest_volume">
 
-			<div id="volume_button"></div>
-			
-				<div id="volume_bar">
-
-					<div id="volume_slider"></div>
-			
-				</div>
-			
-			</div>
 
 			<h1>Latest Episode <span style="font-weight:400">(released on 14/5/2013)</span></h1>
 

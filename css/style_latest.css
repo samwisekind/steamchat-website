@@ -140,36 +140,44 @@
 
 
 
-/*
 
-#wrapper #latest #latest_volume {
-	float: right;
-	padding-right: 20px;
-	width: 160px; }
-
-#wrapper #latest #latest_volume #volume_button {
-	float: left;
-	width: 55px;
+#header.latest #latest_volume {
+	position: absolute;
+	bottom: -40px;
+	right: 0;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	height: 35px;
-	background: url(../img/latest_volume.png) top center no-repeat;
+	background: #0064BF; }
+
+#header.latest #volume_button {
+	display: inline-block;
+	float: left;
+	width: 20px;
+	height: 35px;
+	background: url(../img/latest_volume.png) center left no-repeat; }
+
+#header.latest #volume_button:hover {
 	cursor: pointer; }
 
-#wrapper #latest #latest_volume #volume_bar {
-	float: right;
+#header.latest #volume_button.volume_muted {
+	background-position-x: right; }
+
+#header.latest #latest_volume #volume_bar {
+	display: inline-block;
 	overflow: hidden;
-	margin: 10px auto 0 auto;
+	margin: 10px 0 0 10px;
 	width: 100px;
 	height: 15px;
 	background: #0582F4;
 	cursor: pointer; }
 
-#wrapper #latest #latest_volume #volume_bar #volume_slider {
+#header.latest #latest_volume #volume_bar #volume_slider {
 	position: relative;
 	top: 0;
 	left: 68px;
 	width: 15px;
-	height: 15px;
+	height: 20px;
 	background: #FFFFFF;
 	cursor: pointer; }
-
-*/
