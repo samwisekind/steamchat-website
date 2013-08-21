@@ -6,33 +6,9 @@
 	
 	<div id="wrapper">
 
-		<!-- <div id="latest">
-
-
-
-			<h1>Latest Episode <span style="font-weight:400">(released on 14/5/2013)</span></h1>
-
-			<div id="latest_player">
-
-							
-				<h3 id="latest_audio_time_current">00:00:00</h3>
-				<h3 id="latest_audio_time_total">00:00:00</h3>
-
-				
-
-				
-
-				<div id="latest_progress_wrapper"><div id="latest_progress"></div></div>
-
-				
-
-			</div>
-
-		</div> -->
-
 		<h2>Episode Archives</h2>
 
-		<table border="0" cellpadding="0" cellspacing="0">
+		<table border="0" cellpadding="0" cellspacing="0" id="episode_archives">
 
 			<tr class="archives_title">
 				<td>2013</td>

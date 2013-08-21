@@ -1,37 +1,15 @@
 /******* Reset *******/
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+* {
 	margin: 0;
 	padding: 0;
 	outline: 0;
 	border: 0;
-	vertical-align: baseline;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit; }
+	line-height: 100%; }
 
 body {
 	background: #FFFFFF;
-	height: 100%;
-	line-height: 1; }
-
-table {
-	border-spacing: 0;
-	border-collapse: separate; }
-
-caption, th, td {
-	text-align: left;
-	font-weight: normal; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-	content: ""; }
-
-blockquote, q {
-	quotes: "" ""; }
-
-header, section, footer, aside, nav, article, figure {
-	display: block; }
+	height: 100%; }
 
 a:visited {
 	color: inherit; }
@@ -40,21 +18,11 @@ a:visited {
 /****** MAIN *******/
 
 body {
-	width: 100%;
-	height: 100%;
-	min-width: 1000px;
-	margin: 0;
-	padding: 0; }
-
-#wrapper {
-	margin: 0 auto 0 auto;
-	padding: 0 25px 0 25px;
-	width: 900px; }
+	min-width: 1000px; }
 
 .clearfix {
 	clear: both;
 	content: ""; }
-
 
 
 /******* TIPUS *******/
@@ -66,24 +34,24 @@ body {
 	background: #0582F4; }
 
 #tip.tip_expanded {
-	height: 300px; }
+	height: 350px; }
 
 #tip #tip_wrapper {
 	margin: 0 auto 0 auto;
 	width: 800px;
-	height: 300px; }
+	height: 350px; }
 
 #tip #tip_left {
 	display: inline-table;
 	float: left;
 	width: 350px;
-	height: 300px; }
+	height: 350px; }
 
 #tip #tip_right {
 	display: inline-table;
 	float: right;
 	width: 350px;
-	height: 300px; }
+	height: 350px; }
 
 #tip #tip_left span, #tip #tip_right span {
 	display: table-cell;
@@ -171,7 +139,7 @@ body {
 	width: 1000px;
 	height: 200px; }
 
-#header #header_wrapper h1.pagetitle {
+#header h1.pagetitle {
 	position: absolute;
 	margin-bottom: 40px;
 	bottom: 0;
@@ -181,7 +149,7 @@ body {
 	font-family: "Open Sans";
 	color: #333534; }
 
-#header #header_wrapper #menu {
+#header #menu {
 	position: absolute;
 	top: 0;
 	z-index: 100;
@@ -211,26 +179,26 @@ body {
 	background: #FFFFFF;
 	list-style: none; }
 
-#header #header_wrapper #menu #menu_wrapper ul #logo {
+#header #menu ul #logo {
 	margin-right: 25px;
 	width: 75px;
 	background: none; }
 
-#header #header_wrapper #menu #menu_wrapper ul #logo img {
+#header #menu ul #logo img {
 	position: absolute;
 	top: -15px;
 	left: -20px;
 	width: 100px;
 	border: 0; }
 
-#header #header_wrapper #menu #menu_wrapper ul #logo a {
+#header #menu ul #logo a {
 	padding: 0;
 	border: none; }
 
-#header #header_wrapper #menu #menu_wrapper ul #logo a:hover {
+#header #menu ul #logo a:hover {
 	background: none; }
 
-#header #header_wrapper #menu #menu_wrapper ul li a {
+#header #menu ul li a {
 	display: table-cell;
 	vertical-align: middle;
 	padding: 0 15px 0 15px;
@@ -243,19 +211,19 @@ body {
 	font-size: 18px;
 	font-family: 'Open Sans', Arial, sans-serif; }
 
-#header #header_wrapper #menu #menu_wrapper ul li a:hover {
+#header #menu ul li a:hover {
 	background: #0064BF;
 	color: #FFFFFF; }
 
-#header #header_wrapper #menu #menu_wrapper ul #tipus {
+#header #menu ul #tipus {
 	float: right; }
 
-#header #header_wrapper #menu #menu_wrapper ul #tipus a {
+#header #menu ul #tipus a {
 	background: #0582F4;
 	color: #FFFFFF;
 	font-weight: 700; }
 
-#header #header_wrapper #menu #menu_wrapper ul #tipus a:hover {
+#header #menu ul #tipus a:hover {
 	background: #0064BF; }
 
 
@@ -334,17 +302,17 @@ body {
 	font-size: 24px;
 	font-family: 'Open Sans', Arial, sans-serif; }
 
-#wrapper table {
+#wrapper #episode_archives {
 	width: 100%;
 	table-layout: fixed; }
 
-#wrapper table .archives_title td {
+#wrapper #episode_archives .archives_title td {
 	padding-top: 20px;
 	padding-bottom: 5px;
 	font-weight: 700;
 	font-size: 18px; }
 
-#wrapper table tr td {
+#wrapper #episode_archives tr td {
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -358,7 +326,7 @@ body {
 	font-size: 16px;
 	font-family: Arial, sans-serif; }
 
-#wrapper table tr td a {
+#wrapper #episode_archives tr td a {
 	display: block;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
@@ -371,27 +339,27 @@ body {
 	text-overflow: ellipsis;
 	white-space: nowrap; }
 
-#wrapper table tr td a .title {
+#wrapper #episode_archives tr td a .title {
 	color: #0582F4;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 15px; }
 
-#wrapper table tr td a .small {
+#wrapper #episode_archives tr td a .small {
 	color: #999999;
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 12px; }
 
-#wrapper table tr td a:hover {
+#wrapper #episode_archives tr td a:hover {
 	background: #0582F4;
 	color: #FFFFFF; }
 
-#wrapper table tr td a:hover .title {
+#wrapper #episode_archives tr td a:hover .title {
 	color: #FFFFFF;
 	text-decoration: none; }
 
-#wrapper table tr td a:hover .small {
+#wrapper #episode_archives tr td a:hover .small {
 	color: #FFFFFF; }
 
 
@@ -409,15 +377,15 @@ body {
 
 
 #footer {
-width: 100%;
-height: 300px;
-background: #CCCCCC; }
+	width: 100%;
+	height: 300px;
+	background: #CCCCCC; }
 
 #footer_wrapper {
-margin: 0 auto 0 auto;
-padding: 50px 0 50px 0;
-width: 900px;
-height: 200px; background: yellow; }
+	margin: 0 auto 0 auto;
+	padding: 50px 0 50px 0;
+	width: 900px;
+	height: 200px; }
 
 
 

@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Steamcast<?php if ($pagetitle==null) {} else { echo ': ' , $pagetitle; }; ?></title>
+<title>Steamcast<?php if ($pagetitle==null) {} else if ($episodepage==true) { echo ' ' , $pagetitle; } else { echo ': ' , $pagetitle; }; ?></title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 <?php if ($frontpage==true) { echo '<link rel="stylesheet" href="css/style_latest.css" type="text/css" media="screen">';} else {}; ?>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
 						<div class="clearfix"></div>
 
 						<label for="tip_message">Message</label>
-						<textarea rows="5" name="tip_message" id="tip_message"></textarea>
+						<textarea rows="7" name="tip_message" id="tip_message"></textarea>
 
 						<div class="clearfix"></div>
 

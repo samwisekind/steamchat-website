@@ -1,5 +1,3 @@
-/******* ADJUSTMENTS *******/
-
 #header.latest, #header.latest #header_wrapper {
 	height: 400px !important; }
 
@@ -14,9 +12,6 @@
 #header.latest #menu_wrapper {
 	background-image: url(../img/episode100_latest_overlay.png) !important;
 	box-shadow: none !important; }
-
-
-/******* LATEST PLAYER *******/
 
 #header.latest #latest_controls {
 	position: absolute;
@@ -135,11 +130,6 @@
 	display: inline-block;
 	height: 400px;
 	background: url(../img/raster.png) left center repeat rgba(0, 100, 191, 0.25); }
-
-
-
-
-
 
 #header.latest #latest_volume {
 	position: absolute;
