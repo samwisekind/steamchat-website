@@ -51,144 +51,112 @@ body {
 	padding: 0 25px 0 25px;
 	width: 900px; }
 
+.clearfix {
+	clear: both;
+	content: ""; }
 
 
-/******* OVERLAY *******/
 
-#overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	display: none;
+/******* TIPUS *******/
+
+#tip {
 	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.85); }
-
-#overlay #tip_bar {
-	position: relative;
-	top: 50%;
-	left: 0;
-	z-index: 1100;
-	margin-top: -200px;
-	width: 100%;
-	height: 400px;
-	background: #FFFFFF; }
-
-#overlay #tip_bar #tip_wrapper {
-	margin: 0 auto 0 auto;
-	width: 900px;
-	height: 400px; }
-
-#overlay #tip_bar #tip_wrapper #tip_text {
-	float: left;
+	height: 0px;
 	overflow: hidden;
-	padding: 25px;
+	background: #0582F4; }
+
+#tip.tip_expanded {
+	height: 300px; }
+
+#tip #tip_wrapper {
+	margin: 0 auto 0 auto;
+	width: 800px;
+	height: 300px; }
+
+#tip #tip_left {
+	display: inline-table;
+	float: left;
 	width: 350px;
-	height: 350px; }
+	height: 300px; }
 
-#overlay #tip_bar #tip_wrapper #tip_text p {
-	margin: 0 0 15px 0;
-	padding: 0;
+#tip #tip_right {
+	display: inline-table;
+	float: right;
+	width: 350px;
+	height: 300px; }
+
+#tip #tip_left span, #tip #tip_right span {
+	display: table-cell;
+	width: 100%;
+	height: auto;
+	vertical-align: middle; }
+
+#tip h1 {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 26px;
+	color: #FFFFFF;
+	margin-bottom: 25px; }
+
+#tip p {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: justify;
+	color: #FFFFFF;
+	margin-bottom: 15px; }
+
+#tip p:last-child {
+	margin-bottom: 0; }
+
+#tip p a {
+	color: inherit; }
+
+#tip form {
+	width: 100%;
+	height: auto; }
+
+#tip label {
+	width: 80px;
+	padding-top: 8px;
+	display: inline-block;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #FFFFFF; }
+
+#tip input, #tip textarea {
+	float: right;
+	padding: 5px;
+	font-family: Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	width: 260px;
+	margin-bottom: 10px;
+	border: 1px solid #0064bf;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; }
+
+#tip #tip_send {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
 	color: #000000;
-	font-weight: 400;
-	font-size: 16px;
-	font-family: 'Open Sans', Arial, sans-serif;
-	line-height: 22px; }
-
-#overlay #tip_bar #tip_wrapper #tip_text #tip_close {
-	position: absolute;
-	bottom: 5px;
-	display: block;
-	padding: 10px;
-	width: 330px;
-	border: 2px solid #0064BF;
-	background: none;
-	color: #0064BF;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 400;
-	font-size: 14px;
-	font-family: 'Open Sans', Arial, sans-serif; }
-
-#overlay #tip_bar #tip_wrapper #tip_text #tip_close:hover {
-	background: #0064BF;
-	color: #FFFFFF;
-	cursor: pointer; }	
-
-#overlay #tip_bar #tip_wrapper #tip_box {
+	display: table;
 	float: right;
-	padding: 25px;
-	width: 450px;
-	height: 350px;
-	background: #0064BF; }
+	width: 260px;
+	height: 30px;
+	background: #FFFFFF;
+	border: 1px solid #0064bf;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-align: center; }
 
-#overlay #tip_bar #tip_wrapper #tip_box form { }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	list-style: none; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li {
-	margin: 0 0 15px 0;
-	padding: 0;
-	width: 450px;
-	color: #FFFFFF;
-	list-style: none;
-	text-align: left;
-	font-weight: 700;
-	font-size: 16px;
-	font-family: 'Open Sans', Arial, sans-serif; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul #small {
-	float: right;
-	margin-top: 5px;
-	color: #CCCCCC;
-	font-size: 12px; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_name, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_email, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_message {
-	margin-top: 5px;
-	padding: 10px;
-	width: 100%;
-	border: none;
-	background: #0582F4;
-	color: #FFFFFF;
-	font-weight: 400;
-	font-size: 14px;
-	font-family: 'Open Sans', Arial, sans-serif; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_name:hover, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_email:hover, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_message:hover {
-	background: #1E8EF5; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_name:focus, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_email:focus, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_message:focus {
-	background: #1E8EF5; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul #tip_buttons {
-	position: absolute;
-	bottom: 5px; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_reset, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_submit {
-	padding: 10px;
-	border: 2px solid #FFFFFF;
-	background: none;
-	color: #FFFFFF;
-	font-weight: 400;
-	font-size: 14px;
-	font-family: 'Open Sans', Arial, sans-serif; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_reset:hover, #overlay #tip_bar #tip_wrapper #tip_box ul li #tip_submit:hover {
-	background: #0582F4;
+#tip #tip_send:hover {
 	cursor: pointer; }
-
-#overlay #tip_bar #tip_wrapper #tip_box ul li #tip_submit {
-	position: absolute;
-	right: 0;
-	margin-left: 20px;
-	font-weight: 700; }
-
-
 
 
 /******* HEADER *******/

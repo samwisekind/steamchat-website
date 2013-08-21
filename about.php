@@ -39,7 +39,7 @@
 		<p>We love to hear from our listeners, and have always kept our promise to read and discuss every email and message we get on the show. If you would like for us to discuss something on the show, or just want to get in touch, please feel free to contact us using the methods below:</p>
 		
 		<ul>
-			<li>email (<span class="special" onclick="overlay_toggle();">web form</span>)</i>
+			<li>email (<span class="special" onclick="tip_toggle();">web form</span>)</i>
 			<li>email (<a href="mailto:podcast@thesteamcast.com">podcast@thesteamcast.com</a>)</li>
 			<li>Twitter (<a href="http://www.twitter.com/Steamcast">@Steamcast</a>)</li>
 			<li><a href="http://www.facebook.com/Steamcast">Facebook</a></li>

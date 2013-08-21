@@ -11,40 +11,55 @@
 </head>
 <body>
 
-<div id="overlay">
-		
-		<div id="tip_bar">
-			
-			<div id="tip_wrapper">
-				
-				<div id="tip_text">
-					
-					<p><b>We love to hear from our listeners. We've always aimed to read and discuss every email we get on the podcast.</b></p>
-					<p>If you would like us to discuss something on the podcast, or just have somthing to say, simply send us an email using the forms to the right!</p>
-					<p>You can also email us directly at <a href="mailto:podcast@thesteamcast.com">podcast@thesteamcast.com</a> if that's how you roll.</p>
-					<p id="tip_close" onclick="overlay_toggle();">Close</p>
-					
-				</div>
-				
-				<div id="tip_box">
-					
-					<form>
-						
-						<ul>
-							<li>Name<br> <input type="text" name="firstname" id="tip_name"></li>
-							<li>Email <span id="small">(we will never share your email address)</span><br> <input type="text" name="email" id="tip_email"></li>
-							<li>Message<br> <textarea rows="4" name="message" id="tip_message"></textarea></li>
-							<li id="tip_buttons"><input type="reset" value="Reset" id="tip_reset"><input type="submit" value="Submit" id="tip_submit"></li>
-						</ul>
-					
-					</form>
-				
-				</div>
-			
+	<div id="tip">
+
+		<div id="tip_wrapper">
+
+			<div id="tip_left">
+
+				<span>
+
+					<h1>Thanks for getting in touch!</h1>
+
+					<p>We love to hear from our listeners, and have always aimed to read and discuss every email we get on the podcast.</p>
+
+					<p>If you would like us to discuss something, or just have something to say, feel free to give us a shout using the forms to the right or email us directly at <a href="mailto:podcast@thesteamcast.com">podcast@thesteamcast.com</a>.</p>
+
+				</span>
+
 			</div>
-		
+
+			<div id="tip_right">
+
+				<span>
+
+					<form>
+
+						<label for="tip_name">Name</label>
+						<input type="text" name="tip_name" id="tip_name">
+
+						<div class="clearfix"></div>
+
+						<label for="tip_email">Email</label>
+						<input type="text" name="tip_email" id="tip_email">
+
+						<div class="clearfix"></div>
+
+						<label for="tip_message">Message</label>
+						<textarea rows="5" name="tip_message" id="tip_message"></textarea>
+
+						<div class="clearfix"></div>
+
+						<div id="tip_send"><span>Send</span></div>
+
+					</form>
+
+				</span>
+
+			</div>
+
 		</div>
-	
+
 	</div>
 	
     <div id="header" <?php if ($frontpage==true) { echo 'class="latest"'; }; ?>>
@@ -60,7 +75,7 @@
 						<li><a href="index.php">Episodes</a></li>
 						<li><a href="specials.php">Specials</a></li>
 						<li><a href="about.php">About</a></li>
-						<li id="tipus"><a href="#" onclick="overlay_toggle();">Tip us!</a></li>
+						<li id="tipus"><a href="#" onclick="tip_toggle();">Tip us!</a></li>
 					</ul>
 				
 				</div>	
