@@ -55,7 +55,7 @@
 	font-family: 'Open Sans', Arial, sans-serif; }
 
 #header.latest h1 a {
-	padding: 10px; }
+	padding: 10px 15px 10px 10px; }
 
 #header.latest h2 {
 	position: absolute;
