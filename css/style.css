@@ -162,7 +162,7 @@ body {
 	width: 100%;
 	height: 75px;
 	box-shadow: 0 0 1px #D2D0CE;
-	background: url(../img/episode100_latest_overlay.png) center top no-repeat #FFFFFF; }
+	background: #FFFFFF; }
 
 #header #menu ul {
 	margin: 0;
@@ -221,6 +221,8 @@ body {
 #header #menu ul #tipus a {
 	background: #0582F4;
 	color: #FFFFFF;
+	padding: 0;
+	width: 90px;
 	font-weight: 700; }
 
 #header #menu ul #tipus a:hover {
