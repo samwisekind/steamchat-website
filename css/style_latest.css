@@ -2,7 +2,7 @@
 	height: 400px !important; }
 
 #header.latest {
-	background: url(../img/episode100_latest_image.jpg) center top no-repeat #000000 !important;
+	background: url(../img/episode101_latest_image.jpg) center top no-repeat #000000 !important;
 	border-bottom: solid 5px #0064BF !important; }
 
 #header.latest #header_wrapper {
@@ -10,7 +10,7 @@
 	padding: 0 !important; }
 	
 #header.latest #menu_wrapper {
-	background-image: url(../img/episode100_latest_overlay.png) !important;
+	background-image: url(../img/episode101_latest_overlay.png) !important;
 	box-shadow: none !important; }
 
 #header.latest #latest_controls {
@@ -63,7 +63,7 @@
 	left: 0;
 	display: inline-block;
 	margin: 0;
-	padding; 0;
+	padding: 0;
 	background: #0064BF;
 	color: #FFFFFF;
 	font-weight: 300;
