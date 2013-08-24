@@ -1,14 +1,43 @@
 <?php $frontpage=true; ?>
 	
-	
 	<?php include 'lib/header.php'; ?>
-	
 	
 	<div id="wrapper">
 
 		<h2>Episode Archives</h2>
 
-		<table border="0" cellpadding="0" cellspacing="0" id="episode_archives">
+		<table border="0" cellpadding="0" cellspacing="0" class="episode_archives special_archives">
+
+			<tr class="archives_title">
+				<td>Special Episodes</td>
+			</tr>
+
+			<tr>
+
+				<td>
+
+					<ul>
+
+						<li><a href="#"><span class="title">Gabe Newell (2009)</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Gabe Newell (2011) Part 1</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Gabe Newell (2011) Part 2</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Marc Laidlaw</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Alesia Glidewell</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Ellen McLain</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">LambdaGeneration</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Harry Robins</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Jonathan Coulton</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">Black Mesa mod team</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+
+					</ul>
+				
+				</td>
+
+			</tr>
+
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" class="episode_archives">
 
 			<tr class="archives_title">
 				<td>2013</td>

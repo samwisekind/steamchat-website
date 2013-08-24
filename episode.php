@@ -1,4 +1,4 @@
-<?php $frontpage=false; $episodepage=true; $pagetitle=$headertitle="Episode #74: Creative Minds"; ?>
+<?php $frontpage=false; $episodepage=true; $pagetitle=$headertitle="Episode #100: Rise and Shine"; ?>
 	
 	<?php include 'lib/header.php'; ?>
 	

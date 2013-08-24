@@ -85,7 +85,7 @@
 #header.latest h3 {
 	position: absolute;
 	right: 0;
-	bottom: 15px;
+	bottom: 20px;
 	z-index: 100;
 	display: inline-block;
 	margin: 0;
