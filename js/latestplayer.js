@@ -81,11 +81,28 @@ function latest_toggle() {
 
 
 // Functions on document load
-$(window).load(function () {
+$(window).ready(function () {
+
+    // Function to add the latest episode menu overlaying image smoothly
+    var latest_image = new Image();
+
+    latest_image.src = 'img/episode100_latest_image.jpg';
+
+    latest_image.onload = function() {
+        
+        $("#menu_wrapper").addClass("overlay");
+        
+    };
+
+    $("#latest_audio_toggle").bind('click', latest_toggle);
 
     latest_audio.volume = 0.8;
 
-    $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
+    setTimeout(function(){ 
+
+        $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
+
+    }, 500);
 
     // Bind for clicking on the audio player to track the audio time
     $('#latest_progress_wrapper').bind('click', function (e) {
@@ -229,14 +246,3 @@ $(window).load(function () {
     });
     
 });
-
-// Function to add the latest episode menu overlaying image smoothly
-var latest_image = new Image();
-
-latest_image.src = 'img/episode100_latest_image.jpg';
-
-latest_image.onload = function() {
-	
-	$("#menu_wrapper").css("background-color", "transparent");
-	
-};

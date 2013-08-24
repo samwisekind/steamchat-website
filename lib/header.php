@@ -3,6 +3,7 @@
 <title>Steamcast<?php if ($pagetitle==null) {} else if ($episodepage==true) { echo ' ' , $pagetitle; } else { echo ': ' , $pagetitle; }; ?></title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 <?php if ($frontpage==true) { echo '<link rel="stylesheet" href="css/style_latest.css" type="text/css" media="screen">';} else {}; ?>
+<link rel="shortcut icon" href="img/favicon.ico">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>

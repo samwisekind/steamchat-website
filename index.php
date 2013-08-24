@@ -19,59 +19,71 @@
 			</tr>
 
 			<tr>
-				<td><a href="#"><span class="title">#100: Rise and Shine</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#99: The End</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#76: Economics of Fun</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#41: The Christmas Fallout</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#16: Left 4 Dead 2 Special</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#98: Perpetual Testing</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#75: Plush Flush</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#42: Merry Quizmas</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#15: Fashionably Late</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
+				<td>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#97: Flat World</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#74: Creative Minds</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#41: The Christmas Fallout</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#14: Our Apples</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
+					<ul>
+						<li><a href="#"><span class="title">#100: Rise and Shine</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+					</ul>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#96: Powerful Impact Sensations</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#73: Rage Raging Rager</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#40: The Delay Is A Lie</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#13: Room Service for the Drag-Ass</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
+				</td>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#95: Mass Effect 3 Special</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#72: Eurogamer Expo</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#39: Spooky Screamcast</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#12: Half-Life Heavy</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
+				<td>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#94: Super Duper Consumerism</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#71: Our Gaming Lives</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#38: Dohtah</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#11: The Moral High Road</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-			</tr>
+					<ul>
+						<li><a href="#"><span class="title">#99: The End</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#98: Perpetual Testing</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#97: Flat World</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#96: Powerful Impact Sensations</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#95: Mass Effect 3 Special</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#94: Super Duper Consumerism</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#93: Unexpected Item Found In Bagging Area</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+					</ul>
 
-			<tr>
-				<td></td>
-				<td><a href="#"><span class="title">#93: Unexpected Item Found In Bagging Area</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#70: Counter-Podcasting</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#37: Worth Things Evah</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
-				<td><a href="#"><span class="title">#10: A Toothbrush and Strider Legs</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></td>
+				</td>
+
+				<td>
+
+					<ul>
+						<li><a href="#"><span class="title">#76: Economics of Fun</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#75: Plush Flush</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#74: Creative Minds</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#73: Rage Raging Rager</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#72: Eurogamer Expo</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#71: Our Gaming Lives</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#70: Counter-Podcasting</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+					</ul>
+
+				</td>
+
+				<td>
+
+					<ul>
+						<li><a href="#"><span class="title">#43: Decade's Renegades</span> <br><span class="small"><span style="float:left;">27/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#42: Merry Quizmas</span> <br><span class="small"><span style="float:left;">27/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#41: The Christmas Fallout</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#40: The Delay Is A Lie</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#39: Spooky Screamcast</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#38: Dohtah</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#37: Worth Things Evah</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+					</ul>
+
+				</td>
+
+				<td>
+
+					<ul>
+						<li><a href="#"><span class="title">#16: Left 4 Dead 2 Special</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#15: Fashionably Late</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#14: Our Apples</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#13: Room Service for the Drag-Ass</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#12: Half-Life Heavy</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#11: The Moral High Road</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+						<li><a href="#"><span class="title">#10: A Toothbrush and Strider Legs</span> <br><span class="small"><span style="float:left;">7/6/2012</span><span style="float:right;">01:58:16</span></span></a></li>
+					</ul>
+
+				</td>
+
 			</tr>
 
 		</table>
