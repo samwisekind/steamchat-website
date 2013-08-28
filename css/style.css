@@ -238,7 +238,14 @@ body {
 	clear: both;
 	margin: 0 auto 0 auto;
 	padding: 100px 0 250px 0;
-	width: 950px; }
+	width: 1000px; }
+
+#wrapper .section {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	clear: both;
+	margin-bottom: 50px; }
 
 #wrapper h1 {
 	font-size: 32px;
@@ -251,11 +258,12 @@ body {
 	margin-left: 20px; }
 
 #wrapper h2 {
+	margin-bottom: 50px;
 	float: left;
-	font-size: 28px;
-	font-weight: 300 !important;
-	font-family: "Open Sans";
-	color: #333534; }
+	color: #333534;
+	font-weight: 300;
+	font-size: 22px;
+	font-family: 'Open Sans', Arial, sans-serif;  }
 
 #wrapper p {
 	margin-bottom: 20px;
@@ -299,13 +307,6 @@ body {
 	cursor: pointer; }
 
 
-
-
-
-#wrapper h2 {
-	font-weight: 700;
-	font-size: 24px;
-	font-family: 'Open Sans', Arial, sans-serif; }
 
 
 
@@ -375,16 +376,23 @@ body {
 	font-family: Arial, sans-serif !important; }
 
 .episode_archives tr td ul li a .title {
+	clear: both;
 	color: #0582F4;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px; }
 
-.episode_archives tr td ul li a .small {
+.episode_archives .date, .episode_archives .duration {
 	color: #999999;
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 12px; }
+
+.episode_archives .date {
+	float: left; }
+
+.episode_archives .duration {
+	float: right; }
 
 .episode_archives tr td ul li a:hover {
 	background: #0582F4;
@@ -394,7 +402,7 @@ body {
 	color: #FFFFFF;
 	text-decoration: none; }
 
-.episode_archives tr td ul li a:hover .small {
+.episode_archives tr td ul li:hover .date, .episode_archives tr td ul li:hover .duration {
 	color: #FFFFFF; }
 
 

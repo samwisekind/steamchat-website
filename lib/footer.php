@@ -2,7 +2,7 @@
 	
 		<div id="footer_wrapper">
 
-			<a href="#" id="footer_logo"><img src="../img/footer_logo.png" alt="" /></a>
+			<a href="#" id="footer_logo"><img src="http://localhost/img/footer_logo.png" alt="" /></a>
 
 			<ul>
 				<li class="title">Sitemap</li>
@@ -13,7 +13,7 @@
 				<li><a href="#">RSS (M4A)</a></li>
 				<li><a href="#">RSS (MP3)</a></li>
 			</ul>
-			
+
 			<ul>
 				<li class="title">Networks</li>
 				<li><a href="http://www.facebook.com/Steamcast">Facebook</a></li>
