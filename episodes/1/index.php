@@ -34,7 +34,7 @@
 
 			<ul style="clear:both;">
 
-				<li><a href="http://www.thesteamcast.com/episodes/1/steamcast_episode1.mp3">Direct MP3 Download</a> (65.8MB)</li>
+				<li><a href="http://www.thesteamcast.com/episodes/1/steamcast_episode1.mp3">Direct MP3 Download</a></li>
 				<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">Podcast RSS Feed (M4A)</a></li>
 				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">Podcast RSS Feed (MP3)</a></li>
 				<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Subscription</a></li>

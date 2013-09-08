@@ -1,35 +1,48 @@
-<?php $pagetitle = "Steamcast Episode #96: Powerful Impact Sensations" ?>
-<?php $menucurrent_episodes = " id='menucurrent'" ?>
-<?php include("../../lib/header.php"); ?>
-<?php include("../../lib/sidebar.php"); ?>
+<?php $frontpage=false; $episodepage=true; $pagetitle=$headertitle="Episode #96: Powerful Impact Sensations" ?>
+	
+	<?php include "../../lib/header.php"; ?>
+	
+	<div id="wrapper">
+		
+		<span class="section">
 
-<div id="content">
+			<h2>Description</h2>
 
-<h1>#96: Powerful Impact Sensations</h1>
+			<p>In this episode we talk about Valve's 'SOB' game, Half-Life 3, Michael Abrash, GOG, and more!</p>
 
-<p>In this episode we talk about Valve's 'SOB' game, Half-Life 3, Michael Abrash, GOG, and more!</p>
+		</span>
 
-<p><b>The show notes are <a href="https://docs.google.com/document/pub?id=1lu7czk_BmZWuNJnnTVXg-zQx8IUz9mTLASrRIEr4yFU">here</a>.</b></p>
+		<span class="section">
 
-<h2>How To Listen</h2>
+			<h2>Listen</h2>
 
-<script language="JavaScript" src="http://www.thesteamcast.com/lib/audio-player.js" type="text/javascript"></script>
-<object type="application/x-shockwave-flash" data="http://www.thesteamcast.com/lib/player.swf" id="audioplayer1" height="24" width="290">
-<param name="movie" value="player.swf" />
-<param name="FlashVars" value="playerID=1&amp;soundFile=http://www.thesteamcast.com/episodes/96/steamcast_episode96.mp3" />
-<param name="quality" value="high" />
-<param name="menu" value="false" />
-<param name="wmode" value="transparent" />
-</object>
+			<div id="episode_audio_player">
 
-<ul>
-<li>Direct M4A Download (<a href="http://www.thesteamcast.com/episodes/96/steamcast_episode96.m4a">126.5MB</a>)</li>
-<li>Direct MP3 Download (<a href="http://www.thesteamcast.com/episodes/96/steamcast_episode96.mp3">144.1MB</a>)</li>
-<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">Podcast RSS Feed (M4A)</a></li>
-<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">Podcast RSS Feed (MP3)</a></li>
-<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Subscription</a></li>
-</ul>
+				<audio id="episode_audio"><source src="http://www.thesteamcast.com/episodes/96/steamcast_episode96.mp3" type="audio/mp3"></audio>
 
-</div>
+				<div id="episode_audio_toggle"></div>
 
-<?php include("../../lib/footer.php"); ?>
+				<div id="episode_audio_time"><span>00:00:00</span></div>
+
+				<div id="episode_audio_progress_wrapper">
+
+					<div id="episode_audio_progress"></div>
+
+				</div>
+
+			</div>
+
+			<ul style="clear:both;">
+
+				<li><a href="http://www.thesteamcast.com/episodes/96/steamcast_episode96.mp3">Direct MP3 Download</a></li>
+				<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">Podcast RSS Feed (M4A)</a></li>
+				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">Podcast RSS Feed (MP3)</a></li>
+				<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Subscription</a></li>
+
+			</ul>
+
+		</span>
+		
+	</div>
+	
+<?php include "../../lib/footer.php"; ?>
