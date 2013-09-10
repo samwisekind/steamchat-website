@@ -84,7 +84,7 @@
 						<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
 						<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
 						<li><a href="http://www.thesteamcast.com/about/">About</a></li>
-						<li id="tipus"><a href="#" onclick="tip_toggle();">Tip us!</a></li>
+						<li id="tipus" class="tipus_button"><span>Tip us!</span></li>
 					</ul>
 				
 				</div>	

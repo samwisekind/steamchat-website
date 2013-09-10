@@ -11,11 +11,11 @@ function tip_toggle (tip_link) {
 
 		if (tip_expanded == false) {
 
-			$("#tipus a").html("Close");
+			$("#tipus span").html("Close");
 
 			$("html, body").animate({ scrollTop: 0 }, 350);
 
-			$( "#tip" ).toggleClass("tip_expanded", 700, "easeOutBounce", function() {
+			$("#tip").toggleClass("tip_expanded", 700, "easeOutBounce", function() {
 
 				tip_expanded = true;
 				tip_transition = false;
@@ -26,9 +26,9 @@ function tip_toggle (tip_link) {
 
 		else if (tip_expanded == true && tip_link !== true) {
 
-			$("#tipus a").html("Tip Us!");
+			$("#tipus span").html("Tip Us!");
 
-			$( "#tip" ).toggleClass("tip_expanded", 700, "easeOutQuart", function() {
+			$("#tip").toggleClass("tip_expanded", 700, "easeOutQuart", function() {
 
 				tip_expanded = false;
 				tip_transition = false;
@@ -57,6 +57,12 @@ $(document).ready(function() {
 	$(".tipus_link").bind("click", function() {
 
 		tip_toggle(true);
+
+	});
+
+	$(".tipus_button").bind("click", function() {
+
+		tip_toggle(false);
 
 	});
 
