@@ -1,7 +1,7 @@
 var tip_transition = false;
 var tip_expanded = false;
 
-function tip_toggle () {
+function tip_toggle (tip_link) {
 
 	if (tip_transition == true) {}
 
@@ -24,7 +24,7 @@ function tip_toggle () {
 
 		}
 
-		else if (tip_expanded == true) {
+		else if (tip_expanded == true && tip_link !== true) {
 
 			$("#tipus a").html("Tip Us!");
 
@@ -35,17 +35,29 @@ function tip_toggle () {
 
 			});
 
+		}
+
+		else if (tip_expanded == true && tip_link !== false) {
+
+			$("html, body").animate({ scrollTop: 0 }, 350, function() {
+
+				tip_expanded = true;
+				tip_transition = false;
+
+			});
 
 		};
 
-
-	};	
-            
+	};	            
 
 };
 
 $(document).ready(function() {
 
-	$(".tipus_link").bind( "click", tip_toggle);
+	$(".tipus_link").bind("click", function() {
+
+		tip_toggle(true);
+
+	});
 
 });

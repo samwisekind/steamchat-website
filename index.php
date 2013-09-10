@@ -18,16 +18,16 @@
 
 					<ul>
 
-						<li><a href="http://www.thesteamcast.com/episodes/9/"><span class="title">Gabe Newell (2009)</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/episodes/47/"><span class="title">Gabe Newell (2011) Part 1</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/episodes/48/"><span class="title">Gabe Newell (2011) Part 2</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Marc Laidlaw</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Alesia Glidewell</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Ellen McLain</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/snacks/1/"><span class="title">LambdaGeneration</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/snacks/2/"><span class="title">Harry Robins</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/snacks/3/"><span class="title">Jonathan Coulton</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
-						<li><a href="http://www.thesteamcast.com/snacks/4/"><span class="title">Black Mesa mod team</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/episodes/9/"><span class="title">Gabe Newell (2009)</span> <br> <span class="date">12/8/2009</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/episodes/47/"><span class="title">Gabe Newell (2011) Part 1</span> <br> <span class="date">9/2/2011</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/episodes/48/"><span class="title">Gabe Newell (2011) Part 2</span> <br> <span class="date">11/2/2011</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Marc Laidlaw</span> <br> <span class="date">28/4/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Alesia Glidewell</span> <br> <span class="date">28/4/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/pages/portal2party/"><span class="title">Ellen McLain</span> <br> <span class="date">28/4/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/snacks/1/"><span class="title">LambdaGeneration</span> <br> <span class="date">7/10/2010</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/snacks/2/"><span class="title">Harry Robins</span> <br> <span class="date">14/2/2011</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/snacks/3/"><span class="title">Jonathan Coulton</span> <br> <span class="date">25/7/2011</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/snacks/4/"><span class="title">Black Mesa mod team</span> <br> <span class="date">26/8/2011</span><!--<span class="duration">01:58:16</span>--></a></li>
 
 					</ul>
 				
@@ -52,7 +52,7 @@
 				<td>
 
 					<ul>
-						<li><a href="http://www.thesteamcast.com/episodes/100/"><span class="title">#100: Rise and Shine</span> <br> <span class="date">7/6/2012</span><!--<span class="duration">01:58:16</span>--></a></li>
+						<li><a href="http://www.thesteamcast.com/episodes/100/"><span class="title">#100: "Rise and Shine"</span> <br> <span class="date">10/9/2013</span><!--<span class="duration">01:58:16</span>--></a></li>
 					</ul>
 
 				</td>

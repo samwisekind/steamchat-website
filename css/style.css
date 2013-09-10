@@ -159,19 +159,19 @@ body {
 	text-decoration: underline; }
 
 #tip #tipus_methods #tipus_methods_email {
-	background-image: url(http://www.thesteamcast.com/img/tipus_email_icon.png); }
+	background-image: url(http://localhost:82/img/tipus_email_icon.png); }
 
 #tip #tipus_methods #tipus_methods_twitter {
-	background-image: url(http://www.thesteamcast.com/img/tipus_twitter_icon.png); }
+	background-image: url(http://localhost:82/img/tipus_twitter_icon.png); }
 
 #tip #tipus_methods #tipus_methods_facebook {
-	background-image: url(http://www.thesteamcast.com/img/tipus_facebook_icon.png); }
+	background-image: url(http://localhost:82/img/tipus_facebook_icon.png); }
 
 #tip #tipus_methods #tipus_methods_steam {
-	background-image: url(http://www.thesteamcast.com/img/tipus_steam_icon.png); }
+	background-image: url(http://localhost:82/img/tipus_steam_icon.png); }
 
 #tip #tipus_methods #tipus_methods_youtube {
-	background-image: url(http://www.thesteamcast.com/img/tipus_youtube_icon.png); }
+	background-image: url(http://localhost:82/img/tipus_youtube_icon.png); }
 
 #tip #tip_send:hover {
 	cursor: pointer; }

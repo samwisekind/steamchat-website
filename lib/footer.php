@@ -2,16 +2,16 @@
 	
 		<div id="footer_wrapper">
 
-			<a href="http://www.thesteamcast.com/" id="footer_logo"><img src="http://www.thesteamcast.com/img/footer_logo.png" alt="" /></a>
+			<a href="http://localhost:82/" id="footer_logo"><img src="http://localhost:82/img/footer_logo.png" alt="" /></a>
 
 			<ul>
 				<li class="title">Sitemap</li>
-				<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
-				<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
-				<li><a href="http://www.thesteamcast.com/about/">About</a></li>
+				<li><a href="http://localhost:82/">Episodes</a></li>
+				<li><a href="http://localhost:82/specials/">Specials</a></li>
+				<li><a href="http://localhost:82/about/">About</a></li>
 				<li><span class="tipus_link">Tip Us</span></li>
-				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">RSS (MP3)</a></li>				
-				<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">RSS (M4A)</a></li>
+				<li><a href="http://localhost:82/steamcast_feed_mp3.xml">RSS (MP3)</a></li>				
+				<li><a href="http://localhost:82/steamcast_feed.xml">RSS (M4A)</a></li>
 			</ul>
 
 			<ul>
@@ -20,6 +20,7 @@
 				<li><a href="http://www.twitter.com/Steamcast">Twitter</a></li>
 				<li><a href="http://www.steamcommunity.com/groups/Steamcast">Steam</a></li>
 				<li><a href="http://www.youtube.com/Steamcast">YouTube</a></li>
+				<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes</a></li>
 			</ul>
 				
 			<small>&copy; 2009-2013 Steamcast (The Steamcast, Steamcast Podcast)</small>
