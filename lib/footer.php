@@ -9,9 +9,9 @@
 				<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
 				<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
 				<li><a href="http://www.thesteamcast.com/about/">About</a></li>
-				<!--<li><a href="#">Tip Us</a></li>-->
+				<li><span class="tipus_link">Tip Us</span></li>
+				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">RSS (MP3)</a></li>				
 				<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">RSS (M4A)</a></li>
-				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">RSS (MP3)</a></li>
 			</ul>
 
 			<ul>

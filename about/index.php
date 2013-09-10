@@ -22,7 +22,7 @@
 		
 		<h2 id="podcast">Podcast</h2>
 		
-		<p>Steamcast episodes are produced in audio-only format. Episodes last for around an hour in length. New episodes are released every Saturday at 11PM GMT and are published on <a href="#">our website</a>, on two RSS feeds (<a href="http://www.thesteamcast.com/steamcast_feed.xml">M4A feed</a> and <a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">MP3 feed</a>) and on the <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Store</a>.</p>
+		<p>Steamcast episodes are produced in audio-only format. Episodes last for around an hour in length. New episodes are released every week, usually on Wednesdays, and are published on <a href="http://www.thesteamcast.com">our website</a>, on two RSS feeds (<a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">MP3 feed</a> and <a href="http://www.thesteamcast.com/steamcast_feed.xml">M4A feed</a>), on the <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Store</a> and on our <a href="http://www.youtube.com/">YouTube channel</a>.</p>
 		
 		<p>Episodes are structured by opening with discussions about what each of the hosts have recently been playing, then moving on to discussing listener emails and messages, after which (given time) any articles or news topics are discussed. Episodes are usually kept to a family-friendly standard, but every once in a while adult language may be used in either the quoting of others or in discussions.</p>
 		
@@ -39,8 +39,8 @@
 		<p>We love to hear from our listeners, and have always kept our promise to read and discuss every email and message we get on the show. If you would like for us to discuss something on the show, or just want to get in touch, please feel free to contact us using the methods below:</p>
 		
 		<ul>
-			<li>email (<span class="special" onclick="tip_toggle();">web form</span>)</i>
-			<li>email (<a href="mailto:podcast@thesteamcast.com">podcast@thesteamcast.com</a>)</li>
+			<!--<li>email (<span class="tipus_link about_tipus">web form</span>)</i>-->
+			<li>email (<a href="mailto:podcast@localhost">podcast@localhost</a>)</li>
 			<li>Twitter (<a href="http://www.twitter.com/Steamcast">@Steamcast</a>)</li>
 			<li><a href="http://www.facebook.com/Steamcast">Facebook</a></li>
 			<li><a href="http://www.steamcommunity.com/groups/Steamcast">Steam Commuity Group</a></li>

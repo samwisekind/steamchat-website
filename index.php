@@ -4,8 +4,6 @@
 	
 	<div id="wrapper">
 
-		<h2>Episode Archives</h2>
-
 		<table border="0" cellpadding="0" cellspacing="0" class="episode_archives special_archives">
 
 			<tr class="archives_title">
@@ -42,11 +40,11 @@
 		<table border="0" cellpadding="0" cellspacing="0" class="episode_archives">
 
 			<tr class="archives_title">
-				<td>2013</td>
-				<td>2012</td>
-				<td>2011</td>
-				<td>2010</td>
-				<td>2009</td>
+				<td>2013 Episodes</td>
+				<td>2012 Episodes</td>
+				<td>2011 Episodes</td>
+				<td>2010 Episodes</td>
+				<td>2009 Episodes</td>
 			</tr>
 
 			<tr>

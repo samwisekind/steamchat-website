@@ -24,7 +24,7 @@
 
 					<p>We love to hear from our listeners, and have always aimed to read and discuss every email we get on the podcast.</p>
 
-					<p>If you would like us to discuss something, or just have something to say, feel free to give us a shout using the forms to the right or email us directly at <a href="mailto:podcast@thesteamcast.com">podcast@thesteamcast.com</a>.</p>
+					<p>If you would like us to discuss something, or just have something to say, feel free to give us a shout using any of the methods to the right (web form coming in the next week or so)!</p>
 
 				</span>
 
@@ -34,7 +34,7 @@
 
 				<span>
 
-					<form>
+					<!-- <form>
 
 						<label for="tip_name">Name</label>
 						<input type="text" name="tip_name" id="tip_name">
@@ -53,7 +53,15 @@
 
 						<div id="tip_send"><span>Send</span></div>
 
-					</form>
+					</form> -->
+
+					<ul id="tipus_methods">
+						<li><a href="mailto:podcast@thesteamcast.com" id="tipus_methods_email">Email (podcast@thesteamcast.com)</a></li>
+						<li><a href="http://www.twitter.com/Steamcast" id="tipus_methods_twitter">Twitter (@Steamcast)</a></li>
+						<li><a href="http://www.facebook.com/Steamcast" id="tipus_methods_facebook">Facebook</a></li>
+						<li><a href="http://www.steamcommunity.com/groups/Steamcast" id="tipus_methods_steam">Steam</a></li>
+						<li><a href="http://www.youtube.com/Steamcast" id="tipus_methods_youtube">YouTube</a></li>
+					</ul>
 
 				</span>
 
@@ -76,7 +84,7 @@
 						<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
 						<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
 						<li><a href="http://www.thesteamcast.com/about/">About</a></li>
-						<!-- <li id="tipus"><a href="#" onclick="tip_toggle();">Tip us!</a></li> -->
+						<li id="tipus"><a href="#" onclick="tip_toggle();">Tip us!</a></li>
 					</ul>
 				
 				</div>	
@@ -89,7 +97,7 @@
 
 				if ($frontpage==true) {
 					
-					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/100/steamcast_episode100.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/100/">#100: Rise and Shine</a></h1><h2><a href="http://www.thesteamcast.com/episodes/100/">Published 10th September 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:25</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/100/steamcast_episode100.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/100/">#100: Rise and Shine</a></h1><h2><a href="http://www.thesteamcast.com/episodes/100/">Published 10th September 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
 				
 				}
 				

@@ -1,5 +1,3 @@
-
-
 var tip_transition = false;
 var tip_expanded = false;
 
@@ -46,9 +44,8 @@ function tip_toggle () {
 
 };
 
+$(document).ready(function() {
 
+	$(".tipus_link").bind( "click", tip_toggle);
 
-
-
-
-
+});
