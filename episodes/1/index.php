@@ -8,7 +8,7 @@
 
 			<h2>Description</h2>
 
-			<p>In this debut episode of Steamcast, we discuss the podcast itself, the recently ending-E3 and the ups and downs of Valve's participation at it. We also talk about our thoughts of Left 4 Dead 2 and the lack, again, of Half-Life 2: Episode 3. We hope you enjoy the show! <span class="date">&mdash; 7th June 2009</span></p>
+			<p>In this debut episode of Steamcast, we discuss the podcast itself, the recently ending-E3 and the ups and downs of Valve's participation at it. We also talk about our thoughts of Left 4 Dead 2 and the lack, again, of Half-Life 2: Episode 3. We hope you enjoy the show! <!--<span class="date">&mdash; 7th June 2009</span>--></p>
 
 		</span>
 
@@ -18,7 +18,7 @@
 
 			<div id="episode_audio_player">
 
-				<audio id="episode_audio"><source src="../../lib/test.mp3" type="audio/mp3"></audio>
+				<audio id="episode_audio"><source src="http://www.thesteamcast.com/episodes/1/steamcast_episode1.mp3" type="audio/mp3"></audio>
 
 				<div id="episode_audio_toggle"></div>
 

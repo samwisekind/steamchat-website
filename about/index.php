@@ -1,6 +1,6 @@
 <?php $frontpage=false; $pagetitle="About"; $headertitle="About Steamcast"; ?>
 	
-	<?php include 'lib/header.php'; ?>
+	<?php include "../lib/header.php"; ?>
 	
 	<div id="wrapper">
 		
@@ -10,7 +10,7 @@
 		
 		<p style="font-weight:700;">Steamcast is a fan-made podcast that hosts discussions about Valve, Steam, digital distribution, PC games and other related subjects such as the art and design of video games and other topical video game related subjects.</p>
 		
-		<p>Steamcast was created in early June of 2009, born from the controversy of the Left 4 Dead 2 announcement at E3 of the same year. Since then, it has been maintained by the three hosts; Sam, Saurabh, and Brad. Steamcast has enjoyed considerable success in that time. In August of 2009, Steamcast hosted its <a href="http://www.thesteamcast.com/episodes/9/">first exclusive interview with Gabe Newell</a>, co-founder and managing director of Valve Software. Staying true to its aim of supporting the community, Steamcast allowed members of the community the opportunity to forward their own questions and concerns to Newell, resulting in an entirely community-produced interview. Since then, Steamcast has published a further six community-based interviews (including <a href="http://www.thesteamcast.com/episodes/47/">another with Newell</a>, <a href="http://www.thesteamcast.com/snacks/2/">Harry S. Robins</a>, <a href="http://www.thesteamcast.com/promo/portal2party/">Marc Laidlaw</a>, <a href="http://www.thesteamcast.com/promo/portal2party/">Alésia Glidewell</a>, <a href="http://www.thesteamcast.com/promo/portal2party/">Ellen McLain</a>, <a href="http://www.thesteamcast.com/snacks/3/">Jonathan Coulton</a> and the <a href="http://www.thesteamcast.com/snacks/4/">Black Mesa mod team</a>).</p>
+		<p>Steamcast was created in early June of 2009, born from the controversy of the Left 4 Dead 2 announcement at E3 of the same year. Since then, it has been maintained by the three hosts; Sam, Saurabh, and Brad. Steamcast has enjoyed considerable success in that time. In August of 2009, Steamcast hosted its <a href="http://www.thesteamcast.com/episodes/9/">first exclusive interview with Gabe Newell</a>, co-founder and managing director of Valve Software. Staying true to its aim of supporting the community, Steamcast allowed members of the community the opportunity to forward their own questions and concerns to Newell, resulting in an entirely community-produced interview. Since then, Steamcast has published a further six community-based interviews (including <a href="http://www.thesteamcast.com/episodes/47/">another with Newell</a>, <a href="http://www.thesteamcast.com/snacks/2/">Harry S. Robins</a>, <a href="http://www.thesteamcast.com/pages/portal2party/">Marc Laidlaw</a>, <a href="http://www.thesteamcast.com/pages/portal2party/">Alésia Glidewell</a>, <a href="http://www.thesteamcast.com/pages/portal2party/">Ellen McLain</a>, <a href="http://www.thesteamcast.com/snacks/3/">Jonathan Coulton</a> and the <a href="http://www.thesteamcast.com/snacks/4/">Black Mesa mod team</a>).</p>
 		
 		<p>As a community-founded podcast, Steamcast has always placed high importance on community participation, of which members are welcome to join the hosts and share their thoughts and opinions on specific topics. This gave the community - everyday gamers - the opportunity to voice their opinions and concerns.</p>
 		
@@ -22,7 +22,7 @@
 		
 		<h2 id="podcast">Podcast</h2>
 		
-		<p>Steamcast episodes are produced in audio-only format. Episodes last for around an hour in length. New episodes are released every Saturday at 11PM GMT and are published on <a href="#">our website</a>, on two RSS feeds (<a href="#">M4A feed</a> and <a href="#">MP3 feed</a>) and on the <a href="#">iTunes Store</a>.</p>
+		<p>Steamcast episodes are produced in audio-only format. Episodes last for around an hour in length. New episodes are released every Saturday at 11PM GMT and are published on <a href="#">our website</a>, on two RSS feeds (<a href="http://www.thesteamcast.com/steamcast_feed.xml">M4A feed</a> and <a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">MP3 feed</a>) and on the <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=320594165">iTunes Store</a>.</p>
 		
 		<p>Episodes are structured by opening with discussions about what each of the hosts have recently been playing, then moving on to discussing listener emails and messages, after which (given time) any articles or news topics are discussed. Episodes are usually kept to a family-friendly standard, but every once in a while adult language may be used in either the quoting of others or in discussions.</p>
 		
@@ -48,4 +48,4 @@
 		
 	</div>
 	
-<?php include 'lib/footer.php'; ?>
+<?php include "../lib/footer.php"; ?>

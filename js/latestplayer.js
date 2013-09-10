@@ -86,7 +86,7 @@ $(window).ready(function () {
     // Function to add the latest episode menu overlaying image smoothly
     var latest_image = new Image();
 
-    latest_image.src = 'http://localhost/img/episode100_latest_image.jpg';
+    latest_image.src = 'http://www.thesteamcast.com/episodes/100/episode100_latest_image.jpg';
 
     latest_image.onload = function() {
         
@@ -98,11 +98,11 @@ $(window).ready(function () {
 
     latest_audio.volume = 0.8;
 
-    setTimeout(function(){ 
+    /* setTimeout(function(){ 
 
         $("#latest_audio_time_total").html(timecalc($("#latest_audio")[0].duration));
 
-    }, 500);
+    }, 500); */
 
     // Bind for clicking on the audio player to track the audio time
     $('#latest_progress_wrapper').bind('click', function (e) {

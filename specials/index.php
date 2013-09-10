@@ -1,6 +1,6 @@
 <?php $frontpage=false; $pagetitle="Specials"; $headertitle="Special Episodes"; ?>
 	
-	<?php include 'lib/header.php'; ?>
+	<?php include "../lib/header.php"; ?>
 	
 	<div id="wrapper">
 		
@@ -13,9 +13,9 @@
 			<li><a href="http://www.thesteamcast.com/episodes/9/">Gabe Newell (2009)</a></li>
 			<li><a href="http://www.thesteamcast.com/episodes/47/">Gabe Newell (2011) Part 1</a></li>
 			<li><a href="http://www.thesteamcast.com/episodes/48/">Gabe Newell (2011) Part 2</a></li>
-			<li><a href="http://www.thesteamcast.com/promo/portal2party/">Marc Laidlaw</a></li>
-			<li><a href="http://www.thesteamcast.com/promo/portal2party/">Alesia Glidewell</a></li>
-			<li><a href="http://www.thesteamcast.com/promo/portal2party/">Ellen McLain</a></li>
+			<li><a href="http://www.thesteamcast.com/pages/portal2party/">Marc Laidlaw</a></li>
+			<li><a href="http://www.thesteamcast.com/pages/portal2party/">Alesia Glidewell</a></li>
+			<li><a href="http://www.thesteamcast.com/pages/portal2party/">Ellen McLain</a></li>
 			<li><a href="http://www.thesteamcast.com/snacks/1/">LambdaGeneration</a></li>
 			<li><a href="http://www.thesteamcast.com/snacks/2/">Harry Robins</a></li>
 			<li><a href="http://www.thesteamcast.com/snacks/3/">Jonathan Coulton</a></li>
@@ -50,11 +50,11 @@
 		
 		<ul>
 			
-			<li><a href="http://www.thesteamcast.com/promo/portal2party/">Portal 2 Launch Party</a></li>
-			<li><a href="http://thesteamcast.com/promo/2010/">Christmas 2010 Thanks</a></li>
+			<li><a href="http://www.thesteamcast.com/pages/portal2party/">Portal 2 Launch Party</a></li>
+			<li><a href="http://thesteamcast.com/pages/2010/">Christmas 2010 Thanks</a></li>
 			
 		</ul>
 		
 	</div>
 	
-<?php include 'lib/footer.php'; ?>
+<?php include "../lib/footer.php"; ?>

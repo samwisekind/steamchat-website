@@ -1,4 +1,4 @@
-!<?php $frontpage=false; $episodepage=true; $pagetitle=$headertitle="Episode #85: Origins of Impulse" ?>
+<?php $frontpage=false; $episodepage=true; $pagetitle=$headertitle="Episode #85: Origins of Impulse" ?>
 	
 	<?php include "../../lib/header.php"; ?>
 	

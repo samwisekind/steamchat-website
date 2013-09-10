@@ -2,16 +2,16 @@
 	
 		<div id="footer_wrapper">
 
-			<a href="#" id="footer_logo"><img src="http://localhost/img/footer_logo.png" alt="" /></a>
+			<a href="http://www.thesteamcast.com/" id="footer_logo"><img src="http://www.thesteamcast.com/img/footer_logo.png" alt="" /></a>
 
 			<ul>
 				<li class="title">Sitemap</li>
-				<li><a href="#">Episodes</a></li>
-				<li><a href="#">Specials</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Tip Us</a></li>
-				<li><a href="#">RSS (M4A)</a></li>
-				<li><a href="#">RSS (MP3)</a></li>
+				<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
+				<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
+				<li><a href="http://www.thesteamcast.com/about/">About</a></li>
+				<!--<li><a href="#">Tip Us</a></li>-->
+				<li><a href="http://www.thesteamcast.com/steamcast_feed.xml">RSS (M4A)</a></li>
+				<li><a href="http://www.thesteamcast.com/steamcast_feed_mp3.xml">RSS (MP3)</a></li>
 			</ul>
 
 			<ul>
