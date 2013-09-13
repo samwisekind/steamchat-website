@@ -60,3 +60,16 @@ p .date {
 	width: 0%;
 	height: 15px;
 	background: #0582F4; }
+
+.pagetitle.episode {
+	margin-bottom: 60px !important;
+	width: 1000px;
+	text-align: center;
+	clear: both; }
+
+.pagedate.episode {
+	margin-bottom: 30px !important;
+	width: 1000px;
+	text-align: center;
+	font-size: 20px !important;
+	font-weight: 500 !important; }

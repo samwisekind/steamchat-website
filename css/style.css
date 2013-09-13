@@ -193,7 +193,7 @@ body {
 	width: 1000px;
 	height: 200px; }
 
-#header h1.pagetitle {
+#header h1.pagetitle, #header h1.pagedate {
 	position: absolute;
 	margin-bottom: 40px;
 	bottom: 0;

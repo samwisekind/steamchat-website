@@ -91,7 +91,7 @@
 		
 			</div>
 			
-			<?php if ($headertitle==null) {} else { echo '<h1 class="pagetitle">' , $headertitle, '</h1>'; }; ?>
+			<?php if ($headertitle==null) {} else if ($episodepage=true) { echo '<h1 class="pagetitle episode">' , $headertitle, '</h1><h1 class="pagedate episode">Published ' , $headerdate, '</h1>'; } else { echo '<h1 class="pagetitle">' , $headertitle, '</h1>'; }; ?>
 			
 			<?php
 
