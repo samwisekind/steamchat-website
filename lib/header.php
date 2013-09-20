@@ -97,7 +97,7 @@
 
 				if ($frontpage==true) {
 					
-					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/100/steamcast_episode100.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/100/">#100: Rise and Shine</a></h1><h2><a href="http://www.thesteamcast.com/episodes/100/">Published 10th September 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/101/steamcast_episode101.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/101/">#101: Pacific Podcast</a></h1><h2><a href="http://www.thesteamcast.com/episodes/101/">Published 20th September 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
 				
 				}
 				

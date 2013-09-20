@@ -2,7 +2,7 @@
 	height: 400px !important; }
 
 #header.latest {
-	background: url(http://www.thesteamcast.com/episodes/100/episode100_latest_image.jpg) center top no-repeat #000000 !important;
+	background: url(http://www.thesteamcast.com/episodes/101/episode101_latest_image.jpg) center top no-repeat #000000 !important;
 	border-bottom: solid 5px #0064BF !important; }
 
 #header.latest #header_wrapper {
@@ -10,7 +10,7 @@
 	padding: 0 !important; }
 	
 #header.latest #menu_wrapper {
-	background-image: url(http://www.thesteamcast.com/episodes/100/episode100_latest_overlay.png) !important;
+	background-image: url(http://www.thesteamcast.com/episodes/101/episode101_latest_overlay.png) !important;
 	box-shadow: none !important; }
 
 #header.latest #latest_controls {

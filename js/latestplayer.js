@@ -86,7 +86,7 @@ $(window).ready(function () {
     // Function to add the latest episode menu overlaying image smoothly
     var latest_image = new Image();
 
-    latest_image.src = 'http://www.thesteamcast.com/episodes/100/episode100_latest_image.jpg';
+    latest_image.src = 'http://www.thesteamcast.com/episodes/101/episode101_latest_image.jpg';
 
     latest_image.onload = function() {
         

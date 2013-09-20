@@ -52,6 +52,7 @@
 				<td>
 
 					<ul>
+						<li><a href="http://www.thesteamcast.com/episodes/101/"><span class="title">#101: "Pacific Podcast"</span> <br> <span class="date">20/9/2013</span><!--<span class="duration">01:58:16</span>--></a></li>
 						<li><a href="http://www.thesteamcast.com/episodes/100/"><span class="title">#100: "Rise and Shine"</span> <br> <span class="date">10/9/2013</span><!--<span class="duration">01:58:16</span>--></a></li>
 					</ul>
 

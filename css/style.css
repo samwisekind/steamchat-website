@@ -346,8 +346,7 @@ body {
 	font-weight: 400;
 	padding-left: 20px;
 	margin-bottom: 15px;
-	font-family: "Open Sans";
-	color: #0582F4; }
+	font-family: "Open Sans"; }
 
 #wrapper ul li:last-child {
 	margin-bottom: 0; }
@@ -404,7 +403,8 @@ body {
 .episode_archives.special_archives ul li {
 	float: left;
 	display: inline-block;
-	width: 20%; }
+	width: 20%;
+	color: #0582F4; }
 
 .episode_archives ul li a {
 	display: block;
