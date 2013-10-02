@@ -24,7 +24,7 @@
 
 					<p>We love to hear from our listeners, and have always aimed to read and discuss every email we get on the podcast.</p>
 
-					<p>If you would like us to discuss something, or just have something to say, feel free to give us a shout using any of the methods to the right (web form coming in the next week or so)!</p>
+					<p>If you would like us to discuss something, or just have something to say, feel free to give us a shout using any of the methods to the right (web form coming in the future)!</p>
 
 				</span>
 
@@ -97,7 +97,7 @@
 
 				if ($frontpage==true) {
 					
-					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/101/steamcast_episode101.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/101/">#101: Pacific Podcast</a></h1><h2><a href="http://www.thesteamcast.com/episodes/101/">Published 20th September 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/102/steamcast_episode102.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/102/">#102: Three Life Therapy</a></h1><h2><a href="http://www.thesteamcast.com/episodes/102/">Published 2nd October 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
 				
 				}
 				
