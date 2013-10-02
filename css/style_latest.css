@@ -2,7 +2,7 @@
 	height: 400px !important; }
 
 #header.latest {
-	background: url(http://www.thesteamcast.com/episodes/102/episode102_latest_image.jpg) center top no-repeat #000000 !important;
+	background: url(http://www.thesteamcast.com/episodes/102/episode102_latest_image.jpg) center top no-repeat #52CFE8 !important;
 	border-bottom: solid 5px #0064BF !important; }
 
 #header.latest #header_wrapper {
@@ -45,7 +45,7 @@
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	max-width: 660px;
+	max-width: 700px;
 	background: #0064BF;
 	color: #FFFFFF;
 	text-overflow: ellipsis;

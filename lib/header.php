@@ -97,7 +97,7 @@
 
 				if ($frontpage==true) {
 					
-					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/102/steamcast_episode102.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/102/">#102: Three Life Therapy</a></h1><h2><a href="http://www.thesteamcast.com/episodes/102/">Published 2nd October 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:55:27</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/102/steamcast_episode102.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/102/">#102: Three Life Therapy</a></h1><h2><a href="http://www.thesteamcast.com/episodes/102/">Published 2nd October 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:53:25</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
 				
 				}
 				
