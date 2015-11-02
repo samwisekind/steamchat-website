@@ -1,14 +1,16 @@
+<?php $hostLocation = "http://localhost:8888/steamcast-website/"; ?>
+
 <html>
 <head>
 <title>Steamcast<?php if ($pagetitle==null) {} else if ($episodepage==true) { echo ' ' , $pagetitle; } else { echo ': ' , $pagetitle; }; ?></title>
-<link rel="stylesheet" href="http://www.thesteamcast.com/css/style.css" type="text/css" media="screen">
-<?php if ($frontpage==true) { echo '<link rel="stylesheet" href="http://www.thesteamcast.com/css/style_latest.css" type="text/css" media="screen">'; } else if ($episodepage == true) { echo '<link rel="stylesheet" href="http://www.thesteamcast.com/css/style_episode.css" type="text/css" media="screen">'; }; ?>
-<link rel="shortcut icon" href="http://www.thesteamcast.com/img/favicon.ico">
+<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style.css" type="text/css" media="screen">
+<?php if ($frontpage==true) { echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style_latest.css" type="text/css" media="screen">'; } else if ($episodepage == true) { echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style_episode.css" type="text/css" media="screen">'; }; ?>
+<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://www.thesteamcast.com/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://www.thesteamcast.com/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="http://www.thesteamcast.com/js/scripts.js"></script>
-<?php if ($frontpage==true) { echo '<script type="text/javascript" src="http://www.thesteamcast.com/js/latestplayer.js"></script>'; } else if ($episodepage == true) { echo '<script type="text/javascript" src="http://www.thesteamcast.com/js/episodeplayer.js"></script>'; } ?>
+<script type="text/javascript" src="<?php echo $hostLocation; ?>js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $hostLocation; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scripts.js"></script>
+<?php if ($frontpage==true) { echo '<script type="text/javascript" src="' . $hostLocation . 'js/latestplayer.js"></script>'; } else if ($episodepage == true) { echo '<script type="text/javascript" src="' . $hostLocation . 'js/episodeplayer.js"></script>'; } ?>
 </head>
 <body>
 
@@ -80,10 +82,10 @@
             	<div id="menu_wrapper">
 					
 					<ul>
-						<li id="logo"><a href="http://www.thesteamcast.com/"><img src="http://www.thesteamcast.com/img/website_logo.png" alt=""></a></li>
-						<li><a href="http://www.thesteamcast.com/">Episodes</a></li>
-						<li><a href="http://www.thesteamcast.com/specials/">Specials</a></li>
-						<li><a href="http://www.thesteamcast.com/about/">About</a></li>
+						<li id="logo"><a href="<?php echo $hostLocation; ?>"><img src="<?php echo $hostLocation; ?>img/website_logo.png" alt=""></a></li>
+						<li><a href="<?php echo $hostLocation; ?>">Episodes</a></li>
+						<li><a href="<?php echo $hostLocation; ?>specials/">Specials</a></li>
+						<li><a href="<?php echo $hostLocation; ?>about/">About</a></li>
 						<li id="tipus" class="tipus_button"><span>Tip us!</span></li>
 					</ul>
 				
@@ -97,7 +99,7 @@
 
 				if ($frontpage==true) {
 					
-					echo '<div id="latest_controls"><audio id="latest_audio"><source src="http://www.thesteamcast.com/episodes/102/steamcast_episode102.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="http://www.thesteamcast.com/episodes/102/">#102: Three Life Therapy</a></h1><h2><a href="http://www.thesteamcast.com/episodes/102/">Published 2nd October 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:53:25</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
+					echo '<div id="latest_controls"><audio id="latest_audio"><source src="' .$hostLocation . 'episodes/102/steamcast_episode102.mp3" type="audio/mp3"></audio><div id="latest_audio_toggle"></div><h1><a href="' . $hostLocation . 'episodes/102/">#102: Three Life Therapy</a></h1><h2><a href="' .$hostLocation . 'episodes/102/">Published 2nd October 2013</a></h2><h3><span id="latest_audio_time_current">00:00:00</span> / <span id="latest_audio_time_total">00:53:25</span></h3><div id="latest_volume"><div id="volume_button"></div><div id="volume_bar"><div id="volume_slider"></div></div></div></div>';
 				
 				}
 				

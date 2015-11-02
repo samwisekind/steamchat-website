@@ -2,7 +2,7 @@
 	height: 400px !important; }
 
 #header.latest {
-	background: url(http://www.thesteamcast.com/episodes/102/episode102_latest_image.jpg) center top no-repeat #52CFE8 !important;
+	background: url(../episodes/102/episode102_latest_image.jpg) center top no-repeat #52CFE8 !important;
 	border-bottom: solid 5px #0064BF !important; }
 
 #header.latest #header_wrapper {
@@ -10,7 +10,7 @@
 	padding: 0 !important; }
 	
 #header.latest #menu_wrapper {
-	background-image: url(http://www.thesteamcast.com/episodes/102/episode102_latest_overlay.png) !important;
+	background-image: url(../episodes/102/episode102_latest_overlay.png) !important;
 	box-shadow: none !important; }
 
 #header.latest #latest_controls {
@@ -27,7 +27,7 @@
 	z-index: 100;
 	width: 100px;
 	height: 100px;
-	background: url(http://www.thesteamcast.com/img/latest_toggle.png) no-repeat; }
+	background: url(../img/latest_toggle.png) no-repeat; }
 
 #header.latest #latest_audio_toggle:hover {
 	cursor: pointer;
@@ -129,7 +129,7 @@
 	z-index: 10;
 	display: inline-block;
 	height: 400px;
-	background: url(http://www.thesteamcast.com/img/raster.png) left center repeat rgba(0, 100, 191, 0.25); }
+	background: url(../img/raster.png) left center repeat rgba(0, 100, 191, 0.25); }
 
 #header.latest #latest_volume {
 	position: absolute;
@@ -146,7 +146,7 @@
 	float: left;
 	width: 20px;
 	height: 35px;
-	background: url(http://www.thesteamcast.com/img/latest_volume.png) center left no-repeat; }
+	background: url(../img/latest_volume.png) center left no-repeat; }
 
 #header.latest #volume_button:hover {
 	cursor: pointer; }

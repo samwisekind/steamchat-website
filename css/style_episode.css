@@ -15,7 +15,7 @@ p .date {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	background: url(http://www.thesteamcast.com/img/player_toggle.png) left center no-repeat transparent; }
+	background: url(../img/player_toggle.png) left center no-repeat transparent; }
 
 #episode_audio_toggle:hover {
 	background-color: #0582F4;
