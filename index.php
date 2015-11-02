@@ -1,6 +1,9 @@
-<?php $frontpage=true; ?>
-	
-	<?php include "lib/header.php"; ?>
+<?php
+	$pageType = "index";
+	$latestEpisode = 102;
+	require_once "lib/episodeData.php";
+	require_once "lib/header.php";
+?>
 	
 	<div id="wrapper">
 
