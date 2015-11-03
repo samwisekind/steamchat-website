@@ -7,8 +7,8 @@
 	// [0][4] Publish date (DD/MM/YYYY)
 	// [0][5] Episode type ("interview", "special")
 	// [1] (Episode Images)
-	// [1][0] Header Cover Image
-	// [1][1] Header Main Image
+	// [1][0] Header Cover Image URL
+	// [1][1] Header Main Image URL
 	// [2] (Episode Files)
 	// [2][0] File Size (bytes)
 	// [2][1] File duration (HH:MM:SS)
@@ -22,8 +22,8 @@
 			"19/11/2013"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			"episodes/103/episode103_latest_overlay.png",
+			"episodes/103/episode103_latest_image.jpg"
 		),
 		array(
 			137886797,
@@ -40,8 +40,8 @@
 			"2/10/2013"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			"episodes/102/episode102_latest_overlay.png",
+			"episodes/102/episode102_latest_image.jpg"
 		),
 		array(
 			102629148,
@@ -58,8 +58,8 @@
 			"20/9/2013"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			"episodes/101/episode101_latest_overlay.png",
+			"episodes/101/episode101_latest_image.jpg"
 		),
 		array(
 			101246903,
@@ -76,8 +76,8 @@
 			"10/9/2013"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			"episodes/100/episode100_latest_overlay.png",
+			"episodes/100/episode100_latest_image.jpg"
 		),
 		array(
 			133087064,
@@ -94,8 +94,8 @@
 			"7/6/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			422833865,
@@ -112,8 +112,8 @@
 			"22/5/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			80912352,
@@ -130,8 +130,8 @@
 			"10/5/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			76783913,
@@ -148,8 +148,8 @@
 			"26/4/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			144083948,
@@ -167,8 +167,8 @@
 			"special"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			74120340,
@@ -185,8 +185,8 @@
 			"16/4/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			94859105,
@@ -203,8 +203,8 @@
 			"1/4/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			46700752,
@@ -221,8 +221,8 @@
 			"29/3/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			60775859,
@@ -239,8 +239,8 @@
 			"17/3/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			173309034,
@@ -257,8 +257,8 @@
 			"15/3/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			116661026,
@@ -275,8 +275,8 @@
 			"27/2/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			112468032,
@@ -293,8 +293,8 @@
 			"20/2/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			129244367,
@@ -311,8 +311,8 @@
 			"13/2/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			116977604,
@@ -329,8 +329,8 @@
 			"3/2/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			102015002,
@@ -347,8 +347,8 @@
 			"29/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			92705641,
@@ -365,8 +365,8 @@
 			"21/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			104150865,
@@ -383,8 +383,8 @@
 			"19/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			103574248,
@@ -401,8 +401,8 @@
 			"17/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			107577120,
@@ -419,8 +419,8 @@
 			"15/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			102835778,
@@ -437,8 +437,8 @@
 			"14/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			105191936,
@@ -455,8 +455,8 @@
 			"13/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			100720237,
@@ -473,8 +473,8 @@
 			"12/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			94906973,
@@ -491,8 +491,8 @@
 			"11/1/2012"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			134798444,
@@ -509,8 +509,8 @@
 			"3/12/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			146072370,
@@ -527,8 +527,8 @@
 			"3/12/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			54205284,
@@ -545,8 +545,8 @@
 			"9/11/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			150936970,
@@ -563,8 +563,8 @@
 			"29/10/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			105630219,
@@ -581,8 +581,8 @@
 			"29/10/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			79050984,
@@ -599,8 +599,8 @@
 			"24/10/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			134371755,
@@ -617,8 +617,8 @@
 			"23/10/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			88108625,
@@ -635,8 +635,8 @@
 			"16/9/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			92104940,
@@ -653,8 +653,8 @@
 			"28/8/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			140511102,
@@ -671,8 +671,8 @@
 			"26/8/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			155593930,
@@ -689,8 +689,8 @@
 			"17/8/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			110798116,
@@ -707,8 +707,8 @@
 			"16/8/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			172833583,
@@ -726,8 +726,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			78970060,
@@ -744,8 +744,8 @@
 			"9/7/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			104628643,
@@ -762,8 +762,8 @@
 			"7/7/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			109987065,
@@ -780,8 +780,8 @@
 			"28/6/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			107559846,
@@ -798,8 +798,8 @@
 			"20/6/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			197521302,
@@ -816,8 +816,8 @@
 			"03/6/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			114408168,
@@ -834,8 +834,8 @@
 			"01/6/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			113370392,
@@ -852,8 +852,8 @@
 			"12/5/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			145727243,
@@ -870,8 +870,8 @@
 			"05/5/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			191270585,
@@ -888,8 +888,8 @@
 			"29/4/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			171718453,
@@ -906,8 +906,8 @@
 			"28/4/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			125019036,
@@ -924,8 +924,8 @@
 			"06/4/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			107341870,
@@ -942,8 +942,8 @@
 			"01/4/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			67333144,
@@ -960,8 +960,8 @@
 			"17/3/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			65048579,
@@ -978,8 +978,8 @@
 			"11/3/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			96660505,
@@ -996,8 +996,8 @@
 			"09/3/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			82310294,
@@ -1014,8 +1014,8 @@
 			"07/3/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			67153421,
@@ -1032,8 +1032,8 @@
 			"16/2/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			70640873,
@@ -1051,8 +1051,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			26890576,
@@ -1070,8 +1070,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			110840188,
@@ -1089,8 +1089,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			96774190,
@@ -1107,8 +1107,8 @@
 			"07/2/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			135321730,
@@ -1125,8 +1125,8 @@
 			"25/1/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			88261197,
@@ -1143,8 +1143,8 @@
 			"25/1/2011"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			87110137,
@@ -1161,8 +1161,8 @@
 			"27/12/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			82955911,
@@ -1179,8 +1179,8 @@
 			"27/12/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			75202352,
@@ -1197,8 +1197,8 @@
 			"27/12/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			96313048,
@@ -1215,8 +1215,8 @@
 			"03/12/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			124621972,
@@ -1233,8 +1233,8 @@
 			"04/11/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			87182212,
@@ -1251,8 +1251,8 @@
 			"03/11/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			74347960,
@@ -1269,8 +1269,8 @@
 			"30/10/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			75483954,
@@ -1287,8 +1287,8 @@
 			"20/10/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			105512382,
@@ -1306,8 +1306,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			43205821,
@@ -1324,8 +1324,8 @@
 			"04/10/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			108005586,
@@ -1342,8 +1342,8 @@
 			"10/9/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			115620600,
@@ -1360,8 +1360,8 @@
 			"16/8/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			91762488,
@@ -1378,8 +1378,8 @@
 			"27/7/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			97591536,
@@ -1396,8 +1396,8 @@
 			"24/7/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			85253351,
@@ -1414,8 +1414,8 @@
 			"4/7/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			71549723,
@@ -1432,8 +1432,8 @@
 			"24/6/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			91122254,
@@ -1451,8 +1451,8 @@
 			"special"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			134984643,
@@ -1469,8 +1469,8 @@
 			"04/6/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			142267895,
@@ -1487,8 +1487,8 @@
 			"8/5/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			78960769,
@@ -1505,8 +1505,8 @@
 			"29/4/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			50916305,
@@ -1523,8 +1523,8 @@
 			"15/4/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			78536636,
@@ -1541,8 +1541,8 @@
 			"01/4/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			70791194,
@@ -1560,8 +1560,8 @@
 			"special"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			88692938,
@@ -1579,8 +1579,8 @@
 			"special"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			84746396,
@@ -1597,8 +1597,8 @@
 			"02/3/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			95686952,
@@ -1615,8 +1615,8 @@
 			"24/2/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			113159342,
@@ -1633,8 +1633,8 @@
 			"20/1/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			103046642,
@@ -1651,8 +1651,8 @@
 			"09/1/2010"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			5106263,
@@ -1670,8 +1670,8 @@
 			"special"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			92514172,
@@ -1688,8 +1688,8 @@
 			"18/11/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			102853684,
@@ -1706,8 +1706,8 @@
 			"21/10/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			76902752,
@@ -1724,8 +1724,8 @@
 			"03/10/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			100656146,
@@ -1742,8 +1742,8 @@
 			"10/9/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			110142249,
@@ -1760,8 +1760,8 @@
 			"09/9/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			61159752,
@@ -1778,8 +1778,8 @@
 			"26/8/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			83287589,
@@ -1797,8 +1797,8 @@
 			"interview"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			106069023,
@@ -1815,8 +1815,8 @@
 			"07/8/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			60211601,
@@ -1833,8 +1833,8 @@
 			"30/7/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			41655512,
@@ -1851,8 +1851,8 @@
 			"23/7/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			65486144,
@@ -1869,8 +1869,8 @@
 			"12/7/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			92959022,
@@ -1887,8 +1887,8 @@
 			"05/7/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			63878630,
@@ -1905,8 +1905,8 @@
 			"25/6/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			92100332,
@@ -1923,8 +1923,8 @@
 			"16/6/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			48348569,
@@ -1941,8 +1941,8 @@
 			"07/6/2009"
 		),
 		array(
-			"header_cover_image",
-			"header_main_image"
+			null,
+			null
 		),
 		array(
 			65829326,
