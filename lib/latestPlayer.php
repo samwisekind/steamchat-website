@@ -6,15 +6,15 @@
 <div id="latestWrapper">
 
 	<h1>
-		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">#<?php echo $latestEpisode . ": " . $episode["episode"][$latestEpisode][0]; ?></a>
+		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">#<?php echo $latestEpisode . ": " . $episode["episode"][$latestEpisode][0][0]; ?></a>
 	</h1>
 
 	<h2>
-		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <?php echo $episode["episode"][$latestEpisode][2]; ?></a>
+		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <?php echo $episode["episode"][$latestEpisode][0][3]; ?></a>
 	</h2>
 
 	<div id="latestTime">
-		<span id="latestTime-current">00:00:00</span> / <span id="latestTime-duration">00:53:25</span>
+		<span id="latestTime-current">--:--:--</span> / <span id="latestTime-duration">--:--:--</span>
 	</div>
 
 	<div id="latestVolume">
