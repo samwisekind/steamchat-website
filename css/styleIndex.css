@@ -1,337 +1,294 @@
+/********* SCSS *********/
 /******* HEADER *******/
-
 #header #headerMenu {
-	background-color: transparent; }
+  background-color: transparent; }
 
 #header {
-	height: 400px;
-	background: center top no-repeat #52CFE8;
-	border-bottom: solid 5px #0064BF; }
-	
+  height: 400px;
+  background: center top no-repeat #52CFE8;
+  border-bottom: solid 5px #0064BF; }
+
 #header #headerMenu {
-	box-shadow: none; }
+  box-shadow: none; }
 
 /******* HEADER - LATEST PLAYER *******/
-
 #header #latestToggle {
-	z-index: 10;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -50px;
-	margin-top: -50px;
-	width: 100px;
-	height: 100px; }
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px; }
 
 #header #latestToggle a {
-	background: url("../img/index/latestToggle.png") center top no-repeat transparent; }
+  opacity: .75;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/index/latestToggle.svg") left top no-repeat transparent; }
 
-#header #latest_audio_toggle:hover {
-	background-position: center bottom; }
+#header #latestToggle a:hover {
+  background-position: right top; }
+
+#header #latestToggle.playing a {
+  background-position: left bottom; }
+
+#header #latestToggle.playing a:hover {
+  background-position: right bottom; }
 
 #header #latestWrapper {
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	margin-left: -500px;
-	width: 1000px;
-	height: 400px; }
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -500px;
+  width: 1000px;
+  height: 400px; }
 
 #header #latestWrapper h1 a,
 #header #latestWrapper h2 a {
-	display: block;
-	width: 100%;
-	height: 100%; 
-	color: #FFFFFF;
-	text-decoration: none; }
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  text-decoration: none; }
 
 #header #latestWrapper h1 {
-	z-index: 10;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	display: table-cell;
-	margin: 0;
-	padding: 0;
-	max-width: 700px;
-	font-size: 48px;
-	line-height: 48px;
-	font-weight: 700;
-	color: #FFFFFF;
-	background: #0064BF; }
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  max-width: 700px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #0064BF; }
 
 #header #latestWrapper h1 a {
-	padding: 10px 15px 10px 10px;
-	overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
+  padding: 10px 15px 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 #header #latestWrapper h1 a:hover {
-	text-decoration: underline; }
+  text-decoration: underline; }
 
 #header #latestWrapper h2 {
-	z-index: 10;
-	position: absolute;
-	bottom: -40px;
-	left: 0;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	line-height: 20px;
-	font-weight: normal;
-	color: #FFFFFF;
-	background: #0064BF; }
+  z-index: 10;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #FFFFFF;
+  background: #0064BF; }
 
 #header #latestWrapper h2 a {
-	padding: 10px; }
+  padding: 10px; }
 
-#header #latestWrapper h1 a:hover, #header h2 a:hover {
-	color: inherit;
-	text-decoration: underline; }
+#header #latestWrapper h1 a:hover,
+#header h2 a:hover {
+  color: inherit;
+  text-decoration: underline; }
 
 #header #latestWrapper #latestTime {
-	pointer-events: none;
-	z-index: 0;
-	position: absolute;
-	right: 0;
-	bottom: 15px;
-	color: #FFFFFF;
-	font-size: 32px;
-	line-height: 32px;
-	letter-spacing: -1px;
-	text-align: right;
-	text-shadow: 0 0 3px #000000;
-	pointer-events: none;
-	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none; }
+  pointer-events: none;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-align: right;
+  text-shadow: 0 0 3px #111111;
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none; }
 
 #header #latestWrapper #latestVolume {
-	position: absolute;
-	bottom: -40px;
-	right: 0;
-	width: 150px;
-	height: 35px;
-	background: #0064BF; }
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: 150px;
+  height: 35px;
+  background: #0064BF; }
 
 #header #latestWrapper #latestVolume #latestVolume-toggle {
-	position: absolute;
-	left: 5px;
-	top: 5px;
-	display: inline-block;
-	width: 20px;
-	height: 35px; }
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px; }
 
 #header #latestWrapper #latestVolume #latestVolume-toggle a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: url("../img/latest_volume.png") center top no-repeat; }
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/index/latestVolume.svg") left center no-repeat; }
+
+#header #latestWrapper #latestVolume #latestVolume-toggle.muted a {
+  background-position: right center; }
 
 #header #latestWrapper #latestVolume #latestVolume-bar {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	display: inline-block;
-	overflow: hidden;
-	width: 100px;
-	height: 15px;
-	background: #0582F4;
-	cursor: pointer; }
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+  overflow: hidden;
+  width: 105px;
+  height: 15px;
+  background: #007ff2;
+  cursor: pointer; }
 
-#header #latestWrapper #latestVolume #latestVolume-toggle > div {
-	position: relative;
-	top: 0;
-	left: 68px;
-	width: 15px;
-	height: 20px;
-	background: #FFFFFF;
-	cursor: pointer; }
+#header #latestWrapper #latestVolume #latestVolume-bar > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #FFFFFF;
+  cursor: pointer; }
 
 #header #latestProgress {
-	z-index: 0;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden; }
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
 
 #header #latestProgress:hover {
-	cursor: pointer; }
+  cursor: pointer; }
 
 #header #latestProgress .cover {
-	z-index: 0;
-	position: absolute;
-	top: 0;
-	z-index: 10;
-	display: inline-block;
-	height: 400px;
-	border-right: 5px solid transparent;
-	background: url("../img/index/latestCover.png") left center repeat rgba(0, 100, 191, 0.25); }
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: inline-block;
+  height: 400px;
+  border-right: 5px solid transparent;
+  background: url("../img/index/latestCover.svg") left center repeat rgba(0, 100, 191, 0.25); }
 
 #header #latestProgress:hover .cover {
-	border-right-color: #0582F4; }
-
-
+  border-right-color: #0582F4; }
 
 /******* TRANSITIONS *******/
+#header #latestToggle {
+  -webkit-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 #header #latestProgress .cover {
-	-webkit-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  -webkit-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .episode_archives {
-	width: 100%;
-	table-layout: fixed; }
+  width: 100%;
+  table-layout: fixed; }
 
 .episode_archives .archives_title td {
-	padding-bottom: 10px;
-	font-weight: 700;
-	font-size: 18px; }
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px; }
 
 .episode_archives tr td {
-	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
-	max-width: 20%;
-	border: 0px #000000 solid;
-	font-size: 16px;
-	font-family: Arial, sans-serif !important;
-	color: inherit;
-	vertical-align: top; }
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 20%;
+  border: 0px #111111 solid;
+  font-size: 16px;
+  font-family: Arial, sans-serif !important;
+  color: inherit;
+  vertical-align: top; }
 
 .episode_archives ul {
-	margin: 0 !important;
-	padding: 0 !important;
-	list-style: none;
-	border-left: none !important; }
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  border-left: none !important; }
 
 .episode_archives ul li {
-	margin: 0 !important;
-	padding: 0 !important;
-	display: block;
-	list-style: none;
-	text-align: left;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-weight: normal;
-	color: #0582F4; }
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  list-style: none;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+  color: #0582F4; }
 
 .episode_archives.special_archives {
-	margin-bottom: 50px; }
+  margin-bottom: 50px; }
 
 .episode_archives.special_archives ul li {
-	float: left;
-	display: inline-block;
-	width: 20%;
-	color: #0582F4; }
+  float: left;
+  display: inline-block;
+  width: 20%;
+  color: #0582F4; }
 
 .episode_archives ul li a {
-	display: block;
-	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 10px;
-	width: 100%;
-	height: 100%;
-	color: inherit;
-	text-decoration: none;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-family: Arial, sans-serif !important; }
+  display: block;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Arial, sans-serif !important; }
 
 .episode_archives ul li a .title {
-	clear: both;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 14px; }
+  clear: both;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px; }
 
 .episode_archives .date, .episode_archives .duration {
-	color: #999999;
-	text-decoration: none;
-	font-weight: normal;
-	font-size: 12px; }
+  color: #999999;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px; }
 
 .episode_archives .date {
-	float: left; }
+  float: left; }
 
 .episode_archives .duration {
-	float: right; }
+  float: right; }
 
 .episode_archives ul li:hover {
-	background: #0582F4;
-	color: #FFFFFF !important; }
+  background: #0582F4;
+  color: #FFFFFF !important; }
 
 .episode_archives ul li a:hover {
-	color: inherit !important; }
+  color: inherit !important; }
 
 .episode_archives ul li:hover .date, .episode_archives ul li:hover .duration {
-	color: #FFFFFF !important; }
+  color: #FFFFFF !important; }
+
+/*# sourceMappingURL=styleIndex.css.map */

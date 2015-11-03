@@ -29,7 +29,7 @@
 </div>
 
 
-<div id="latestToggle">
+<div id="latestToggle" class="playing">
 	<a href="#"></a>
 </div>
 
