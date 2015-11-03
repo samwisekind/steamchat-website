@@ -1,5 +1,5 @@
 <audio id="latestAudio">
-	<source src="<?php echo $hostLocation . 'episodes/' . $latestEpisode . '/steamcast_episode' . $latestEpisode . '.mp3" type="audio/mp3"' ?>">
+	<source src="<?php echo $hostLocation . 'episodes/' . $latestEpisode . '/steamchat_episode' . $latestEpisode . '.mp3" type="audio/mp3"' ?>">
 </audio>
 
 

@@ -81,7 +81,7 @@
 						<li><a href="<?php echo $hostLocation; ?>episodes/86/"><span class="title">#86: Red Letter Day</span> <br> <span class="date">3/2/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
 						<li><a href="<?php echo $hostLocation; ?>episodes/85/"><span class="title">#85: Origins of Impulse</span> <br> <span class="date">29/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
 						<li><a href="<?php echo $hostLocation; ?>episodes/84/"><span class="title">#84: A Call For Communication</span> <br> <span class="date">21/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
-						<li><a href="<?php echo $hostLocation; ?>episodes/83/"><span class="title">#83: Steamcast 2011 Awards</span> <br> <span class="date">19/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
+						<li><a href="<?php echo $hostLocation; ?>episodes/83/"><span class="title">#83: Steamchat 2011 Awards</span> <br> <span class="date">19/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
 						<li><a href="<?php echo $hostLocation; ?>episodes/82/"><span class="title">#82: The Rear End Special</span> <br> <span class="date">17/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
 						<li><a href="<?php echo $hostLocation; ?>episodes/81/"><span class="title">#81: Valve Trollstep</span> <br> <span class="date">15/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>
 						<li><a href="<?php echo $hostLocation; ?>episodes/80/"><span class="title">#80: 2011 VGAs</span> <br> <span class="date">14/1/2012</span><!--<span class="duration">00:00:00</span>--></a></li>

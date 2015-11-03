@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Steamcast<?php if ($pageType == "???") { echo " " , $pageTitle; } else if ($pageType == "episode") { echo ': ' , $pageTitle; }; ?></title>
+		<title>Steamchat<?php if ($pageType == "???") { echo " " , $pageTitle; } else if ($pageType == "episode") { echo ': ' , $pageTitle; }; ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style<?php echo ucfirst($pageType) ?>.css" type="text/css" media="screen">
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
@@ -29,11 +29,11 @@
 				<div class="right">
 
 					<ul>
-						<li><a href="mailto:podcast@thesteamcast.com" id="tipus_methods_email">Email (podcast@thesteamcast.com)</a></li>
-						<li><a href="http://www.twitter.com/Steamcast" id="tipus_methods_twitter">Twitter (@Steamcast)</a></li>
-						<li><a href="http://www.facebook.com/Steamcast" id="tipus_methods_facebook">Facebook</a></li>
-						<li><a href="http://www.steamcommunity.com/groups/Steamcast" id="tipus_methods_steam">Steam</a></li>
-						<li><a href="http://www.youtube.com/Steamcast" id="tipus_methods_youtube">YouTube</a></li>
+						<li><a href="mailto:podcast@thesteamchat.com" id="tipus_methods_email">Email (podcast@thesteamchat.com)</a></li>
+						<li><a href="http://www.twitter.com/Steamchat" id="tipus_methods_twitter">Twitter (@Steamchat)</a></li>
+						<li><a href="http://www.facebook.com/Steamchat" id="tipus_methods_facebook">Facebook</a></li>
+						<li><a href="http://www.steamcommunity.com/groups/Steamchat" id="tipus_methods_steam">Steam</a></li>
+						<li><a href="http://www.youtube.com/Steamchat" id="tipus_methods_youtube">YouTube</a></li>
 					</ul>
 
 				</div>

@@ -53,7 +53,7 @@ figcaption {
 #headerTip {
 	height: 0px;
 	overflow: hidden;
-	background: $color-steamcast; }
+	background: $color-steamchat; }
 
 body.headerTip #headerTip {
 	height: 350px; }
@@ -175,7 +175,7 @@ body.headerTip #headerTip {
 	padding: 0 15px 0 15px;
 	width: 100%;
 	height: 75px;
-	color: $color-steamcast;
+	color: $color-steamchat;
 	font-weight: 400; 
 	font-size: 18px;
 	line-height: 18px;
@@ -187,14 +187,14 @@ body.headerTip #headerTip {
 #header #headerMenu ul li a:hover,
 #header #headerMenu-tip a:hover {
 	color: $color-white;
-	background: $color-steamcast;
+	background: $color-steamchat;
 	cursor: pointer; }
 
 #header #headerMenu-tip {
 	float: right;
 	width: 90px;
 	height: 100%;
-	background: $color-steamcastLight; }
+	background: $color-steamchatLight; }
 
 #header #headerMenu-tip a {
 	color: $color-white; }
