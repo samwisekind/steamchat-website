@@ -1,13 +1,13 @@
 <?php
 
 	// [0] (Episode Information)
-	// [0][1] Episode Title
-	// [0][2] Episode Description
-	// [0][4] Publish date (DD/MM/YYYY)
-	// [0][5] Episode type ("interview", "special")
-	// [0][6] (Episode Links)
-	// [0][6][0] Shownotes URL
-	// [0][6][1] Transcript URL
+	// [0][0] Episode Title
+	// [0][1] Episode Description
+	// [0][2] Publish date (DD/MM/YYYY)
+	// [0][3] Episode type ("interview", "special")
+	// [0][4] (Episode Links)
+	// [0][5][0] Shownotes URL
+	// [0][5][1] Transcript URL
 	// [1] (Episode Images)
 	// [1][0] Header Cover Image
 	// [1][1] Header Main Image
