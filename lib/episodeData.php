@@ -3,12 +3,14 @@
 	// [0] (Episode Information)
 	// [0][1] Episode Title
 	// [0][2] Episode Description
-	// [0][3] Shownotes Link
 	// [0][4] Publish date (DD/MM/YYYY)
 	// [0][5] Episode type ("interview", "special")
+	// [0][6] (Episode Links)
+	// [0][6][0] Shownotes URL
+	// [0][6][1] Transcript URL
 	// [1] (Episode Images)
-	// [1][0] Header Cover Image URL
-	// [1][1] Header Main Image URL
+	// [1][0] Header Cover Image
+	// [1][1] Header Main Image
 	// [2] (Episode Files)
 	// [2][0] File Size (bytes)
 	// [2][1] File duration (HH:MM:SS)
@@ -18,8 +20,11 @@
 		array(
 			"Three Machines",
 			"Feeling boxed-in because of consoles? Join us as we discuss Steam OS, Steam Box and the Steam Controller.",
-			"shownotes link",
-			"19/11/2013"
+			"19/11/2013",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			"episodes/103/episode103_latest_overlay.png",
@@ -36,8 +41,11 @@
 		array(
 			"Three Life Therapy",
 			"Feeling down because of Half-Life 3? Don't worry, we've got your back! Topics in this episode include GTA, Amnesia, Saints Row, Half-Life, Steam and more.",
-			"shownotes link",
-			"2/10/2013"
+			"2/10/2013",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			"episodes/102/episode102_latest_overlay.png",
@@ -54,8 +62,11 @@
 		array(
 			"Pacific Podcast",
 			"In this episode we discuss Amnesia: A Machine for Pigs, making choices in video games, and briefly touch on Pacific Rim.",
-			"shownotes link",
-			"20/9/2013"
+			"20/9/2013",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			"episodes/101/episode101_latest_overlay.png",
@@ -72,8 +83,11 @@
 		array(
 			"Rise and Shine",
 			"Steamchat returns from the ashes as we catch up on a year of seperation, make our peace and get back to doing what we love - making this podcast.",
-			"shownotes link",
-			"10/9/2013"
+			"10/9/2013",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			"episodes/100/episode100_latest_overlay.png",
@@ -90,8 +104,11 @@
 		array(
 			"The End",
 			"In the final episode we discuss the past, present and future of the podcast and talk to a handful of guests as we bid farewell to Steamchat. This episode was also released on 7th June 2012 to commemorate the third birthday of Steamchat.",
-			"shownotes link",
-			"7/6/2012"
+			"7/6/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -108,8 +125,11 @@
 		array(
 			"Perpetual Testing",
 			"In this episode we discuss the announcement of the new Portal 2 DLC, more Half-Life 3 speculation, and more!",
-			"shownotes link",
-			"22/5/2012"
+			"22/5/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -126,8 +146,11 @@
 		array(
 			"Flat World",
 			"In this episode we talk about Gabe's statement about E3, Valve's new employee handbook, Dota 2 going free-to-play, and more!",
-			"shownotes link",
-			"10/5/2012"
+			"10/5/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -144,8 +167,11 @@
 		array(
 			"Powerful Impact Sensations",
 			"In this episode we talk about Valve's 'SOB' game, Half-Life 3, Michael Abrash, GOG, and more!",
-			"shownotes link",
-			"26/4/2012"
+			"26/4/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -163,8 +189,11 @@
 			"Mass Effect 3 Special",
 			"In this episode we revisit Mass Effect 3, one month on from its release, and discuss our full thoughts on the game, series and franchise as a whole.",
 			"18/4/2012",
-			"shownotes link",
-			"special"
+			"special",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -181,8 +210,11 @@
 		array(
 			"Super Duper Consumerism",
 			"In this episode we discuss the recent infamous award given to EA, charging for weapons and gear as DLC in games, and more!",
-			"shownotes link",
-			"16/4/2012"
+			"16/4/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -199,8 +231,11 @@
 		array(
 			"Unexpected Item Found In Bagging Area",
 			"Item has been removed from bagging area. Please return item to bagging area.",
-			"shownotes link",
-			"1/4/2012"
+			"1/4/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -217,8 +252,11 @@
 		array(
 			"Crowd Sourced",
 			"In this episode we discuss the GDC post-mortem and BAFTA awards of Portal 2, some Counter-Strike: Global Offensive news and the ups and downs of crowd-sourced game funding.",
-			"shownotes link",
-			"29/3/2012"
+			"29/3/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -235,8 +273,11 @@
 		array(
 			"Mass Discussion",
 			"In this episode we discuss the concept of choice in video game design, cover some Steam news, and have a lengthy discussion about Mass Effect 3!",
-			"shownotes link",
-			"17/3/2012"
+			"17/3/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -253,8 +294,11 @@
 		array(
 			"Acid Generation",
 			"In this episode we discuss the Steam Box rumours, some new Half-Life 2: Episode Three hints, Valve's E3 presence, and more!",
-			"shownotes link",
-			"15/3/2012"
+			"15/3/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -271,8 +315,11 @@
 		array(
 			"A Machine For Pigs",
 			"In this episode we discuss the announcement of Amnesia: A Machine For Pigs, The Penny Arcade Report interview with Gabe Newell, the dangers of gamer entitlement, and more!",
-			"shownotes link",
-			"27/2/2012"
+			"27/2/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -289,8 +336,11 @@
 		array(
 			"Beyond Esther",
 			"In this episode we answer a handful of emails and discuss our thoughts on the commercial release of Dear Esther.",
-			"shownotes link",
-			"20/2/2012"
+			"20/2/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -307,8 +357,11 @@
 		array(
 			"Spaceship 087",
 			"In this episode we are joined by our good friend Brett (surfrock22) as we discuss the latest news on Valve's 'SOB' game, the Space Core mod for Skyrim, and the results of the 'A Red Letter Day' community event.",
-			"shownotes link",
-			"13/2/2012"
+			"13/2/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -325,8 +378,11 @@
 		array(
 			"Red Letter Day",
 			"In this episode we discuss the Steam Mobile App, the latest Black Mesa Source news, and have a chat with Surfrock22 about the 'A Red Letter Day' event.",
-			"shownotes link",
-			"3/2/2012"
+			"3/2/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -343,8 +399,11 @@
 		array(
 			"Origins of Impulse",
 			"In this episode we discuss Valve games on Impulse, new publishers on Origin, Gaikai, and more!",
-			"shownotes link",
-			"29/1/2012"
+			"29/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -361,8 +420,11 @@
 		array(
 			"A Call For Communication",
 			"In this episode we discuss Return to Ravenholm, the latest attempt in gaining Valve's attention, Dear Esther, and more!",
-			"shownotes link",
-			"21/1/2012"
+			"21/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -379,8 +441,11 @@
 		array(
 			"Steamchat 2011 Awards",
 			"In this episode we talk about our best and worst gaming moments of 2011.",
-			"shownotes link",
-			"19/1/2012"
+			"19/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -397,8 +462,11 @@
 		array(
 			"The Rear End Special",
 			"In this episode we participate in a quiz.",
-			"shownotes link",
-			"17/1/2012"
+			"17/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -415,8 +483,11 @@
 		array(
 			"Valve Trollstep",
 			"In this episode we talk about the latest Half-Life rumours.",
-			"shownotes link",
-			"15/1/2012"
+			"15/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -433,8 +504,11 @@
 		array(
 			"2011 VGAs",
 			"In this episode we talk about the 2011 VGAs.",
-			"shownotes link",
-			"14/1/2012"
+			"14/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -451,8 +525,11 @@
 		array(
 			"Just A Few More",
 			"In this episode we talk about the CryEngine 3, the Steam Autumn Sale, and more!",
-			"shownotes link",
-			"13/1/2012"
+			"13/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -469,8 +546,11 @@
 		array(
 			"Nearly There",
 			"In this episode we talk about Gearbox, Counter-Strike: Global Offensive, the EA Forums, Nintendo's attitude towards DLC, and more!",
-			"shownotes link",
-			"12/1/2012"
+			"12/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -487,8 +567,11 @@
 		array(
 			"Running Behind",
 			"In this episode we discuss the intrusion into the Steam network and the Steam Users' Forums, the launch of the Dota 2 beta, and more!",
-			"shownotes link",
-			"11/1/2012"
+			"11/1/2012",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -505,8 +588,11 @@
 		array(
 			"Economics of Fun",
 			"In this episode we discuss how Valve experiments with the economics of video games, Origin's new publishers, the announcement of Mass Effect 3 multiplayer, and more!",
-			"shownotes link",
-			"3/12/2011"
+			"3/12/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -523,8 +609,11 @@
 		array(
 			"Plush Flush",
 			"In this episode we discuss the upcoming Portal 2 in-game map editor, Counter-Strike: Global Offensive, and more!",
-			"shownotes link",
-			"3/12/2011"
+			"3/12/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -541,8 +630,11 @@
 		array(
 			"Creative Minds",
 			"In this episode we delve into a lengthy discussion about on Valve's creative writing process, how Newell predicts Apple will redefine gaming expectations, why Rage had a difficult launch on PC, and more!",
-			"shownotes link",
-			"9/11/2011"
+			"9/11/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -559,8 +651,11 @@
 		array(
 			"Rage Raging Rager",
 			"In this episode we talk about Battlefield 3, RAGE, John Carmack and more!",
-			"shownotes link",
-			"29/10/2011"
+			"29/10/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -577,8 +672,11 @@
 		array(
 			"Eurogamer Expo",
 			"In this episode we talk about the Eurogamer Expo, the new Portal 2 DLC, the Dota 2 client leak and more!",
-			"shownotes link",
-			"29/10/2011"
+			"29/10/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -595,8 +693,11 @@
 		array(
 			"Our Gaming Lives",
 			"In this episode we take a break from covering Valve news and delve into a lengthy discussion about the social problems of video gaming.",
-			"shownotes link",
-			"24/10/2011"
+			"24/10/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -613,8 +714,11 @@
 		array(
 			"Counter-Podcasting",
 			"In this episode we discuss the latest news about Counter-Strike: Global Offensive, Gamescom and a whole bunch more!",
-			"shownotes link",
-			"23/10/2011"
+			"23/10/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -631,8 +735,11 @@
 		array(
 			"Deal With It",
 			"In this episode we discuss our thoughts and feelings of what was shown at Gamescom 2011, Dota 2: The International and a whole bunch more!",
-			"shownotes link",
-			"16/9/2011"
+			"16/9/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -649,8 +756,11 @@
 		array(
 			"Go Time",
 			"In this episode we discuss the announcement of Counter-Strike: Global Offensive, what it means for Valve, Half-Life, e-sports and more!",
-			"shownotes link",
-			"28/8/2011"
+			"28/8/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -667,8 +777,11 @@
 		array(
 			"Interview with Black Mesa",
 			"In this episode we had the pleasure of talking to Mike, Kevin and Ben from the Black Mesa Modification Team, the team behind the highly anticipated Source modification Black Mesa. This episode also includes seven exclusive audio clips from the mod!",
-			"shownotes link",
-			"26/8/2011"
+			"26/8/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -685,8 +798,11 @@
 		array(
 			"Perfect Voices",
 			"In this episode we are joined two voice actors from the Black Mesa Source mod, Kevin and Mike, as we discuss the new Steam download system, Valve's upcoming comic books, Half-Life 3 and more!",
-			"shownotes link",
-			"17/8/2011"
+			"17/8/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -703,8 +819,11 @@
 		array(
 			"Shoulders of Giants",
 			"In this episode we are joined by a long-time fan and supporter, Susan, who discusses about studying alongside game developers and artists, and more!",
-			"shownotes link",
-			"16/8/2011"
+			"16/8/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -722,8 +841,11 @@
 			"Interview with Jonathan Coulton",
 			"We had the pleasure of being able to talk to Jonathan Coulton, the song writer behind Still Alive and Want You Gone, and ask him questions from the community.",
 			"25/7/2011",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -740,8 +862,11 @@
 		array(
 			"Summer Time",
 			"In this episode we celebrate the start of summer by covering the Steam Summer Camp Sale, the second volume of the Portal 2 soundtrack and more.",
-			"shownotes link",
-			"9/7/2011"
+			"9/7/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -758,8 +883,11 @@
 		array(
 			"Free to Listen",
 			"In this episode we discuss the ground-breaking news of Team Fortress 2's new free-to-play direction, Meet the Medic and more.",
-			"shownotes link",
-			"7/7/2011"
+			"7/7/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -776,8 +904,11 @@
 		array(
 			"Nerd Gels",
 			"In this episode we discuss the possible Half-Life 3 reveal, Valve's upcoming free-to-play project and gels for that handsome nerd in you.",
-			"shownotes link",
-			"28/6/2011"
+			"28/6/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -794,8 +925,11 @@
 		array(
 			"E3 2011 Discussion",
 			"In this episode we go over the 2011 E3 event and talk about our favorite and least favorite events.",
-			"shownotes link",
-			"20/6/2011"
+			"20/6/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -812,8 +946,11 @@
 		array(
 			"Podcast Monger",
 			"In this episode we give out a bunch of games, courtesy of Fishmonger, and discuss a whole bunch of pre-E3 news.",
-			"shownotes link",
-			"03/6/2011"
+			"03/6/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -830,8 +967,11 @@
 		array(
 			"Up In Your SDK",
 			"In this episode we discuss Daily Deals, Valve's presence at E3 and the secrets that await us in the Portal 2 SDK.",
-			"shownotes link",
-			"01/6/2011"
+			"01/6/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -848,8 +988,11 @@
 		array(
 			"Deep Theories",
 			"In this episode we discuss the possibility of a mobile version of Steam, the Mass Effect 3 delay, our highs and lows of Portal 2 and more.",
-			"shownotes link",
-			"12/5/2011"
+			"12/5/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -866,8 +1009,11 @@
 		array(
 			"Portal 2 Compilation",
 			"In this episode we invited listeners of the show to come and share their thoughts on Portal 2! A big thanks to everyone who came and participated.",
-			"shownotes link",
-			"05/5/2011"
+			"05/5/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -884,8 +1030,11 @@
 		array(
 			"Absurd Abduction",
 			"In this episode Saurabh explains the final stretch of the ARG and what happened when he was abducted to Valve.",
-			"shownotes link",
-			"29/4/2011"
+			"29/4/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -902,8 +1051,11 @@
 		array(
 			"ARGing Late",
 			"In this episode we explain and discuss the Portal 2 ARG, where it was and where it went (present tense in your past tense, yo).",
-			"shownotes link",
-			"28/4/2011"
+			"28/4/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -920,8 +1072,11 @@
 		array(
 			"Potato Sack of News",
 			"descIn this episode, we catch up on a huge amount of Valve news, discuss the recent acquisition of Impulse, give away a free copy of Portal 2 and more.ription",
-			"shownotes link",
-			"06/4/2011"
+			"06/4/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -938,8 +1093,11 @@
 		array(
 			"Quality Legitimacy",
 			"Cardboard boxes are industrially prefabricated boxes, primarily used for packaging goods and materials. Specialists in industry seldom use the term cardboard because it does not denote a specific material.",
-			"shownotes link",
-			"01/4/2011"
+			"01/4/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -956,8 +1114,11 @@
 		array(
 			"Australianless",
 			"In this episode we talk about GDC, the departure of Kelly Bailey from Valve, more Portal 2 news and much more.",
-			"shownotes link",
-			"17/3/2011"
+			"17/3/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -974,8 +1135,11 @@
 		array(
 			"The Big Guard",
 			"In this episode we talk about the latest news about Steam, Portal 2, GDC 2011 and a much more.",
-			"shownotes link",
-			"11/3/2011"
+			"11/3/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -992,8 +1156,11 @@
 		array(
 			"Surfin' 'n' Ragin' Nerds",
 			"In this episode we are joined again by surfrock22 as we discuss the recent Left 4 Dead controversies, Portal 2 release dates, people stealing games and more. Thanks again to surfrock22 for the fun!",
-			"shownotes link",
-			"09/3/2011"
+			"09/3/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1010,8 +1177,11 @@
 		array(
 			"Mid-Half-Life Crisis",
 			"In this episode, we are half way to the end... or are we? Topics include Portal 2, Gabe Newell and Dear Esther news.",
-			"shownotes link",
-			"07/3/2011"
+			"07/3/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1028,8 +1198,11 @@
 		array(
 			"Stepping Back",
 			"In this episode we sit down and talk with backstepper about his trip to Valve, as well as cover some of the latest news.",
-			"shownotes link",
-			"16/2/2011"
+			"16/2/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1047,8 +1220,11 @@
 			"Interview with Harry Robins, voice of Dr. Kleiner",
 			"We had the pleasure of being able to talk to Harry Robins, the voice actor behind Dr. Kleiner, and ask him questions about his work with Half-Life and beyond.",
 			"14/2/2011",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1066,8 +1242,11 @@
 			"Gabe Newell 2011 Interview, Part 2",
 			"Part 2 of 2. We present the second Gabe Newell interview thanks to community member backstepper. Newell answers a range of questions submitted by the community.",
 			"11/2/2011",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1085,8 +1264,11 @@
 			"Gabe Newell 2011 Interview, Part 1",
 			"Part 1 of 2. We present the second Gabe Newell interview thanks to community member backstepper. Newell answers a range of questions submitted by the community.",
 			"09/2/2011",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1103,8 +1285,11 @@
 		array(
 			"Anticipation",
 			"These aren't the interviews you are looking for. However, this episode we cover a bunch of Portal 2 news and discuss at length and in depth the current state of game reviews.",
-			"shownotes link",
-			"07/2/2011"
+			"07/2/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1121,8 +1306,11 @@
 		array(
 			"Internet Reputation",
 			"This week, we cover a bunch of Portal 2 news and previews and discuss the personal impact of Half-Life.",
-			"shownotes link",
-			"25/1/2011"
+			"25/1/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1139,8 +1327,11 @@
 		array(
 			"The Glitch",
 			"A new year, a whole bunch to look forward to. We cover the latest news, articles and discuss what Valve has learnt over the years.",
-			"shownotes link",
-			"25/1/2011"
+			"25/1/2011",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1157,8 +1348,11 @@
 		array(
 			"Decade's Renegades",
 			"We award our favorite games of the past decade for their outstanding features and qualities.",
-			"shownotes link",
-			"27/12/2010"
+			"27/12/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1175,8 +1369,11 @@
 		array(
 			"Merry Quizmas",
 			"Joined by lovely lady and a gorgeous gentleman as guests, EDJE puts us to the test in a Valve-related quiz. Also, a surprise guest appearance by Nabe 'Troll' Gewell.",
-			"shownotes link",
-			"27/12/2010"
+			"27/12/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1193,8 +1390,11 @@
 		array(
 			"The Christmas Fallout",
 			"We go over the/12/news and have a fruitful discussion about Fallout New Vegas.",
-			"shownotes link",
-			"27/12/2010"
+			"27/12/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1211,8 +1411,11 @@
 		array(
 			"The Delay Is A Lie",
 			"This episode is already a month late, so typing a meaningful description for it would only make the delay longer!",
-			"shownotes link",
-			"03/12/2010"
+			"03/12/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1229,8 +1432,11 @@
 		array(
 			"Spooky Screamcast",
 			"Boo! In this extra scary episode, if you dare to listen, we go over a bunch of horrifying news including the frightening TF2 Halloween update, creepy issues over Dota 2 and much more.",
-			"shownotes link",
-			"04/11/2010"
+			"04/11/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1247,8 +1453,11 @@
 		array(
 			"Dohtah",
 			"We go over the announcement of Dota 2, amongst other news.",
-			"shownotes link",
-			"03/11/2010"
+			"03/11/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1265,8 +1474,11 @@
 		array(
 			"Worst Things Evah",
 			"We revisit the topics from last week, but with more perspectives from the community.",
-			"shownotes link",
-			"30/10/2010"
+			"30/10/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1283,8 +1495,11 @@
 		array(
 			"Mann-ly Sacrifice",
 			"Your favorite podcast covers the recent week in news, from the Left 4 Dead DLC to the Team Fortress 2 update.",
-			"shownotes link",
-			"20/10/2010"
+			"20/10/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1302,8 +1517,11 @@
 			"Interview with LambdaGeneration",
 			"We interview the guys over at LambdaGeneration, a fan-site dedicated to news about Valve and community content.",
 			"7/10/2010",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1320,8 +1538,11 @@
 		array(
 			"Continue Testing",
 			"Joined by guest host Sebastian (known as backstepper) we discuss his experiences at GamesCom, the comparison between Half-Life and Half-Life 2, the newly released Left 4 Dead comic and a whole bunch more!",
-			"shownotes link",
-			"04/10/2010"
+			"04/10/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1338,8 +1559,11 @@
 		array(
 			"New Newer News",
 			"We cover the news from GamesCon and a few fan-emails.",
-			"shownotes link",
-			"10/9/2010"
+			"10/9/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1356,8 +1580,11 @@
 		array(
 			"Probably Old",
 			"We dive together, naked, into a plethora of topics and drown ourselves in discussion.",
-			"shownotes link",
-			"16/8/2010"
+			"16/8/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1374,8 +1601,11 @@
 		array(
 			"Cold Coffee",
 			"With a whole bunch of news to catch up on, we catch up on a whole bunch of news.",
-			"shownotes link",
-			"27/7/2010"
+			"27/7/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1392,8 +1622,11 @@
 		array(
 			"E3 Special, Part 3 with surfrock22",
 			"Part 3 of 3. We catch up on old news, as usual, and talk about E3. We're also joined by surfrock22 from the forums.",
-			"shownotes link",
-			"24/7/2010"
+			"24/7/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1410,8 +1643,11 @@
 		array(
 			"E3 Special, Part 2",
 			"Part 2 of 3. We catch up on old news, as usual, and talk about E3.",
-			"shownotes link",
-			"4/7/2010"
+			"4/7/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1428,8 +1664,11 @@
 		array(
 			"E3 Special, Part 1",
 			"Part 1 of 3. We catch up on old news, as usual, and talk about E3.",
-			"shownotes link",
-			"24/6/2010"
+			"24/6/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1447,8 +1686,11 @@
 			"Lost Special",
 			"In this episode Sam and Brad discuss everything about the television show Lost.",
 			"06/6/2010",
-			"shownotes link",
-			"special"
+			"special",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1465,8 +1707,11 @@
 		array(
 			"Featuring DJ Bradely-D-Diddles",
 			"This week DJ Bradely-D-Diddles, DJ Spitfire and DJ Flamov cover the latest news and other topics such as Steam on Mac to the Counter-Strike update.",
-			"shownotes link",
-			"04/6/2010"
+			"04/6/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1483,8 +1728,11 @@
 		array(
 			"Passable Podcast",
 			"With a new recording method by our sides, we go over the usual and somehow end up discussing 'The Passing' DLC for Left 4 Dead 2.",
-			"shownotes link",
-			"8/5/2010"
+			"8/5/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1501,8 +1749,11 @@
 		array(
 			"Mailbag Maintenance",
 			"In this episode Sam and Saurabh clean out their sacks... of lovely community emails!",
-			"shownotes link",
-			"29/4/2010"
+			"29/4/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1519,8 +1770,11 @@
 		array(
 			"Viva Voce",
 			"The Steamchat heroes battle the evil forces of news and community feedback in this epic tale of discussion and debate.",
-			"shownotes link",
-			"15/4/2010"
+			"15/4/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1537,8 +1791,11 @@
 		array(
 			"Think Twice",
 			"In what was probably the biggest week of Valve-related news, we cover it all from top to bottom as well as the usual fan mail and some threads from the forums.",
-			"shownotes link",
-			"01/4/2010"
+			"01/4/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1556,8 +1813,11 @@
 			"Portal 2 Special, Part 2",
 			"Part 2 of 2. We discuss the recently announced game from Valve, Portal 2, as well as new information regarding The Passing DLC for Left 4 Dead 2. In addition, we go over some fan mail and news.",
 			"22/3/2010",
-			"shownotes link",
-			"special"
+			"special",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1575,8 +1835,11 @@
 			"Portal 2 Special, Part 1",
 			"Part 1 of 2. We discuss the recently announced game from Valve, Portal 2, as well as new information regarding The Passing DLC for Left 4 Dead 2. In addition, we go over some fan mail and news.",
 			"22/3/2010",
-			"shownotes link",
-			"special"
+			"special",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1593,8 +1856,11 @@
 		array(
 			"I am Welding this Doah",
 			"Be warned, this episode is quite mature. Not the hosts themselves, but rather the content. We are all over the place this week, but we hope you enjoy it!",
-			"shownotes link",
-			"02/3/2010"
+			"02/3/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1611,8 +1877,11 @@
 		array(
 			"Riders on the Forums",
 			"From ponies in Secret of the Magic Crystals to Brad and Modern Warfare 2, this week is packed with lots of yummy things to chew on with your ears. We talk forum threads, news, reviews and, just for the LOST fans out there, a detailed discussion on the latest episode of and the story in general for the last 20 minutes of the show!",
-			"shownotes link",
-			"24/2/2010"
+			"24/2/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1629,8 +1898,11 @@
 		array(
 			"Community Appreciation Spectacular",
 			"A new decade, the same show. The Steamchat crew are back in action, starting off the new decade with a spectacular community-dedicated episode.",
-			"shownotes link",
-			"20/1/2010"
+			"20/1/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1647,8 +1919,11 @@
 		array(
 			"Short and Sweet",
 			"This is a short episode highlighting what's been going on.",
-			"shownotes link",
-			"09/1/2010"
+			"09/1/2010",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1666,8 +1941,11 @@
 			"Left 4 Dead 2 Special",
 			"It's all Left 4 Dead 2 this episode. However, we're not the ones doing the talking - this episode is brought to you by our sexy and handsome community. Thanks again to our special guests!",
 			"25/11/2009",
-			"shownotes link",
-			"special"
+			"special",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1684,8 +1962,11 @@
 		array(
 			"Fashionably Late",
 			"Being late is never a bad thing. Besides, who hasn't been busy with the Left 4 Dead 2 demo? We're back discussing plenty of juciy topics from the demo itself to the controversy surrounding Modern Warfare 2, all topped with a handful of lovely emails from the community and snacks on the side to nibble on (such as the latest news from... a month ago).",
-			"shownotes link",
-			"18/11/2009"
+			"18/11/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1702,8 +1983,11 @@
 		array(
 			"Our Apples",
 			"The Steamchat crew returns from their break in style! They cover topics from Half-Life enemies to purchasing their early copies of Left 4 Dead 2 live on air.",
-			"shownotes link",
-			"21/10/2009"
+			"21/10/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1720,8 +2004,11 @@
 		array(
 			"Room Service for the Drag-Ass",
 			"With the full crew back, we discuss the latest from PAX, which is all Left 4 Dead 2, which is awesome! Note: there are no iTunes chapters in this episode.",
-			"shownotes link",
-			"03/10/2009"
+			"03/10/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1738,8 +2025,11 @@
 		array(
 			"Half-Life Heavy",
 			"Half-Life. That's all your going to find in here; discussion about the story, characters, textures, music -- anything that makes Half-Life as awesome as it is. WARNING: The audio levels in this episode are fairly random. Please take care with your volume when listening to this episode.",
-			"shownotes link",
-			"10/9/2009"
+			"10/9/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1756,8 +2046,11 @@
 		array(
 			"The Moral High Road",
 			"We are joined by a special guest this week, backstepper (also known as Sebastian), as we talk about the controversy behind Valve's punishment on TF2 idling. Be sure to check out the show notes for details on the Monkey Island giveaways. Thanks again to Sebastian for his contributions.",
-			"shownotes link",
-			"09/9/2009"
+			"09/9/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1774,8 +2067,11 @@
 		array(
 			"A Toothbrush and Strider Legs",
 			"In the first double-digit episode we talk about the Team Fortress 2 Classless Update, Episode 3 and Left 4 Dead 2 development issues and a bunch of topics in the Steam forums.",
-			"shownotes link",
-			"26/8/2009"
+			"26/8/2009",
+			array(
+				"http://docs.google.com/View?id=d8qf5wx_28c5xz2mcc",
+				null
+			)
 		),
 		array(
 			null,
@@ -1793,8 +2089,11 @@
 			"Exclusive interview with Gabe Newell",
 			"In this episode we are very, very happy to have nightcabbage (Justin) join us who brings us an awesome exclusive interview with Gabe Newell, the co-founder and managing director of Valve Software. We also discuss Depeche Mode branding in Left 4 Dead 2, re-playability issues in Left 4 Dead and various other topics. Huge thanks again to nightcabbage!",
 			"12/8/2009",
-			"shownotes_link",
-			"interview"
+			"interview",
+			array(
+				"http://docs.google.com/View?id=d8qf5wx_23d4qx4hhh",
+				"http://docs.google.com/View?id=d8qf5wx_27fxhvfwjs"
+			)
 		),
 		array(
 			null,
@@ -1811,8 +2110,11 @@
 		array(
 			"Blast to the Past",
 			"We've pieced together the highs and lows of the past 7 episodes thus far. Enjoy!",
-			"shownotes link",
-			"07/8/2009"
+			"07/8/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1829,8 +2131,11 @@
 		array(
 			"M.I.A.",
 			"This week, we're all over the place, like a bad Left 4 Dead team.",
-			"shownotes link",
-			"30/7/2009"
+			"30/7/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1847,8 +2152,11 @@
 		array(
 			"The Sloppy Show",
 			"This week, we're all over the place, like a bad Left 4 Dead team.",
-			"shownotes link",
-			"23/7/2009"
+			"23/7/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1865,8 +2173,11 @@
 		array(
 			"Tea with Sasso",
 			"We're joined by Matt (Sasso from the forums) as we delve into his very own topic of &quot;Episode Three wants and don't wants&quot;.",
-			"shownotes link",
-			"12/7/2009"
+			"12/7/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1883,8 +2194,11 @@
 		array(
 			"It's Raining",
 			"We're back and we're late!",
-			"shownotes link",
-			"05/7/2009"
+			"05/7/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1901,8 +2215,11 @@
 		array(
 			"A Second Opinion",
 			"In this episode we try out our new show-structure, talk SDK's and nab a bit at Adam Sessler. The episode also features a debate, for those who asked for it.",
-			"shownotes link",
-			"25/6/2009"
+			"25/6/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1919,8 +2236,11 @@
 		array(
 			"Gentlemen's Club",
 			"In episode we talk about Left 4 Dead 2, its boycott group, Team Fortress 2 hats and a variety of other juicy, heart-warming topics.",
-			"shownotes link",
-			"16/6/2009"
+			"16/6/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
@@ -1937,8 +2257,11 @@
 		array(
 			"Jarate-ed",
 			"In this debut episode of Steamchat, we discuss the podcast itself, the recently ending-E3 and the ups and downs of Valve's participation at it. We also talk about our thoughts of Left 4 Dead 2 and the lack, again, of Half-Life 2: Episode 3. We hope you enjoy the show!",
-			"shownotes link",
-			"07/6/2009"
+			"07/6/2009",
+			array(
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
 			null,
