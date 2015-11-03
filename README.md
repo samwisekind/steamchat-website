@@ -19,7 +19,7 @@ If you plan on hosting the website in a local environment or otherwise, the foll
 2. Clone the repository or [download the ZIP](https://github.com/Flamov/steamchat-website/archive/master.zip) and place the files in the web server
 3. Make sure `.htaccess` (or equivalent) is working as intended.
   * The intended behaviour is having the server parse requests to episode pages (e.g. `/episodes/50/`) to use `lib/episodePage.php` and pass in the episode type ("episodes" or "snack") and episode number from the end of the requested URL (in this case, "episodes" and 50).
-3. In addition, also make sure you configure your server to support the SVG MIME type [(more info here)](http://www.kaioa.com/node/45)
+3. In addition, also make sure you configure your server to support the SVG MIME type ([more info here](http://www.kaioa.com/node/45)).
 
 For steps 3 and 4, the `.htaccess` file provided in the repository *should* work as intended. Unfortunately we are unable to provide support if this is not the case or for other web servers.
 
@@ -28,6 +28,7 @@ For steps 3 and 4, the `.htaccess` file provided in the repository *should* work
 * The latest episode to be shown on the homepage is controlled by the PHP variable `$latestEpisode` (integer) in [`index.php`](https://github.com/Flamov/steamchat-website/blob/master/index.php#L3).
 * Episode data is controlled in the [`lib/episodeData.php`](https://github.com/Flamov/steamchat-website/blob/master/lib/episodeData.php) file. Information on how the arrays are structured can be found in [the comment at the start of the file](https://github.com/Flamov/steamchat-website/blob/master/lib/episodeData.php#L3-L17).
   * If you plan on further developing with the source files, we *highly* recommend you use a database to retrieve relevant episode data instead of referring to a single PHP file with a single array. We provided the `episodeData.php` file purely for reference; it's a ~50Kb file that gets requested every time you visit a page on the website and isn't recommended as it could lead to performance issues.
+* SASS/SCSS CSS files are used in the website but knowledge in SASS is not required; we have also included equivalent regular CSS files.
 * Things not included in the repository:
   * Episode MP3 and M4A files.
   * Episode XML/RSS feeds.
