@@ -10,8 +10,9 @@
 	// [1][0] Header Cover Image
 	// [1][1] Header Main Image
 	// [2] (Episode Files)
-	// [2][0] File Size
-	// [2][1] File Location
+	// [2][0] File Size (bytes)
+	// [2][1] File duration (HH:MM:SS)
+	// [2][2] File MP3 URL
 
 	$episode["episode"][103] = array(
 		array(
@@ -25,8 +26,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			137886797,
+			"01:11:49",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode103.mp3"
 		)
 	);
 
@@ -42,8 +44,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			102629148,
+			"00:53:24",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode102.mp3"
 		)
 	);
 
@@ -59,8 +62,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			101246903,
+			"00:52:41",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode101.mp3"
 		)
 	);
 
@@ -76,8 +80,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			133087064,
+			"00:55:27",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode100.mp3"
 		)
 	);
 
@@ -93,8 +98,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			422833865,
+			"03:08:38",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode99.mp3"
 		)
 	);
 
@@ -110,8 +116,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			80912352,
+			"00:35:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode98.mp3"
 		)
 	);
 
@@ -127,8 +134,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			76783913,
+			"00:34:21",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode97.mp3"
 		)
 	);
 
@@ -144,8 +152,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			144083948,
+			"01:03:51",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode96.mp3"
 		)
 	);
 
@@ -162,8 +171,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			74120340,
+			"00:32:44",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode95.mp3"
 		)
 	);
 
@@ -179,8 +189,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			94859105,
+			"00:42:42",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode94.mp3"
 		)
 	);
 
@@ -196,8 +207,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			46700752,
+			"00:20:56",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode93.mp3"
 		)
 	);
 
@@ -213,8 +225,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			60775859,
+			"00:27:23",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode92.mp3"
 		)
 	);
 
@@ -230,8 +243,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			173309034,
+			"01:25:42",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode91.mp3"
 		)
 	);
 
@@ -247,8 +261,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			116661026,
+			"00:57:02",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode90.mp3"
 		)
 	);
 
@@ -264,8 +279,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			112468032,
+			"00:49:41",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode89.mp3"
 		)
 	);
 
@@ -281,8 +297,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			129244367,
+			"00:57:06",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode88.mp3"
 		)
 	);
 
@@ -298,8 +315,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			116977604,
+			"00:51:53",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode87.mp3"
 		)
 	);
 
@@ -315,8 +333,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			102015002,
+			"00:45:16",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode86.mp3"
 		)
 	);
 
@@ -332,8 +351,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			92705641,
+			"00:41:13",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode85.mp3"
 		)
 	);
 
@@ -349,8 +369,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			104150865,
+			"00:46:36",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode84.mp3"
 		)
 	);
 
@@ -366,8 +387,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			103574248,
+			"00:46:30",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode83.mp3"
 		)
 	);
 
@@ -383,8 +405,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			107577120,
+			"00:52:17",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode82.mp3"
 		)
 	);
 
@@ -400,8 +423,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			102835778,
+			"00:49:43",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode81.mp3"
 		)
 	);
 
@@ -417,8 +441,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			105191936,
+			"00:51:46",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode80.mp3"
 		)
 	);
 
@@ -434,8 +459,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			100720237,
+			"00:45:11",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode79.mp3"
 		)
 	);
 
@@ -451,8 +477,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			94906973,
+			"00:41:58",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode78.mp3"
 		)
 	);
 
@@ -468,8 +495,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			134798444,
+			"00:59:47",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode77.mp3"
 		)
 	);
 
@@ -485,8 +513,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			146072370,
+			"01:04:29",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode76.mp3"
 		)
 	);
 
@@ -502,8 +531,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			54205284,
+			"00:23:51",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode75.mp3"
 		)
 	);
 
@@ -519,8 +549,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			150936970,
+			"01:06:48",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode74.mp3"
 		)
 	);
 
@@ -536,8 +567,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			105630219,
+			"00:46:45",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode73.mp3"
 		)
 	);
 
@@ -553,8 +585,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			79050984,
+			"00:35:25",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode72.mp3"
 		)
 	);
 
@@ -570,8 +603,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			134371755,
+			"01:00:01",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode71.mp3"
 		)
 	);
 
@@ -587,8 +621,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			88108625,
+			"00:38:47",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode70.mp3"
 		)
 	);
 
@@ -604,8 +639,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			92104940,
+			"00:40:30",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode69.mp3"
 		)
 	);
 
@@ -621,8 +657,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			140511102,
+			"01:02:29",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode68.mp3"
 		)
 	);
 
@@ -638,8 +675,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			155593930,
+			"01:08:20",
+			"https://s3.amazonaws.com/steamchatepisodes/snack/steamcast_snack4.mp3"
 		)
 	);
 
@@ -655,8 +693,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			110798116,
+			"00:48:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode67.mp3"
 		)
 	);
 
@@ -672,8 +711,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			172833583,
+			"01:16:51",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode66.mp3"
 		)
 	);
 
@@ -690,8 +730,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			78970060,
+			"00:35:10",
+			"https://s3.amazonaws.com/steamchatepisodes/snack/steamcast_snack3.mp3"
 		)
 	);
 
@@ -707,8 +748,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			104628643,
+			"00:45:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode65.mp3"
 		)
 	);
 
@@ -724,8 +766,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			109987065,
+			"00:48:45",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode64.mp3"
 		)
 	);
 
@@ -741,8 +784,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			107559846,
+			"00:47:42",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode63.mp3"
 		)
 	);
 
@@ -758,8 +802,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			197521302,
+			"01:33:19",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode62.mp3"
 		)
 	);
 
@@ -775,8 +820,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			114408168,
+			"00:53:58",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode61.mp3"
 		)
 	);
 
@@ -792,8 +838,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			113370392,
+			"00:52:28",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode60.mp3"
 		)
 	);
 
@@ -809,8 +856,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			145727243,
+			"01:15:54",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode59.mp3"
 		)
 	);
 
@@ -826,8 +874,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			191270585,
+			"01:39:37",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode58.mp3"
 		)
 	);
 
@@ -843,8 +892,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			171718453,
+			"01:29:26",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode57.mp3"
 		)
 	);
 
@@ -860,8 +910,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			125019036,
+			"01:05:07",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode56.mp3"
 		)
 	);
 
@@ -877,8 +928,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			107341870,
+			"00:55:54",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode55.mp3"
 		)
 	);
 
@@ -894,8 +946,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			67333144,
+			"00:35:04",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode54.mp3"
 		)
 	);
 
@@ -911,8 +964,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			65048579,
+			"00:33:53",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode53.mp3"
 		)
 	);
 
@@ -928,8 +982,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			96660505,
+			"00:50:21",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode52.mp3"
 		)
 	);
 
@@ -945,8 +1000,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			82310294,
+			"00:42:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode51.mp3"
 		)
 	);
 
@@ -962,8 +1018,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			67153421,
+			"00:34:58",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode50.mp3"
 		)
 	);
 
@@ -979,8 +1036,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			70640873,
+			"00:36:47",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode49.mp3"
 		)
 	);
 
@@ -997,8 +1055,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			26890576,
+			"00:14:00",
+			"https://s3.amazonaws.com/steamchatepisodes/snack/steamcast_snack2.mp3"
 		)
 	);
 
@@ -1015,8 +1074,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			110840188,
+			"00:57:44",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode48.mp3"
 		)
 	);
 
@@ -1033,8 +1093,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			96774190,
+			"00:50:24",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode47.mp3"
 		)
 	);
 
@@ -1050,8 +1111,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			135321730,
+			"01:10:29",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode46.mp3"
 		)
 	);
 
@@ -1067,8 +1129,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			88261197,
+			"00:45:58",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode45.mp3"
 		)
 	);
 
@@ -1084,8 +1147,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			87110137,
+			"00:45:18",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode44.mp3"
 		)
 	);
 
@@ -1101,8 +1165,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			82955911,
+			"00:43:12",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode43.mp3"
 		)
 	);
 
@@ -1118,8 +1183,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			75202352,
+			"00:52:13",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode42.mp3"
 		)
 	);
 
@@ -1135,8 +1201,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			96313048,
+			"01:06:53",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode41.mp3"
 		)
 	);
 
@@ -1152,8 +1219,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			124621972,
+			"01:26:32",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode40.mp3"
 		)
 	);
 
@@ -1169,8 +1237,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			87182212,
+			"01:00:32",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode39.mp3"
 		)
 	);
 
@@ -1186,8 +1255,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			74347960,
+			"00:51:42",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode38.mp3"
 		)
 	);
 
@@ -1203,8 +1273,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			75483954,
+			"00:52:25",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode37.mp3"
 		)
 	);
 
@@ -1220,8 +1291,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			105512382,
+			"01:13:16",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode36.mp3"
 		)
 	);
 
@@ -1238,8 +1310,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			43205821,
+			"00:30:00",
+			"https://s3.amazonaws.com/steamchatepisodes/snack/steamcast_snack1.mp3"
 		)
 	);
 
@@ -1255,8 +1328,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			108005586,
+			"01:15:00",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode35.mp3"
 		)
 	);
 
@@ -1272,8 +1346,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			115620600,
+			"01:20:17",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode34.mp3"
 		)
 	);
 
@@ -1289,8 +1364,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			91762488,
+			"01:03:43",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode33.mp3"
 		)
 	);
 
@@ -1306,8 +1382,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			97591536,
+			"01:07:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode32.mp3"
 		)
 	);
 
@@ -1323,8 +1400,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			85253351,
+			"00:59:12",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode31.mp3"
 		)
 	);
 
@@ -1340,8 +1418,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			71549723,
+			"00:49:41",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode30.mp3"
 		)
 	);
 
@@ -1357,8 +1436,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			91122254,
+			"00:47:27",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode29.mp3"
 		)
 	);
 
@@ -1375,8 +1455,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			134984643,
+			"01:33:44",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode28.mp3"
 		)
 	);
 
@@ -1392,8 +1473,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			142267895,
+			"01:14:06",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode27.mp3"
 		)
 	);
 
@@ -1409,8 +1491,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			78960769,
+			"01:22:15",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode26.mp3"
 		)
 	);
 
@@ -1426,8 +1509,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			50916305,
+			"00:42:26",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode25.mp3"
 		)
 	);
 
@@ -1443,8 +1527,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			78536636,
+			"01:05:27",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode24.mp3"
 		)
 	);
 
@@ -1460,8 +1545,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			70791194,
+			"00:58:59",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode23.mp3"
 		)
 	);
 
@@ -1478,8 +1564,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			88692938,
+			"01:13:54",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode22.mp3"
 		)
 	);
 
@@ -1496,8 +1583,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			84746396,
+			"01:10:37",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode21.mp3"
 		)
 	);
 
@@ -1513,8 +1601,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			95686952,
+			"01:19:48",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode20.mp3"
 		)
 	);
 
@@ -1530,8 +1619,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			113159342,
+			"01:34:18",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode19.mp3"
 		)
 	);
 
@@ -1547,8 +1637,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			103046642,
+			"01:25:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode18.mp3"
 		)
 	);
 
@@ -1564,8 +1655,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			5106263,
+			"03:40:00",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode17.mp3"
 		)
 	);
 
@@ -1582,8 +1674,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			92514172,
+			"01:26:53",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode16.mp3"
 		)
 	);
 
@@ -1599,8 +1692,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			102853684,
+			"01:38:16",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode15.mp3"
 		)
 	);
 
@@ -1616,8 +1710,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			76902752,
+			"01:08:34",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode14.mp3"
 		)
 	);
 
@@ -1633,8 +1728,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			100656146,
+			"01:23:52",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode13.mp3"
 		)
 	);
 
@@ -1650,8 +1746,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			110142249,
+			"01:44:34",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode12.mp3"
 		)
 	);
 
@@ -1667,8 +1764,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			61159752,
+			"53:10",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode11.mp3"
 		)
 	);
 
@@ -1684,8 +1782,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			83287589,
+			"01:15:22",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode10.mp3"
 		)
 	);
 
@@ -1702,8 +1801,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			106069023,
+			"01:28:23",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode9.mp3"
 		)
 	);
 
@@ -1719,8 +1819,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			60211601,
+			"50:10",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode8.mp3"
 		)
 	);
 
@@ -1736,8 +1837,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			41655512,
+			"34:42",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode7.mp3"
 		)
 	);
 
@@ -1753,8 +1855,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			65486144,
+			"54:33",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode6.mp3"
 		)
 	);
 
@@ -1770,8 +1873,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			92959022,
+			"01:17:27",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode5.mp3"
 		)
 	);
 
@@ -1787,8 +1891,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			63878630,
+			"00:53:13",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode4.mp3"
 		)
 	);
 
@@ -1804,8 +1909,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			92100332,
+			"01:16:44",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode3.mp3"
 		)
 	);
 
@@ -1821,8 +1927,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			48348569,
+			"01:08:34",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode1.mp3"
 		)
 	);
 
@@ -1838,8 +1945,9 @@
 			"header_main_image"
 		),
 		array(
-			"file_size",
-			"file_location (mp3)"
+			65829326,
+			"01:08:34",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode1.mp3"
 		)
 	);
 
