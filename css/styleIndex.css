@@ -63,20 +63,21 @@
   display: table-cell;
   margin: 0;
   padding: 0;
-  max-width: 700px;
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 700;
-  color: #FFFFFF;
+  max-width: 100%;
   background: #0064BF; }
 
 #header #latestWrapper h1 a {
   padding: 10px 15px 10px 10px;
+  max-width: 700px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
 #header #latestWrapper h1 a:hover {
+  max-width: 100%;
   text-decoration: underline; }
 
 #header #latestWrapper h2 {
@@ -95,11 +96,6 @@
 
 #header #latestWrapper h2 a {
   padding: 10px; }
-
-#header #latestWrapper h1 a:hover,
-#header h2 a:hover {
-  color: inherit;
-  text-decoration: underline; }
 
 #header #latestWrapper #latestTime {
   pointer-events: none;
