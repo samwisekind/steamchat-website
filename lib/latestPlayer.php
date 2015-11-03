@@ -10,7 +10,7 @@
 	</h1>
 
 	<h2>
-		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <?php echo $episode["episode"][$latestEpisode][0][3]; ?></a>
+		<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <?php echo $episode["episode"][$latestEpisode][0][2]; ?></a>
 	</h2>
 
 	<div id="latestTime">

@@ -183,6 +183,67 @@
 #header #latestProgress:hover .cover {
   border-right-color: #0582F4; }
 
+/******* EPISODE ARCHIVES *******/
+.episodeArchives {
+  width: 100%;
+  table-layout: fixed; }
+
+.episodeArchives .episodeArchives-header td {
+  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700; }
+
+.episodeArchives tr td,
+.episodeArchives.special tr td ul li {
+  width: 20%;
+  vertical-align: top; }
+
+.episodeArchives tr td ul,
+.episodeArchives tr td ul li {
+  list-style: none; }
+
+.episodeArchives tr td ul li {
+  display: block; }
+
+.episodeArchives tr td,
+.episodeArchives.special tr td ul li {
+  float: left; }
+
+.episodeArchives.special {
+  margin-bottom: 50px; }
+
+.episodeArchives tr td ul li a {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; }
+
+.episodeArchives tr td ul li a span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.episodeArchives tr td ul li a .title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  color: #0064BF; }
+
+.episodeArchives tr td ul li a .date {
+  font-size: 12px;
+  line-height: 12px;
+  color: #999999; }
+
+.episodeArchives tr td ul li a:hover {
+  background: #0064BF; }
+
+.episodeArchives tr td ul li a:hover span {
+  color: #FFFFFF !important; }
+
 /******* TRANSITIONS *******/
 #header #latestToggle {
   -webkit-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -197,95 +258,5 @@
   -ms-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.episode_archives {
-  width: 100%;
-  table-layout: fixed; }
-
-.episode_archives .archives_title td {
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-size: 18px; }
-
-.episode_archives tr td {
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 20%;
-  border: 0px #111111 solid;
-  font-size: 16px;
-  font-family: Arial, sans-serif !important;
-  color: inherit;
-  vertical-align: top; }
-
-.episode_archives ul {
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none;
-  border-left: none !important; }
-
-.episode_archives ul li {
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block;
-  list-style: none;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: normal;
-  color: #0582F4; }
-
-.episode_archives.special_archives {
-  margin-bottom: 50px; }
-
-.episode_archives.special_archives ul li {
-  float: left;
-  display: inline-block;
-  width: 20%;
-  color: #0582F4; }
-
-.episode_archives ul li a {
-  display: block;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Arial, sans-serif !important; }
-
-.episode_archives ul li a .title {
-  clear: both;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px; }
-
-.episode_archives .date, .episode_archives .duration {
-  color: #999999;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 12px; }
-
-.episode_archives .date {
-  float: left; }
-
-.episode_archives .duration {
-  float: right; }
-
-.episode_archives ul li:hover {
-  background: #0582F4;
-  color: #FFFFFF !important; }
-
-.episode_archives ul li a:hover {
-  color: inherit !important; }
-
-.episode_archives ul li:hover .date, .episode_archives ul li:hover .duration {
-  color: #FFFFFF !important; }
 
 /*# sourceMappingURL=styleIndex.css.map */

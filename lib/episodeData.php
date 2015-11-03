@@ -4,10 +4,9 @@
 	// [0][0] Episode Title
 	// [0][1] Episode Description
 	// [0][2] Publish date (DD/MM/YYYY)
-	// [0][3] Episode type ("interview", "special")
-	// [0][4] (Episode Links)
-	// [0][5][0] Shownotes URL
-	// [0][5][1] Transcript URL
+	// [0][3][0] Shownotes URL
+	// [0][3][1] Transcript URL
+	// [0][4] Episode type ("interview", "speciaEpisode Links)
 	// [1] (Episode Images)
 	// [1][0] Header Cover Image
 	// [1][1] Header Main Image
@@ -189,11 +188,11 @@
 			"Mass Effect 3 Special",
 			"In this episode we revisit Mass Effect 3, one month on from its release, and discuss our full thoughts on the game, series and franchise as a whole.",
 			"18/4/2012",
-			"special",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"special",
 		),
 		array(
 			null,
@@ -841,11 +840,11 @@
 			"Interview with Jonathan Coulton",
 			"We had the pleasure of being able to talk to Jonathan Coulton, the song writer behind Still Alive and Want You Gone, and ask him questions from the community.",
 			"25/7/2011",
-			"interview",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,
@@ -1220,11 +1219,11 @@
 			"Interview with Harry Robins, voice of Dr. Kleiner",
 			"We had the pleasure of being able to talk to Harry Robins, the voice actor behind Dr. Kleiner, and ask him questions about his work with Half-Life and beyond.",
 			"14/2/2011",
-			"interview",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,
@@ -1242,11 +1241,11 @@
 			"Gabe Newell 2011 Interview, Part 2",
 			"Part 2 of 2. We present the second Gabe Newell interview thanks to community member backstepper. Newell answers a range of questions submitted by the community.",
 			"11/2/2011",
-			"interview",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,
@@ -1264,11 +1263,11 @@
 			"Gabe Newell 2011 Interview, Part 1",
 			"Part 1 of 2. We present the second Gabe Newell interview thanks to community member backstepper. Newell answers a range of questions submitted by the community.",
 			"09/2/2011",
-			"interview",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,
@@ -1517,11 +1516,11 @@
 			"Interview with LambdaGeneration",
 			"We interview the guys over at LambdaGeneration, a fan-site dedicated to news about Valve and community content.",
 			"7/10/2010",
-			"interview",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,
@@ -1686,11 +1685,11 @@
 			"Lost Special",
 			"In this episode Sam and Brad discuss everything about the television show Lost.",
 			"06/6/2010",
-			"special",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"special",
 		),
 		array(
 			null,
@@ -1813,11 +1812,11 @@
 			"Portal 2 Special, Part 2",
 			"Part 2 of 2. We discuss the recently announced game from Valve, Portal 2, as well as new information regarding The Passing DLC for Left 4 Dead 2. In addition, we go over some fan mail and news.",
 			"22/3/2010",
-			"special",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"special",
 		),
 		array(
 			null,
@@ -1835,11 +1834,11 @@
 			"Portal 2 Special, Part 1",
 			"Part 1 of 2. We discuss the recently announced game from Valve, Portal 2, as well as new information regarding The Passing DLC for Left 4 Dead 2. In addition, we go over some fan mail and news.",
 			"22/3/2010",
-			"special",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"special",
 		),
 		array(
 			null,
@@ -1941,11 +1940,11 @@
 			"Left 4 Dead 2 Special",
 			"It's all Left 4 Dead 2 this episode. However, we're not the ones doing the talking - this episode is brought to you by our sexy and handsome community. Thanks again to our special guests!",
 			"25/11/2009",
-			"special",
 			array(
 				"show_notes",
 				"interview_transcript"
-			)
+			),
+			"special"
 		),
 		array(
 			null,
@@ -2089,11 +2088,11 @@
 			"Exclusive interview with Gabe Newell",
 			"In this episode we are very, very happy to have nightcabbage (Justin) join us who brings us an awesome exclusive interview with Gabe Newell, the co-founder and managing director of Valve Software. We also discuss Depeche Mode branding in Left 4 Dead 2, re-playability issues in Left 4 Dead and various other topics. Huge thanks again to nightcabbage!",
 			"12/8/2009",
-			"interview",
 			array(
 				"http://docs.google.com/View?id=d8qf5wx_23d4qx4hhh",
 				"http://docs.google.com/View?id=d8qf5wx_27fxhvfwjs"
-			)
+			),
+			"interview"
 		),
 		array(
 			null,

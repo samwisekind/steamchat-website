@@ -193,13 +193,17 @@ body.headerTip #headerTip {
 #header #headerMenu-tip {
 	float: right;
 	width: 90px;
-	height: 100%;
-	background: $color-steamchatLight; }
+	height: 100%; }
 
 #header #headerMenu-tip a {
-	color: $color-white; }
+	color: $color-white;
+	background: $color-steamchatLight; }
 
-#header h1.pagetitle, #header h1.pagedate {
+body.headerTip #header #headerMenu-tip a {
+	background: $color-steamchat; }
+
+#header h1.pagetitle,
+#header h1.pagedate {
 	position: absolute;
 	margin-bottom: 40px;
 	bottom: 0;
@@ -251,7 +255,7 @@ body.headerTip #headerTip {
 	clear: both;
 	margin-bottom: 50px; }
 
-#wrapper h1 {
+/* #wrapper h1 {
 	font-size: 32px;
 	margin-bottom: 50px;
 	font-weight: 300;
@@ -307,7 +311,7 @@ body.headerTip #headerTip {
 
 #wrapper .about_tipus:hover {
 	color: #000000;
-	cursor: pointer; }
+	cursor: pointer; } */
 
 
 
