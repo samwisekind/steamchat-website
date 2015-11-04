@@ -109,8 +109,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			422833865,
@@ -130,8 +130,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			80912352,
@@ -151,8 +151,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			76783913,
@@ -172,8 +172,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			144083948,
@@ -193,8 +193,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			74120340,
@@ -214,8 +214,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			94859105,
@@ -235,8 +235,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			46700752,
@@ -256,8 +256,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			60775859,
@@ -277,8 +277,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			173309034,
@@ -298,8 +298,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			116661026,
@@ -319,8 +319,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			112468032,
@@ -340,8 +340,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			129244367,
@@ -361,8 +361,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			116977604,
@@ -382,8 +382,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			102015002,
@@ -403,8 +403,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			92705641,
@@ -424,8 +424,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			104150865,
@@ -445,8 +445,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			103574248,
@@ -466,8 +466,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			107577120,
@@ -487,8 +487,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			102835778,
@@ -508,8 +508,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			105191936,
@@ -529,8 +529,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			100720237,
@@ -550,8 +550,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			94906973,
@@ -571,8 +571,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			134798444,
@@ -592,8 +592,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			146072370,
@@ -613,8 +613,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			54205284,
@@ -634,8 +634,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			150936970,
@@ -655,8 +655,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			105630219,
@@ -676,8 +676,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			79050984,
@@ -697,8 +697,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			134371755,
@@ -718,8 +718,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			88108625,
@@ -739,8 +739,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			92104940,
@@ -760,8 +760,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			140511102,
@@ -781,8 +781,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			155593930,
@@ -802,8 +802,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			110798116,
@@ -823,8 +823,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			172833583,
@@ -844,8 +844,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			78970060,
@@ -865,8 +865,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			104628643,
@@ -886,8 +886,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			109987065,
@@ -907,8 +907,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			107559846,
@@ -928,8 +928,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			197521302,
@@ -949,8 +949,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			114408168,
@@ -970,8 +970,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			113370392,
@@ -991,8 +991,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			145727243,
@@ -1012,8 +1012,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			191270585,
@@ -1033,8 +1033,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			171718453,
@@ -1054,8 +1054,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			125019036,
@@ -1075,8 +1075,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			107341870,
@@ -1096,8 +1096,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			67333144,
@@ -1117,8 +1117,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			65048579,
@@ -1138,8 +1138,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			96660505,
@@ -1159,8 +1159,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			82310294,
@@ -1180,8 +1180,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			67153421,
@@ -1201,8 +1201,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			70640873,
@@ -1222,8 +1222,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			26890576,
@@ -1243,8 +1243,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			110840188,
@@ -1264,8 +1264,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			96774190,
@@ -1285,8 +1285,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			135321730,
@@ -1306,8 +1306,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			88261197,
@@ -1327,8 +1327,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			87110137,
@@ -1348,8 +1348,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			82955911,
@@ -1369,8 +1369,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			75202352,
@@ -1390,8 +1390,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			96313048,
@@ -1411,8 +1411,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			124621972,
@@ -1432,8 +1432,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			87182212,
@@ -1453,8 +1453,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			74347960,
@@ -1474,8 +1474,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			75483954,
@@ -1495,8 +1495,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			105512382,
@@ -1516,8 +1516,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			43205821,
@@ -1537,8 +1537,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			108005586,
@@ -1558,8 +1558,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			115620600,
@@ -1579,8 +1579,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			91762488,
@@ -1600,8 +1600,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			97591536,
@@ -1621,8 +1621,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			85253351,
@@ -1642,8 +1642,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			71549723,
@@ -1663,8 +1663,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			91122254,
@@ -1684,8 +1684,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			134984643,
@@ -1705,8 +1705,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			142267895,
@@ -1726,8 +1726,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			78960769,
@@ -1747,8 +1747,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			50916305,
@@ -1768,8 +1768,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			78536636,
@@ -1789,8 +1789,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			70791194,
@@ -1810,8 +1810,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			88692938,
@@ -1831,8 +1831,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			84746396,
@@ -1852,8 +1852,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			95686952,
@@ -1873,8 +1873,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			113159342,
@@ -1894,8 +1894,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			103046642,
@@ -1915,8 +1915,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			5106263,
@@ -1937,8 +1937,8 @@
 			"special"
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			92514172,
@@ -1958,8 +1958,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			102853684,
@@ -1979,8 +1979,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			76902752,
@@ -2000,8 +2000,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			100656146,
@@ -2021,8 +2021,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			110142249,
@@ -2042,8 +2042,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			61159752,
@@ -2063,8 +2063,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			83287589,
@@ -2084,8 +2084,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			106069023,
@@ -2105,8 +2105,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			60211601,
@@ -2126,8 +2126,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			41655512,
@@ -2147,8 +2147,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			65486144,
@@ -2168,8 +2168,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			92959022,
@@ -2189,8 +2189,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			63878630,
@@ -2210,8 +2210,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			92100332,
@@ -2231,8 +2231,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			48348569,
@@ -2252,8 +2252,8 @@
 			)
 		),
 		array(
-			"show_notes",
-			"interview_transcript"
+			null,
+			null
 		),
 		array(
 			65829326,

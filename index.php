@@ -36,7 +36,7 @@
 							for ($i = 0; $i < count($specialsArray); $i++) {
 								echo '
 									<li>
-										<a href="' . $hostLocation . $specialsArray[$i][1] . "s/" . $specialsArray[$i][0] . '/" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '">
+										<a href="' . $hostLocation . $specialsArray[$i][1] . "s/" . $specialsArray[$i][0] . '/" data-audio="' . $episode["episode"][$i][2][2] . '" class="link">
 											<span class="title">' . $specialsArray[$i][2] . '</span>
 											<span class="date">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '</span>
 										</a>
@@ -53,16 +53,22 @@
 
 			function listEpisodes($targetStart, $targetEnd) {
 
+				global $hostLocation;
 				global $episode;
 
 				for ($i = $targetStart; $i >= $targetEnd; $i--) {
+
+					if ($episode["episode"][$i][1][0] != null || $episode["episode"][$i][1][1] != null) {
+						$images = 'data-header="' . $hostLocation . $episode["episode"][$i][1][0] . '" data-background="' . $hostLocation . $episode["episode"][$i][1][1] . '";';
+					}
+
 					echo '
 						<li>
-							<a href="' . $hostLocation . 'episodes/' . $i .'/" data-audio="' . $episode["episode"][$i][2][2] . '">
+							<a href="' . $hostLocation . 'episodes/' . $i .'/" class="link">
 								<span class="title">#' . $i . ': ' . $episode["episode"][$i][0][0] .'</span>
 								<span class="date">' . $episode["episode"][$i][0][2] .'</span>
-								<span class="play"></span>
 							</a>
+							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="latestChange(event, this);"' . $images . '></a>
 						</li>';
 				};
 
