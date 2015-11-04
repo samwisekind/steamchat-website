@@ -6,13 +6,14 @@
 
 	<div id="latestWrapper">
 
-		<h1>
-			<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">#<?php echo $latestEpisode . ": " . $episode["episode"][$latestEpisode][0][0]; ?></a>
-		</h1>
-
-		<h2>
-			<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <span><?php echo $episode["episode"][$latestEpisode][0][2]; ?></span></a>
-		</h2>
+		<div id="latestTitle">
+			<h1>
+				<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">#<?php echo $latestEpisode . ": " . $episode["episode"][$latestEpisode][0][0]; ?></a>
+			</h1>
+			<h2>
+				<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">Published <span><?php echo $episode["episode"][$latestEpisode][0][2]; ?></span></a>
+			</h2>
+		</div>
 
 		<div id="latestTime">
 			<span id="latestTime-current">--:--:--</span> / <span id="latestTime-total">--:--:--</span>
@@ -20,7 +21,7 @@
 
 		<div id="latestVolume">
 			<div id="latestVolume-toggle">
-				<a href="#"></a>
+				<a href="#" onclick="latestMute(event);"></a>
 			</div>
 			<div id="latestVolume-bar">
 				<div></div>

@@ -59,7 +59,7 @@ function latestChange (event, target) {
 	latestWasPaused = $cacheAudio[0].paused;
 	latestLoaded = false;
 	$cacheLatest.title.html(target.parent().find(".title").html());
-	$cacheLatest.date.html(target.parent().find(".date").html());
+	$cacheLatest.date.find("span").html(target.parent().find(".date").html());
 	$cacheLatest.title.add($cacheLatest.date).attr("href", target.parent().find(".link").attr("href"));
 	$cacheProgress.cover.css("width", "0%");
 	$cacheProgress.line.css("left", "0%");
@@ -70,10 +70,10 @@ function latestChange (event, target) {
 	if (target.attr("data-header") != undefined || target.attr("data-background") != undefined) {
 		$cacheLatest.background.removeClass("noBackground");
 		var imageLoadBackground = new Image();
-		imageLoadBackground.src = target.attr('data-background');
+		imageLoadBackground.src = target.attr("data-background");
 		imageLoadBackground.onload = function() {
 			var imageLoadHeader = new Image();
-			imageLoadHeader.src = target.attr('data-header');
+			imageLoadHeader.src = target.attr("data-header");
 			imageLoadHeader.onload = function() {
 				$cacheLatest.background.css("background-image", "url(" + imageLoadBackground.src + ")");
 				$cacheLatest.header.css("background-image", "url(" + imageLoadHeader.src + ")");
@@ -86,21 +86,35 @@ function latestChange (event, target) {
 
 };
 
+function latestMute (event) {
+
+	event.preventDefault();
+
+	$cacheAudio[0].volume = 0;
+	$cacheVolume.dragger.css("left", 0);
+	$cacheVolume.addClass("muted");
+
+};
+
 $(window).ready(function () {
 
 	$cacheLatest = $("#headerLatest");
 		$cacheLatest.title = $cacheLatest.find("h1 a");
-		$cacheLatest.date = $cacheLatest.find("h2 a span");
+		$cacheLatest.date = $cacheLatest.find("h2 a");
 		$cacheLatest.background = $("#header");
 		$cacheLatest.header = $cacheLatest.background.find("#headerMenu");
 	$cacheAudio = $cacheLatest.find("#latestAudio");
+	$cacheVolume = $cacheLatest.find("#latestVolume");
+		$cacheVolume.button = $cacheVolume.find("#latestVolume-toggle a");
+		$cacheVolume.bar = $cacheVolume.find("#latestVolume-bar");
+		$cacheVolume.dragger = $cacheVolume.bar.find("div");
 	$cacheProgress = $cacheLatest.find("#latestProgress");
 		$cacheProgress.cover = $cacheProgress.find(".cover");
 		$cacheProgress.line = $cacheProgress.find(".line");
 	$cacheTimestamp = $cacheLatest.find("#latestTime");
 		$cacheTimestamp.current = $cacheTimestamp.find("#latestTime-current");
 		$cacheTimestamp.total = $cacheTimestamp.find("#latestTime-total");
-	$cacheAudio[0].volume = 0.8;
+	$cacheAudio[0].volume = latestLastVolume = 0.8;
 
 	$cacheProgress.mousemove(function (event) {
 		if (latestLoaded == false) {
@@ -143,176 +157,33 @@ $(window).ready(function () {
 		};
 	}, false);
 
+	$cacheVolume.bar.on("click", function (event) {
 
+		var x = Math.round(event.clientX - $(this).offset().left - 10);
 
-
-
-
-	return;
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// Function to add the latest episode menu overlaying image smoothly
-	/* var latest_image = new Image();
-
-	latest_image.src = 'episodes/102/episode102_latest_image.jpg';
-
-	latest_image.onload = function() {
-
-		$("#menu_wrapper").addClass("overlay");
-
-	};
-
-	$("#latest_audio_toggle").bind('click', latest_toggle); */
-
-
-	// Bind for clicking on the audio player to track the audio time
-	$('#latest_progress_wrapper').bind('click', function (e) {
-
-		var x = Math.round((e.pageX - this.offsetLeft - (($(window).width() - $("#latest_progress_wrapper").width()) / 2)) / $("#latest_progress_wrapper").width() * $("#latest_audio")[0].duration);
-
-		$("#latest_audio")[0].currentTime = x;
-
-		window.clearInterval(window.latest_update_interval);
-		latest_update(true);
-
-		if ($("#latest_audio")[0].paused || $("#latest_audio")[0].ended) { }
-
-		else {
-
-			latest_update_interval = setInterval(latest_update, 1000);
-
+		if (x < 0) {
+			x = 0;
+		}
+		else if (x > 90) {
+			x = 90;
 		};
 
+		$cacheVolume.dragger.css("left", x);
+		$cacheVolume.dragger.trigger("drag");
+
 	});
 
-	// Bind for mouse movement around the body to reset the current time
-	$('body').bind('mousemove', function (e) {
+	$cacheVolume.dragger.draggable({
+		containment: "parent"
+	}).bind("drag", function () {
 
-		if (latest_hover == false) {
+		$cacheAudio[0].volume = $cacheVolume.dragger.position().left / 90;
 
+		if ($cacheAudio[0].volume == 0) {
+			$cacheVolume.addClass("muted");
 		}
-
-		else if (latest_hover == true) {
-
-			$("#latest_audio_time_current").html(timecalc($("#latest_audio")[0].currentTime));
-			latest_hover = false;
-
-			$('#latest_progress_line').stop();
-			$('#latest_progress_line').animate({ opacity: 0 }, 250, 'easeOutExpo');
-
-		};
-
-	});
-
-	// Bind for mouse movement around the audio player to show hovered timestamp
-	$('#latest_progress_wrapper').bind('mousemove', function (e) {
-
-		if (latest_hover == false) {
-
-			latest_hover = true;
-
-		}
-
-		else { };
-
-		var x = Math.round((e.pageX - this.offsetLeft - (($(window).width() - $("#latest_progress_wrapper").width()) / 2)) / $("#latest_progress_wrapper").width() * $("#latest_audio")[0].duration);
-
-		$("#latest_audio_time_current").html(timecalc(x));
-
-		$('#latest_progress_line').stop();
-		$('#latest_progress_line').animate({ opacity: 1 }, 250, 'easeOutExpo');
-
-		$("#latest_progress_line").css("left", (e.pageX - this.offsetLeft - (($(window).width() - $("#latest_progress_wrapper").width()) / 2)) + "px");
-
-		e.stopPropagation();
-
-	});
-
-	// Enables the volume bar to be draggable within its parent
-	$(function () {
-
-		$("#volume_slider").draggable({ containment: "parent" });
-
-	});
-
-	// Changes audio volume depending on the location of the slider
-	$("#volume_slider").bind("drag", function (e) {
-
-		latest_volume = latest_audio.volume;
-
-		latest_audio.volume = parseInt($("#volume_slider").css("left")) / 85;
-
-		if (parseInt($("#volume_slider").css("left")) == 0) {
-
-			$("#volume_button").addClass("volume_muted");
-
-		}
-
 		else {
-
-			$("#volume_button").removeClass("volume_muted");
-
-		};
-
-	});
-
-	// Bind for changing volume by clicking inside the volume bar
-	$("#volume_bar").bind('click', function (e) {
-
-		var x = Math.round(e.clientX - $(this).offset().left);
-
-		latest_audio.volume = x / 100;
-
-		$("#volume_slider").stop();
-		$('#volume_slider').animate({ left: ((x / 100) * 85) + "px" }, 250, 'easeOutExpo');
-
-	});
-
-	// Bind for volume mute and unmute button
-	$("#volume_button").bind('click', function (e) {
-
-		if (latest_audio.volume == 0) {
-
-			latest_audio.volume = latest_volume;
-
-			$("#volume_slider").stop();
-			$('#volume_slider').animate({ left: (latest_volume * 85) + "px" }, 250, 'easeOutExpo');
-
-			if (latest_volume == 0) {
-
-				$("#volume_button").addClass("volume_muted");
-
-			}
-
-			else {
-
-				$("#volume_button").removeClass("volume_muted");
-
-			};
-
-		}
-
-		else {
-
-			latest_volume = latest_audio.volume;
-			latest_audio.volume = 0;
-
-			$("#volume_slider").stop();
-			$('#volume_slider').animate({ left: "0px" }, 250, 'easeOutExpo');
-
-			$("#volume_button").addClass("volume_muted");
-
+			$cacheVolume.removeClass("muted");
 		};
 
 	});

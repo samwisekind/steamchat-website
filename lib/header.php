@@ -7,9 +7,14 @@
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style<?php echo ucfirst($pageType) ?>.css" type="text/css" media="screen">
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scriptsGlobal.js"></script>
-		<?php if ($pageType == "index") { echo '<script type="text/javascript" src="' . $hostLocation . 'js/scriptsIndex.js"></script>'; }; ?>
+		<?php
+			if ($pageType == "index") { echo '
+				<script type="text/javascript" src="' . $hostLocation . 'js/jquery-2.1.4.min.js"></script>
+				<script type="text/javascript" src="' . $hostLocation . 'js/jquery-ui.min.js"></script>
+				<script type="text/javascript" src="' . $hostLocation . 'js/scriptsIndex.js"></script>';
+			};
+		?>
 	</head>
 
 	<body class="<?php echo $pageType; ?>">

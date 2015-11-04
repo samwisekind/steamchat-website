@@ -51,15 +51,15 @@
   width: 1000px;
   height: 400px; }
 
-#header #headerLatest #latestWrapper h1 a,
-#header #headerLatest #latestWrapper h2 a {
+#header #headerLatest #latestWrapper #latestTitle h1 a,
+#header #headerLatest #latestWrapper #latestTitle h2 a {
   display: block;
   width: 100%;
   height: 100%;
   color: #FFFFFF;
   text-decoration: none; }
 
-#header #headerLatest #latestWrapper h1 {
+#header #headerLatest #latestWrapper #latestTitle h1 {
   z-index: 30;
   position: absolute;
   bottom: 0;
@@ -70,7 +70,7 @@
   max-width: 100%;
   background: #0064BF; }
 
-#header #headerLatest #latestWrapper h1 a {
+#header #headerLatest #latestWrapper #latestTitle h1 a {
   padding: 10px 15px 10px 10px;
   max-width: 700px;
   font-size: 48px;
@@ -80,11 +80,11 @@
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-#header #headerLatest #latestWrapper h1 a:hover {
+#header #headerLatest #latestWrapper #latestTitle:hover h1 a {
   max-width: 100%;
   text-decoration: underline; }
 
-#header #headerLatest #latestWrapper h2 {
+#header #headerLatest #latestWrapper #latestTitle h2 {
   z-index: 10;
   position: absolute;
   bottom: -40px;
@@ -98,7 +98,7 @@
   color: #FFFFFF;
   background: #0064BF; }
 
-#header #headerLatest #latestWrapper h2 a {
+#header #headerLatest #latestWrapper #latestTitle h2 a {
   padding: 10px; }
 
 #header #headerLatest #latestWrapper #latestTime {
@@ -119,6 +119,9 @@
   -khtml-user-select: none;
   -webkit-user-select: none; }
 
+#header.noBackground #headerLatest #latestWrapper #latestTime {
+  text-shadow: none; }
+
 #header #headerLatest #latestWrapper #latestVolume {
   position: absolute;
   bottom: -40px;
@@ -126,6 +129,14 @@
   width: 150px;
   height: 35px;
   background: #0064BF; }
+
+#header #headerLatest #latestWrapper #latestVolume {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 #header #headerLatest #latestWrapper #latestVolume #latestVolume-toggle {
   position: absolute;
@@ -139,10 +150,10 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: url("../img/index/latestVolume.svg") left center no-repeat; }
+  background: url("../img/index/indexVolume.svg") -3px center no-repeat; }
 
-#header #headerLatest #latestWrapper #latestVolume #latestVolume-toggle.muted a {
-  background-position: right center; }
+#header #headerLatest #latestWrapper #latestVolume.muted #latestVolume-toggle a {
+  background-position: -27px center; }
 
 #header #headerLatest #latestWrapper #latestVolume #latestVolume-bar {
   position: absolute;
@@ -158,7 +169,7 @@
 #header #headerLatest #latestWrapper #latestVolume #latestVolume-bar > div {
   position: relative;
   top: 0;
-  left: 0;
+  left: 75px;
   width: 15px;
   height: 15px;
   background: #FFFFFF;
@@ -338,7 +349,11 @@
   z-index: 0;
   display: block;
   padding: 10px;
-  width: 100%;
+  width: -webkit-calc(100% - 20px);
+  width: -moz-calc(100% - 20px);
+  width: -ms-calc(100% - 20px);
+  width: -o-calc(100% - 20px);
+  width: calc(100% - 20px);
   height: 100%;
   text-decoration: none; }
 
@@ -360,20 +375,28 @@
   line-height: 12px;
   color: #999999; }
 
-.episodeArchives tr td ul li .link:hover {
+.episodeArchives tr td ul li:hover {
   background: #0064BF; }
 
-.episodeArchives tr td ul li .link:hover span {
+.episodeArchives tr td ul li:hover span {
   color: #FFFFFF !important; }
 
 .episodeArchives tr td ul li .play {
+  opacity: .25;
   position: absolute;
   z-index: 10;
   right: 0;
   top: 0;
   width: 20px;
   height: 100%;
-  background: red; }
+  background: url("../img/index/indexVolume.svg") -40px center no-repeat transparent; }
+
+.episodeArchives tr td ul li:hover .play {
+  background-position: 0 center; }
+
+.episodeArchives tr td ul li .play:hover {
+  opacity: 1;
+  background-color: rgba(140, 200, 255, 0.5); }
 
 /******* TRANSITIONS *******/
 #header #headerLatest #latestToggle {

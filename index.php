@@ -40,6 +40,7 @@
 											<span class="title">' . $specialsArray[$i][2] . '</span>
 											<span class="date">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '</span>
 										</a>
+										<a href="#" class="play" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '" onclick="latestChange(event, this);"></a>
 									</li>';
 							};
 
