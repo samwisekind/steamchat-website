@@ -1,4 +1,4 @@
-<?php $hostLocation = "http://localhost:8888/steamcast-website/"; ?>
+<?php $hostLocation = "http://localhost:8888/steamchat-website/"; ?>
 
 <html>
 	<head>
@@ -9,7 +9,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scriptsGlobal.js"></script>
 	</head>
-	
+
 	<body class="<?php echo $pageType; ?>">
 
 		<aside id="headerTip">
@@ -41,13 +41,13 @@
 			</div>
 
 		</aside>
-	
+
 		<header id="header" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_image.jpg);'"; }; ?>>
-				
+
 			<nav id="headerMenu" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_overlay.png);'"; }; ?>>
 
 				<div id="headerLogo"><a href="<?php echo $hostLocation; ?>"></a></div>
-					
+
 				<ul>
 					<li><a href="<?php echo $hostLocation; ?>">Episodes</a></li>
 					<li><a href="<?php echo $hostLocation; ?>specials/">Specials</a></li>
@@ -57,17 +57,17 @@
 				<div id="headerMenu-tip">
 					<a href="#" onclick="tipToggle(event)">Tip us!</a>
 				</li>
-		
+
 			</nav>
-			
+
 			<?php /* if ($headertitle==null) {} else if ($episodepage=true) { echo '<h1 class="pagetitle episode">' , $headertitle, '</h1><h1 class="pagedate episode">Published ' , $headerdate, '</h1>'; } else { echo '<h1 class="pagetitle">' , $headertitle, '</h1>'; }; */ ?>
-			
+
 			<?php
 
 				if ($pageType == "index") {
 					require_once "latestPlayer.php";
 				};
-			
+
 			?>
-		
+
 		</header>

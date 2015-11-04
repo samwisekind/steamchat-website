@@ -6,7 +6,6 @@
 	// [0][2] Publish date (DD/MM/YYYY)
 	// [0][3][0] Shownotes URL
 	// [0][3][1] Transcript URL
-	// [0][4] Episode type ("interview", "speciaEpisode Links)
 	// [1] (Episode Images)
 	// [1][0] Header Cover Image
 	// [1][1] Header Main Image
@@ -110,8 +109,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			422833865,
@@ -131,8 +130,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			80912352,
@@ -152,8 +151,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			76783913,
@@ -173,8 +172,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			144083948,
@@ -191,12 +190,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"special",
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			74120340,
@@ -216,8 +214,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			94859105,
@@ -237,8 +235,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			46700752,
@@ -258,8 +256,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			60775859,
@@ -279,8 +277,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			173309034,
@@ -300,8 +298,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			116661026,
@@ -321,8 +319,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			112468032,
@@ -342,8 +340,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			129244367,
@@ -363,8 +361,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			116977604,
@@ -384,8 +382,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			102015002,
@@ -405,8 +403,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			92705641,
@@ -426,8 +424,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			104150865,
@@ -447,8 +445,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			103574248,
@@ -468,8 +466,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			107577120,
@@ -489,8 +487,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			102835778,
@@ -510,8 +508,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			105191936,
@@ -531,8 +529,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			100720237,
@@ -552,8 +550,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			94906973,
@@ -573,8 +571,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			134798444,
@@ -594,8 +592,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			146072370,
@@ -615,8 +613,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			54205284,
@@ -636,8 +634,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			150936970,
@@ -657,8 +655,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			105630219,
@@ -678,8 +676,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			79050984,
@@ -699,8 +697,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			134371755,
@@ -720,8 +718,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			88108625,
@@ -741,8 +739,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			92104940,
@@ -762,8 +760,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			140511102,
@@ -783,8 +781,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			155593930,
@@ -804,8 +802,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			110798116,
@@ -825,8 +823,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			172833583,
@@ -843,12 +841,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"interview"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			78970060,
@@ -868,8 +865,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			104628643,
@@ -889,8 +886,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			109987065,
@@ -910,8 +907,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			107559846,
@@ -931,8 +928,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			197521302,
@@ -952,8 +949,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			114408168,
@@ -973,8 +970,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			113370392,
@@ -994,8 +991,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			145727243,
@@ -1015,8 +1012,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			191270585,
@@ -1036,8 +1033,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			171718453,
@@ -1057,8 +1054,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			125019036,
@@ -1078,8 +1075,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			107341870,
@@ -1099,8 +1096,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			67333144,
@@ -1120,8 +1117,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			65048579,
@@ -1141,8 +1138,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			96660505,
@@ -1162,8 +1159,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			82310294,
@@ -1183,8 +1180,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			67153421,
@@ -1204,8 +1201,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			70640873,
@@ -1222,12 +1219,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"interview"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			26890576,
@@ -1244,12 +1240,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"interview"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			110840188,
@@ -1266,12 +1261,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"interview"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			96774190,
@@ -1291,8 +1285,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			135321730,
@@ -1312,8 +1306,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			88261197,
@@ -1333,8 +1327,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			87110137,
@@ -1354,8 +1348,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			82955911,
@@ -1375,8 +1369,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			75202352,
@@ -1396,8 +1390,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			96313048,
@@ -1417,8 +1411,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			124621972,
@@ -1438,8 +1432,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			87182212,
@@ -1459,8 +1453,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			74347960,
@@ -1480,8 +1474,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			75483954,
@@ -1501,8 +1495,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			105512382,
@@ -1519,12 +1513,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"interview"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			43205821,
@@ -1544,8 +1537,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			108005586,
@@ -1565,8 +1558,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			115620600,
@@ -1586,8 +1579,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			91762488,
@@ -1607,8 +1600,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			97591536,
@@ -1628,8 +1621,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			85253351,
@@ -1649,8 +1642,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			71549723,
@@ -1670,8 +1663,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			91122254,
@@ -1688,12 +1681,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"special",
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			134984643,
@@ -1713,8 +1705,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			142267895,
@@ -1734,8 +1726,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			78960769,
@@ -1755,8 +1747,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			50916305,
@@ -1776,8 +1768,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			78536636,
@@ -1797,8 +1789,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			70791194,
@@ -1815,12 +1807,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"special",
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			88692938,
@@ -1837,12 +1828,11 @@
 			array(
 				"show_notes",
 				"interview_transcript"
-			),
-			"special",
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			84746396,
@@ -1862,8 +1852,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			95686952,
@@ -1883,8 +1873,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			113159342,
@@ -1904,8 +1894,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			103046642,
@@ -1925,8 +1915,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			5106263,
@@ -1947,8 +1937,8 @@
 			"special"
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			92514172,
@@ -1968,8 +1958,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			102853684,
@@ -1989,8 +1979,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			76902752,
@@ -2010,8 +2000,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			100656146,
@@ -2031,8 +2021,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			110142249,
@@ -2052,8 +2042,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			61159752,
@@ -2068,13 +2058,13 @@
 			"In the first double-digit episode we talk about the Team Fortress 2 Classless Update, Episode 3 and Left 4 Dead 2 development issues and a bunch of topics in the Steam forums.",
 			"26/8/2009",
 			array(
-				"http://docs.google.com/View?id=d8qf5wx_28c5xz2mcc",
-				null
+				"show_notes",
+				"interview_transcript"
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			83287589,
@@ -2089,14 +2079,13 @@
 			"In this episode we are very, very happy to have nightcabbage (Justin) join us who brings us an awesome exclusive interview with Gabe Newell, the co-founder and managing director of Valve Software. We also discuss Depeche Mode branding in Left 4 Dead 2, re-playability issues in Left 4 Dead and various other topics. Huge thanks again to nightcabbage!",
 			"12/8/2009",
 			array(
-				"http://docs.google.com/View?id=d8qf5wx_23d4qx4hhh",
-				"http://docs.google.com/View?id=d8qf5wx_27fxhvfwjs"
-			),
-			"interview"
+				"show_notes",
+				"interview_transcript"
+			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			106069023,
@@ -2116,8 +2105,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			60211601,
@@ -2137,8 +2126,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			41655512,
@@ -2158,8 +2147,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			65486144,
@@ -2179,8 +2168,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			92959022,
@@ -2200,8 +2189,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			63878630,
@@ -2221,8 +2210,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			92100332,
@@ -2242,8 +2231,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			48348569,
@@ -2263,8 +2252,8 @@
 			)
 		),
 		array(
-			null,
-			null
+			"show_notes",
+			"interview_transcript"
 		),
 		array(
 			65829326,
