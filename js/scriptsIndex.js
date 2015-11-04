@@ -120,9 +120,9 @@ $(window).ready(function () {
 		if (latestLoaded == false) {
 			return;
 		};
-		var coordinateY = event.pageX / window.innerWidth;
-		$cacheProgress.line.css("left", (coordinateY * 100) + "%");
-		$cacheTimestamp.current.html(formatTime($cacheAudio[0].duration * coordinateY));
+		var coordinateX = event.pageX / window.innerWidth;
+		$cacheProgress.line.css("left", (coordinateX * 100) + "%");
+		$cacheTimestamp.current.html(formatTime($cacheAudio[0].duration * coordinateX));
 	}).mouseover(function () {
 		latestHover = true;
 	}).mouseout(function () {
@@ -159,16 +159,16 @@ $(window).ready(function () {
 
 	$cacheVolume.bar.on("click", function (event) {
 
-		var x = Math.round(event.clientX - $(this).offset().left - 10);
+		var coordinateX = Math.round(event.clientX - $(this).offset().left - 10);
 
-		if (x < 0) {
-			x = 0;
+		if (coordinateX < 0) {
+			coordinateX = 0;
 		}
-		else if (x > 90) {
-			x = 90;
+		else if (coordinateX > 90) {
+			coordinateX = 90;
 		};
 
-		$cacheVolume.dragger.css("left", x);
+		$cacheVolume.dragger.css("left", coordinateX);
 		$cacheVolume.dragger.trigger("drag");
 
 	});

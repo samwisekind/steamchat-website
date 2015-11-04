@@ -1,4 +1,4 @@
-<div id="headerLatest">
+<div id="headerLatest" class="loading">
 
 	<audio id="latestAudio">
 		<source src="<?php echo $episode["episode"][$latestEpisode][2][2]; ?>" type="audio/mp3">
