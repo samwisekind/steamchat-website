@@ -176,7 +176,7 @@ body.headerTip #headerTip {
 	width: 100%;
 	height: 75px;
 	color: $color-steamchat;
-	font-weight: 400; 
+	font-weight: 400;
 	font-size: 18px;
 	line-height: 18px;
 	text-align: center;
@@ -190,12 +190,16 @@ body.headerTip #headerTip {
 	background: $color-steamchat;
 	cursor: pointer; }
 
+#header #headerMenu-tip,
+#header #headerMenu-tip a {
+	width: 90px; }
+
 #header #headerMenu-tip {
 	float: right;
-	width: 90px;
 	height: 100%; }
 
 #header #headerMenu-tip a {
+	padding: 0;
 	color: $color-white;
 	background: $color-steamchatLight; }
 

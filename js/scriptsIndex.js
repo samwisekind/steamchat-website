@@ -56,6 +56,8 @@ function latestChange (event, target) {
 	event.preventDefault();
 	target = $(target);
 
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+
 	latestWasPaused = $cacheAudio[0].paused;
 	latestLoaded = false;
 	$cacheLatest.title.html(target.parent().find(".title").html());
