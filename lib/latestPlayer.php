@@ -1,8 +1,6 @@
-<div id="headerplayer" class="loading">
+<div id="headerplayer" class="int">
 
-	<audio id="playerAudio">
-		<source src="<?php echo $episode["episode"][$latestEpisode][2][2]; ?>" type="audio/mp3">
-	</audio>
+	<audio id="playerAudio" data-latest="<?php echo $episode["episode"][$latestEpisode][2][2]; ?>"></audio>
 
 	<div id="playerWrapper">
 
@@ -16,7 +14,7 @@
 		</div>
 
 		<div id="playerTime">
-			<span id="playerTime-current">--:--:--</span> / <span id="playerTime-total">--:--:--</span>
+			<span id="playerTime-current"></span> / <span id="playerTime-total"></span>
 		</div>
 
 		<div id="playerVolume">

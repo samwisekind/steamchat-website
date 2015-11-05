@@ -1,5 +1,6 @@
-var $cacheAudio, $cacheProgress, playerHover, playerWasPaused, playerUpdateInterval, playerUpdateTimeout;
-var playerLoaded = false;
+var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout;
+var playerLoaded = playerBinded = playerHover = false;
+var playerInt = true;
 
 function formatTime (target) {
 
@@ -10,110 +11,24 @@ function formatTime (target) {
 
 };
 
-function playerUpdate () {
+function playerBind () {
 
-	if (playerLoaded == false) {
-		return;
-	};
+	playerBinded = true;
 
-	if (playerHover == false) {
-		$cacheTimestamp.current.html(formatTime($cacheAudio[0].currentTime));
-	};
-
-	var targetWidth = ($cacheAudio[0].currentTime / $cacheAudio[0].duration) * 100;
-	$cacheProgress.cover.css("width", targetWidth + "%");
-
-	if ($cacheAudio[0].ended == true) {
-		clearInterval(playerUpdateInterval);
-	};
-
-};
-
-function playerToggle (event) {
-
-	event.preventDefault();
-
-	if (playerLoaded == false) {
-		return;
-	};
-
-	if ($cacheAudio[0].paused == true) {
-		$cacheAudio[0].play();
-		playerUpdate();
-		playerUpdateInterval = setInterval(playerUpdate, 1000);
-		$cacheplayer.addClass("playing");
-	}
-	else {
-		$cacheAudio[0].pause();
-		clearInterval(playerUpdateInterval);
-		$cacheplayer.removeClass("playing");
-	};
-
-};
-
-function playerChange (event, target) {
-
-	event.preventDefault();
-	target = $(target);
-
-	$("html, body").animate({ scrollTop: 0 }, "slow");
-
-	playerWasPaused = $cacheAudio[0].paused;
-	playerLoaded = false;
-	$cacheplayer.title.html(target.parent().find(".title").html());
-	$cacheplayer.date.find("span").html(target.parent().find(".date").html());
-	$cacheplayer.title.add($cacheplayer.date).attr("href", target.parent().find(".link").attr("href"));
-	$cacheProgress.cover.css("width", "0%");
-	$cacheProgress.line.css("left", "0%");
-	$cacheAudio.find("source").attr("src", target.attr("data-audio"));
-	$cacheplayer.addClass("loading");
-	$cacheAudio[0].load();
-
-	if (target.attr("data-header") != undefined || target.attr("data-background") != undefined) {
-		$cacheplayer.background.removeClass("noBackground");
-		var imageLoadBackground = new Image();
-		imageLoadBackground.src = target.attr("data-background");
-		imageLoadBackground.onload = function() {
-			var imageLoadHeader = new Image();
-			imageLoadHeader.src = target.attr("data-header");
-			imageLoadHeader.onload = function() {
-				$cacheplayer.background.css("background-image", "url(" + imageLoadBackground.src + ")");
-				$cacheplayer.header.css("background-image", "url(" + imageLoadHeader.src + ")");
-			};
-		};
-	}
-	else {
-		$cacheplayer.background.addClass("noBackground");
-	};
-
-};
-
-function playerMute (event) {
-
-	event.preventDefault();
-
-	$cacheAudio[0].volume = 0;
-	$cacheVolume.dragger.css("left", 0);
-	$cacheVolume.addClass("muted");
-
-};
-
-$(window).ready(function () {
-
-	$cacheplayer = $("#headerplayer");
-		$cacheplayer.title = $cacheplayer.find("h1 a");
-		$cacheplayer.date = $cacheplayer.find("h2 a");
-		$cacheplayer.background = $("#header");
-		$cacheplayer.header = $cacheplayer.background.find("#headerMenu");
-	$cacheAudio = $cacheplayer.find("#playerAudio");
-	$cacheVolume = $cacheplayer.find("#playerVolume");
+	$cachePlayer = $("#headerplayer");
+		$cachePlayer.title = $cachePlayer.find("h1 a");
+		$cachePlayer.date = $cachePlayer.find("h2 a");
+		$cachePlayer.background = $("#header");
+		$cachePlayer.header = $cachePlayer.background.find("#headerMenu");
+	$cacheAudio = $cachePlayer.find("#playerAudio");
+	$cacheVolume = $cachePlayer.find("#playerVolume");
 		$cacheVolume.button = $cacheVolume.find("#playerVolume-toggle a");
 		$cacheVolume.bar = $cacheVolume.find("#playerVolume-bar");
 		$cacheVolume.dragger = $cacheVolume.bar.find("div");
-	$cacheProgress = $cacheplayer.find("#playerProgress");
+	$cacheProgress = $cachePlayer.find("#playerProgress");
 		$cacheProgress.cover = $cacheProgress.find(".cover");
 		$cacheProgress.line = $cacheProgress.find(".line");
-	$cacheTimestamp = $cacheplayer.find("#playerTime");
+	$cacheTimestamp = $cachePlayer.find("#playerTime");
 		$cacheTimestamp.current = $cacheTimestamp.find("#playerTime-current");
 		$cacheTimestamp.total = $cacheTimestamp.find("#playerTime-total");
 	$cacheAudio[0].volume = playerLastVolume = 0.8;
@@ -145,15 +60,20 @@ $(window).ready(function () {
 
 	$cacheAudio[0].addEventListener("ended", function () {
 		clearInterval(playerUpdateInterval);
-		$cacheplayer.removeClass("playing");
+		$cachePlayer.removeClass("playing");
 	});
 
 	$cacheAudio[0].addEventListener("loadedmetadata", function () {
 		$cacheTimestamp.current.html("00:00:00");
 		$cacheTimestamp.total.html(formatTime($cacheAudio[0].duration));
-		$cacheplayer.removeClass("loading");
+		$cachePlayer.removeClass("loading");
 		playerLoaded = true;
 		playerUpdate();
+		if (playerInt == true) {
+			$cachePlayer.removeClass("int");
+			playerInt = false;
+			playerToggle(event);
+		};
 		if (playerWasPaused == false) {
 			$cacheAudio[0].play();
 		};
@@ -190,4 +110,113 @@ $(window).ready(function () {
 
 	});
 
-});
+};
+
+function playerUpdate () {
+
+	if (playerLoaded == false) {
+		return;
+	};
+
+	if (playerHover == false) {
+		$cacheTimestamp.current.html(formatTime($cacheAudio[0].currentTime));
+	};
+
+	var targetWidth = ($cacheAudio[0].currentTime / $cacheAudio[0].duration) * 100;
+	$cacheProgress.cover.css("width", targetWidth + "%");
+
+	if ($cacheAudio[0].ended == true) {
+		clearInterval(playerUpdateInterval);
+	};
+
+};
+
+function playerToggle (event) {
+
+	event.preventDefault();
+
+	if (playerBinded == false) {
+		playerBind();
+	};
+
+	if (playerInt == true) {
+		$cacheAudio.html('<source src="' + $cacheAudio.attr("data-latest") + '" type="audio/mp3">');
+		$cachePlayer.addClass("loading").removeClass("int");
+		$cacheAudio[0].load();
+		return;
+	};
+
+	if ($cacheAudio[0].paused == true) {
+		$cacheAudio[0].play();
+		playerUpdate();
+		playerUpdateInterval = setInterval(playerUpdate, 1000);
+		$cachePlayer.addClass("playing");
+	}
+	else {
+		$cacheAudio[0].pause();
+		clearInterval(playerUpdateInterval);
+		$cachePlayer.removeClass("playing");
+	};
+
+};
+
+function playerChange (event, target) {
+
+	event.preventDefault();
+
+	if (playerBinded == false) {
+		playerBind();
+	};
+
+	target = $(target);
+	$cachePlayer.addClass("loading");
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+
+	playerWasPaused = $cacheAudio[0].paused;
+	playerLoaded = false;
+	$cachePlayer.title.html(target.parent().find(".title").html());
+	$cachePlayer.date.find("span").html(target.parent().find(".date").html());
+	$cachePlayer.title.add($cachePlayer.date).attr("href", target.parent().find(".link").attr("href"));
+	$cacheProgress.cover.css("width", "0%");
+	$cacheProgress.line.css("left", "0%");
+	if (playerInt == true) {
+		playerInt = false;
+		$cacheAudio.html('<source src="' + target.attr("data-audio") + '" type="audio/mp3">');
+		$cachePlayer.removeClass("int");
+	}
+	else {
+		$cacheAudio.find("source").attr("src", target.attr("data-audio"));
+	};
+	$cacheAudio[0].load();
+	if (target.attr("data-header") != undefined || target.attr("data-background") != undefined) {
+		$cachePlayer.background.removeClass("noBackground");
+		var imageLoadBackground = new Image();
+		imageLoadBackground.src = target.attr("data-background");
+		imageLoadBackground.onload = function() {
+			var imageLoadHeader = new Image();
+			imageLoadHeader.src = target.attr("data-header");
+			imageLoadHeader.onload = function() {
+				$cachePlayer.background.css("background-image", "url(" + imageLoadBackground.src + ")");
+				$cachePlayer.header.css("background-image", "url(" + imageLoadHeader.src + ")");
+			};
+		};
+	}
+	else {
+		$cachePlayer.background.addClass("noBackground");
+	};
+
+};
+
+function playerMute (event) {
+
+	event.preventDefault();
+
+	if (playerBinded == false) {
+		playerBind();
+	};
+
+	$cacheAudio[0].volume = 0;
+	$cacheVolume.dragger.css("left", 0);
+	$cacheVolume.addClass("muted");
+
+};

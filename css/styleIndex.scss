@@ -118,7 +118,6 @@
 	letter-spacing: -1px;
 	text-align: right;
 	text-shadow: 0 0 3px $color-black;
-	pointer-events: none;
 	user-select: none;
 	-moz-user-select: none;
 	-khtml-user-select: none;
@@ -177,8 +176,7 @@
 	left: 75px;
 	width: 15px;
 	height: 15px;
-	background: $color-white;
-	cursor: pointer; }
+	background: $color-white; }
 
 #header #headerPlayer #playerProgress {
 	z-index: 0;
@@ -189,6 +187,9 @@
 
 #header #headerPlayer #playerProgress:hover {
 	cursor: pointer; }
+
+#header #headerPlayer.int #playerProgress:hover {
+	cursor: default; }
 
 #header #headerPlayer #playerProgress > div {
 	pointer-events: none;
@@ -298,6 +299,11 @@
 	0% { transform: scale(0); }
 	40% { transform: scale(1.0); }
 	80% { transform: scale(0); } }
+
+#header #headerPlayer.int #playerWrapper #playerTime,
+#header #headerPlayer.int #playerProgress .cover,
+#header #headerPlayer.int #playerProgress .line {
+	display: none; }
 
 #header #headerPlayer.loading #playerToggle,
 #header #headerPlayer.loading #playerWrapper #playerTime,
