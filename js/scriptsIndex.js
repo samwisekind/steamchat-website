@@ -140,8 +140,7 @@ function playerToggle (event) {
 	};
 
 	if (playerInt == true) {
-		$cacheAudio.html('<source src="' + $cacheAudio.attr("data-latest") + '" type="audio/mp3">');
-		$cachePlayer.addClass("loading").removeClass("int");
+		$cachePlayer.addClass("loading");
 		$cacheAudio[0].load();
 		return;
 	};
@@ -181,12 +180,9 @@ function playerChange (event, target) {
 	$cacheProgress.line.css("left", "0%");
 	if (playerInt == true) {
 		playerInt = false;
-		$cacheAudio.html('<source src="' + target.attr("data-audio") + '" type="audio/mp3">');
 		$cachePlayer.removeClass("int");
-	}
-	else {
-		$cacheAudio.find("source").attr("src", target.attr("data-audio"));
 	};
+	$cacheAudio.find("source").attr("src", target.attr("data-audio"));
 	$cacheAudio[0].load();
 	if (target.attr("data-header") != undefined || target.attr("data-background") != undefined) {
 		$cachePlayer.background.removeClass("noBackground");

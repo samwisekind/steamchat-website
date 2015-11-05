@@ -22,7 +22,10 @@
 #header.noBackground #headerMenu {
   background-color: #FFFFFF !important; }
 
-/******* HEADER - player PLAYER *******/
+/******* HEADER - PLAYER *******/
+#header #headerPlayer {
+  border-bottom: 5px solid #0064BF; }
+
 #header #headerPlayer #playerToggle {
   z-index: 10;
   position: absolute;

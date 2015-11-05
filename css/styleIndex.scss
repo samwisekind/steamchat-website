@@ -26,7 +26,10 @@
 #header.noBackground #headerMenu {
 	background-color: $color-white !important; }
 
-/******* HEADER - player PLAYER *******/
+/******* HEADER - PLAYER *******/
+
+#header #headerPlayer {
+	border-bottom: 5px solid $color-steamchat; }
 
 #header #headerPlayer #playerToggle {
 	z-index: 10;
