@@ -1067,7 +1067,7 @@
 	$episode["episode"][55] = array(
 		array(
 			"Potato Sack of News",
-			"descIn this episode, we catch up on a huge amount of Valve news, discuss the recent acquisition of Impulse, give away a free copy of Portal 2 and more.ription",
+			"In this episode, we catch up on a huge amount of Valve news, discuss the recent acquisition of Impulse, give away a free copy of Portal 2 and more.ription",
 			"06/4/2011",
 			array(
 				"show_notes",
