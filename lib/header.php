@@ -1,12 +1,12 @@
-<?php $hostLocation = "http://localhost:8888/steamchat-website/"; ?>
+<?php require_once "common.php"; ?>
 
 <html>
 	<head>
-		<title>Steamchat<?php if ($pageType == "???") { echo " " , $pageTitle; } else if ($pageType == "episode") { echo ': ' , $pageTitle; }; ?></title>
+		<title>Steamchat<?php if ($pageType == "???") { echo " " . $pageTitle; } else if ($pageType == "episode") { echo ': ' . $pageTitle; }; ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style<?php echo ucfirst($pageType) ?>.css" type="text/css" media="screen">
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scriptsGlobal.js"></script>
 		<?php
 			if ($pageType == "index") { echo '
@@ -67,8 +67,6 @@
 
 			</nav>
 
-			<?php /* if ($headertitle==null) {} else if ($episodepage=true) { echo '<h1 class="pagetitle episode">' , $headertitle, '</h1><h1 class="pagedate episode">Published ' , $headerdate, '</h1>'; } else { echo '<h1 class="pagetitle">' , $headertitle, '</h1>'; }; */ ?>
-
 			<?php
 
 				if ($pageType == "index") {
@@ -78,3 +76,5 @@
 			?>
 
 		</header>
+
+		<main id="content">

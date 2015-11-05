@@ -1,0 +1,161 @@
+@import "variables";
+
+
+
+/******* CONTENT *******/
+
+#content {
+	padding: 100px 20px 100px 20px; }
+
+#content .left,
+#content .right {
+	display: inline-block; }
+
+#content .left {
+	float: left;
+	width: 700px; }
+
+#content h1,
+#content h2 {
+	font-weight: 300; }
+
+#content h1 {
+	margin-bottom: 10px;
+	font-size: 38px;
+	line-height: 38px;
+	color: $color-steamchat; }
+
+#content h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 24px;
+	color: $color-grey; }
+
+#content p {
+	margin-bottom: 60px;
+	text-align: justify; }
+
+#content #episodeAudio {
+	width: 100%; }
+
+#content .right {
+	padding-top: 10px;
+	float: right;
+	width: 225px; }
+
+#content ul,
+#content ul li {
+	list-style: none; }
+
+#content ul {
+	margin-bottom: 40px; }
+
+#content ul li {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: right; }
+
+#content ul li:last-child {
+	margin-bottom: 0; }
+
+#content ul li.title,
+#content ul li span {
+	color: $color-grey; }
+
+#content ul li.title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase; }
+
+#content ul li span {
+	margin-right: 5px; }
+
+#content ul li a {
+	display: inline-block;
+	font-weight: 700;
+	color: $color-steamchat;
+	text-decoration: none; }
+
+#content ul li a:hover {
+	text-decoration: underline; }
+
+#content #episodeTools {
+	margin-bottom: 0; }
+
+
+
+/******* EPISODE NAV *******/
+
+#content #episodeNav {
+	margin-top: 100px;
+	margin-bottom: 200px; }
+
+#content #episodeNav,
+#content #episodeNav li {
+	list-style: none; }
+
+#content #episodeNav li {
+	display: inline-table;
+	width: 50%;
+	height: 70px; }
+
+#content #episodeNav li.prev {
+	float: left; }
+
+#content #episodeNav li.next {
+	float: right; }
+
+#content #episodeNav li a {
+	opacity: .6;
+	display: table-cell;
+	padding-left: 20px;
+	height: 100%;
+	color: $color-grey;
+	text-align: left;
+	text-decoration: none;
+	background: url("../img/episode/episode_nav.svg") no-repeat transparent;
+	vertical-align: middle; }
+
+#content #episodeNav li.prev a {
+	padding-left: 60px;
+	background-position: left top; }
+
+#content #episodeNav li.next a {
+	padding-right: 60px;
+	text-align: right;
+	background-position: right bottom; }
+
+#content #episodeNav li a:hover {
+	opacity: 1; }
+
+#content #episodeNav li.prev a:hover {
+	padding-left: 55px; }
+
+#content #episodeNav li.next a:hover {
+	padding-right: 55px; }
+
+#content #episodeNav li span {
+	display: block; }
+
+#content #episodeNav li .title {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 14px; }
+
+#content #episodeNav li .date {
+	font-size: 12px;
+	line-height: 12px; }
+
+
+
+/******* TRANSITIONS *******/
+
+#content #episodeNav li a {
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out; }

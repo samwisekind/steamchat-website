@@ -5,7 +5,7 @@
 	require_once "lib/header.php";
 ?>
 
-	<div id="wrapper">
+	<section>
 
 		<table border="0" cellpadding="0" cellspacing="0" class="episodeArchives special">
 			<tr class="episodeArchives-header">
@@ -50,6 +50,10 @@
 			</tr>
 		</table>
 
+	</section>
+
+	<section>
+
 		<?php
 
 			function listEpisodes($targetStart, $targetEnd) {
@@ -71,6 +75,7 @@
 							</a>
 							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="playerChange(event, this);"' . $images . '></a>
 						</li>';
+
 				};
 
 			};
@@ -114,6 +119,6 @@
 			</tr>
 		</table>
 
-	</div>
+	</section>
 
 <?php include "lib/footer.php"; ?>
