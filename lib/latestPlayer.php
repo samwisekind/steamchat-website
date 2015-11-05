@@ -1,12 +1,12 @@
-<div id="headerLatest" class="loading">
+<div id="headerplayer" class="loading">
 
-	<audio id="latestAudio">
+	<audio id="playerAudio">
 		<source src="<?php echo $episode["episode"][$latestEpisode][2][2]; ?>" type="audio/mp3">
 	</audio>
 
-	<div id="latestWrapper">
+	<div id="playerWrapper">
 
-		<div id="latestTitle">
+		<div id="playerTitle">
 			<h1>
 				<a href="<?php echo $hostLocation . 'episodes/' . $latestEpisode ?>/">#<?php echo $latestEpisode . ": " . $episode["episode"][$latestEpisode][0][0]; ?></a>
 			</h1>
@@ -15,31 +15,31 @@
 			</h2>
 		</div>
 
-		<div id="latestTime">
-			<span id="latestTime-current">--:--:--</span> / <span id="latestTime-total">--:--:--</span>
+		<div id="playerTime">
+			<span id="playerTime-current">--:--:--</span> / <span id="playerTime-total">--:--:--</span>
 		</div>
 
-		<div id="latestVolume">
-			<div id="latestVolume-toggle">
-				<a href="#" onclick="latestMute(event);"></a>
+		<div id="playerVolume">
+			<div id="playerVolume-toggle">
+				<a href="#" onclick="playerMute(event);"></a>
 			</div>
-			<div id="latestVolume-bar">
+			<div id="playerVolume-bar">
 				<div></div>
 			</div>
 		</div>
 
 	</div>
 
-	<div id="latestToggle" class="playing">
-		<a href="#" onclick="latestToggle(event);"></a>
+	<div id="playerToggle" class="playing">
+		<a href="#" onclick="playerToggle(event);"></a>
 	</div>
 
-	<div id="latestProgress">
+	<div id="playerProgress">
 		<div class="cover"></div>
 		<div class="line"></div>
 	</div>
 
-	<div id="latestLoading">
+	<div id="playerLoading">
 		<div class="wrapper">
 			<div class="circle circle1"></div>
 			<div class="circle circle2"></div>

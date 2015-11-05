@@ -19,9 +19,9 @@
 #header.noBackground #headerMenu {
 	background-color: $color-white !important; }
 
-/******* HEADER - LATEST PLAYER *******/
+/******* HEADER - player PLAYER *******/
 
-#header #headerLatest #latestToggle {
+#header #headerPlayer #playerToggle {
 	z-index: 10;
 	position: absolute;
 	top: 50%;
@@ -31,24 +31,24 @@
 	width: 100px;
 	height: 100px; }
 
-#header #headerLatest #latestToggle a {
+#header #headerPlayer #playerToggle a {
 	opacity: .75;
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("../img/index/latestToggle.svg") left top no-repeat transparent; }
+	background: url("../img/index/playerToggle.svg") left top no-repeat transparent; }
 
-#header #headerLatest #latestToggle a:hover {
+#header #headerPlayer #playerToggle a:hover {
 	opacity: 1;
 	background-position: right top; }
 
-#header #headerLatest.playing #latestToggle a {
+#header #headerPlayer.playing #playerToggle a {
 	background-position: left bottom; }
 
-#header #headerLatest.playing #latestToggle a:hover {
+#header #headerPlayer.playing #playerToggle a:hover {
 	background-position: right bottom; }
 
-#header #headerLatest #latestWrapper {
+#header #headerPlayer #playerWrapper {
 	position: absolute;
 	left: 50%;
 	bottom: 0;
@@ -56,15 +56,15 @@
 	width: 1000px;
 	height: 400px; }
 
-#header #headerLatest #latestWrapper #latestTitle h1 a,
-#header #headerLatest #latestWrapper #latestTitle h2 a {
+#header #headerPlayer #playerWrapper #playerTitle h1 a,
+#header #headerPlayer #playerWrapper #playerTitle h2 a {
 	display: block;
 	width: 100%;
 	height: 100%;
 	color: $color-white;
 	text-decoration: none; }
 
-#header #headerLatest #latestWrapper #latestTitle h1 {
+#header #headerPlayer #playerWrapper #playerTitle h1 {
 	z-index: 30;
 	position: absolute;
 	bottom: 0;
@@ -75,7 +75,7 @@
 	max-width: 100%;
 	background: $color-steamchat; }
 
-#header #headerLatest #latestWrapper #latestTitle h1 a {
+#header #headerPlayer #playerWrapper #playerTitle h1 a {
 	padding: 10px 15px 10px 10px;
 	max-width: 700px;
 	font-size: 48px;
@@ -85,11 +85,11 @@
 	text-overflow: ellipsis;
 	white-space: nowrap; }
 
-#header #headerLatest #latestWrapper #latestTitle:hover h1 a {
+#header #headerPlayer #playerWrapper #playerTitle:hover h1 a {
 	max-width: 100%;
 	text-decoration: underline; }
 
-#header #headerLatest #latestWrapper #latestTitle h2 {
+#header #headerPlayer #playerWrapper #playerTitle h2 {
 	z-index: 10;
 	position: absolute;
 	bottom: -40px;
@@ -103,10 +103,10 @@
 	color: $color-white;
 	background: $color-steamchat; }
 
-#header #headerLatest #latestWrapper #latestTitle h2 a {
+#header #headerPlayer #playerWrapper #playerTitle h2 a {
 	padding: 10px; }
 
-#header #headerLatest #latestWrapper #latestTime {
+#header #headerPlayer #playerWrapper #playerTime {
 	pointer-events: none;
 	z-index: 20;
 	position: absolute;
@@ -124,10 +124,10 @@
 	-khtml-user-select: none;
 	-webkit-user-select: none; }
 
-#header.noBackground #headerLatest #latestWrapper #latestTime {
+#header.noBackground #headerPlayer #playerWrapper #playerTime {
 	text-shadow: none; }
 
-#header #headerLatest #latestWrapper #latestVolume {
+#header #headerPlayer #playerWrapper #playerVolume {
 	position: absolute;
 	bottom: -40px;
 	right: 0;
@@ -135,7 +135,7 @@
 	height: 35px;
 	background: $color-steamchat; }
 
-#header #headerLatest #latestWrapper #latestVolume {
+#header #headerPlayer #playerWrapper #playerVolume {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -143,7 +143,7 @@
 	-ms-user-select: none;
 	user-select: none; }
 
-#header #headerLatest #latestWrapper #latestVolume #latestVolume-toggle {
+#header #headerPlayer #playerWrapper #playerVolume #playerVolume-toggle {
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -151,16 +151,16 @@
 	width: 15px;
 	height: 15px; }
 
-#header #headerLatest #latestWrapper #latestVolume #latestVolume-toggle a {
+#header #headerPlayer #playerWrapper #playerVolume #playerVolume-toggle a {
 	display: block;
 	width: 100%;
 	height: 100%;
 	background: url("../img/index/indexVolume.svg") -3px center no-repeat; }
 
-#header #headerLatest #latestWrapper #latestVolume.muted #latestVolume-toggle a {
+#header #headerPlayer #playerWrapper #playerVolume.muted #playerVolume-toggle a {
 	background-position: -27px center; }
 
-#header #headerLatest #latestWrapper #latestVolume #latestVolume-bar {
+#header #headerPlayer #playerWrapper #playerVolume #playerVolume-bar {
 	position: absolute;
 	right: 10px;
 	top: 10px;
@@ -171,7 +171,7 @@
 	background: $color-steamchatLight;
 	cursor: pointer; }
 
-#header #headerLatest #latestWrapper #latestVolume #latestVolume-bar > div {
+#header #headerPlayer #playerWrapper #playerVolume #playerVolume-bar > div {
 	position: relative;
 	top: 0;
 	left: 75px;
@@ -180,37 +180,37 @@
 	background: $color-white;
 	cursor: pointer; }
 
-#header #headerLatest #latestProgress {
+#header #headerPlayer #playerProgress {
 	z-index: 0;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	overflow: hidden; }
 
-#header #headerLatest #latestProgress:hover {
+#header #headerPlayer #playerProgress:hover {
 	cursor: pointer; }
 
-#header #headerLatest #latestProgress > div {
+#header #headerPlayer #playerProgress > div {
 	pointer-events: none;
 	position: absolute;
 	top: 0;
 	height: 400px; }
 
-#header #headerLatest #latestProgress .cover {
+#header #headerPlayer #playerProgress .cover {
 	z-index: 0;
-	background: url("../img/index/latestCover.svg") left center repeat $color-steamchatCover; }
+	background: url("../img/index/playerCover.svg") left center repeat $color-steamchatCover; }
 
-#header #headerLatest #latestProgress .line {
+#header #headerPlayer #playerProgress .line {
 	opacity: 0;
 	z-index: 10;
 	left: 0;
 	width: 5px;
 	background-color: $color-steamchat; }
 
-#header #headerLatest #latestProgress:hover .line {
+#header #headerPlayer #playerProgress:hover .line {
 	opacity: 1; }
 
- #header #headerLatest #latestLoading {
+ #header #headerPlayer #playerLoading {
  	display: none;
 	z-index: 0;
 	position: absolute;
@@ -220,7 +220,7 @@
 	height: 100%;
 	background: rgba(0, 0, 0, .5); }
 
- #header #headerLatest #latestLoading .wrapper {
+ #header #headerPlayer #playerLoading .wrapper {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -228,7 +228,7 @@
 	margin: -10px 0 0 -40px;
 	text-align: center; }
 
- #header #headerLatest #latestLoading .circle {
+ #header #headerPlayer #playerLoading .circle {
 	float: left;
 	margin-right: 10px;
 	width: 20px;
@@ -252,21 +252,21 @@
 	-o-animation-play-state: paused;
 	animation-play-state: paused; }
 
-#header #headerLatest.loading #latestLoading .circle {
+#header #headerPlayer.loading #playerLoading .circle {
 	-webkit-animation-play-state: running;
 	-moz-animation-play-state: running;
 	-ms-animation-play-state: running;
 	-o-animation-play-state: running;
 	animation-play-state: running;  }
 
- #header #headerLatest #latestLoading .circle2 {
+ #header #headerPlayer #playerLoading .circle2 {
 	-webkit-animation-delay: 0.2s;
 	-moz-transition-delay: 0.2s;
 	-ms-transition-delay: 0.2s;
 	-o-transition-delay: 0.2s;
 	animation-delay: 0.2s; }
 
- #header #headerLatest #latestLoading .circle3 {
+ #header #headerPlayer #playerLoading .circle3 {
 	margin-right: 0;
 	-webkit-animation-delay: 0.4s;
 	-moz-transition-delay: 0.4s;
@@ -299,13 +299,13 @@
 	40% { transform: scale(1.0); }
 	80% { transform: scale(0); } }
 
-#header #headerLatest.loading #latestToggle,
-#header #headerLatest.loading #latestWrapper #latestTime,
-#header #headerLatest.loading #latestProgress .cover,
-#header #headerLatest.loading #latestProgress .line {
+#header #headerPlayer.loading #playerToggle,
+#header #headerPlayer.loading #playerWrapper #playerTime,
+#header #headerPlayer.loading #playerProgress .cover,
+#header #headerPlayer.loading #playerProgress .line {
 	display: none; }
 
-#header #headerLatest.loading #latestLoading {
+#header #headerPlayer.loading #playerLoading {
 	display: block; }
 
 
@@ -400,21 +400,21 @@
 
 /******* TRANSITIONS *******/
 
-#header #headerLatest #latestToggle {
+#header #headerPlayer #playerToggle {
 	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
 
-#header #headerLatest #latestProgress .cover.smooth {
+#header #headerPlayer #playerProgress .cover.smooth {
 	-webkit-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
 
-#header #headerLatest #latestProgress .line {
+#header #headerPlayer #playerProgress .line {
 	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);

@@ -1,5 +1,5 @@
-var $cacheAudio, $cacheProgress, latestHover, latestWasPaused, latestUpdateInterval, latestUpdateTimeout;
-var latestLoaded = false;
+var $cacheAudio, $cacheProgress, playerHover, playerWasPaused, playerUpdateInterval, playerUpdateTimeout;
+var playerLoaded = false;
 
 function formatTime (target) {
 
@@ -10,13 +10,13 @@ function formatTime (target) {
 
 };
 
-function latestUpdate () {
+function playerUpdate () {
 
-	if (latestLoaded == false) {
+	if (playerLoaded == false) {
 		return;
 	};
 
-	if (latestHover == false) {
+	if (playerHover == false) {
 		$cacheTimestamp.current.html(formatTime($cacheAudio[0].currentTime));
 	};
 
@@ -24,71 +24,71 @@ function latestUpdate () {
 	$cacheProgress.cover.css("width", targetWidth + "%");
 
 	if ($cacheAudio[0].ended == true) {
-		clearInterval(latestUpdateInterval);
+		clearInterval(playerUpdateInterval);
 	};
 
 };
 
-function latestToggle (event) {
+function playerToggle (event) {
 
 	event.preventDefault();
 
-	if (latestLoaded == false) {
+	if (playerLoaded == false) {
 		return;
 	};
 
 	if ($cacheAudio[0].paused == true) {
 		$cacheAudio[0].play();
-		latestUpdate();
-		latestUpdateInterval = setInterval(latestUpdate, 1000);
-		$cacheLatest.addClass("playing");
+		playerUpdate();
+		playerUpdateInterval = setInterval(playerUpdate, 1000);
+		$cacheplayer.addClass("playing");
 	}
 	else {
 		$cacheAudio[0].pause();
-		clearInterval(latestUpdateInterval);
-		$cacheLatest.removeClass("playing");
+		clearInterval(playerUpdateInterval);
+		$cacheplayer.removeClass("playing");
 	};
 
 };
 
-function latestChange (event, target) {
+function playerChange (event, target) {
 
 	event.preventDefault();
 	target = $(target);
 
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 
-	latestWasPaused = $cacheAudio[0].paused;
-	latestLoaded = false;
-	$cacheLatest.title.html(target.parent().find(".title").html());
-	$cacheLatest.date.find("span").html(target.parent().find(".date").html());
-	$cacheLatest.title.add($cacheLatest.date).attr("href", target.parent().find(".link").attr("href"));
+	playerWasPaused = $cacheAudio[0].paused;
+	playerLoaded = false;
+	$cacheplayer.title.html(target.parent().find(".title").html());
+	$cacheplayer.date.find("span").html(target.parent().find(".date").html());
+	$cacheplayer.title.add($cacheplayer.date).attr("href", target.parent().find(".link").attr("href"));
 	$cacheProgress.cover.css("width", "0%");
 	$cacheProgress.line.css("left", "0%");
 	$cacheAudio.find("source").attr("src", target.attr("data-audio"));
-	$cacheLatest.addClass("loading");
+	$cacheplayer.addClass("loading");
 	$cacheAudio[0].load();
 
 	if (target.attr("data-header") != undefined || target.attr("data-background") != undefined) {
-		$cacheLatest.background.removeClass("noBackground");
+		$cacheplayer.background.removeClass("noBackground");
 		var imageLoadBackground = new Image();
 		imageLoadBackground.src = target.attr("data-background");
 		imageLoadBackground.onload = function() {
 			var imageLoadHeader = new Image();
 			imageLoadHeader.src = target.attr("data-header");
 			imageLoadHeader.onload = function() {
-				$cacheLatest.background.css("background-image", "url(" + imageLoadBackground.src + ")");
-				$cacheLatest.header.css("background-image", "url(" + imageLoadHeader.src + ")");
+				$cacheplayer.background.css("background-image", "url(" + imageLoadBackground.src + ")");
+				$cacheplayer.header.css("background-image", "url(" + imageLoadHeader.src + ")");
 			};
 		};
 	}
 	else {
-		$cacheLatest.background.addClass("noBackground");
+		$cacheplayer.background.addClass("noBackground");
 	};
 
 };
 
-function latestMute (event) {
+function playerMute (event) {
 
 	event.preventDefault();
 
@@ -100,61 +100,61 @@ function latestMute (event) {
 
 $(window).ready(function () {
 
-	$cacheLatest = $("#headerLatest");
-		$cacheLatest.title = $cacheLatest.find("h1 a");
-		$cacheLatest.date = $cacheLatest.find("h2 a");
-		$cacheLatest.background = $("#header");
-		$cacheLatest.header = $cacheLatest.background.find("#headerMenu");
-	$cacheAudio = $cacheLatest.find("#latestAudio");
-	$cacheVolume = $cacheLatest.find("#latestVolume");
-		$cacheVolume.button = $cacheVolume.find("#latestVolume-toggle a");
-		$cacheVolume.bar = $cacheVolume.find("#latestVolume-bar");
+	$cacheplayer = $("#headerplayer");
+		$cacheplayer.title = $cacheplayer.find("h1 a");
+		$cacheplayer.date = $cacheplayer.find("h2 a");
+		$cacheplayer.background = $("#header");
+		$cacheplayer.header = $cacheplayer.background.find("#headerMenu");
+	$cacheAudio = $cacheplayer.find("#playerAudio");
+	$cacheVolume = $cacheplayer.find("#playerVolume");
+		$cacheVolume.button = $cacheVolume.find("#playerVolume-toggle a");
+		$cacheVolume.bar = $cacheVolume.find("#playerVolume-bar");
 		$cacheVolume.dragger = $cacheVolume.bar.find("div");
-	$cacheProgress = $cacheLatest.find("#latestProgress");
+	$cacheProgress = $cacheplayer.find("#playerProgress");
 		$cacheProgress.cover = $cacheProgress.find(".cover");
 		$cacheProgress.line = $cacheProgress.find(".line");
-	$cacheTimestamp = $cacheLatest.find("#latestTime");
-		$cacheTimestamp.current = $cacheTimestamp.find("#latestTime-current");
-		$cacheTimestamp.total = $cacheTimestamp.find("#latestTime-total");
-	$cacheAudio[0].volume = latestLastVolume = 0.8;
+	$cacheTimestamp = $cacheplayer.find("#playerTime");
+		$cacheTimestamp.current = $cacheTimestamp.find("#playerTime-current");
+		$cacheTimestamp.total = $cacheTimestamp.find("#playerTime-total");
+	$cacheAudio[0].volume = playerLastVolume = 0.8;
 
 	$cacheProgress.mousemove(function (event) {
-		if (latestLoaded == false) {
+		if (playerLoaded == false) {
 			return;
 		};
 		var coordinateX = event.pageX / window.innerWidth;
 		$cacheProgress.line.css("left", (coordinateX * 100) + "%");
 		$cacheTimestamp.current.html(formatTime($cacheAudio[0].duration * coordinateX));
 	}).mouseover(function () {
-		latestHover = true;
+		playerHover = true;
 	}).mouseout(function () {
-		latestHover = false;
-		latestUpdate();
+		playerHover = false;
+		playerUpdate();
 	}).on("click", function (event) {
-		if (latestLoaded == false) {
+		if (playerLoaded == false) {
 			return;
 		};
 		$cacheAudio[0].currentTime = $cacheAudio[0].duration * (event.pageX / window.innerWidth);
-		clearTimeout(latestUpdateTimeout);
+		clearTimeout(playerUpdateTimeout);
 		$cacheProgress.cover.addClass("smooth");
-		latestUpdateTimeout = setTimeout(function() {
+		playerUpdateTimeout = setTimeout(function() {
 			$cacheProgress.cover.removeClass("smooth");
 		}, 250);
-		latestUpdate();
+		playerUpdate();
 	});
 
 	$cacheAudio[0].addEventListener("ended", function () {
-		clearInterval(latestUpdateInterval);
-		$cacheLatest.removeClass("playing");
+		clearInterval(playerUpdateInterval);
+		$cacheplayer.removeClass("playing");
 	});
 
 	$cacheAudio[0].addEventListener("loadedmetadata", function () {
 		$cacheTimestamp.current.html("00:00:00");
 		$cacheTimestamp.total.html(formatTime($cacheAudio[0].duration));
-		$cacheLatest.removeClass("loading");
-		latestLoaded = true;
-		latestUpdate();
-		if (latestWasPaused == false) {
+		$cacheplayer.removeClass("loading");
+		playerLoaded = true;
+		playerUpdate();
+		if (playerWasPaused == false) {
 			$cacheAudio[0].play();
 		};
 	}, false);

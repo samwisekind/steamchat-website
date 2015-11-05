@@ -40,7 +40,7 @@
 											<span class="title">' . $specialsArray[$i][2] . '</span>
 											<span class="date">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '</span>
 										</a>
-										<a href="#" class="play" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '" onclick="latestChange(event, this);"></a>
+										<a href="#" class="play" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '" onclick="playerChange(event, this);"></a>
 									</li>';
 							};
 
@@ -69,7 +69,7 @@
 								<span class="title">#' . $i . ': ' . $episode["episode"][$i][0][0] .'</span>
 								<span class="date">' . $episode["episode"][$i][0][2] .'</span>
 							</a>
-							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="latestChange(event, this);"' . $images . '></a>
+							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="playerChange(event, this);"' . $images . '></a>
 						</li>';
 				};
 
