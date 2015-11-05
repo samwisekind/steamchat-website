@@ -316,7 +316,7 @@
 #header #headerPlayer.loading #playerWrapper #playerTime,
 #header #headerPlayer.int #playerProgress .cover,
 #header #headerPlayer.loading #playerProgress .cover,
-#header #headerPlayer.int #playerProgress .line
+#header #headerPlayer.int #playerProgress .line,
 #header #headerPlayer.loading #playerProgress .line,
 #header #headerPlayer.int #playerVolume {
   display: none; }
@@ -373,9 +373,10 @@
   height: 100%;
   text-decoration: none; }
 
-.episodeArchives tr td ul li .link span {
+.episodeArchives tr td ul li .link > span {
   display: block;
   overflow: hidden;
+  overflow-y: visible;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
@@ -386,10 +387,14 @@
   font-weight: bold;
   color: #0064BF; }
 
-.episodeArchives tr td ul li .link .date {
+.episodeArchives tr td ul li .link .subtitle {
   font-size: 12px;
   line-height: 12px;
   color: #999999; }
+
+.episodeArchives tr td ul li .link .subtitle > span {
+  float: right;
+  color: #AAAAAA; }
 
 .episodeArchives tr td ul li:hover {
   background: #0064BF; }
@@ -416,12 +421,19 @@
 
 /******* TRANSITIONS *******/
 #header #headerPlayer #playerToggle,
-#header #headerPlayer #playerLoading {
+#header #headerPlayer #playerProgress .line {
   -webkit-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -ms-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+#header #headerPlayer #playerLoading {
+  -webkit-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 #header #headerPlayer #playerProgress .cover.smooth {
   -webkit-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -429,12 +441,5 @@
   -ms-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-#header #headerPlayer #playerProgress .line {
-  -webkit-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 /*# sourceMappingURL=styleIndex.css.map */

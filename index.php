@@ -38,7 +38,7 @@
 									<li>
 										<a href="' . $hostLocation . $specialsArray[$i][1] . "s/" . $specialsArray[$i][0] . '/" data-audio="' . $episode["episode"][$i][2][2] . '" class="link">
 											<span class="title">' . $specialsArray[$i][2] . '</span>
-											<span class="date">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '</span>
+											<span class="subtitle">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '<span>' . $episode["episode"][$i][2][1] . '</span></span>
 										</a>
 										<a href="#" class="play" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '" onclick="playerChange(event, this);"></a>
 									</li>';
@@ -71,7 +71,7 @@
 						<li>
 							<a href="' . $hostLocation . 'episodes/' . $i .'/" class="link">
 								<span class="title">#' . $i . ': ' . $episode["episode"][$i][0][0] .'</span>
-								<span class="date">' . $episode["episode"][$i][0][2] .'</span>
+								<span class="subtitle">' . $episode["episode"][$i][0][2] . '<span>' . $episode["episode"][$i][2][1] . '</span></span>
 							</a>
 							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="playerChange(event, this);"' . $images . '></a>
 						</li>';

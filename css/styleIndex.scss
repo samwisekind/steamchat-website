@@ -311,7 +311,7 @@
 #header #headerPlayer.loading #playerWrapper #playerTime,
 #header #headerPlayer.int #playerProgress .cover,
 #header #headerPlayer.loading #playerProgress .cover,
-#header #headerPlayer.int #playerProgress .line
+#header #headerPlayer.int #playerProgress .line,
 #header #headerPlayer.loading #playerProgress .line,
 #header #headerPlayer.int #playerVolume {
 	display: none; }
@@ -372,9 +372,10 @@
 	height: 100%;
 	text-decoration: none; }
 
-.episodeArchives tr td ul li .link span {
+.episodeArchives tr td ul li .link > span {
 	display: block;
 	overflow: hidden;
+	overflow-y: visible;
 	text-overflow: ellipsis;
 	white-space: nowrap; }
 
@@ -385,10 +386,14 @@
 	font-weight: bold;
 	color: $color-steamchat; }
 
-.episodeArchives tr td ul li .link .date {
+.episodeArchives tr td ul li .link .subtitle {
 	font-size: 12px;
 	line-height: 12px;
-	color: #999999; }
+	color: $color-grey; }
+
+.episodeArchives tr td ul li .link .subtitle > span {
+	float: right;
+	color: $color-greyLight; }
 
 .episodeArchives tr td ul li:hover {
 	background: $color-steamchat; }
@@ -418,12 +423,19 @@
 /******* TRANSITIONS *******/
 
 #header #headerPlayer #playerToggle,
-#header #headerPlayer #playerLoading {
+#header #headerPlayer #playerProgress .line {
 	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
+
+#header #headerPlayer #playerLoading {
+	-webkit-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-moz-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-ms-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-o-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
 
 #header #headerPlayer #playerProgress .cover.smooth {
 	-webkit-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
@@ -431,10 +443,3 @@
 	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
-
-#header #headerPlayer #playerProgress .line {
-	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
