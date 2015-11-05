@@ -191,7 +191,36 @@ body.headerTip #header #headerMenu-tip a {
 #content {
   margin: 0 auto 0 auto;
   padding: 100px 0 250px 0;
-  width: 1000px; }
+  max-width: 700px; }
+
+#content h1 {
+  margin-bottom: 20px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 300;
+  color: #0064BF; }
+
+#content h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 300; }
+
+#content p {
+  margin-bottom: 20px;
+  text-align: justify; }
+
+#content > p:last-child {
+  margin-bottom: 0; }
+
+#content p a,
+#content ul a {
+  color: #0064BF; }
+
+#content ul a:hover,
+#content p a:hover {
+  color: #00498c; }
 
 /******* FOOTER *******/
 #footer {

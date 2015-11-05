@@ -5,7 +5,8 @@
 /******* CONTENT *******/
 
 #content {
-	padding: 100px 20px 100px 20px; }
+	padding: 100px 20px 100px 20px;
+	max-width: 1000px }
 
 #content .left,
 #content .right {
@@ -15,25 +16,15 @@
 	float: left;
 	width: 700px; }
 
-#content h1,
-#content h2 {
-	font-weight: 300; }
-
 #content h1 {
-	margin-bottom: 10px;
-	font-size: 38px;
-	line-height: 38px;
-	color: $color-steamchat; }
+	margin-bottom: 10px; }
 
 #content h2 {
-	margin-bottom: 20px;
-	font-size: 24px;
-	line-height: 24px;
+	margin-top: 0;
 	color: $color-grey; }
 
 #content p {
-	margin-bottom: 60px;
-	text-align: justify; }
+	margin-bottom: 60px; }
 
 #content #episodeAudio {
 	width: 100%; }
@@ -144,6 +135,9 @@
 	margin-bottom: 5px;
 	font-size: 14px;
 	line-height: 14px; }
+
+#content #episodeNav li a:hover .title {
+	text-decoration: underline; }
 
 #content #episodeNav li .date {
 	font-size: 12px;

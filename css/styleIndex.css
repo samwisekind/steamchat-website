@@ -324,7 +324,11 @@
 #header #headerPlayer.loading #playerLoading {
   display: block; }
 
-/******* EPISODE ARCHIVES *******/
+/******* CONTENT *******/
+#content {
+  max-width: 1000px; }
+
+/******* CONTENT - EPISODE ARCHIVES *******/
 .episodeArchives {
   width: 100%;
   table-layout: fixed; }
