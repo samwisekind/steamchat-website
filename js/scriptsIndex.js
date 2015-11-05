@@ -4,10 +4,11 @@ var playerInt = true;
 
 function formatTime (target) {
 
-	var minutes = Math.round(Math.floor(target / 60));
-	var seconds = Math.round(target - minutes * 60);
-	var hours = Math.round(Math.floor(target / 3600));
-	return ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
+	target = Number(target);
+	var hours = Math.floor(target / 3600);
+	var minutes = Math.floor(target % 3600 / 60);
+	var seconds = Math.floor(target % 3600 % 60);
+	return (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds
 
 };
 
@@ -206,10 +207,6 @@ function playerChange (event, target) {
 function playerMute (event) {
 
 	event.preventDefault();
-
-	if (playerBinded == false) {
-		playerBind();
-	};
 
 	$cacheAudio[0].volume = 0;
 	$cacheVolume.dragger.css("left", 0);

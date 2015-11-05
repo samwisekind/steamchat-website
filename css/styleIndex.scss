@@ -216,8 +216,9 @@
 #header #headerPlayer #playerProgress:hover .line {
 	opacity: 1; }
 
- #header #headerPlayer #playerLoading {
- 	display: none;
+#header #headerPlayer #playerLoading {
+	pointer-events: none;
+	opacity: 0;
 	z-index: 0;
 	position: absolute;
 	left: 0;
@@ -305,19 +306,19 @@
 	40% { transform: scale(1.0); }
 	80% { transform: scale(0); } }
 
-#header #headerPlayer.int #playerWrapper #playerTime,
-#header #headerPlayer.int #playerProgress .cover,
-#header #headerPlayer.int #playerProgress .line {
-	display: none; }
-
 #header #headerPlayer.loading #playerToggle,
+#header #headerPlayer.int #playerWrapper #playerTime,
 #header #headerPlayer.loading #playerWrapper #playerTime,
+#header #headerPlayer.int #playerProgress .cover,
 #header #headerPlayer.loading #playerProgress .cover,
-#header #headerPlayer.loading #playerProgress .line {
+#header #headerPlayer.int #playerProgress .line
+#header #headerPlayer.loading #playerProgress .line,
+#header #headerPlayer.int #playerVolume {
 	display: none; }
 
 #header #headerPlayer.loading #playerLoading {
-	display: block; }
+	pointer-events: auto;
+	opacity: 1; }
 
 
 
@@ -416,7 +417,8 @@
 
 /******* TRANSITIONS *******/
 
-#header #headerPlayer #playerToggle {
+#header #headerPlayer #playerToggle,
+#header #headerPlayer #playerLoading {
 	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
