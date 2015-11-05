@@ -64,7 +64,7 @@
 				for ($i = $targetStart; $i >= $targetEnd; $i--) {
 
 					if ($episode["episode"][$i][1][0] != null || $episode["episode"][$i][1][1] != null) {
-						$images = 'data-header="' . $hostLocation . $episode["episode"][$i][1][0] . '" data-background="' . $hostLocation . $episode["episode"][$i][1][1] . '";';
+						$images = 'data-header="' . $hostLocation . $episode["episode"][$i][1][0] . '" data-background="' . $hostLocation . $episode["episode"][$i][1][1] . '" data-color="' . $episode["episode"][$i][1][2] . '"';
 					}
 
 					echo '

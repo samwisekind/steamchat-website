@@ -192,7 +192,7 @@ function playerChange (event, target) {
 			var imageLoadHeader = new Image();
 			imageLoadHeader.src = target.attr("data-header");
 			imageLoadHeader.onload = function() {
-				$cachePlayer.background.css("background-image", "url(" + imageLoadBackground.src + ")");
+				$cachePlayer.background.css("background-image", "url(" + imageLoadBackground.src + ")").css("background-color", target.attr("data-color"));
 				$cachePlayer.header.css("background-image", "url(" + imageLoadHeader.src + ")");
 			};
 		};

@@ -9,6 +9,7 @@
 	// [1] (Episode Images)
 	// [1][0] Header Cover Image
 	// [1][1] Header Main Image
+	// [1][2] Header Background Color
 	// [2] (Episode Files)
 	// [2][0] File Size (bytes)
 	// [2][1] File duration (HH:MM:SS)
@@ -26,7 +27,8 @@
 		),
 		array(
 			"episodes/103/episode103_latest_overlay.png",
-			"episodes/103/episode103_latest_image.jpg"
+			"episodes/103/episode103_latest_image.jpg",
+			"#000000"
 		),
 		array(
 			137886797,
@@ -47,7 +49,8 @@
 		),
 		array(
 			"episodes/102/episode102_latest_overlay.png",
-			"episodes/102/episode102_latest_image.jpg"
+			"episodes/102/episode102_latest_image.jpg",
+			"#56D4EB"
 		),
 		array(
 			102629148,
@@ -68,7 +71,8 @@
 		),
 		array(
 			"episodes/101/episode101_latest_overlay.png",
-			"episodes/101/episode101_latest_image.jpg"
+			"episodes/101/episode101_latest_image.jpg",
+			"#000000"
 		),
 		array(
 			101246903,
@@ -89,7 +93,8 @@
 		),
 		array(
 			"episodes/100/episode100_latest_overlay.png",
-			"episodes/100/episode100_latest_image.jpg"
+			"episodes/100/episode100_latest_image.jpg",
+			"#000000"
 		),
 		array(
 			133087064,
@@ -109,6 +114,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -131,6 +137,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -151,6 +158,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -173,6 +181,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -193,6 +202,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -215,6 +225,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -235,6 +246,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -257,6 +269,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -277,6 +290,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -299,6 +313,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -319,6 +334,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -341,6 +357,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -361,6 +378,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -383,6 +401,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -403,6 +422,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -425,6 +445,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -445,6 +466,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -467,6 +489,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -487,6 +510,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -509,6 +533,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -529,6 +554,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -551,6 +577,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -571,6 +598,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -593,6 +621,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -613,6 +642,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -635,6 +665,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -655,6 +686,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -677,6 +709,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -697,6 +730,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -719,6 +753,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -739,6 +774,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -761,6 +797,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -781,6 +818,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -803,6 +841,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -823,6 +862,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -845,6 +885,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -865,6 +906,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -887,6 +929,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -907,6 +950,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -929,6 +973,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -949,6 +994,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -971,6 +1017,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -991,6 +1038,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1013,6 +1061,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1033,6 +1082,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1055,6 +1105,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1075,6 +1126,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1097,6 +1149,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1117,6 +1170,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1139,6 +1193,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1159,6 +1214,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1181,6 +1237,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1201,6 +1258,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1223,6 +1281,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1243,6 +1302,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1265,6 +1325,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1285,6 +1346,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1307,6 +1369,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1327,6 +1390,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1349,6 +1413,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1369,6 +1434,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1391,6 +1457,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1411,6 +1478,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1433,6 +1501,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1453,6 +1522,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1475,6 +1545,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1495,6 +1566,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1517,6 +1589,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1537,6 +1610,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1559,6 +1633,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1579,6 +1654,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1601,6 +1677,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1621,6 +1698,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1643,6 +1721,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1663,6 +1742,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1685,6 +1765,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1705,6 +1786,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1727,6 +1809,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1747,6 +1830,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1769,6 +1853,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1789,6 +1874,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1811,6 +1897,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1831,6 +1918,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1853,6 +1941,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1873,6 +1962,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1895,6 +1985,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1915,6 +2006,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1938,6 +2030,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -1958,6 +2051,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -1980,6 +2074,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2000,6 +2095,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2022,6 +2118,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2042,6 +2139,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2064,6 +2162,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2084,6 +2183,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2106,6 +2206,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2126,6 +2227,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2148,6 +2250,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2168,6 +2271,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2190,6 +2294,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2210,6 +2315,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
@@ -2232,6 +2338,7 @@
 		),
 		array(
 			null,
+			null,
 			null
 		),
 		array(
@@ -2252,6 +2359,7 @@
 			)
 		),
 		array(
+			null,
 			null,
 			null
 		),
