@@ -187,17 +187,6 @@ body.headerTip #headerTip {
 body.headerTip #header #headerMenu-tip a {
   background: #0064BF; }
 
-#header h1.pagetitle,
-#header h1.pagedate {
-  position: absolute;
-  margin-bottom: 40px;
-  bottom: 0;
-  font-size: 36px;
-  letter-spacing: -1px;
-  font-weight: 300;
-  font-family: "Open Sans";
-  color: #333534; }
-
 /******* CONTENT *******/
 #content {
   margin: 0 auto 0 auto;
