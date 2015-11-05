@@ -1,14 +1,14 @@
 <?php
 
-	require_once "common.php";
-	require_once "episodeData.php";
+	require_once "../common.php";
+	require_once "../episodeData.php";
 
 	$episodeType = $_GET["type"];
 	$episodeNumber = $_GET["number"];
 
-	if (($episodeType !== "episode" || $episodeNumber !== "snack") && !is_numeric($episodeNumber) && !isset($episode[$episodeType][$episodeNumber])) {
-		header("Location: " . $hostLocation);
-		die();
+	if ($episodeType !== "episode" || $episodeNumber !== "snack" || !is_numeric($episodeNumber) || !isset($episode[$episodeType][$episodeNumber])) {
+		//header("Location: " . $hostLocation);
+		//die();
 	};
 
 	$episodePath = $episode[$episodeType][$episodeNumber][2][2];
@@ -22,7 +22,7 @@
 	else {
 		$pageType = "episode";
 		$pageTitle = $episode[$episodeType][$episodeNumber][0][0];
-		require_once "header.php";
+		require_once "../header.php";
 	};
 
 ?>
@@ -86,7 +86,7 @@
 
 		<li class="prev">
 
-			<a href="episodePage.php?type=<?php echo $episodeType; ?>&amp;number=<?php echo $episodeNumber - 1; ?>">
+			<a href="<?php echo $hostLocation . $episodeType . "s/" . ($episodeNumber - 1); ?>/">
 
 				<span class="title"><?php echo " #" . ($episodeNumber - 1) . ": " . $episode[$episodeType][$episodeNumber - 1][0][0]; ?></span>
 				<span class="date"><?php echo $episode[$episodeType][$episodeNumber - 1][0][2]; ?></span>
@@ -101,7 +101,7 @@
 
 		<li class="next">
 
-			<a href="episodePage.php?type=<?php echo $episodeType; ?>&amp;number=<?php echo $episodeNumber + 1; ?>">
+			<a href="<?php echo $hostLocation . $episodeType . "s/" . ($episodeNumber + 1); ?>/">
 
 				<span class="title"><?php echo " #" . ($episodeNumber + 1) . ": " . $episode[$episodeType][$episodeNumber + 1][0][0]; ?></span>
 				<span class="date"><?php echo $episode[$episodeType][$episodeNumber + 1][0][2]; ?></span>
@@ -116,4 +116,4 @@
 
 
 
-<?php require_once "footer.php"; ?>
+<?php require_once "../footer.php"; ?>

@@ -1,5 +1,5 @@
-ErrorDocument 404 /404.php
-
 RewriteEngine on
-RewriteBase /
-RewriteRule ^steamchat-website/episodes/([0-9]+)/?$ steamchat-website/lib/episodePage.php?type=episode&number=$1 [L]
+RewriteRule ^about/$ lib/pages/pageAbout.php [L]
+RewriteRule ^specials/$ lib/pages/pageSpecials.php [L]
+RewriteRule ^episodes/([0-9]+)/?$ lib/pages/pageEpisode.php?type=episode&number=$1 [L]
+RewriteRule ^snacks/([0-9]+)/?$ lib/pages/pageEpisode.php?type=snack&number=$1 [L]
