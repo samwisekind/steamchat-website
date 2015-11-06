@@ -13,7 +13,7 @@
 
 	$episodePath = $episode[$episodeType][$episodeNumber][2][2];
 	$pageType = "episode";
-	$pageTitle = $episode[$episodeType][$episodeNumber][0][0];
+	$episodeTitle = $episode[$episodeType][$episodeNumber][0][0];
 	require_once "../header.php";
 
 ?>
@@ -22,7 +22,7 @@
 
 <div class="left">
 
-	<h1><?php echo ucfirst($pageType) . " #" . $episodeNumber . ": " . $episode[$episodeType][$episodeNumber][0][0]; ?></h1>
+	<h1><?php echo ucfirst($pageType) . " #" . $episodeNumber . ": " . $episodeTitle; ?></h1>
 
 	<h2><?php echo $episode[$episodeType][$episodeNumber][0][2]; ?></h2>
 

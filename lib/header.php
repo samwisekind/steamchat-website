@@ -1,8 +1,22 @@
-<?php require_once "common.php"; ?>
+<?php
+
+	require_once "common.php";
+
+	if ($pageType == "index") {
+		$metaTitle = ": A Podcast On All Things Valve";
+	}
+	else if ($pageType == "episode") {
+		$metaTitle = " " . ucfirst($episodeType) . " #" . $episodeNumber . ": " . $episodeTitle;
+	}
+	else if ($pageType = "misc") {
+		$metaTitle = ": " . $pageTitle;
+	};
+
+?>
 
 <html>
 	<head>
-		<title>Steamchat<?php if ($pageType == "???") { echo " " . $pageTitle; } else if ($pageType == "episode") { echo ': ' . $pageTitle; }; ?></title>
+		<title>Steamchat<?php echo $metaTitle; ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style<?php echo ucfirst($pageType) ?>.css" type="text/css" media="screen">
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">

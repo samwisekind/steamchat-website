@@ -1,5 +1,7 @@
 <?php
 
+	$pageTitle = "About";
+
 	require_once "../common.php";
 	require_once "../header.php";
 
