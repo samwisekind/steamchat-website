@@ -51,9 +51,9 @@
 
 					<ul>
 						<li><a href="mailto:podcast@thesteamchat.com" id="tipus_methods_email">Email (podcast@thesteamchat.com)</a></li>
-						<li><a href="http://www.twitter.com/Steamchat" id="tipus_methods_twitter">Twitter (@Steamchat)</a></li>
-						<li><a href="http://www.facebook.com/Steamchat" id="tipus_methods_facebook">Facebook</a></li>
-						<li><a href="http://www.steamcommunity.com/groups/Steamchat" id="tipus_methods_steam">Steam</a></li>
+						<li><a href="https://www.twitter.com/thesteamchat" id="tipus_methods_twitter">Twitter (@Steamchat)</a></li>
+						<li><a href="http://www.facebook.com/SteamchatPodcast" id="tipus_methods_facebook">Facebook</a></li>
+						<li><a href="http://www.steamcommunity.com/groups/SteamchatPodcast" id="tipus_methods_steam">Steam</a></li>
 						<li><a href="http://www.youtube.com/Steamchat" id="tipus_methods_youtube">YouTube</a></li>
 					</ul>
 
