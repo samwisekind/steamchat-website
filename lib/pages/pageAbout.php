@@ -49,7 +49,7 @@
 	</li>
 	<li class="steam">
 		<span class="wrapper">
-			<a href="http://www.steamcommunity.com/groups/Steamchat">Steam Commuity Group</a>
+			<a href="http://www.steamcommunity.com/groups/SteamchatPodcast">Steam Commuity Group</a>
 		</span>
 	</li>
 </ul>
