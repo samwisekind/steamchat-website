@@ -6,26 +6,18 @@
 	$episodeType = $_GET["type"];
 	$episodeNumber = $_GET["number"];
 
-	if ($episodeType !== "episode" || $episodeNumber !== "snack" || !is_numeric($episodeNumber) || !isset($episode[$episodeType][$episodeNumber])) {
-		//header("Location: " . $hostLocation);
-		//die();
+	if (($episodeType !== "episode" && $episodeType !== "snack") || !is_numeric($episodeNumber) || !isset($episode[$episodeType][$episodeNumber])) {
+		header("Location: " . $hostLocation);
+		die();
 	};
 
 	$episodePath = $episode[$episodeType][$episodeNumber][2][2];
-
-	if ($_GET["download"] == true) {
-		header("Content-Type: audio/mpeg");
-		header("Content-Transfer-Encoding: Binary");
-		header("Content-disposition: attachment; filename=\"" . basename($episodePath) . "\"");
-		readfile($episodePath);
-	}
-	else {
-		$pageType = "episode";
-		$pageTitle = $episode[$episodeType][$episodeNumber][0][0];
-		require_once "../header.php";
-	};
+	$pageType = "episode";
+	$pageTitle = $episode[$episodeType][$episodeNumber][0][0];
+	require_once "../header.php";
 
 ?>
+
 
 
 <div class="left">
@@ -47,7 +39,7 @@
 	<ul>
 		<li class="title">Episode Info</li>
 		<li><span>Duration:</span> <?php echo $episode[$episodeType][$episodeNumber][2][1]; ?></li>
-		<li><span>Size:</span> <?php echo number_format($episode[$episodeType][$episodeNumber][2][0] / 1048576, 2); ?>MB</li>
+		<li><span>Size:</span> <?php echo number_format($episode[$episodeType][$episodeNumber][2][0] / 1048576, 2); ?> MB</li>
 		<li><span>Format:</span> MP3</li>
 	</ul>
 
@@ -73,7 +65,7 @@
 		<li class="title">Episode Tools</li>
 		<li id="episodeTools-listen"><a href="#" onclick="episodeToggle(event);">Listen Now</a></li>
 		<li id="episodeTools-link"><a href="<?php echo $episodePath; ?>">Direct Link</a></li>
-		<li id="episodeTools-download"><a href="<?php echo $_SERVER["REQUEST_URI"] . "&download=true"; ?>">Download MP3</a></li>
+		<li id="episodeTools-download"><a href="<?php echo $episodePath; ?>" download="<?php echo basename($episodePath, ".mp3"); ?>">Download MP3</a></li>
 	</ul>
 
 </div>

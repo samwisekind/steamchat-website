@@ -29,12 +29,30 @@
 
 <p>We love to hear from our listeners, and have always kept our promise to read and discuss every email and message we get on the show. If you would like for us to discuss something on the show, or just want to get in touch, please feel free to contact us using the methods below:</p>
 
-<ul>
-	<li>Email (<a href="mailto:podcast@thesteamchat.com">podcast@thesteamchat.com</a>)</li>
-	<li>Twitter (<a href="http://www.twitter.com/Steamchat">@Steamchat</a>)</li>
-	<li><a href="http://www.facebook.com/Steamchat">Facebook</a></li>
-	<li><a href="http://www.steamcommunity.com/groups/Steamchat">Steam Commuity Group</a></li>
+<ul id="aboutLinks">
+	<li class="email">
+		<span class="wrapper">
+			<a href="mailto:podcast@thesteamchat.com">Email <span class="subtitle">podcast@thesteamchat.com</span></a>
+		</span>
+	</li>
+	<li class="twitter">
+		<span class="wrapper">
+			<a href="https://www.twitter.com/thesteamchat">Twitter <span class="subtitle">@thesteamchat</span></a>
+		</span>
+	</li>
+	<li class="facebook">
+		<span class="wrapper">
+			<a href="http://www.facebook.com/SteamchatPodcast">Facebook <span class="subtitle">facebook.com/SteamchatPodcast</span></a>
+		</span>
+	</li>
+	<li class="steam">
+		<span class="wrapper">
+			<a href="http://www.steamcommunity.com/groups/Steamchat">Steam Commuity Group</a>
+		</span>
+	</li>
 </ul>
+
+<div class="cf"></div>
 
 
 <?php require_once "../footer.php"; ?>
