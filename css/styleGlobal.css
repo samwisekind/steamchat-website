@@ -222,6 +222,28 @@ body.headerTip #header #headerMenu-tip a {
 #content p a:hover {
   color: #00498c; }
 
+#content ul,
+#content li {
+  list-style: none; }
+
+#content #specialsColumns {
+  width: 100%; }
+
+#content #specialsColumns > div {
+  width: 50%; }
+
+#content #specialsColumns .left {
+  float: left; }
+
+#content #specialsColumns .right {
+  float: right; }
+
+#content #specialsColumns ul {
+  padding-left: 15px; }
+
+#content #specialsColumns div > ul {
+  border-left: 5px solid #0064BF; }
+
 /******* FOOTER *******/
 #footer {
   width: 100%;

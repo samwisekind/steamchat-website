@@ -1755,8 +1755,8 @@
 
 	$episode["episode"][28] = array(
 		array(
-			"Lost Special",
-			"In this episode Sam and Brad discuss everything about the television show Lost.",
+			"LOST Special",
+			"In this episode Sam and Brad discuss everything about the television show LOST.",
 			"06/6/2010",
 			array(
 				"show_notes",
