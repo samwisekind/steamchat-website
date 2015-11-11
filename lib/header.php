@@ -18,7 +18,11 @@
 	<head>
 		<title>Steamchat<?php echo $metaTitle; ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/style<?php echo ucfirst($pageType) ?>.css" type="text/css" media="screen">
+		<?php
+			if ($pageType != "misc") {
+				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.css" type="text/css" media="screen">';
+			};
+		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
 		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scriptsGlobal.js"></script>
