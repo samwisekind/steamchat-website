@@ -1,4 +1,4 @@
-var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout;
+var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout, playerPreviousVolume;
 var playerLoaded = playerBinded = playerHover = false;
 var playerInt = true;
 
@@ -23,9 +23,8 @@ function playerBind () {
 		$cachePlayer.header = $cachePlayer.background.find("#headerMenu");
 	$cacheAudio = $cachePlayer.find("#playerAudio");
 	$cacheVolume = $cachePlayer.find("#playerVolume");
-		$cacheVolume.button = $cacheVolume.find("#playerVolume-toggle a");
-		$cacheVolume.bar = $cacheVolume.find("#playerVolume-bar");
-		$cacheVolume.dragger = $cacheVolume.bar.find("div");
+		$cacheVolume.button = $cacheVolume.find("#playerVolume-toggle");
+		$cacheVolume.slider = $cacheVolume.find("#playerVolume-slider");
 	$cacheProgress = $cachePlayer.find("#playerProgress");
 		$cacheProgress.cover = $cacheProgress.find(".cover");
 		$cacheProgress.line = $cacheProgress.find(".line");
@@ -80,35 +79,15 @@ function playerBind () {
 		};
 	}, false);
 
-	$cacheVolume.bar.on("click", function (event) {
-
-		var coordinateX = Math.round(event.clientX - $(this).offset().left - 10);
-
-		if (coordinateX < 0) {
-			coordinateX = 0;
-		}
-		else if (coordinateX > 90) {
-			coordinateX = 90;
-		};
-
-		$cacheVolume.dragger.css("left", coordinateX);
-		$cacheVolume.dragger.trigger("drag");
-
-	});
-
-	$cacheVolume.dragger.draggable({
-		containment: "parent"
-	}).bind("drag", function () {
-
-		$cacheAudio[0].volume = $cacheVolume.dragger.position().left / 90;
-
+	$cacheVolume.slider.on("input change", function () {
+		$cacheAudio[0].volume = parseInt($cacheVolume.slider[0].value) / 100;
+		playerPreviousVolume = $cacheAudio[0].volume;
 		if ($cacheAudio[0].volume == 0) {
 			$cacheVolume.addClass("muted");
 		}
 		else {
 			$cacheVolume.removeClass("muted");
 		};
-
 	});
 
 };
@@ -208,8 +187,17 @@ function playerMute (event) {
 
 	event.preventDefault();
 
-	$cacheAudio[0].volume = 0;
-	$cacheVolume.dragger.css("left", 0);
-	$cacheVolume.addClass("muted");
+	playerPreviousVolume
+
+	if ($cacheAudio[0].volume > 0) {
+		playerPreviousVolume = $cacheVolume.slider[0].value;
+		$cacheAudio[0].volume = $cacheVolume.slider[0].value = 0;
+		$cacheVolume.addClass("muted");
+	}
+	else if (playerPreviousVolume > 0) {
+		$cacheVolume.slider[0].value = playerPreviousVolume;
+		$cacheAudio[0].volume = playerPreviousVolume / 100;
+		$cacheVolume.removeClass("muted");
+	};
 
 };

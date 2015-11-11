@@ -25,7 +25,6 @@
 		<?php
 			if ($pageType == "index") { echo '
 				<script type="text/javascript" src="' . $hostLocation . 'js/jquery-2.1.4.min.js"></script>
-				<script type="text/javascript" src="' . $hostLocation . 'js/jquery-ui.min.js"></script>
 				<script type="text/javascript" src="' . $hostLocation . 'js/scriptsIndex.js"></script>';
 			};
 		?>

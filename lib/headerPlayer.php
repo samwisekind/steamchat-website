@@ -20,11 +20,9 @@
 		</div>
 
 		<div id="playerVolume">
-			<div id="playerVolume-toggle">
-				<a href="#" onclick="playerMute(event);"></a>
-			</div>
-			<div id="playerVolume-bar">
-				<div></div>
+			<div class="wrapper">
+				<a id="playerVolume-toggle" href="#" onclick="playerMute(event);"></a>
+			<input id="playerVolume-slider" type="range" value="80" min="0" max="100">
 			</div>
 		</div>
 
