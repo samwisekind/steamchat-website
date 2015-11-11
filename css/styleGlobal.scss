@@ -126,13 +126,13 @@ body.headerTip #headerTip {
 	background: $color-white;
 	box-shadow: 0 0 1px $color-grey; }
 
-#header #headerMenu {
+#headerMenu {
 	position: relative;
 	margin: 0 auto 0 auto;
 	width: 1000px;
 	height: 75px; }
 
-#header #headerMenu #headerLogo {
+#headerMenu #headerLogo {
 	z-index: 10;
 	position: absolute;
 	left: -20px;
@@ -140,15 +140,15 @@ body.headerTip #headerTip {
 	width: 105px;
 	height: 120px; }
 
-#header #headerMenu #headerLogo a {
+#headerMenu #headerLogo a {
 	display: block;
 	width: 100%;
 	height: 100%;
 	background: url("../img/global/headerLogo.svg") center center no-repeat transparent;
 	background-size: contain; }
 
-#header #headerMenu ul,
-#header #headerMenu ul li {
+#headerMenu ul,
+#headerMenu ul li {
 	list-style: none; }
 
 #header #headerMenu ul {
@@ -372,5 +372,3 @@ body.headerTip #header #headerMenu-tip a {
 	-ms-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
-
-

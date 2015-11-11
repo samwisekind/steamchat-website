@@ -28,9 +28,7 @@
 
 	</div>
 
-	<div id="playerToggle" class="playing">
-		<a href="#" onclick="playerToggle(event);"></a>
-	</div>
+	<a id="playerToggle" class="playing" href="#" onclick="playerToggle(event);"></a>
 
 	<div id="playerProgress">
 		<div class="cover"></div>

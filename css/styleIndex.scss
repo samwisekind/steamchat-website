@@ -5,7 +5,7 @@
 /******* HEADER *******/
 
 #header,
-#header #headerMenu {
+#headerMenu {
 	background-color: transparent;
 	box-shadow: none; }
 
@@ -13,7 +13,7 @@
 	height: 400px;
 	background: center top no-repeat $color-steamchatExtraLight; }
 
-#header #headerMenu {
+#headerMenu {
 	z-index: 10;
 	position: absolute;
 	left: 50%;
@@ -28,37 +28,33 @@
 
 /******* HEADER - PLAYER *******/
 
-#header #headerPlayer {
+#headerPlayer {
 	border-bottom: 5px solid $color-steamchat; }
 
-#header #headerPlayer #playerToggle {
+#playerToggle {
+	opacity: .75;
 	z-index: 10;
+	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-left: -50px;
 	margin-top: -50px;
 	width: 100px;
-	height: 100px; }
-
-#header #headerPlayer #playerToggle a {
-	opacity: .75;
-	display: block;
-	width: 100%;
-	height: 100%;
+	height: 100px;
 	background: url("../img/index/playerToggle.svg") left top no-repeat transparent; }
 
-#header #headerPlayer #playerToggle a:hover {
+#playerToggle:hover {
 	opacity: 1;
 	background-position: right top; }
 
-#header #headerPlayer.playing #playerToggle a {
+#headerPlayer.playing #playerToggle {
 	background-position: left bottom; }
 
-#header #headerPlayer.playing #playerToggle a:hover {
+#headerPlayer.playing #playerToggle:hover {
 	background-position: right bottom; }
 
-#header #headerPlayer #playerWrapper {
+#playerWrapper {
 	position: absolute;
 	left: 50%;
 	bottom: 0;
@@ -66,14 +62,14 @@
 	width: 1000px;
 	height: 400px; }
 
-#header #headerPlayer #playerWrapper #playerTitle h1,
-#header #headerPlayer #playerWrapper #playerTitle h2 {
+#playerTitle h1,
+#playerTitle h2 {
 	display: inline-block;
 	position: absolute;
 	left: 0; }
 
-#header #headerPlayer #playerWrapper #playerTitle h1 a,
-#header #headerPlayer #playerWrapper #playerTitle h2 a {
+#playerTitle h1 a,
+#playerTitle h2 a {
 	display: block;
 	padding: 10px;
 	width: 100%;
@@ -82,13 +78,13 @@
 	text-decoration: none;
 	background: $color-steamchat; }
 
-#header #headerPlayer #playerWrapper #playerTitle h1 {
+#playerTitle h1 {
 	z-index: 30;
 	bottom: 0;
 	display: inline-block;
 	max-width: 100%; }
 
-#header #headerPlayer #playerWrapper #playerTitle h1 a {
+#playerTitle h1 a {
 	padding-bottom: 15px;
 	max-width: 700px;
 	font-size: 48px;
@@ -98,18 +94,18 @@
 	text-overflow: ellipsis;
 	white-space: nowrap; }
 
-#header #headerPlayer #playerWrapper #playerTitle:hover h1 a {
+#playerTitle:hover h1 a {
 	max-width: 100%;
 	text-decoration: underline; }
 
-#header #headerPlayer #playerWrapper #playerTitle h2 {
+#playerTitle h2 {
 	z-index: 0;
 	bottom: -40px;
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: normal; }
 
-#header #headerPlayer #playerWrapper #playerTime {
+#playerTime {
 	pointer-events: none;
 	z-index: 20;
 	position: absolute;
@@ -128,19 +124,17 @@
 	-khtml-user-select: none;
 	-webkit-user-select: none; }
 
-#header.noBackground #headerPlayer #playerWrapper #playerTime {
+#header.noBackground #playerTime {
 	text-shadow: none; }
 
-#header #headerPlayer #playerWrapper #playerVolume {
+#playerVolume {
 	display: table;
 	position: absolute;
 	bottom: -40px;
 	right: 0;
 	width: 150px;
 	height: 35px;
-	background: $color-steamchat; }
-
-#header #headerPlayer #playerWrapper #playerVolume {
+	background: $color-steamchat;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -148,14 +142,14 @@
 	-ms-user-select: none;
 	user-select: none; }
 
-#header #headerPlayer #playerWrapper #playerVolume .wrapper {
+#playerVolume .wrapper {
 	display: table-cell;
 	padding: 0 10px 0 10px;
 	width: 100%;
 	height: 100%;
 	vertical-align: middle; }
 
-#header #headerPlayer #playerWrapper #playerVolume #playerVolume-toggle {
+#playerVolume-toggle {
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -164,49 +158,49 @@
 	height: 15px;
 	background: url("../img/index/indexVolume.svg") -3px center no-repeat; }
 
-#header #headerPlayer #playerWrapper #playerVolume.muted #playerVolume-toggle {
+#playerVolume.muted #playerVolume-toggle {
 	background-position: -27px center; }
 
-#header #headerPlayer #playerWrapper #playerVolume #playerVolume-slider {
+#playerVolume-slider {
 	margin-left: auto;
 	display: block;
 	width: 105px;
 	height: 15px; }
 
-#header #headerPlayer #playerProgress {
+#playerProgress {
 	z-index: 0;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	overflow: hidden; }
 
-#header #headerPlayer #playerProgress:hover {
+#playerProgress:hover {
 	cursor: pointer; }
 
-#header #headerPlayer.int #playerProgress:hover {
+#headerPlayer.int #playerProgress:hover {
 	cursor: default; }
 
-#header #headerPlayer #playerProgress > div {
+#playerProgress > div {
 	pointer-events: none;
 	position: absolute;
 	top: 0;
 	height: 400px; }
 
-#header #headerPlayer #playerProgress .cover {
+#playerProgress .cover {
 	z-index: 0;
 	background: url("../img/index/playerCover.svg") left center repeat $color-steamchatCover; }
 
-#header #headerPlayer #playerProgress .line {
+#playerProgress .line {
 	opacity: 0;
 	z-index: 10;
 	left: 0;
 	width: 5px;
 	background-color: $color-steamchat; }
 
-#header #headerPlayer #playerProgress:hover .line {
+#playerProgress:hover .line {
 	opacity: 1; }
 
-#header #headerPlayer #playerLoading {
+#playerLoading {
 	pointer-events: none;
 	opacity: 0;
 	z-index: 0;
@@ -217,7 +211,7 @@
 	height: 100%;
 	background: rgba(0, 0, 0, .5); }
 
- #header #headerPlayer #playerLoading .wrapper {
+ #playerLoading .wrapper {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -225,7 +219,7 @@
 	margin: -10px 0 0 -40px;
 	text-align: center; }
 
- #header #headerPlayer #playerLoading .circle {
+ #playerLoading .circle {
 	float: left;
 	margin-right: 10px;
 	width: 20px;
@@ -249,21 +243,21 @@
 	-o-animation-play-state: paused;
 	animation-play-state: paused; }
 
-#header #headerPlayer.loading #playerLoading .circle {
+#headerPlayer.loading #playerLoading .circle {
 	-webkit-animation-play-state: running;
 	-moz-animation-play-state: running;
 	-ms-animation-play-state: running;
 	-o-animation-play-state: running;
 	animation-play-state: running;  }
 
- #header #headerPlayer #playerLoading .circle2 {
+ #playerLoading .circle2 {
 	-webkit-animation-delay: 0.2s;
 	-moz-transition-delay: 0.2s;
 	-ms-transition-delay: 0.2s;
 	-o-transition-delay: 0.2s;
 	animation-delay: 0.2s; }
 
- #header #headerPlayer #playerLoading .circle3 {
+ #playerLoading .circle3 {
 	margin-right: 0;
 	-webkit-animation-delay: 0.4s;
 	-moz-transition-delay: 0.4s;
@@ -296,17 +290,17 @@
 	40% { transform: scale(1.0); }
 	80% { transform: scale(0); } }
 
-#header #headerPlayer.loading #playerToggle,
-#header #headerPlayer.int #playerWrapper #playerTime,
-#header #headerPlayer.loading #playerWrapper #playerTime,
-#header #headerPlayer.int #playerProgress .cover,
-#header #headerPlayer.loading #playerProgress .cover,
-#header #headerPlayer.int #playerProgress .line,
-#header #headerPlayer.loading #playerProgress .line,
-#header #headerPlayer.int #playerVolume {
+#headerPlayer.loading #playerToggle,
+#headerPlayer.int #playerTime,
+#headerPlayer.loading #playerTime,
+#headerPlayer.int #playerProgress .cover,
+#headerPlayer.loading #playerProgress .cover,
+#headerPlayer.int #playerProgress .line,
+#headerPlayer.loading #playerProgress .line,
+#headerPlayer.int #playerVolume {
 	display: none !important; }
 
-#header #headerPlayer.loading #playerLoading {
+#headerPlayer.loading #playerLoading {
 	pointer-events: auto;
 	opacity: 1; }
 
@@ -329,27 +323,27 @@
 	line-height: 18px;
 	font-weight: 700; }
 
-.episodeArchives tr td,
-.episodeArchives.special tr td ul li {
+.episodeArchives td,
+.episodeArchives.special li {
 	width: 20%;
 	vertical-align: top; }
 
-.episodeArchives tr td ul,
-.episodeArchives tr td ul li {
+.episodeArchives ul,
+.episodeArchives li {
 	list-style: none; }
 
-.episodeArchives tr td ul li {
+.episodeArchives li {
 	position: relative;
 	display: block; }
 
-.episodeArchives tr td,
-.episodeArchives.special tr td ul li {
+.episodeArchives td,
+.episodeArchives.special li {
 	float: left; }
 
 .episodeArchives.special {
 	margin-bottom: 50px; }
 
-.episodeArchives tr td ul li .link {
+.episodeArchives .link {
 	position: relative;
 	z-index: 0;
 	display: block;
@@ -362,36 +356,36 @@
 	height: 100%;
 	text-decoration: none; }
 
-.episodeArchives tr td ul li .link > span {
+.episodeArchives .link > span {
 	display: block;
 	overflow: hidden;
 	overflow-y: visible;
 	text-overflow: ellipsis;
 	white-space: nowrap; }
 
-.episodeArchives tr td ul li .link .title {
+.episodeArchives .title {
 	margin-bottom: 5px;
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: bold;
 	color: $color-steamchat; }
 
-.episodeArchives tr td ul li .link .subtitle {
+.episodeArchives .subtitle {
 	font-size: 12px;
 	line-height: 12px;
 	color: $color-grey; }
 
-.episodeArchives tr td ul li .link .subtitle > span {
+.episodeArchives .subtitle > span {
 	float: right;
 	color: $color-greyLight; }
 
-.episodeArchives tr td ul li:hover {
+.episodeArchives li:hover {
 	background: $color-steamchat; }
 
-.episodeArchives tr td ul li:hover span {
+.episodeArchives li:hover span {
 	color: $color-white !important; }
 
-.episodeArchives tr td ul li .play {
+.episodeArchives .play {
 	opacity: .25;
 	position: absolute;
 	z-index: 10;
@@ -401,10 +395,10 @@
 	height: 100%;
 	background: url("../img/index/indexVolume.svg") -40px center no-repeat transparent; }
 
-.episodeArchives tr td ul li:hover .play {
+.episodeArchives li:hover .play {
 	background-position: 0 center; }
 
-.episodeArchives tr td ul li .play:hover {
+.episodeArchives .play:hover {
 	opacity: 1;
 	background-color: $color-steamchatOpaque; }
 
@@ -412,22 +406,22 @@
 
 /******* TRANSITIONS *******/
 
-#header #headerPlayer #playerToggle,
-#header #headerPlayer #playerProgress .line {
+#playerToggle,
+#playerProgress .line {
 	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
 
-#header #headerPlayer #playerLoading {
+#playerLoading {
 	-webkit-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
 
-#header #headerPlayer #playerProgress .cover.smooth {
+#playerProgress .cover.smooth {
 	-webkit-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-moz-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
