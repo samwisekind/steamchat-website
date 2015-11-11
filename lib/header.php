@@ -84,7 +84,7 @@
 			<?php
 
 				if ($pageType == "index") {
-					require_once "latestPlayer.php";
+					require_once "headerPlayer.php";
 				};
 
 			?>
