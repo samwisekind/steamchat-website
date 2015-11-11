@@ -1118,7 +1118,7 @@
 	$episode["episode"][55] = array(
 		array(
 			"Potato Sack of News",
-			"In this episode, we catch up on a huge amount of Valve news, discuss the recent acquisition of Impulse, give away a free copy of Portal 2 and more.ription",
+			"In this episode, we catch up on a huge amount of Valve news, discuss the recent acquisition of Impulse, give away a free copy of Portal 2 and more.",
 			"06/4/2011",
 			array(
 				"show_notes",
@@ -1448,7 +1448,7 @@
 	$episode["episode"][41] = array(
 		array(
 			"The Christmas Fallout",
-			"We go over the/12/news and have a fruitful discussion about Fallout New Vegas.",
+			"We go over the December news and have a fruitful discussion about Fallout New Vegas. ",
 			"27/12/2010",
 			array(
 				"show_notes",
