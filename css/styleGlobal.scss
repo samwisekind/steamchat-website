@@ -16,6 +16,7 @@ body {
 	font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    text-align: justify;
 	color: $color-black;
 	background: $color-white;
 	-webkit-text-size-adjust: 100%;
@@ -66,52 +67,58 @@ body.headerTip #headerTip {
 #headerTip .left,
 #headerTip .right {
 	display: table-cell;
+	padding: 0 20px 0 0;
 	width: 50%;
 	height: 350px;
 	vertical-align: middle; }
 
+#headerTip .right {
+	padding: 0 0 0 20px; }
+
 #headerTip h2,
 #headerTip p {
-	margin-bottom: 20px;
 	color: $color-white; }
 
 #headerTip h2 {
 	font-size: 26px;
-	line-height: 26px;
-	color: $color-white; }
+	line-height: 26px; }
 
 #headerTip p {
-	font-weight: 300;
+	margin-top: 20px;
 	font-size: 16px;
-	line-height: 22px;
-	text-align: justify; }
-
-#headerTip p:last-child {
-	margin-bottom: 0; }
+	line-height: 22px; }
 
 #headerTip ul,
-#headerTip ul li {
+#headerTip li {
 	list-style: none; }
 
-#headerTip ul li {
-	list-style: none;
-	margin-bottom: 20px;
-	height: 32px; }
+#headerTip li {
+	display: table;
+	margin-bottom: 15px;
+	height: 30px; }
 
-#headerTip ul li:last-child {
+#headerTip li:last-child {
 	margin-bottom: 0; }
 
-#headerTip ul li a {
-	display: block;
+#headerTip li a {
+	display: table-cell;
 	width: 100%;
 	height: 100%;
-	background: left center no-repeat transparent;
 	padding-left: 45px;
-	color: $color-white;
-	text-decoration: none;
 	font-size: 16px;
-	font-weight: 500;
-	line-height: 30px; }
+	line-height: 16px;
+	text-decoration: none;
+	color: $color-white;
+	background: url("../img/global/headerTip_icons.svg") left top no-repeat transparent;
+	vertical-align: middle; }
+
+$class-list: twitter, facebook, steam, youtube;
+@each $current-class in $class-list {
+	$i: index($class-list, $current-class);
+	#headerTip li a.#{$current-class} {
+		background-position: left -30*$i+px;
+	}
+}
 
 #headerTip ul li a:hover {
 	text-decoration: underline; }
