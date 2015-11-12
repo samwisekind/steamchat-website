@@ -89,7 +89,7 @@
 
 	<? }; ?>
 
-	<?php if (isset($episode[$episodeType][$episodeNumber + 1][0]) == true) { ?>
+	<?php if (isset($episode[$episodeType][$episodeNumber + 1][0]) == true && ($episodeNumber + 1) > $latestEpisode == false) { ?>
 
 		<li class="next">
 

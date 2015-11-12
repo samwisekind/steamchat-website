@@ -1,6 +1,5 @@
 <?php
 	$pageType = "index";
-	$latestEpisode = 102;
 	require_once "lib/episodeData.php";
 	require_once "lib/header.php";
 ?>
@@ -100,7 +99,7 @@
 			<tr>
 				<td>
 					<ul>
-						<?php listEpisodes(103, 100); ?>
+						<?php listEpisodes($latestEpisode, 100); ?>
 					</ul>
 				</td>
 				<td>

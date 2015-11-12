@@ -1,5 +1,7 @@
 <?php
 
+	$latestEpisode = 102;
+
 	// [0] (Episode Information)
 	// [0][0] Episode Title
 	// [0][1] Episode Description
