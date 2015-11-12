@@ -375,7 +375,10 @@
 	line-height: 12px;
 	color: $color-grey; }
 
-.episodeArchives .subtitle > span {
+.episodeArchives .subtitle .date {
+	float: left; }
+
+.episodeArchives .subtitle .duration {
 	float: right;
 	color: $color-greyLight; }
 

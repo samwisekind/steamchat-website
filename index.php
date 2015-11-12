@@ -34,14 +34,18 @@
 							);
 
 							for ($i = 0; $i < count($specialsArray); $i++) {
+
+								$episodeTarget = $episode[$specialsArray[$i][1]][$specialsArray[$i][0]];
+
 								echo '
 									<li>
-										<a href="' . $hostLocation . $specialsArray[$i][1] . "s/" . $specialsArray[$i][0] . '/" data-audio="' . $episode["episode"][$i][2][2] . '" class="link">
+										<a href="' . $hostLocation . $specialsArray[$i][1] . 's/' . $specialsArray[$i][0] . '/' . '" class="link">
 											<span class="title">' . $specialsArray[$i][2] . '</span>
-											<span class="subtitle">' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][0][2] . '<span>' . $episode["episode"][$i][2][1] . '</span></span>
+											<span class="subtitle"><span class="date">' . $episodeTarget[0][2] . '</span><span class="duration">' . $episodeTarget[2][1] . '</span></span>
 										</a>
-										<a href="#" class="play" data-audio="' . $episode[$specialsArray[$i][1]][$specialsArray[$i][0]][2][2] . '" onclick="playerChange(event, this);"></a>
+										<a href="#" class="play" data-audio="' . $episodeTarget[2][2] . '" onclick="playerChange(event, this);"></a>
 									</li>';
+
 							};
 
 						?>
@@ -66,12 +70,15 @@
 					if ($episode["episode"][$i][1][0] != null || $episode["episode"][$i][1][1] != null) {
 						$images = 'data-header="' . $hostLocation . $episode["episode"][$i][1][0] . '" data-background="' . $hostLocation . $episode["episode"][$i][1][1] . '" data-color="' . $episode["episode"][$i][1][2] . '"';
 					}
+					else {
+						$images = null;
+					};
 
 					echo '
 						<li>
 							<a href="' . $hostLocation . 'episodes/' . $i .'/" class="link">
 								<span class="title">#' . $i . ': ' . $episode["episode"][$i][0][0] .'</span>
-								<span class="subtitle">' . $episode["episode"][$i][0][2] . '<span>' . $episode["episode"][$i][2][1] . '</span></span>
+								<span class="subtitle"><span class="date">' . $episode["episode"][$i][0][2] . '</span><span class="duration">' . $episode["episode"][$i][2][1] . '</span></span>
 							</a>
 							<a href="#" class="play" data-audio="' . $episode["episode"][$i][2][2] . '" onclick="playerChange(event, this);"' . $images . '></a>
 						</li>';
