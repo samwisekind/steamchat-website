@@ -42,7 +42,7 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 
 #### SVG Support
 
-The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to parse the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with the [`.htaccess`](.htaccess#L21-22) in this repository.
+The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to parse the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with the [`.htaccess`](.htaccess#L21-L22) in this repository.
 
 #### Latest Episode Control
 
