@@ -16,7 +16,7 @@
 					<li class="title">Elsewhere</li>
 					<li><a href="https://www.twitter.com/thesteamchat">Twitter</a></li>
 					<li><a href="https://www.facebook.com/SteamchatPodcast">Facebook</a></li>
-					<li><a href="https://www.steamcommunity.com/groups/SteamchatPodcast">Steam</a></li>
+					<li><a href="http://www.steamcommunity.com/groups/SteamchatPodcast">Steam</a></li>
 					<li><a href="https://www.youtube.com/Steamchat">YouTube</a></li>
 				</ul>
 			</div>

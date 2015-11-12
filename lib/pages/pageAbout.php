@@ -45,7 +45,7 @@
 	</li>
 	<li class="facebook">
 		<span class="wrapper">
-			<a href="http://www.facebook.com/SteamchatPodcast">Facebook <span class="subtitle">facebook.com/SteamchatPodcast</span></a>
+			<a href="https://www.facebook.com/SteamchatPodcast">Facebook <span class="subtitle">facebook.com/SteamchatPodcast</span></a>
 		</span>
 	</li>
 	<li class="steam">

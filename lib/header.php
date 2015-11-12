@@ -83,7 +83,7 @@
 						<li><a href="mailto:podcast@thesteamchat.com" class="email">Email (podcast@thesteamchat.com)</a></li>
 						<li><a href="https://www.twitter.com/thesteamchat" class="twitter">Twitter (@Steamchat)</a></li>
 						<li><a href="https://www.facebook.com/SteamchatPodcast" class="facebook">Facebook</a></li>
-						<li><a href="https://www.steamcommunity.com/groups/SteamchatPodcast" class="steam">Steam</a></li>
+						<li><a href="http://www.steamcommunity.com/groups/SteamchatPodcast" class="steam">Steam</a></li>
 						<li><a href="https://www.youtube.com/Steamchat" class="youtube">YouTube</a></li>
 					</ul>
 
