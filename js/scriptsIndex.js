@@ -38,7 +38,7 @@ function playerBind () {
 			return;
 		};
 		var coordinateX = event.pageX / window.innerWidth;
-		$cacheProgress.line.css("left", (coordinateX * 100) + "%");
+		$cacheProgress.line.css("left", ((coordinateX * 100) - .25) + "%");
 		$cacheTimestamp.current.html(formatTime($cacheAudio[0].duration * coordinateX));
 	}).mouseover(function () {
 		playerHover = true;
