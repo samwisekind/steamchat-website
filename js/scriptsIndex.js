@@ -187,8 +187,6 @@ function playerMute (event) {
 
 	event.preventDefault();
 
-	playerPreviousVolume
-
 	if ($cacheAudio[0].volume > 0) {
 		playerPreviousVolume = $cacheVolume.slider[0].value;
 		$cacheAudio[0].volume = $cacheVolume.slider[0].value = 0;
