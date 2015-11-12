@@ -1,6 +1,7 @@
 <?php
 
 	$pageTitle = "About";
+	$pageType = "misc";
 
 	require_once "../common.php";
 	require_once "../header.php";

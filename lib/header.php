@@ -2,11 +2,14 @@
 
 	require_once "common.php";
 
+	$metaDescription = "A Podcast On All Things Valve";
+
 	if ($pageType == "index") {
-		$metaTitle = ": A Podcast On All Things Valve";
+		$metaTitle = ": " . $metaDescription;
 	}
 	else if ($pageType == "episode") {
 		$metaTitle = " " . ucfirst($episodeType) . " #" . $episodeNumber . ": " . $episodeTitle;
+		$metaDescription = "(Released " . $episode[$episodeType][$episodeNumber][0][2] . ") " . $episode[$episodeType][$episodeNumber][0][1];
 	}
 	else if ($pageType = "misc") {
 		$metaTitle = ": " . $pageTitle;
@@ -17,19 +20,37 @@
 <html>
 	<head>
 		<title>Steamchat<?php echo $metaTitle; ?></title>
-		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen" />
 		<?php
 			if ($pageType != "misc") {
-				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.css" type="text/css" media="screen">';
+				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.css" type="text/css" media="screen" />';
 			};
 		?>
-		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>img/favicon.ico">
+		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />
 		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/scriptsGlobal.js"></script>
 		<?php
 			if ($pageType == "index") { echo '
 				<script type="text/javascript" src="' . $hostLocation . 'js/jquery-2.1.4.min.js"></script>
 				<script type="text/javascript" src="' . $hostLocation . 'js/scriptsIndex.js"></script>';
+			};
+		?>
+		<meta property="og:url" content="<?php echo $_SERVER["REQUEST_URI"]; ?>" />
+		<meta property="og:title" content="Steamchat<?php echo $metaTitle; ?>" />
+		<meta property="og:description" content="<?php echo $metaDescription; ?>" />
+		<meta name="description" content="<?php echo $metaDescription; ?>" />
+		<meta property="og:image" content="<?php echo $hostLocation; ?>img/global/og_image.png" />
+		<?php
+			if ($pageType == "episode") {
+				echo '
+					<meta property="og:type" content="music.song" />
+					<meta property="music:album" content="Steamchat Podcast ' . ucfirst($episodeType) . 's" />
+					<meta property="music:album:track" content="' . $episodeNumber . '" />
+					<meta property="music:musician" content="Steamchat Podcast" />
+				';
+			}
+			else {
+				echo '<meta property="og:type" content="website" />';
 			};
 		?>
 	</head>
