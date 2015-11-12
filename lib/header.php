@@ -42,11 +42,17 @@
 		<meta property="og:image" content="<?php echo $hostLocation; ?>img/global/og_image.png" />
 		<?php
 			if ($pageType == "episode") {
+
+				$episodeSeconds = $episode[$episodeType][$episodeNumber][2][1];
+				sscanf($episodeSeconds, "%d:%d:%d", $hours, $minutes, $seconds);
+				$episodeSeconds = isset($seconds) ? $hours * 3600 + $minutes * 60 + $seconds : $hours * 60 + $minutes;
+
 				echo '
 					<meta property="og:type" content="music.song" />
 					<meta property="music:album" content="Steamchat Podcast ' . ucfirst($episodeType) . 's" />
 					<meta property="music:album:track" content="' . $episodeNumber . '" />
 					<meta property="music:musician" content="Steamchat Podcast" />
+					<meta property="music:duration" content="' . $episodeSeconds . '" />
 				';
 			}
 			else {
