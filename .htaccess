@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /
+# RewriteBase /
 
 # Misc Page Rewrites
 RewriteRule ^specials/$ lib/pages/pageSpecials.php [L]
