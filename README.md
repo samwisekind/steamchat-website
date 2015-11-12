@@ -40,6 +40,10 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
  * `/specials/` to `/lib/pages/pageSpecials.php`
  * `/about/` to `/lib/pages/pageAbout.php`
 
+#### SVG Support
+
+The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to parse the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with the [`.htaccess`](.htaccess#L21-22) in this repository.
+
 #### Latest Episode Control
 
 The latest episode to be shown on the homepage and individual episode pages is controlled by the PHP variable `$latestEpisode` (integer) at line 3 in [`episodeData.php`](lib/episodeData.php#L3). This is done instead of automatically retrieving the latest episode from the first index of the episode data file (see below) so we can upload episode artwork and data (and test it) before publishing it publically on the website.
