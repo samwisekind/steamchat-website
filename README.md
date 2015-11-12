@@ -1,24 +1,24 @@
 # Steamchat Website Source Files
 
-Here you can find the source files for the Steamchat (formerly "Steamcast") website. We're releasing the entirety of the website so if you're interested in web development and design you can clone this repository to learn, play or modify with. Do anything you want with them, no attribution required!
+Here you can find the source files for the Steamchat (formerly "Steamcast") website. We're releasing the entirety of the website so if you're interested in web development and design you can clone this repository to learn, play or modify with. Do anything you want with it, no attribution required!
 
-This website in this repository is the version from 2013 onwards. We have it from its [original state](https://github.com/Flamov/steamchat-website/tree/c6ec7d23f21fbf421eb74abe7b1a97b9d83ec0c9) to be more sanely coded as well as clean up the original files, add CSS3 support, amongst other things.
+The website included in this repository is the version from 2013 onwards. We have updated it from its [original state](https://github.com/Flamov/steamchat-website/tree/c6ec7d23f21fbf421eb74abe7b1a97b9d83ec0c9) to be more sanely coded as well as clean up the original files, add CSS3 support, as well as a bunch of other additions and improvements.
 
-### Requirements
+## Requirements
 
 If you plan on hosting the website in a local environment or otherwise, the following is required:
 
 * PHP 5.4 or greater
-* Access to `.htaccess` for Apache or equivalent directory-level configuration file
- * Must have `RewriteEngine` enabled
+* Access to `.htaccess` for Apache or equivalent directory-level configuration
+ * Must have `RewriteEngine` or equivalent enabled
 
-### Installation
+## Installation
 
 1. Set up a web server following the [requirements](#requirements) above
 2. Clone this repository or [download the ZIP](https://github.com/Flamov/steamchat-website/archive/master.zip) and place the files in the web server
-3. Make sure `.htaccess` (or equivalent) is working as intended ([see below](#htaccess))
+3. Make sure the [`.htaccess`](.htaccess) file is working as intended ([see below](#intended-htaccess-behaviourconfiguration))
 
-### Things To Note
+## Things To Note
 
 #### Intended .htaccess Behaviour/Configuration
 
@@ -34,9 +34,9 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 * Server rewrites as `lib/pages/pageEpisode.php?type=episode&number=50`
 
 ###### Notes:
-* Be wary of singular and plural requests; there are additional rules in the `.htaccess` file that *redirects* requests with singular (`/episode/`) to plurals (`/episodes/`)
+* Be wary of singular and plural requests; there are additional rules in the [.htaccess](.htaccess) file that *redirects* requests with singular (`/episode/`) to plurals (`/episodes/`)
 * Requests with and without trailing slashes ("/")
-* The above rules also apply to the Specials and About pages:
+* The above rules also apply to the Specials and About pages (without any parameters):
  * `/specials/` to `/lib/pages/pageSpecials.php`
  * `/about/` to `/lib/pages/pageAbout.php`
 
@@ -46,9 +46,9 @@ The latest episode to be shown on the homepage is controlled by the PHP variable
 
 #### Episode Data
 
-Episode data is controlled in the [`lib/episodeData.php`](https://github.com/Flamov/steamchat-website/blob/master/lib/episodeData.php) file. Information on how the arrays are structured can be found in [the comment at the start of the file(lib/episodeData.php#L3-L16).
+Episode data is controlled in the [`lib/episodeData.php`](lib/episodeData.php) file. Information on how the arrays are structured can be found in [the comment at the start of the file](lib/episodeData.php#L3-L16).
 
-If you plan on further developing with the source files, we *highly* recommend you use a database to retrieve relevant episode data instead of referring to a single PHP file with a single array. We provided the `episodeData.php` file purely for reference; it's a ~50Kb file that gets requested every time you visit a page on the website and isn't recommended as it could lead to performance issues.
+If you plan on further developing with this repository, we *highly* recommend you use a database to retrieve episode data instead of including and referring to a single PHP file with a large associative array. We provided the episode data file included in the repository purely for reference; it's a ~50Kb file that gets requested every time you visit a page on the website and therefore isn't recommended as it could lead to server performance issues.
 
 #### CSS & JavaScript
 
@@ -63,6 +63,6 @@ JavaScript files are closure-compiled and minified, however we have also include
 * Old episode artwork for episodes 1-99.
 * ~~Backup of the Half-Life 3 beta (removed per Valve's request).~~
 
-### Contributors:
+## Contributors:
 * @Flamov
 * @chocolatethunder
