@@ -37,17 +37,17 @@
   margin-top: -50px;
   width: 100px;
   height: 100px;
-  background: url("../img/index/playerToggle.svg") left top no-repeat transparent; }
+  background: url("../img/index/playerIcons.svg") -60px 0 no-repeat transparent; }
 
 #playerToggle:hover {
   opacity: 1;
-  background-position: right top; }
+  background-position: -160px 0; }
 
 #headerPlayer.playing #playerToggle {
-  background-position: left bottom; }
+  background-position: -60px -100px; }
 
 #headerPlayer.playing #playerToggle:hover {
-  background-position: right bottom; }
+  background-position: -160px -100px; }
 
 #playerWrapper {
   position: absolute;
@@ -151,10 +151,10 @@
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url("../img/index/indexVolume.svg") -3px center no-repeat; }
+  background: url("../img/index/playerIcons.svg") -3px 0 no-repeat; }
 
 #playerVolume.muted #playerVolume-toggle {
-  background-position: -27px center; }
+  background-position: -27px 0; }
 
 #playerVolume-slider {
   margin-left: auto;
@@ -397,10 +397,10 @@
   top: 0;
   width: 20px;
   height: 100%;
-  background: url("../img/index/indexVolume.svg") -40px center no-repeat transparent; }
+  background: url("../img/index/playerIcons.svg") -40px 18px no-repeat transparent; }
 
 .episodeArchives li:hover .play {
-  background-position: 0 center; }
+  background-position: 0 18px; }
 
 .episodeArchives .play:hover {
   opacity: 1;
