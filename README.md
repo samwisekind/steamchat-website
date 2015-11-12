@@ -42,11 +42,11 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 
 #### Latest Episode Control
 
-The latest episode to be shown on the homepage is controlled by the PHP variable `$latestEpisode` (integer) in [`index.php`](index.php#L3). This is done instead of getting the latest episode from the top of the episode data file (see below) so we can upload episode artwork and data (and test it) before publishing it publically on the website.
+The latest episode to be shown on the homepage and individual episode pages is controlled by the PHP variable `$latestEpisode` (integer) at line 3 in [`episodeData.php`](lib/episodeData.php#L3). This is done instead of automatically retrieving the latest episode from the first index of the episode data file (see below) so we can upload episode artwork and data (and test it) before publishing it publically on the website.
 
 #### Episode Data
 
-Episode data is controlled in the [`lib/episodeData.php`](lib/episodeData.php) file. Information on how the arrays are structured can be found in [the comment at the start of the file](lib/episodeData.php#L3-L16).
+Episode data is controlled in the [`lib/episodeData.php`](lib/episodeData.php) file. Information on how the arrays are structured can be found in [the comment (lines 5-18) at the start of the file](lib/episodeData.php#L5-L18).
 
 If you plan on further developing with this repository, we *highly* recommend you use a database to retrieve episode data instead of including and referring to a single PHP file with a large associative array. We provided the episode data file included in the repository purely for reference; it's a ~50Kb file that gets requested every time you visit a page on the website and therefore isn't recommended as it could lead to server performance issues.
 
