@@ -1,8 +1,5 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
+RewriteBase /
 
 # Misc Page Rewrites
 RewriteRule ^specials/$ lib/pages/pageSpecials.php [L]
@@ -15,3 +12,8 @@ RewriteRule ^snacks/([0-9]+)/?$ lib/pages/pageEpisode.php?type=snack&number=$1 [
 # Episode/Snack Page Singular Redirect
 RewriteRule ^episode/(.*)/?$ episodes/$1 [L,R=301]
 RewriteRule ^snack/(.*)/?$ snacks/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
