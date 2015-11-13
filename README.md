@@ -56,7 +56,7 @@ If you plan on further developing with this repository, we *highly* recommend yo
 
 #### CSS & JavaScript
 
-SASS/SCSS files are used to compile the CSS for the website but knowledge in SASS is not required; we have included human-readable versions of the CSS.
+SASS/SCSS files are used to compile the CSS for the website but knowledge in SASS is not required; we have also included human-readable versions of the CSS.
 
 In addition, JavaScript files are closure-compiled and minified however we have also included human-readable versions as well.
 
