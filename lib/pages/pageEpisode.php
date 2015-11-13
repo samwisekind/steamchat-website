@@ -12,6 +12,16 @@
 	};
 
 	$episodePath = $episode[$episodeType][$episodeNumber][2][2];
+	$episodeName = basename($episodePath, ".mp3");
+
+	if (isset($_GET["download"]) == 1) {
+		header("Content-Type: audio/mpeg");
+		header("Content-Transfer-Encoding: Binary");
+		header("Content-disposition: attachment; filename=\"" . $episodeName . ".mp3\"");
+		readfile($episodePath);
+		exit;
+	};
+
 	$pageType = "episode";
 	$episodeTitle = $episode[$episodeType][$episodeNumber][0][0];
 	require_once "../header.php";
@@ -63,9 +73,9 @@
 
 	<ul id="episodeTools">
 		<li class="title">Episode Tools</li>
-		<li id="episodeTools-listen"><a href="#" onclick="episodeToggle(event);">Listen Now</a></li>
-		<li id="episodeTools-link"><a href="<?php echo $episodePath; ?>">Direct Link</a></li>
-		<li id="episodeTools-download"><a href="<?php echo $episodePath; ?>" download="<?php echo basename($episodePath, ".mp3"); ?>">Download MP3</a></li>
+		<li><a href="#" onclick="episodeToggle(event)">Listen Now</a></li>
+		<li><a href="<?php echo $episodePath; ?>">Direct Link</a></li>
+		<li><a href="<?php echo $_SERVER["REQUEST_URI"] . "download/"; ?>">Download MP3</a></li>
 	</ul>
 
 </div>

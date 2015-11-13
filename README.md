@@ -34,15 +34,17 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 * Server rewrites as `lib/pages/pageEpisode.php?type=episode&number=50`
 
 ###### Notes:
-* Be wary of singular and plural requests; there are additional rules in the [.htaccess](.htaccess#L12-L14) file that *redirects* requests with singular (`/episode/`) to plurals (`/episodes/`)
-* Requests with and without trailing slashes ("/")
-* The above rewrite rules also apply to the Specials and About pages (no URL parameters required):
+* Be wary of singular and plural requests; there are additional rules in the [.htaccess](.htaccess#L16-L18) file that *redirects* requests with singular notations (`/episode/`) to plural ones (`/episodes/`)
+* Also be wary of requests with and without trailing slashes ("/")
+* The above rewrite rules also apply to the Specials and About pages (no URL parameters or singular/plural rules required):
  * `/specials/` as `/lib/pages/pageSpecials.php`
  * `/about/` s`/lib/pages/pageAbout.php`
 
+In addition, when a user requests an episode page with "`/download/`" appended to the end (e.g. `/episodes/50/download/`, both with and without a trailing slash) it will rewrite as `/lib/pages/pageEpisode.php?type=episode&number=50&download`. A value for the `download` URL parameter is not required.
+
 #### SVG Support
 
-The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to pass the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with lines 21-22 in the [`.htaccess`](.htaccess#L21-L22) file included in this repository.
+The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to pass the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with lines 25-26 in the [`.htaccess`](.htaccess#L25-L26) file included in this repository.
 
 #### Latest Episode Control
 
