@@ -1,4 +1,4 @@
-var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout, playerPreviousVolume;
+var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout, playerPreviousVolume, playerTitleOriginal;
 var playerLoaded = playerBinded = playerHover = false;
 var playerInt = true;
 
@@ -76,6 +76,8 @@ function playerBind () {
 		};
 		if (playerWasPaused == false) {
 			$cacheAudio[0].play();
+			playerTitleOriginal = document.title;
+			document.title = "Playing: " + $cachePlayer.title.html();
 		};
 	}, false);
 
@@ -126,12 +128,15 @@ function playerToggle (event) {
 	};
 
 	if ($cacheAudio[0].paused == true) {
+		playerTitleOriginal = document.title;
+		document.title = "Playing: " + $cachePlayer.title.html();
 		$cacheAudio[0].play();
 		playerUpdate();
 		playerUpdateInterval = setInterval(playerUpdate, 1000);
 		$cachePlayer.addClass("playing");
 	}
 	else {
+		document.title = playerTitleOriginal;
 		$cacheAudio[0].pause();
 		clearInterval(playerUpdateInterval);
 		$cachePlayer.removeClass("playing");
@@ -145,12 +150,14 @@ function playerChange (event, target) {
 
 	if (playerBinded == false) {
 		playerBind();
+		playerTitleOriginal = document.title;
 	};
 
 	target = $(target);
 	$cachePlayer.addClass("loading");
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 
+	document.title = playerTitleOriginal;
 	playerWasPaused = $cacheAudio[0].paused;
 	playerLoaded = false;
 	$cachePlayer.title.html(target.parent().find(".title").html());
