@@ -1,6 +1,6 @@
 # Steamchat Website Source Files
 
-Here you can find the source files for the Steamchat (formerly "Steamcast") website. We're releasing the entirety of the website so if you're interested in web development and design you can clone this repository to learn, play or modify with. Do anything you want with it, no attribution required!
+Here you can find the source files for the Steamchat (formerly "Steamcast") website. If you're interested in web development and design you can clone this repository to learn, play or modify with at your leisure. Do anything you want with it, no attribution required!
 
 The website included in this repository is the version from 2013 onwards. We have updated it from its [original state](https://github.com/Flamov/steamchat-website/tree/c6ec7d23f21fbf421eb74abe7b1a97b9d83ec0c9) to be more sanely coded as well as clean up the original files, add CSS3 support, as well as a bunch of other additions and improvements.
 
@@ -22,7 +22,7 @@ If you plan on hosting the website in a local environment or otherwise, the foll
 
 #### Intended .htaccess Behaviour/Configuration
 
-The intended behaviour is having the server rewrite (*not* redirect) requests to episode pages (e.g. `/episodes/50/`) to use `lib/pages/episodePage.php` and pass in two parameters:
+The intended behaviour is having the server rewrite (*not* redirect) requests to episode pages (e.g. `/episodes/50/`) as `lib/pages/episodePage.php` while passing in two URL arameters:
 
 | Parameter Name | Value(s) |
 |---|---|
@@ -34,15 +34,15 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 * Server rewrites as `lib/pages/pageEpisode.php?type=episode&number=50`
 
 ###### Notes:
-* Be wary of singular and plural requests; there are additional rules in the [.htaccess](.htaccess) file that *redirects* requests with singular (`/episode/`) to plurals (`/episodes/`)
+* Be wary of singular and plural requests; there are additional rules in the [.htaccess](.htaccess#L12-L14) file that *redirects* requests with singular (`/episode/`) to plurals (`/episodes/`)
 * Requests with and without trailing slashes ("/")
-* The above rules also apply to the Specials and About pages (without any parameters):
- * `/specials/` to `/lib/pages/pageSpecials.php`
- * `/about/` to `/lib/pages/pageAbout.php`
+* The above rewrite rules also apply to the Specials and About pages (no URL parameters required):
+ * `/specials/` as `/lib/pages/pageSpecials.php`
+ * `/about/` s`/lib/pages/pageAbout.php`
 
 #### SVG Support
 
-The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to parse the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with the [`.htaccess`](.htaccess#L21-L22) in this repository.
+The website uses SVGs for its logos and icons instead of bitmaps. Make sure your web server is configured to pass the correct MIME type for SVGs ([more info here](http://www.kaioa.com/node/45)) — this should be enabled with lines 21-22 in the [`.htaccess`](.htaccess#L21-L22) file included in this repository.
 
 #### Latest Episode Control
 
@@ -56,17 +56,17 @@ If you plan on further developing with this repository, we *highly* recommend yo
 
 #### CSS & JavaScript
 
-SASS/SCSS files are used to compile the CSS for the website but knowledge in SASS is not required; we have also included equivalent regular CSS files.
+SASS/SCSS files are used to compile the CSS for the website but knowledge in SASS is not required; we have included human-readable versions of the CSS.
 
-JavaScript files are closure-compiled and minified, however we have also included human-readable versions.
+In addition, JavaScript files are closure-compiled and minified however we have also included human-readable versions as well.
 
 #### Things Not Included In This Repository:
-* Episode MP3 and M4A files.
-* Episode XML/RSS feeds.
-* Promotional pages (e.g. the Portal 2 Launch Party promo page).
-* Old episode artwork for episodes 1-99.
-* ~~Backup of the Half-Life 3 beta (removed per Valve's request).~~
+* Episode MP3 and M4A files
+* Episode XML/RSS feeds
+* Promotional pages (e.g. the Portal 2 Launch Party promo page)
+* Old episode artwork for episodes 1-99
+* ~~Backup of the Half-Life 3 beta (removed per Valve's request)~~
 
 ## Contributors:
-* @Flamov
-* @chocolatethunder
+* [@Flamov](https://www.github.com/Flamov)
+* [@chocolatethunder](https://www.github.com/chocolatethunder)
