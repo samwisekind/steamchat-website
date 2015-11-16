@@ -22,7 +22,7 @@ If you plan on hosting the website in a local environment or otherwise, the foll
 
 #### Intended .htaccess Behaviour/Configuration
 
-The intended behaviour is having the server rewrite (*not* redirect) requests to episode pages (e.g. `/episodes/50/`) as `lib/pages/episodePage.php` while passing in two URL arameters:
+The intended behaviour is having the server rewrite (*not* redirect) requests to episode pages (e.g. `/episodes/50/`) as `lib/pages/episodePage.php` while passing in two URL parameters:
 
 | Parameter Name | Value(s) |
 |---|---|
@@ -38,7 +38,7 @@ The intended behaviour is having the server rewrite (*not* redirect) requests to
 * Also be wary of requests with and without trailing slashes ("/")
 * The above rewrite rules also apply to the Specials and About pages (no URL parameters or singular/plural rules required):
  * `/specials/` as `/lib/pages/pageSpecials.php`
- * `/about/` s`/lib/pages/pageAbout.php`
+ * `/about/` as `/lib/pages/pageAbout.php`
 
 In addition, when a user requests an episode page with "`/download/`" appended to the end (e.g. `/episodes/50/download/`, both with and without a trailing slash) it will rewrite as `/lib/pages/pageEpisode.php?type=episode&number=50&download`. A value for the `download` URL parameter is not required.
 
