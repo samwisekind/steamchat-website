@@ -154,3 +154,81 @@
 	-ms-transition: all .25s ease-out;
 	-o-transition: all .25s ease-out;
 	transition: all .25s ease-out; }
+
+
+
+/********* RESPONSIVE *********/
+
+@media (max-width: 800px) {
+
+	#content .left,
+	#content .right {
+		float: none;
+		width: 100%; }
+
+	#content .left {
+		margin-bottom: 40px; }
+
+	#content .right {
+		padding-top: 0; }
+
+	#content p,
+	#content ul {
+		margin-bottom: 20px; }
+
+	#content ul::after {
+		content: ("");
+		display: table;
+		clear: both; }
+
+	#content ul li {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 0;
+		text-align: left;
+		font-size: 12px;
+		line-height: 12px; }
+
+	#content ul li.title,
+	#content ul li:last-child {
+		margin-right: 0; }
+
+	#content ul li.title {
+		float: none;
+		font-size: 14px;
+		line-height: 14px; }
+
+	#content ul li span {
+		margin: 0; }
+
+	#content #episodeNav,
+	#content #episodeNav li {
+		height: 50px; }
+
+	#content #episodeNav {
+		margin-top: 40px;
+		margin-bottom: 40px; }
+
+	#content #episodeNav li {
+		margin: 0; }
+
+	#content #episodeNav li .title {
+		font-size: 10px;
+		line-height: 10px; }
+
+	#content #episodeNav li .date {
+		font-size: 8px;
+		line-height: 8px; }
+
+	#content #episodeNav li a {
+		background-image: url("../img/episode/episodeNavSmall.svg"); }
+
+	#content #episodeNav li.prev a,
+	#content #episodeNav li.prev a:hover {
+		padding-left: 30px; }
+
+	#content #episodeNav li.next a,
+	#content #episodeNav li.next a:hover {
+		padding-right: 30px; }
+
+}

@@ -430,3 +430,78 @@
 	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
+
+
+
+
+/********* RESPONSIVE *********/
+
+@media (max-width: 800px) {
+
+	#playerToggle,
+	#playerProgress,
+	.episodeArchives .play,
+	.episodeArchives .link .subtitle {
+		display: none; }
+
+	#header,
+	#headerPlayer,
+	#playerWrapper {
+		height: 150px; }
+
+	#header {
+		margin-top: 50px;
+		background-size: cover; }
+
+	#header #headerMenu {
+		position: absolute;
+		left: 0;
+		top: -50px;
+		width: 100%; }
+
+	#playerWrapper {
+		position: relative;
+		left: auto;
+		bottom: auto;
+		margin: 0;
+		width: 100%; }
+
+	#playerTitle h1 a {
+		padding-left: 20px;	}
+
+	#playerTitle h1 a {
+		padding-bottom: 10px;
+		max-width: none;
+		font-size: 16px;
+		line-height: 16px; }
+
+	#playerTitle h2 {
+		opacity: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;  }
+
+	#playerTitle h2 {
+		background: none; }
+
+	.episodeArchives.special {
+		margin-bottom: 20px; }
+
+	.episodeArchives .episodeArchives-header td {
+		font-size: 14px;
+		line-height: 14px; }
+
+	.episodeArchives.special li {
+		width: 50%; }
+
+	.episodeArchives .link {
+		width: 100%;
+		padding: 5px; }
+
+	.episodeArchives .title {
+		margin: 0;
+		font-size: 10px;
+		line-height: 10px; }
+
+}
