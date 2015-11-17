@@ -4,7 +4,8 @@ Here you can find the source files for the Steamchat (formerly "Steamcast") webs
 
 The website included in this repository is the version from 2013 onwards. We have updated it from its [original state](https://github.com/Flamov/steamchat-website/tree/c6ec7d23f21fbf421eb74abe7b1a97b9d83ec0c9) to be more sanely coded as well as clean up the original files, add CSS3 support, as well as a bunch of other additions and improvements.
 
-You can find the versions of the Steamchat website from 2009-2012 here: https://www.github.com/Flamov/steamchat-website-archives/
+You can find the versions of the Steamchat website from 2009-2012 here:
+https://www.github.com/Flamov/steamchat-website-archives/
 
 ## Requirements
 
