@@ -10,3 +10,8 @@ $color-white: #FFFFFF;
 $color-grey: #999999;
 $color-greyLight: #AAAAAA;
 $color-black: #222222;
+
+@mixin clearfix {
+	content: "";
+	display: table;
+	clear: both; }
