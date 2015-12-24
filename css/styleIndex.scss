@@ -446,7 +446,12 @@
 		margin-top: 50px;
 		background-size: cover; }
 
+	#headerPlayer {
+		z-index: 0;
+		position: relative; }
+
 	#header #headerMenu {
+		z-index: 10;
 		position: absolute;
 		left: 0;
 		top: -50px;
@@ -459,24 +464,27 @@
 		margin: 0;
 		width: 100%; }
 
-	#playerTitle h1 a {
-		padding-left: 20px;	}
+	#playerTitle h1 a,
+	#playerTitle h2 a {
+		padding: 10px 10px 10px 20px; }
 
 	#playerTitle h1 a {
-		padding-bottom: 10px;
 		max-width: none;
 		font-size: 16px;
 		line-height: 16px; }
 
-	#playerTitle h2 {
-		opacity: 0;
-		top: 0;
+	#playerTitle h1 a:before {
+		content: "";
+		position: fixed;
 		left: 0;
+		top: 0;
 		width: 100%;
-		height: 100%;  }
+		height: 195px; }
 
 	#playerTitle h2 {
-		background: none; }
+		bottom: -32px;
+		font-size: 12px;
+		line-height: 12px; }
 
 	.episodeArchives.special {
 		margin-bottom: 20px; }

@@ -368,6 +368,18 @@ body.headerTip #header #headerMenu-tip a {
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 /********* RESPONSIVE *********/
+@media (max-width: 1000px) {
+  #headerTip .wrapper {
+    padding: 0 20px 0 20px; }
+
+  #headerMenu,
+  #playerWrapper {
+    left: 0 !important;
+    margin: 0 !important;
+    width: 100% !important; }
+
+  #headerMenu {
+    background: #FFFFFF !important; } }
 @media (max-width: 800px) {
   body {
     font-size: 12px; }
