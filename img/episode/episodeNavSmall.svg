@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px"
-	 height="100px" viewBox="0 0 22 100" enable-background="new 0 0 22 100" xml:space="preserve">
-<g id="Mobile">
-	<path id="Next_2_" fill="#999999" d="M22,75L0.7,100L0,99.3L20.7,75L0,50.7L0.7,50L22,75z"/>
-	<path id="Prev_2_" fill="#999999" d="M0,25L21.3,0L22,0.7L1.3,25L22,49.3L21.3,50L0,25z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" height="100px" width="22px" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 100" enable-background="new 0 0 22 100">
+<g id="Mobile" fill="#999">
+	<path id="Next_2_" d="m22 75l-21.3 25-0.7-0.7 20.7-24.3-20.7-24.3 0.7-0.7 21.3 25z"/>
+	<path id="Prev_2_" d="m0 25l21.3-25 0.7 0.7-20.7 24.3 20.7 24.3-0.7 0.7-21.3-25z"/>
 </g>
-<g id="Large">
-	<path id="Next_1_" fill="#999999" d="M-8,105l-30.9,35l-1.1-1l30-34l-30-34l1.1-1L-8,105z"/>
-	<path id="Prev_1_" fill="#999999" d="M-40,35L-9.1,0L-8,1l-30,34l30,34l-1.1,1L-40,35z"/>
+<g id="Large" fill="#999">
+	<path id="Next_1_" d="m-8 105l-30.9 35-1.1-1 30-34-30-34 1.1-1 30.9 35z"/>
+	<path id="Prev_1_" d="m-40 35l30.9-35 1.1 1-30 34 30 34-1.1 1-30.9-35z"/>
 </g>
 </svg>
