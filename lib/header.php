@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen" />
 		<?php
 			if ($pageType != "misc") {
-				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.css" type="text/css" media="screen" />';
+				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.min.css" type="text/css" media="screen" />';
 			};
 		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />

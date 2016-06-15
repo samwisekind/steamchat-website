@@ -1,0 +1,10 @@
+$color-steamchat: #0064BF;
+$color-steamchatDark: darken($color-steamchat, 10);
+$color-steamchatLight: lighten($color-steamchat, 10);
+$color-steamchatExtraLight: lighten($color-steamchat, 40);
+$color-steamchatOpaque: rgba($color-steamchatExtraLight, .5);
+$color-steamchatCover: rgba($color-steamchat, .25);
+$color-white: #FFFFFF;
+$color-grey: #999999;
+$color-greyLight: #AAAAAA;
+$color-black: #222222;
