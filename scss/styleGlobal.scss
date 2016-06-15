@@ -328,11 +328,8 @@ body.headerTip #header #headerMenu-tip a {
 	margin-right: 50px;
 	background: url("../img/global/globalLogo.svg") center center no-repeat transparent;
 	background-size: contain;
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: gray;  }
+	@include filterGrayscale (100%);
+}
 
 #footer-logo:hover {
 	opacity: .8;
@@ -403,11 +400,7 @@ body.headerTip #header #headerMenu-tip a {
 /******* TRANSITIONS *******/
 
 #headerTip {
-	-webkit-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	@include transition (all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
 }
 
 

@@ -3,3 +3,68 @@
 	display: table;
 	clear: both;
 }
+
+@mixin calc ($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -ms-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin transform ($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transition ($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin animation ($animation) {
+	-webkit-animation: $animation;
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	-o-animation: $animation;
+	animation: $animation;
+}
+
+@mixin animationPlayState ($playState) {
+	-webkit-animation-play-state: $playState;
+	-moz-animation-play-state: $playState;
+	-ms-animation-play-state: $playState;
+	-o-animation-play-state: $playState;
+	animation-play-state: $playState;
+}
+
+@mixin animationDelay ($delay) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin filterGrayscale ($value) {
+	-webkit-filter: grayscale($value);
+	-moz-filter: grayscale($value);
+	-ms-filter: grayscale($value);
+	-o-filter: grayscale($value);
+	filter: gray;
+}
+
+@mixin userSelect ($value) {
+	-webkit-touch-callout: $value;
+	-webkit-user-select: $value;
+	-khtml-user-select: $value;
+	-moz-user-select: $value;
+	-ms-user-select: $value;
+	user-select: $value;
+}

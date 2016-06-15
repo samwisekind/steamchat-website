@@ -136,10 +136,7 @@
 	letter-spacing: 0px;
 	text-align: right;
 	text-shadow: 0 0 3px $color-black;
-	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
+	@include userSelect (none);
 }
 
 #header.noBackground #playerTime {
@@ -154,12 +151,7 @@
 	width: 150px;
 	height: 35px;
 	background: $color-steamchat;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	@include userSelect (none);
 }
 
 #playerVolume .wrapper {
@@ -260,46 +252,22 @@
 	background-color: #FFFFFF;
 	border-radius: 100%;
 	display: inline-block;
-	-webkit-transform: scale(0);
-	-moz-transform: scale(0);
-	-ms-transform: scale(0);
-	-o-transform: scale(0);
-	transform: scale(0);
-	-webkit-animation: circle 1.5s infinite ease-in-out both;
-	-moz-transition: circle 1.5s infinite ease-in-out both;
-	-ms-transition: circle 1.5s infinite ease-in-out both;
-	-o-transition: circle 1.5s infinite ease-in-out both;
-	animation: circle 1.5s infinite ease-in-out both;
-	-webkit-animation-play-state: paused;
-	-moz-animation-play-state: paused;
-	-ms-animation-play-state: paused;
-	-o-animation-play-state: paused;
-	animation-play-state: paused;
+	@include transform (scale(0));
+	@include animation (circle 1.5s infinite ease-in-out both);
+	@include animationPlayState (paused);
 }
 
 #headerPlayer.loading #playerLoading .circle {
-	-webkit-animation-play-state: running;
-	-moz-animation-play-state: running;
-	-ms-animation-play-state: running;
-	-o-animation-play-state: running;
-	animation-play-state: running;
+	@include animationPlayState (running);
 }
 
  #playerLoading .circle2 {
-	-webkit-animation-delay: 0.2s;
-	-moz-transition-delay: 0.2s;
-	-ms-transition-delay: 0.2s;
-	-o-transition-delay: 0.2s;
-	animation-delay: 0.2s;
+ 	@include animationDelay (0.2s);
 }
 
  #playerLoading .circle3 {
 	margin-right: 0;
-	-webkit-animation-delay: 0.4s;
-	-moz-transition-delay: 0.4s;
-	-ms-transition-delay: 0.4s;
-	-o-transition-delay: 0.4s;
-	animation-delay: 0.4s;
+	@include animationDelay (0.4s);
 }
 
 @-webkit-keyframes circle {
@@ -356,6 +324,8 @@
 	max-width: 1000px;
 }
 
+
+
 /******* CONTENT - EPISODE ARCHIVES *******/
 
 .episodeArchives {
@@ -393,11 +363,7 @@
 	z-index: 0;
 	display: block;
 	padding: 10px;
-	width: -webkit-calc(100% - 20px);
-	width: -moz-calc(100% - 20px);
-	width: -ms-calc(100% - 20px);
-	width: -o-calc(100% - 20px);
-	width: calc(100% - 20px);
+	@include calc (width, "100% - 20px");
 	text-decoration: none;
 }
 
@@ -466,29 +432,16 @@
 
 #playerToggle,
 #playerProgress .line {
-	-webkit-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	@include transition (opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
 }
 
 #playerLoading {
-	-webkit-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	@include transition (opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
 }
 
 #playerProgress .cover.smooth {
-	-webkit-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-moz-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-ms-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	-o-transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	@include transition (all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
 }
-
 
 
 
