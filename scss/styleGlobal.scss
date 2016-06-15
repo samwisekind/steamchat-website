@@ -1,41 +1,5 @@
-@import "_sass/variables";
-
-
-
-/********* RESETS *********/
-
-html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box; }
-
-body {
-	min-width: 320px;
-	font-family: "Oxygen", Helvetica, Arial, sans-serif;
-	font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: justify;
-	color: $color-black;
-	background: $color-white;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased; }
-
-*,
-*:before,
-*:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;  }
-
-aside,
-section,
-main,
-nav,
-header,
-footer, {
-	display: block; }
+@import "_sass/common";
+@import "_sass/base";
 
 
 
@@ -44,7 +8,8 @@ footer, {
 .cf {
 	display: block;
 	clear: both;
-	content: ""; }
+	content: "";
+}
 
 
 
@@ -53,16 +18,19 @@ footer, {
 #headerTip {
 	height: 0px;
 	overflow: hidden;
-	background: $color-steamchat; }
+	background: $color-steamchat;
+}
 
 body.headerTip #headerTip {
-	height: 350px; }
+	height: 350px;
+}
 
 #headerTip .wrapper {
 	display: table;
 	margin: 0 auto 0 auto;
 	width: 800px;
-	height: 350px; }
+	height: 350px;
+}
 
 #headerTip .left,
 #headerTip .right {
@@ -70,35 +38,43 @@ body.headerTip #headerTip {
 	padding: 0 20px 0 0;
 	width: 50%;
 	height: 350px;
-	vertical-align: middle; }
+	vertical-align: middle;
+}
 
 #headerTip .right {
-	padding: 0 0 0 20px; }
+	padding: 0 0 0 20px;
+}
 
 #headerTip h2,
 #headerTip p {
-	color: $color-white; }
+	color: $color-white;
+}
 
 #headerTip h2 {
 	font-size: 26px;
-	line-height: 26px; }
+	line-height: 26px;
+}
 
 #headerTip p {
 	margin-top: 20px;
 	font-size: 16px;
-	line-height: 22px; }
+	line-height: 22px;
+}
 
 #headerTip ul,
 #headerTip li {
-	list-style: none; }
+	list-style: none;
+}
 
 #headerTip li {
 	display: table;
 	margin-bottom: 15px;
-	height: 30px; }
+	height: 30px;
+}
 
 #headerTip li:last-child {
-	margin-bottom: 0; }
+	margin-bottom: 0;
+}
 
 #headerTip li a {
 	display: table-cell;
@@ -110,7 +86,8 @@ body.headerTip #headerTip {
 	text-decoration: none;
 	color: $color-white;
 	background: url("../img/global/headerTip_icons.svg") left top no-repeat transparent;
-	vertical-align: middle; }
+	vertical-align: middle;
+}
 
 $class-list: twitter, facebook, steam, youtube;
 @each $current-class in $class-list {
@@ -121,7 +98,8 @@ $class-list: twitter, facebook, steam, youtube;
 }
 
 #headerTip ul li a:hover {
-	text-decoration: underline; }
+	text-decoration: underline;
+}
 
 
 
@@ -131,14 +109,16 @@ $class-list: twitter, facebook, steam, youtube;
 	position: relative;
 	width: 100%;
 	background: $color-white;
-	box-shadow: 0 0 1px $color-grey; }
+	box-shadow: 0 0 1px $color-grey;
+}
 
 #headerMenu {
 	position: relative;
 	margin: 0 auto 0 auto;
 	width: 100%;
 	height: 75px;
-	max-width: 1000px; }
+	max-width: 1000px;
+}
 
 #headerMenu #headerLogo {
 	z-index: 10;
@@ -146,30 +126,35 @@ $class-list: twitter, facebook, steam, youtube;
 	left: -20px;
 	top: -15px;
 	width: 105px;
-	height: 120px; }
+	height: 120px;
+}
 
 #headerMenu #headerLogo a {
 	display: block;
 	width: 100%;
 	height: 100%;
 	background: url("../img/global/globalLogo.svg") center center no-repeat transparent;
-	background-size: contain; }
+	background-size: contain;
+}
 
 #headerMenu ul,
 #headerMenu ul li {
-	list-style: none; }
+	list-style: none;
+}
 
 #header #headerMenu ul {
 	display: inline-block;
 	padding-left: 100px;
 	width: auto;
 	height: 100%;
-	background: $color-white; }
+	background: $color-white;
+}
 
 #header #headerMenu ul li {
 	display: table;
 	float: left;
-	height: 75px; }
+	height: 75px;
+}
 
 #header #headerMenu ul li a,
 #header #headerMenu-tip a {
@@ -184,29 +169,35 @@ $class-list: twitter, facebook, steam, youtube;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	vertical-align: middle; }
+	vertical-align: middle;
+}
 
 #header #headerMenu ul li a:hover,
 #header #headerMenu-tip a:hover {
 	color: $color-white;
 	background: $color-steamchat;
-	cursor: pointer; }
+	cursor: pointer;
+}
 
 #header #headerMenu-tip,
 #header #headerMenu-tip a {
-	width: 90px; }
+	width: 90px;
+}
 
 #header #headerMenu-tip {
 	float: right;
-	height: 100%; }
+	height: 100%;
+}
 
 #header #headerMenu-tip a {
 	padding: 0;
 	color: $color-white;
-	background: $color-steamchatLight; }
+	background: $color-steamchatLight;
+}
 
 body.headerTip #header #headerMenu-tip a {
-	background: $color-steamchat; }
+	background: $color-steamchat;
+}
 
 
 
@@ -216,58 +207,69 @@ body.headerTip #header #headerMenu-tip a {
 	margin: 0 auto 0 auto;
 	padding: 100px 20px 250px 20px;
 	width: 100%;
-	max-width: 700px; }
+	max-width: 700px;
+}
 
 #content h1 {
 	margin-bottom: 20px;
 	font-size: 38px;
 	line-height: 38px;
 	font-weight: 300;
-	color: $color-steamchat; }
+	color: $color-steamchat;
+}
 
 #content h2 {
 	margin-top: 40px;
 	margin-bottom: 20px;
 	font-size: 24px;
 	line-height: 24px;
-	font-weight: 300; }
+	font-weight: 300;
+}
 
 #content p {
 	margin-bottom: 20px;
-	text-align: justify; }
+	text-align: justify;
+}
 
 #content > p:last-child {
-	margin-bottom: 0; }
+	margin-bottom: 0;
+}
 
 #content p a,
 #content ul a {
-	color: $color-steamchat; }
+	color: $color-steamchat;
+}
 
 #content ul a:hover,
 #content p a:hover {
-	color: $color-steamchatDark; }
+	color: $color-steamchatDark;
+}
 
 #content ul,
 #content li {
-	list-style: none; }
+	list-style: none;
+}
 
 #content #aboutLinks li {
 	display: table;
 	float: left;
 	width: 50%;
-	height: 100px; }
+	height: 100px;
+}
 
 #content #aboutLinks li .wrapper {
 	display: table-cell;
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	vertical-align: middle; }
+	vertical-align: middle;
+}
 
 #content #aboutLinks li a {
 	font-weight: 700;
 	line-height: 18px;
-	text-decoration: none; }
+	text-decoration: none;
+}
 
 #content #aboutLinks li a .subtitle {
 	display: block;
@@ -275,25 +277,32 @@ body.headerTip #header #headerMenu-tip a {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 16px;
-	text-decoration: underline; }
+	text-decoration: underline;
+}
 
 #content #specialsColumns {
-	width: 100%; }
+	width: 100%;
+}
 
 #content #specialsColumns > div {
-	width: 50%; }
+	width: 50%;
+}
 
 #content #specialsColumns .left {
-	float: left; }
+	float: left;
+}
 
 #content #specialsColumns .right {
-	float: right; }
+	float: right;
+}
 
 #content #specialsColumns ul {
-	padding-left: 15px; }
+	padding-left: 15px;
+}
 
 #content #specialsColumns div > ul {
-	border-left: 5px solid $color-steamchat; }
+	border-left: 5px solid $color-steamchat;
+}
 
 
 
@@ -301,13 +310,15 @@ body.headerTip #header #headerMenu-tip a {
 
 #footer {
 	width: 100%;
-	background: #EEEEEE; }
+	background: #EEEEEE;
+}
 
 #footer .wrapper {
 	margin: 0 auto 0 auto;
 	padding: 50px 20px 75px 20px;
 	max-width: 900px;
-	overflow: auto; }
+	overflow: auto;
+}
 
 #footer-logo {
 	opacity: .5;
@@ -324,55 +335,68 @@ body.headerTip #header #headerMenu-tip a {
 	filter: gray;  }
 
 #footer-logo:hover {
-	opacity: .8; }
+	opacity: .8;
+}
 
 #footer .left,
 #footer .right {
-	width: 50%; }
+	width: 50%;
+}
 
 #footer .left {
-	float: left; }
+	float: left;
+}
 
 #footer .right {
-	float: right; }
+	float: right;
+}
 
 #footer ul,
 #footer li {
-	list-style: none; }
+	list-style: none;
+}
 
 #footer .left ul {
 	float: left;
-	width: 150px; }
+	width: 150px;
+}
 
 #footer li {
 	margin-top: 20px;
 	padding: 0;
 	font-size: 12px;
 	line-height: 12px;
-	color: $color-greyLight; }
+	color: $color-greyLight;
+}
 
 #footer .left li {
 	float: left;
-	width: 75px; }
+	width: 75px;
+}
 
 #footer .right li {
-	text-align: right; }
+	text-align: right;
+}
 
 #footer li.title {
 	width: 150px;
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: bold;
-	color: $color-greyLight; }
+	color: $color-greyLight;
+}
 
 #footer li:first-child {
-	margin: 0; }
+	margin: 0;
+}
 
 #footer li a {
-	color: inherit; }
+	color: inherit;
+}
 
 #footer li a:hover {
-	color: $color-grey; }
+	color: $color-grey;
+}
 
 
 
@@ -383,7 +407,8 @@ body.headerTip #header #headerMenu-tip a {
 	-moz-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-ms-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 	-o-transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-	transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
+	transition: all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
 
 
 
@@ -392,131 +417,159 @@ body.headerTip #header #headerMenu-tip a {
 @media (max-width: 1000px) {
 
 	#headerTip .wrapper {
-		padding: 0 20px 0 20px; }
+		padding: 0 20px 0 20px;
+	}
 
 	#headerMenu,
 	#playerWrapper {
 		left: 0 !important;
 		margin: 0 !important;
-		width: 100% !important; }
+		width: 100% !important;
+	}
 
 	#headerMenu {
-		background: #FFFFFF !important; }
+		background: #FFFFFF !important;
+	}
 
 }
 
 @media (max-width: 800px) {
 
 	body {
-		font-size: 12px; }
+		font-size: 12px;
+	}
 
 	#headerTip,
 	#header #headerMenu-tip,
 	#footer .left ul {
-		display: none; }
+		display: none;
+	}
 
 	#header {
 		border-bottom: 1px solid #CCCCCC;
-		box-shadow: none; }
+		box-shadow: none;
+	}
 
 	#headerMenu #headerLogo {
 		left: -7px;
 		top: -7px;
 		width: 65px;
-		height: 70px; }
+		height: 70px;
+	}
 
 	#headerMenu,
 	#header #headerMenu ul li,
 	#header #headerMenu ul li a {
-		height: 50px; }
+		height: 50px;
+	}
 
 	#header #headerMenu {
 		position: static;
 		margin: 0;
-		background: #FFFFFF !important; }
+		background: #FFFFFF !important;
+	}
 
 	#header #headerMenu ul {
 		float: right;
 		padding-left: 0;
-		padding-right: 10px; }
+		padding-right: 10px;
+	}
 
 	#header #headerMenu ul li a,
 	#header #headerMenu-tip a {
 		padding: 0 10px 0 10px;
 		font-size: 10px;
-		line-height: 10px; }
+		line-height: 10px;
+	}
 
 	#header #headerMenu-tip,
 	#header #headerMenu-tip a {
-		width: auto; }
+		width: auto;
+	}
 
 	#content {
-		padding: 40px 20px 40px 20px !important; }
+		padding: 40px 20px 40px 20px !important;
+	}
 
 	#content h1,
 	#content h2 {
-		margin-bottom: 10px; }
+		margin-bottom: 10px;
+	}
 
 	#content h1 {
 		font-size: 20px;
-		line-height: 20px; }
+		line-height: 20px;
+	}
 
 	#content h2 {
 		margin-top: 20px;
 		font-size: 16px;
-		line-height: 16px; }
+		line-height: 16px;
+	}
 
 	#content p {
 		margin-bottom: 10px;
 		font-size: 12px;
-		line-height: 20px; }
+		line-height: 20px;
+	}
 
 	#content #aboutLinks li,
 	#content #aboutLinks li .wrapper,
 	#content #aboutLinks li a {
 		display: block;
-		height: auto; }
+		height: auto;
+	}
 
 	#content #aboutLinks li {
 		float: none;
-		width: 100%; }
+		width: 100%;
+	}
 
 	#content #aboutLinks li a {
-		padding: 10px 0 10px 0; }
+		padding: 10px 0 10px 0;
+	}
 
 	#content #aboutLinks li a .subtitle {
 		padding-top: 0;
 		font-size: 12px;
-		line-height: 12px; }
+		line-height: 12px;
+	}
 
 	#content #specialsColumns > div {
 		float: none;
-		width: 100%; }
+		width: 100%;
+	}
 
 	#footer * {
-		float: none !important; }
+		float: none !important;
+	}
 
 	#footer .wrapper {
-		padding: 20px; }
+		padding: 20px;
+	}
 
  	#footer .left,
  	#footer .right,
  	#footer ul {
- 		width: 100% !important; }
+ 		width: 100% !important;
+ 	}
 
 	#footer-logo {
 		display: block;
 		margin: 0 auto 20px auto;
 		width: 50px;
-		height: 50px; }
+		height: 50px;
+	}
 
 	#footer .right li {
 		margin-top: 10px;
 		font-size: 10px;
 		line-height: 10px;
-		text-align: center; }
+		text-align: center;
+	}
 
 	#footer .right li:first-child {
-		margin-top: 0; }
+		margin-top: 0;
+	}
 
 }
