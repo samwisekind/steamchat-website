@@ -30,13 +30,6 @@
 		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />
 		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="<?php echo $hostLocation; ?>js/min/scriptsGlobal.min.js"></script>
-		<?php
-			if ($pageType == "index") { echo '
-				<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.slim.min.js"></script>
-				<script type="text/javascript" src="' . $hostLocation . 'js/min/scriptsIndex.min.js"></script>';
-			};
-		?>
 		<meta property="og:url" content="<?php echo $_SERVER["REQUEST_URI"]; ?>" />
 		<meta property="og:title" content="Steamchat<?php echo $metaTitle; ?>" />
 		<meta property="og:description" content="<?php echo $metaDescription; ?>" />

@@ -33,5 +33,13 @@
 
 	</footer>
 
+	<script type="text/javascript" src="<?php echo $hostLocation; ?>js/min/scriptsGlobal.min.js"></script>
+	<?php
+		if ($pageType == "index") { echo '
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+			<script type="text/javascript" src="' . $hostLocation . 'js/min/scriptsIndex.min.js"></script>';
+		};
+	?>
+
 </body>
 </html>
