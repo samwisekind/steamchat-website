@@ -354,6 +354,10 @@
 	font-weight: 700;
 }
 
+.episodeArchives .header.spacer {
+	margin-top: 30px;
+}
+
 .episodeArchives .episode {
 	position: relative;
 }
@@ -525,6 +529,10 @@
 
 	.episodeArchives.special li {
 		width: 50%;
+	}
+
+	.episodeArchives .header.spacer {
+		margin-top: 10px;
 	}
 
 	.episodeArchives .link {

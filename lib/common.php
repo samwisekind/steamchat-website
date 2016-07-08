@@ -1,1 +1,1 @@
-<?php $hostLocation = "http://localhost:8888/steamchat-website/"; ?>
+<?php $hostLocation = "http://10.0.1.3:8888/steamchat-website/"; ?>

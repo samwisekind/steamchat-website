@@ -1,6 +1,6 @@
 <?php
 
-	$latestEpisode = 103;
+	$latestEpisode = 104;
 
 	// [0] (Episode Information)
 	// [0][0] Episode Title
@@ -16,6 +16,28 @@
 	// [2][0] File Size (bytes)
 	// [2][1] File duration (HH:MM:SS)
 	// [2][2] File MP3 URL
+
+	$episode["episode"][104] = array(
+		array(
+			"E3 2016 Special",
+			"The planets have aligned, it's a full moon, and there's a foul stench in the air. It's a zombie resurrection! Steamchat is back from a three year hiatus, coming to bite your... ears, with a brand new episode! Topics include E3 2016, Overwatch, Dishonored, Half-Life 3, and more!",
+			"08/07/2016",
+			array(
+				null,
+				null
+			)
+		),
+		array(
+			"episodes/104/episode104_latest_overlay.png",
+			"episodes/104/episode104_latest_image.jpg",
+			"#2F3C56"
+		),
+		array(
+			199023789,
+			"01:43:38",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode104.mp3"
+		)
+	);
 
 	$episode["episode"][103] = array(
 		array(

@@ -77,8 +77,10 @@
 		?>
 
 		<div class="column">
-			<span class="header">2013 Episodes</span>
-			<?php listEpisodes($latestEpisode, 100); ?>
+			<span class="header">2016 Episodes</span>
+			<?php listEpisodes($latestEpisode, 104); ?>
+			<span class="header spacer">2013 Episodes</span>
+			<?php listEpisodes(103, 100); ?>
 		</div>
 
 		<div class="column">

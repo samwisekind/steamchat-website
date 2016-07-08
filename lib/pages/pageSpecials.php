@@ -60,6 +60,7 @@
 			<li><a href="<?php echo $hostLocation; ?>episodes/82/">Christmas Special 2011</a></li>
 			<li><a href="<?php echo $hostLocation; ?>episodes/67/">Black Mesa Mod Team Special</a></li>
 			<li><a href="<?php echo $hostLocation; ?>episodes/95/">Mass Effect 3 Special</a></li>
+			<li><a href="<?php echo $hostLocation; ?>episodes/104/">E3 2016 Special</a></li>
 		</ul>
 
 	</div>
