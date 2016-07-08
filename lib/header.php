@@ -88,7 +88,7 @@
 
 		</aside>
 
-		<header id="header" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_image.jpg);'"; }; ?>>
+		<header id="header" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_image.jpg); background-color: "  . $episode["episode"][104][1][2] . "'"; }; ?>>
 
 			<nav id="headerMenu" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_overlay.png);'"; }; ?>>
 
