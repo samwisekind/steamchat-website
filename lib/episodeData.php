@@ -1,6 +1,6 @@
 <?php
 
-	$latestEpisode = 104;
+	$latestEpisode = 105;
 
 	// [0] (Episode Information)
 	// [0][0] Episode Title
@@ -16,6 +16,28 @@
 	// [2][0] File Size (bytes)
 	// [2][1] File duration (HH:MM:SS)
 	// [2][2] File MP3 URL
+
+	$episode["episode"][105] = array(
+		array(
+			"The Beginner's Guide",
+			"In this episode we discuss The Beginner's Guide, interpretation in art and video games, the audience-author relationship, and more!",
+			"28/09/2016",
+			array(
+				null,
+				null
+			)
+		),
+		array(
+			"episodes/105/episode105_latest_overlay.png",
+			"episodes/105/episode105_latest_image.jpg",
+			"#2F7CA8"
+		),
+		array(
+			188337166,
+			"01:18:27",
+			"https://s3.amazonaws.com/steamchatepisodes/episode/steamcast_episode105.mp3"
+		)
+	);
 
 	$episode["episode"][104] = array(
 		array(
