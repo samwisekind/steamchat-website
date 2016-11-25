@@ -108,4 +108,4 @@
 
 	</section>
 
-<?php include "lib/footer.php"; ?>
+<?php include "../footer.php"; ?>
