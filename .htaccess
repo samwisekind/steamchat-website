@@ -1,5 +1,12 @@
 RewriteEngine on
 # RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Default Page
+DirectoryIndex lib/pages/pageIndex.php
 
 # Misc Page Rewrites
 RewriteRule ^specials/?$ lib/pages/pageSpecials.php [L]
@@ -16,11 +23,6 @@ RewriteRule ^snacks/([0-9]+)/download/?$ lib/pages/pageEpisode.php?type=snack&nu
 # Episode/Snack Page Singular Redirect
 RewriteRule ^episode/(.*)/?$ episodes/$1 [L,R=301]
 RewriteRule ^snack/(.*)/?$ snacks/$1 [L,R=301]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
 
 AddType image/svg+xml .svg .svgz
 AddEncoding gzip svgz

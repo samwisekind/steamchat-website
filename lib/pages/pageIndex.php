@@ -1,7 +1,10 @@
 <?php
+
 	$pageType = "index";
-	require_once "lib/episodeData.php";
-	require_once "lib/header.php";
+
+	require_once "../episodeData.php";
+	require_once "../header.php";
+
 ?>
 
 	<section class="episodeArchives special">
