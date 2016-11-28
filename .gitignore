@@ -1,5 +1,17 @@
+# Binary Files
 *.mp3
 *.m4a
+
+# Mac Files
 .DS_Store
+
+# SASS/SCSS
 .sass-cache
 .sass-cache/*
+
+# NPM/Node
+node_modules/
+
+# Builds from gulp tasks
+public-build/
+builds/

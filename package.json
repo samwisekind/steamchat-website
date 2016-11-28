@@ -1,0 +1,32 @@
+{
+  "name": "steamchat-website",
+  "version": "1.1.0",
+  "description": "Source files for the Steamchat (formerly \"Steamcast\") website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Flamov@github.com/Flamov/steamchat-website.git"
+  },
+  "keywords": [
+    "steamchat",
+    "website",
+    "podcast"
+  ],
+  "author": "Steamchat Podcast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flamov/steamchat-website/issues"
+  },
+  "homepage": "https://github.com/Flamov/steamchat-website#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "yargs": "^6.4.0"
+  }
+}
