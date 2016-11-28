@@ -20,6 +20,9 @@ var del = require('del'); // https://www.npmjs.com/package/del
 var cleanHTML = require('gulp-htmlmin'); // https://github.com/jonschlinkert/gulp-htmlmin
 var zip = require('gulp-zip'); // https://www.npmjs.com/package/gulp-zip
 
+// Get the folder name from the above path
+var targetDirectoryName = targetDirectory.split('/').pop();
+
 // Set variable for the hidden folder during compliation
 var targetDestDirectory = ".dist";
 
@@ -82,6 +85,8 @@ gulp.task('build-copy', ['build-delete'], function () {
 		targetDirectory + '/public/**', // Copy everything...
 		targetDirectory + '/public/**/.*', // ...including hidden files,...
 		'!' + targetDirectory + '/public/node_modules{,/**}', // ...except the node_modules folder,...
+		'!' + targetDirectory + '/public/scss{,/**}', // ...the SCSS folder,...
+		'!' + targetDirectory + '/public/css/*.css', // ...the uncompressed CSS files,...
 		'!' + targetDirectory + '/public/js/**/!(*.min.js)', // ...the JavaScript files (but keep the compiled ones, i.e. *.min.js),...
 		'!' + targetDirectory + '/public/package.json', // ...the package.json,...
 		'!' + targetDirectory + '/public/gulpfile.js', // ...the gulpfile,...
@@ -111,26 +116,11 @@ gulp.task('build-html', ['build-copy'], function () {
 
 });
 
-// Builds SCSS files by calling the 'buildSCSS' global function (see below)
-gulp.task('build-scss', ['build-copy'], function () {
-
-	var params = {
-		targetSrc: targetDirectory + '/' + targetDestDirectory + '/scss/',
-		targetDest: targetDirectory + '/' + targetDestDirectory + '/css/',
-		isForBuild: true
-	}
-
-	return buildSCSS(params);
-
-});
-
-// Deletes files remaining and generated during the build processes that cause unnecessary overhead
-gulp.task('build-overhead', ['build-html', 'build-scss'], function () {
+// Deletes files generated during the build processes that cause unnecessary overhead
+gulp.task('build-overhead', ['build-html'], function () {
 
 	return del([
-			targetDirectory + '/' + targetDestDirectory + '/**/.DS_Store',
-			targetDirectory + '/' + targetDestDirectory + '/scss',
-			targetDirectory + '/' + targetDestDirectory + '/css/*.css'
+			targetDirectory + '/' + targetDestDirectory + '/**/.DS_Store'
 		], {
 			force: true
 		});
@@ -155,10 +145,6 @@ gulp.task('build-prepare', ['build-overhead'], function () {
 
 		// If using the --buildnumber flag, renames the hidden folder to the '-build' folder and places it outside the target folder
 
-		// Get the folder name from the above path
-		var targetDirectoryName = targetDirectory.split('/').pop();
-
-		// Construct the date/timestamp
 		var today = new Date();
 		var dd = String(today.getDate());
 		var mm = String(today.getMonth() + 1);
@@ -189,7 +175,6 @@ gulp.task('build', [
 	'build-delete',
 	'build-copy',
 	'build-html',
-	'build-scss',
 	'build-overhead',
 	'build-prepare',
 	'build-clean'
@@ -212,65 +197,30 @@ var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 var using = require('gulp-using');
 
-// Global function for building SCSS
-function buildSCSS (params) {
-
-	function mainTasks () {
-
-		if (params.isForBuild === false) {
-
-			gulp.src(params.targetSrc + '*.scss')
-				.pipe(changed(params.targetDest + 'min', {
-					extension: '.min.css'
-				}))
-				.pipe(using({
-					path: 'relative',
-					prefix: 'Compiling',
-					color: 'yellow',
-					filesize: true
-				}));
-
-		}
-
-		gulp.src(params.targetSrc + '**/*.scss')
-			.pipe(sass({
-				includePaths: ['_/sass/']
-			}).on('error', sass.logError))
-			.pipe(gulp.dest(params.targetDest));
-
-		gulp.src(params.targetSrc + '**/*.scss')
-			.pipe(sourcemaps.init())
-			.pipe(sass({
-				includePaths: ['_/sass/'],
-				outputStyle: 'compressed'}).on('error', sass.logError))
-			.pipe(rename({
-				extname: '.min.css'
-			}))
-			.pipe(sourcemaps.write('./maps'))
-			.pipe(gulp.dest(params.targetDest + 'min'));
-
-	}
-
-	// If not for building, then invoke a gulp watch task
-	if (params.isForBuild === false) {
-		gulp.watch(params.targetSrc + '**/*.scss', mainTasks);
-	}
-	else if (params.isForBuild === true) {
-		mainTasks();
-	}
-
-}
-
 // Main task for SCSS/CSS/sourcemap compilation
 gulp.task('sass', function () {
 
-	var params = {
-		targetSrc: targetDirectory + '/public/scss/',
-		targetDest: targetDirectory + '/public/css/',
-		isForBuild: false
-	}
+	var targetSrc = targetDirectory + '/public/scss/';
+	var targetDest = targetDirectory + '/public/css/';
 
-	buildSCSS(params);
+	gulp.watch(targetSrc + '**/*.scss', function () {
+
+		gulp.src(targetSrc + '*.scss')
+			.pipe(changed(targetDest + 'min', {extension: '.min.css'}))
+			.pipe(using({path: 'relative', prefix: 'Compiling', color: 'yellow', filesize: true}));
+
+		gulp.src(targetSrc + '**/*.scss')
+			.pipe(sass({includePaths: ['_/sass/']}).on('error', sass.logError))
+			.pipe(gulp.dest(targetDest));
+
+		gulp.src(targetSrc + '**/*.scss')
+			.pipe(sourcemaps.init())
+			.pipe(sass({includePaths: ['_/sass/'], outputStyle: 'compressed'}).on('error', sass.logError))
+			.pipe(rename({extname: '.min.css'}))
+			.pipe(sourcemaps.write('./maps'))
+			.pipe(gulp.dest(targetDest + 'min'));
+
+	});
 
 });
 
