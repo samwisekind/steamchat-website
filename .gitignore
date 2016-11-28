@@ -15,3 +15,4 @@ node_modules/
 # Builds from gulp tasks
 public-build/
 builds/
+.build
