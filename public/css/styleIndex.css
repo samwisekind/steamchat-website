@@ -1,0 +1,498 @@
+/******* HEADER *******/
+#header,
+#headerMenu {
+  background-color: transparent;
+  box-shadow: none; }
+
+#header {
+  height: 400px;
+  background: center top no-repeat #8cc8ff; }
+
+#headerMenu {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -500px; }
+
+#header.noBackground {
+  background-image: none !important; }
+
+#header.noBackground #headerMenu {
+  background-color: #FFFFFF !important; }
+
+/******* HEADER - PLAYER *******/
+#headerPlayer {
+  border-bottom: 5px solid #0064BF; }
+
+#playerToggle {
+  opacity: .75;
+  z-index: 10;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  background: url("../../img/index/playerIcons.svg") -60px 0 no-repeat transparent; }
+
+#playerToggle:hover {
+  opacity: 1;
+  background-position: -160px 0; }
+
+#headerPlayer.playing #playerToggle {
+  background-position: -60px -100px; }
+
+#headerPlayer.playing #playerToggle:hover {
+  background-position: -160px -100px; }
+
+#playerWrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -500px;
+  width: 1000px;
+  height: 400px; }
+
+#playerTitle h1,
+#playerTitle h2 {
+  display: inline-block;
+  position: absolute;
+  left: 0; }
+
+#playerTitle h1 a,
+#playerTitle h2 a {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #0064BF; }
+
+#playerTitle h1 {
+  z-index: 30;
+  bottom: 0;
+  display: inline-block;
+  max-width: 100%; }
+
+#playerTitle h1 a {
+  padding-bottom: 15px;
+  max-width: 700px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+#playerTitle:hover h1 a {
+  max-width: 100%;
+  text-decoration: underline; }
+
+#playerTitle h2 {
+  z-index: 0;
+  bottom: -40px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal; }
+
+#playerTime {
+  pointer-events: none;
+  z-index: 20;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  color: #FFFFFF;
+  font-family: "Lato", Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: right;
+  text-shadow: 0 0 3px #222222;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#header.noBackground #playerTime {
+  text-shadow: none; }
+
+#playerVolume {
+  display: table;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: 150px;
+  height: 35px;
+  background: #0064BF;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#playerVolume .wrapper {
+  display: table-cell;
+  padding: 0 10px 0 10px;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle; }
+
+#playerVolume-toggle {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../../img/index/playerIcons.svg") -3px 0 no-repeat; }
+
+#playerVolume.muted #playerVolume-toggle {
+  background-position: -27px 0; }
+
+#playerVolume-slider {
+  margin-left: auto;
+  display: block;
+  width: 105px;
+  height: 15px; }
+
+#playerProgress {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+#playerProgress:hover {
+  cursor: pointer; }
+
+#headerPlayer.int #playerProgress:hover {
+  cursor: default; }
+
+#playerProgress > div {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  height: 400px; }
+
+#playerProgress .cover {
+  z-index: 0;
+  background: url("../../img/index/playerCover.svg") left center repeat rgba(0, 100, 191, 0.25); }
+
+#playerProgress .line {
+  opacity: 0;
+  z-index: 10;
+  left: 0;
+  width: 5px;
+  background-color: #0064BF; }
+
+#playerProgress:hover .line {
+  opacity: 1; }
+
+#playerLoading {
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+#playerLoading .wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  margin: -10px 0 0 -40px;
+  text-align: center; }
+
+#playerLoading .circle {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: circle 1.5s infinite ease-in-out both;
+  -moz-animation: circle 1.5s infinite ease-in-out both;
+  -ms-animation: circle 1.5s infinite ease-in-out both;
+  -o-animation: circle 1.5s infinite ease-in-out both;
+  animation: circle 1.5s infinite ease-in-out both;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused; }
+
+#headerPlayer.loading #playerLoading .circle {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running; }
+
+#playerLoading .circle2 {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -ms-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+
+#playerLoading .circle3 {
+  margin-right: 0;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -ms-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  animation-delay: 0.4s; }
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1); }
+  80% {
+    -webkit-transform: scale(0); } }
+
+@-moz-keyframes circle {
+  0% {
+    -moz-transform: scale(0); }
+  40% {
+    -moz-transform: scale(1); }
+  80% {
+    -moz-transform: scale(0); } }
+
+@-ms-keyframes circle {
+  0% {
+    -ms-transform: scale(0); }
+  40% {
+    -ms-transform: scale(1); }
+  80% {
+    -ms-transform: scale(0); } }
+
+@-o-keyframes circle {
+  0% {
+    -o-transform: scale(0); }
+  40% {
+    -o-transform: scale(1); }
+  80% {
+    -o-transform: scale(0); } }
+
+@keyframes circle {
+  0% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); }
+  80% {
+    transform: scale(0); } }
+
+#headerPlayer.loading #playerToggle,
+#headerPlayer.int #playerTime,
+#headerPlayer.loading #playerTime,
+#headerPlayer.int #playerProgress .cover,
+#headerPlayer.loading #playerProgress .cover,
+#headerPlayer.int #playerProgress .line,
+#headerPlayer.loading #playerProgress .line,
+#headerPlayer.int #playerVolume {
+  display: none !important; }
+
+#headerPlayer.loading #playerLoading {
+  pointer-events: auto;
+  opacity: 1; }
+
+/******* CONTENT *******/
+#content {
+  max-width: 1000px; }
+
+/******* CONTENT - EPISODE ARCHIVES *******/
+.episodeArchives {
+  width: 100%; }
+
+.episodeArchives:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.episodeArchives.special {
+  margin-bottom: 40px; }
+
+.episodeArchives .column,
+.episodeArchives.special .episode {
+  float: left;
+  width: 20%; }
+
+.episodeArchives .header {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700; }
+
+.episodeArchives .header.spacer {
+  margin-top: 30px; }
+
+.episodeArchives .episode {
+  position: relative; }
+
+.episodeArchives .episode .link {
+  position: relative;
+  z-index: 0;
+  display: block;
+  padding: 10px;
+  width: -webkit-calc(100% - 20px);
+  width: -moz-calc(100% - 20px);
+  width: -ms-calc(100% - 20px);
+  width: -o-calc(100% - 20px);
+  width: calc(100% - 20px);
+  text-decoration: none; }
+
+.episodeArchives .link > span {
+  display: block;
+  overflow: hidden;
+  overflow-y: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.episodeArchives .title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  color: #0064BF; }
+
+.episodeArchives .subtitle {
+  font-size: 12px;
+  line-height: 12px;
+  color: #999999; }
+
+.episodeArchives .subtitle .date {
+  float: left; }
+
+.episodeArchives .subtitle .duration {
+  float: right;
+  color: #AAAAAA; }
+
+.episodeArchives .episode:hover {
+  background: #0064BF; }
+
+.episodeArchives .episode:hover span {
+  color: #FFFFFF !important; }
+
+.episodeArchives .play {
+  opacity: .25;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: url("../../img/index/playerIcons.svg") -40px 18px no-repeat transparent; }
+
+.episodeArchives .episode:hover .play {
+  background-position: 0 18px; }
+
+.episodeArchives .play:hover {
+  opacity: 1;
+  background-color: rgba(140, 200, 255, 0.5); }
+
+/******* TRANSITIONS *******/
+#playerToggle,
+#playerProgress .line {
+  -webkit-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+#playerLoading {
+  -webkit-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+#playerProgress .cover.smooth {
+  -webkit-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+/********* RESPONSIVE *********/
+@media (max-width: 800px) {
+  #playerToggle,
+  #playerProgress,
+  .episodeArchives .play,
+  .episodeArchives .link .subtitle {
+    display: none; }
+  #header,
+  #headerPlayer,
+  #playerWrapper {
+    height: 150px; }
+  #header {
+    margin-top: 50px;
+    background-size: cover; }
+  #headerPlayer {
+    z-index: 0;
+    position: relative; }
+  #header #headerMenu {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%; }
+  #playerWrapper {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 0;
+    width: 100%; }
+  #playerTitle h1 a,
+  #playerTitle h2 a {
+    padding: 10px 10px 10px 20px; }
+  #playerTitle h1 a {
+    max-width: none;
+    font-size: 16px;
+    line-height: 16px; }
+  #playerTitle h1 a:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 195px; }
+  #playerTitle h2 {
+    bottom: -32px;
+    font-size: 12px;
+    line-height: 12px; }
+  .episodeArchives.special {
+    margin-bottom: 20px; }
+  .episodeArchives .episodeArchives-header td {
+    font-size: 14px;
+    line-height: 14px; }
+  .episodeArchives.special li {
+    width: 50%; }
+  .episodeArchives .header.spacer {
+    margin-top: 10px; }
+  .episodeArchives .link {
+    width: 100%;
+    padding: 5px; }
+  .episodeArchives .title {
+    margin: 0;
+    font-size: 10px;
+    line-height: 10px; } }

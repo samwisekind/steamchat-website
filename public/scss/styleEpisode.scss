@@ -131,7 +131,7 @@
 	color: $color-grey;
 	text-align: left;
 	text-decoration: none;
-	background: url("../img/episode/episodeNav.svg") no-repeat transparent;
+	background: url("../../img/episode/episodeNav.svg") no-repeat transparent;
 	vertical-align: middle;
 }
 
@@ -265,7 +265,7 @@
 	}
 
 	#content #episodeNav li a {
-		background-image: url("../img/episode/episodeNavSmall.svg");
+		background-image: url("../../img/episode/episodeNavSmall.svg");
 	}
 
 	#content #episodeNav li.prev a,

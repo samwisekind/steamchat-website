@@ -22,10 +22,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
 		<title>Steamchat<?php echo $metaTitle; ?></title>
-		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/styleGlobal.min.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/min/styleGlobal.min.css" type="text/css" media="screen" />
 		<?php
 			if ($pageType != "misc") {
-				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/style' . ucfirst($pageType) . '.min.css" type="text/css" media="screen" />';
+				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/min/style' . ucfirst($pageType) . '.min.css" type="text/css" media="screen" />';
 			};
 		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />

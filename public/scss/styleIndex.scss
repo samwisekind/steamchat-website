@@ -48,7 +48,7 @@
 	margin-top: -50px;
 	width: 100px;
 	height: 100px;
-	background: url("../img/index/playerIcons.svg") -60px 0 no-repeat transparent;
+	background: url("../../img/index/playerIcons.svg") -60px 0 no-repeat transparent;
 }
 
 #playerToggle:hover {
@@ -169,7 +169,7 @@
 	display: inline-block;
 	width: 15px;
 	height: 15px;
-	background: url("../img/index/playerIcons.svg") -3px 0 no-repeat;
+	background: url("../../img/index/playerIcons.svg") -3px 0 no-repeat;
 }
 
 #playerVolume.muted #playerVolume-toggle {
@@ -208,7 +208,7 @@
 
 #playerProgress .cover {
 	z-index: 0;
-	background: url("../img/index/playerCover.svg") left center repeat $color-steamchatCover;
+	background: url("../../img/index/playerCover.svg") left center repeat $color-steamchatCover;
 }
 
 #playerProgress .line {
@@ -418,7 +418,7 @@
 	top: 0;
 	width: 20px;
 	height: 100%;
-	background: url("../img/index/playerIcons.svg") -40px 18px no-repeat transparent;
+	background: url("../../img/index/playerIcons.svg") -40px 18px no-repeat transparent;
 }
 
 .episodeArchives .episode:hover .play {
