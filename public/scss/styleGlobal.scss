@@ -13,96 +13,6 @@
 
 
 
-/******* HEADER TIP *******/
-
-#headerTip {
-	height: 0px;
-	overflow: hidden;
-	background: $color-steamchat;
-}
-
-body.headerTip #headerTip {
-	height: 350px;
-}
-
-#headerTip .wrapper {
-	display: table;
-	margin: 0 auto 0 auto;
-	width: 800px;
-	height: 350px;
-}
-
-#headerTip .left,
-#headerTip .right {
-	display: table-cell;
-	padding: 0 20px 0 0;
-	width: 50%;
-	height: 350px;
-	vertical-align: middle;
-}
-
-#headerTip .right {
-	padding: 0 0 0 20px;
-}
-
-#headerTip h2,
-#headerTip p {
-	color: $color-white;
-}
-
-#headerTip h2 {
-	font-size: 26px;
-	line-height: 26px;
-}
-
-#headerTip p {
-	margin-top: 20px;
-	font-size: 16px;
-	line-height: 22px;
-}
-
-#headerTip ul,
-#headerTip li {
-	list-style: none;
-}
-
-#headerTip li {
-	display: table;
-	margin-bottom: 15px;
-	height: 30px;
-}
-
-#headerTip li:last-child {
-	margin-bottom: 0;
-}
-
-#headerTip li a {
-	display: table-cell;
-	width: 100%;
-	height: 100%;
-	padding-left: 45px;
-	font-size: 16px;
-	line-height: 16px;
-	text-decoration: none;
-	color: $color-white;
-	background: url("../../img/global/headerTip_icons.svg") left top no-repeat transparent;
-	vertical-align: middle;
-}
-
-$class-list: twitter, facebook, steam, youtube;
-@each $current-class in $class-list {
-	$i: index($class-list, $current-class);
-	#headerTip li a.#{$current-class} {
-		background-position: left -30*$i+px;
-	}
-}
-
-#headerTip ul li a:hover {
-	text-decoration: underline;
-}
-
-
-
 /******* HEADER *******/
 
 #header {
@@ -142,22 +52,20 @@ $class-list: twitter, facebook, steam, youtube;
 	list-style: none;
 }
 
-#header #headerMenu ul {
+#header #headerMenu ul.menu {
 	display: inline-block;
 	padding-left: 100px;
-	width: auto;
 	height: 100%;
 	background: $color-white;
 }
 
-#header #headerMenu ul li {
+#header #headerMenu ul.menu li {
 	display: table;
 	float: left;
 	height: 75px;
 }
 
-#header #headerMenu ul li a,
-#header #headerMenu-tip a {
+#header #headerMenu ul.menu li a {
 	display: table-cell;
 	padding: 0 15px 0 15px;
 	width: 100%;
@@ -172,31 +80,52 @@ $class-list: twitter, facebook, steam, youtube;
 	vertical-align: middle;
 }
 
-#header #headerMenu ul li a:hover,
-#header #headerMenu-tip a:hover {
+#header #headerMenu ul.menu li a:hover {
 	color: $color-white;
 	background: $color-steamchat;
 	cursor: pointer;
 }
 
-#header #headerMenu-tip,
-#header #headerMenu-tip a {
-	width: 90px;
-}
-
-#header #headerMenu-tip {
+#header #headerMenu ul.social {
 	float: right;
 	height: 100%;
 }
 
-#header #headerMenu-tip a {
-	padding: 0;
-	color: $color-white;
-	background: $color-steamchatLight;
+#header #headerMenu ul.social:after {
+	@include clearFix;
 }
 
-body.headerTip #header #headerMenu-tip a {
+#header #headerMenu ul.social li {
+	float: left;
+	display: table;
+	width: 40px;
+	height: 75px;
+}
+
+#header #headerMenu ul.social li > a {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#header #headerMenu ul.social li > a:hover {
 	background: $color-steamchat;
+}
+
+#header #headerMenu ul.social li > a > .icon-element {
+	margin: 0 auto 0 auto;
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+#header #headerMenu ul.social li > a > .icon-element > .layer {
+	fill: $color-steamchatLight;
+}
+
+#header #headerMenu ul.social li > a:hover > .icon-element > .layer {
+	fill: #FFFFFF;
 }
 
 
@@ -397,21 +326,9 @@ body.headerTip #header #headerMenu-tip a {
 
 
 
-/******* TRANSITIONS *******/
-
-#headerTip {
-	@include transition (all .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
-
-
-
 /********* RESPONSIVE *********/
 
 @media (max-width: 1000px) {
-
-	#headerTip .wrapper {
-		padding: 0 20px 0 20px;
-	}
 
 	#headerMenu,
 	#playerWrapper {
@@ -432,8 +349,6 @@ body.headerTip #header #headerMenu-tip a {
 		font-size: 12px;
 	}
 
-	#headerTip,
-	#header #headerMenu-tip,
 	#footer .left ul {
 		display: none;
 	}
@@ -451,8 +366,8 @@ body.headerTip #header #headerMenu-tip a {
 	}
 
 	#headerMenu,
-	#header #headerMenu ul li,
-	#header #headerMenu ul li a {
+	#header #headerMenu ul.menu li,
+	#header #headerMenu ul.menu li a {
 		height: 50px;
 	}
 
@@ -462,22 +377,20 @@ body.headerTip #header #headerMenu-tip a {
 		background: #FFFFFF !important;
 	}
 
-	#header #headerMenu ul {
+	#header #headerMenu ul.menu {
 		float: right;
 		padding-left: 0;
 		padding-right: 10px;
 	}
 
-	#header #headerMenu ul li a,
-	#header #headerMenu-tip a {
+	#header #headerMenu ul.menu li a {
 		padding: 0 10px 0 10px;
 		font-size: 10px;
 		line-height: 10px;
 	}
 
-	#header #headerMenu-tip,
-	#header #headerMenu-tip a {
-		width: auto;
+	#header #headerMenu ul.social {
+		display: none;
 	}
 
 	#content {

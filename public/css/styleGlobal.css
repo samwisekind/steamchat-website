@@ -38,84 +38,6 @@ footer {
   clear: both;
   content: ""; }
 
-/******* HEADER TIP *******/
-#headerTip {
-  height: 0px;
-  overflow: hidden;
-  background: #0064BF; }
-
-body.headerTip #headerTip {
-  height: 350px; }
-
-#headerTip .wrapper {
-  display: table;
-  margin: 0 auto 0 auto;
-  width: 800px;
-  height: 350px; }
-
-#headerTip .left,
-#headerTip .right {
-  display: table-cell;
-  padding: 0 20px 0 0;
-  width: 50%;
-  height: 350px;
-  vertical-align: middle; }
-
-#headerTip .right {
-  padding: 0 0 0 20px; }
-
-#headerTip h2,
-#headerTip p {
-  color: #FFFFFF; }
-
-#headerTip h2 {
-  font-size: 26px;
-  line-height: 26px; }
-
-#headerTip p {
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 22px; }
-
-#headerTip ul,
-#headerTip li {
-  list-style: none; }
-
-#headerTip li {
-  display: table;
-  margin-bottom: 15px;
-  height: 30px; }
-
-#headerTip li:last-child {
-  margin-bottom: 0; }
-
-#headerTip li a {
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-  padding-left: 45px;
-  font-size: 16px;
-  line-height: 16px;
-  text-decoration: none;
-  color: #FFFFFF;
-  background: url("../../img/global/headerTip_icons.svg") left top no-repeat transparent;
-  vertical-align: middle; }
-
-#headerTip li a.twitter {
-  background-position: left -30px; }
-
-#headerTip li a.facebook {
-  background-position: left -60px; }
-
-#headerTip li a.steam {
-  background-position: left -90px; }
-
-#headerTip li a.youtube {
-  background-position: left -120px; }
-
-#headerTip ul li a:hover {
-  text-decoration: underline; }
-
 /******* HEADER *******/
 #header {
   position: relative;
@@ -149,20 +71,18 @@ body.headerTip #headerTip {
 #headerMenu ul li {
   list-style: none; }
 
-#header #headerMenu ul {
+#header #headerMenu ul.menu {
   display: inline-block;
   padding-left: 100px;
-  width: auto;
   height: 100%;
   background: #FFFFFF; }
 
-#header #headerMenu ul li {
+#header #headerMenu ul.menu li {
   display: table;
   float: left;
   height: 75px; }
 
-#header #headerMenu ul li a,
-#header #headerMenu-tip a {
+#header #headerMenu ul.menu li a {
   display: table-cell;
   padding: 0 15px 0 15px;
   width: 100%;
@@ -176,27 +96,46 @@ body.headerTip #headerTip {
   text-transform: uppercase;
   vertical-align: middle; }
 
-#header #headerMenu ul li a:hover,
-#header #headerMenu-tip a:hover {
+#header #headerMenu ul.menu li a:hover {
   color: #FFFFFF;
   background: #0064BF;
   cursor: pointer; }
 
-#header #headerMenu-tip,
-#header #headerMenu-tip a {
-  width: 90px; }
-
-#header #headerMenu-tip {
+#header #headerMenu ul.social {
   float: right;
   height: 100%; }
 
-#header #headerMenu-tip a {
-  padding: 0;
-  color: #FFFFFF;
-  background: #007ff2; }
+#header #headerMenu ul.social:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-body.headerTip #header #headerMenu-tip a {
+#header #headerMenu ul.social li {
+  float: left;
+  display: table;
+  width: 40px;
+  height: 75px; }
+
+#header #headerMenu ul.social li > a {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle; }
+
+#header #headerMenu ul.social li > a:hover {
   background: #0064BF; }
+
+#header #headerMenu ul.social li > a > .icon-element {
+  margin: 0 auto 0 auto;
+  display: block;
+  width: 24px;
+  height: 24px; }
+
+#header #headerMenu ul.social li > a > .icon-element > .layer {
+  fill: #007ff2; }
+
+#header #headerMenu ul.social li > a:hover > .icon-element > .layer {
+  fill: #FFFFFF; }
 
 /******* CONTENT *******/
 #content {
@@ -358,18 +297,8 @@ body.headerTip #header #headerMenu-tip a {
 #footer li a:hover {
   color: #999999; }
 
-/******* TRANSITIONS *******/
-#headerTip {
-  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
 /********* RESPONSIVE *********/
 @media (max-width: 1000px) {
-  #headerTip .wrapper {
-    padding: 0 20px 0 20px; }
   #headerMenu,
   #playerWrapper {
     left: 0 !important;
@@ -381,8 +310,6 @@ body.headerTip #header #headerMenu-tip a {
 @media (max-width: 800px) {
   body {
     font-size: 12px; }
-  #headerTip,
-  #header #headerMenu-tip,
   #footer .left ul {
     display: none; }
   #header {
@@ -394,25 +321,23 @@ body.headerTip #header #headerMenu-tip a {
     width: 65px;
     height: 70px; }
   #headerMenu,
-  #header #headerMenu ul li,
-  #header #headerMenu ul li a {
+  #header #headerMenu ul.menu li,
+  #header #headerMenu ul.menu li a {
     height: 50px; }
   #header #headerMenu {
     position: static;
     margin: 0;
     background: #FFFFFF !important; }
-  #header #headerMenu ul {
+  #header #headerMenu ul.menu {
     float: right;
     padding-left: 0;
     padding-right: 10px; }
-  #header #headerMenu ul li a,
-  #header #headerMenu-tip a {
+  #header #headerMenu ul.menu li a {
     padding: 0 10px 0 10px;
     font-size: 10px;
     line-height: 10px; }
-  #header #headerMenu-tip,
-  #header #headerMenu-tip a {
-    width: auto; }
+  #header #headerMenu ul.social {
+    display: none; }
   #content {
     padding: 40px 20px 40px 20px !important; }
   #content h1,
