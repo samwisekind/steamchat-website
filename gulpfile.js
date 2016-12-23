@@ -23,48 +23,8 @@ var zip = require('gulp-zip'); // https://www.npmjs.com/package/gulp-zip
 // Set variable for the hidden folder during compliation
 var targetDestDirectory = ".build";
 
-// Build starting task with error handling
-gulp.task('build-init', function () {
-
-	if (argv.noarchive === undefined && argv.buildnumber === undefined) {
-		// Error if neither flag is defined
-		gutil.log(
-			gutil.colors.red('Build Error: You must either flag'),
-			gutil.colors.bgRed('--buildnumber'),
-			gutil.colors.red('or'),
-			gutil.colors.bgRed('--noarchive') + gutil.colors.red('!')
-		).beep();
-		process.exit();
-	}
-	else if (argv.noarchive !== undefined && argv.buildnumber !== undefined) {
-		// Error if both flags are defined at the same time
-		gutil.log(
-			gutil.colors.red('Build Error: You can only use'),
-			gutil.colors.bgRed('--buildnumber'),
-			gutil.colors.red('or'),
-			gutil.colors.bgRed('--noarchive'),
-			gutil.colors.red('at once!')
-		).beep();
-		process.exit();
-	}
-	else if ((argv.noarchive === undefined && argv.buildnumber !== undefined) && (Number(argv.buildnumber) !== argv.buildnumber || argv.buildnumber % 1 !== 0 || argv.buildnumber < 1)) {
-		// Error if the --buildnumber flag is not set or if its value is not an integer or an interger less than 1
-		gutil.log(
-			gutil.colors.red('Build Error: You must provide a value for'),
-			gutil.colors.bgRed('--buildnumber'),
-			gutil.colors.red('(which must be an'),
-			gutil.colors.bgBlue('integer') + gutil.colors.red(')!')
-		).beep();
-		process.exit();
-	}
-	else{
-		return true;
-	}
-
-});
-
 // Deletes the old .build and non-archived build folders
-gulp.task('build-delete', ['build-init'], function () {
+gulp.task('build-init', function () {
 
 	var array = [
 		targetDirectory + '/' + targetDestDirectory
@@ -81,7 +41,7 @@ gulp.task('build-delete', ['build-init'], function () {
 });
 
 // Copies the directory and all the files and subfolders to a new hidden folder
-gulp.task('build-copy', ['build-delete'], function () {
+gulp.task('build-copy', ['build-init'], function () {
 
 	var files = [
 		targetDirectory + '/public/**', // Copy everything...
@@ -148,15 +108,26 @@ gulp.task('build-prepare', ['build-overhead'], function () {
 		// Get the folder name from the above path
 		var targetDirectoryName = targetDirectory.split('/').pop();
 
-		// If using the --buildnumber flag, renames the hidden folder to the '-build' folder and places it outside the target folder
+		// Construct a date/timestamp for the archive file name
+		function leadingZero (i) {
+			return (i < 10) ? '0' + i : i;
+		}
 
 		var today = new Date();
-		var dd = String(today.getDate());
-		var mm = String(today.getMonth() + 1);
-		var yyyy = String(today.getFullYear());
+
+		var day = String(leadingZero(today.getDate()));
+		var month = String(leadingZero(today.getMonth() + 1));
+		var year = String(leadingZero(today.getFullYear()));
+		var datestamp = day + month + year;
+
+		var hour = String(leadingZero(today.getHours()));
+		var minute = String(leadingZero(today.getMinutes()));
+		var second = String(leadingZero(today.getSeconds()));
+		var affix = (today.getHours() >= 12) ? 'PM' : 'AM';
+		var timestamp = hour + minute + second + affix;
 
 		return gulp.src(targetDirectory + '/' + targetDestDirectory + '/**/*')
-			.pipe(zip(targetDirectoryName + '-' + (dd + mm + yyyy) + '-' + argv.buildnumber + '.zip'))
+			.pipe(zip(targetDirectoryName + '-' + datestamp + '-' + timestamp + '.zip'))
 			.pipe(gulp.dest(targetDirectory + '/builds/'));
 
 	}
@@ -177,7 +148,6 @@ gulp.task('build-clean', ['build-prepare'], function () {
 // Gulp task for building
 gulp.task('build', [
 	'build-init',
-	'build-delete',
 	'build-copy',
 	'build-html',
 	'build-overhead',
