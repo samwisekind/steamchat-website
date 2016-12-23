@@ -31,7 +31,10 @@ gulp.task('build-init', function () {
 	];
 
 	if (argv.noarchive !== undefined) {
-		array.push(targetDirectory + '/public-build/**/*');
+		array.push(
+			targetDirectory + '/public-build/**/*',
+			targetDirectory + '/public-build/**/.*'
+		);
 	}
 
 	return del(array, {
@@ -126,7 +129,12 @@ gulp.task('build-prepare', ['build-overhead'], function () {
 		var affix = (today.getHours() >= 12) ? 'PM' : 'AM';
 		var timestamp = hour + minute + second + affix;
 
-		return gulp.src(targetDirectory + '/' + targetDestDirectory + '/**/*')
+		var array = [
+			targetDirectory + '/' + targetDestDirectory + '/**/*',
+			targetDirectory + '/' + targetDestDirectory + '/**/.*'
+		];
+
+		return gulp.src(array)
 			.pipe(zip(targetDirectoryName + '-' + datestamp + '-' + timestamp + '.zip'))
 			.pipe(gulp.dest(targetDirectory + '/builds/'));
 
