@@ -33,7 +33,7 @@ footer {
   display: block; }
 
 /****** COMMON *******/
-.content:after {
+.content:after, .content .columns:after {
   content: "";
   display: table;
   clear: both; }
@@ -140,9 +140,9 @@ footer {
 /******* CONTENT *******/
 .content {
   margin: 0 auto 0 auto;
-  padding: 100px 40px 250px 40px;
+  padding: 100px 40px 140px 40px;
   width: 100%;
-  max-width: 700px; }
+  max-width: 800px; }
 
 .content h1 {
   margin-bottom: 20px;
@@ -202,23 +202,36 @@ footer {
   line-height: 16px;
   text-decoration: underline; }
 
-.content #specialsColumns {
+/******* COLUMNS *******/
+.content .columns {
   width: 100%; }
 
-.content #specialsColumns > div {
-  width: 50%; }
+.content .columns > .left,
+.content .columns > .right {
+  max-width: 50%; }
 
-.content #specialsColumns .left {
-  float: left; }
+.content .columns > .left {
+  float: left;
+  padding-right: 10px; }
 
-.content #specialsColumns .right {
-  float: right; }
+.content .columns > .right {
+  float: right;
+  padding-left: 10px; }
 
-.content #specialsColumns ul {
-  padding-left: 15px; }
-
-.content #specialsColumns div > ul {
+/******* SPECIAL LIST *******/
+.content .list-special {
+  padding-left: 15px;
   border-left: 5px solid #0064BF; }
+
+.content .list-special ul {
+  padding-left: 15px;
+  margin-bottom: 20px; }
+
+.content .list-special li {
+  margin-top: 10px; }
+
+.content .list-special li:first-child {
+  margin-bottom: 0; }
 
 /******* FOOTER *******/
 #footer {

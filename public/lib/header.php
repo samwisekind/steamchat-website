@@ -15,7 +15,7 @@
 		$meta_info['meta_description'] = $info_page['page_description'];
 	}
 	else if ($info_page['page_type'] === 'misc') {
-		$meta_info['meta_title'] = 'Steamchat ' . $info_page['page_title'];
+		$meta_info['meta_title'] = 'Steamchat: ' . $info_page['page_title'];
 		$meta_info['meta_description'] = $meta_description_base;
 	};
 
