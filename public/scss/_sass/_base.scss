@@ -9,15 +9,17 @@ html {
 
 body {
 	min-width: 320px;
-	font-family: "Oxygen", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Verdana, sans-serif;
 	font-weight: 400;
     font-size: 18px;
     line-height: calculate-line-height(18px);
     text-align: justify;
 	color: $color-black;
 	background: $color-white;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
 }
 
 *,
@@ -34,4 +36,18 @@ nav,
 header,
 footer, {
 	display: block;
+}
+
+a {
+	font-weight: 500;
+	color: $color-steamchat;
+}
+
+a:hover {
+	color: $color-steamchatDark;
+}
+
+h1,
+h2 {
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Verdana, sans-serif;
 }

@@ -44,6 +44,7 @@
 ?>
 
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
@@ -56,7 +57,7 @@
 
 		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />
-		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
 		<meta property="og:url" content="<?php echo $_SERVER["REQUEST_URI"]; ?>" />
 		<meta property="og:title" content="<?php echo $meta_info['meta_title']; ?>" />
 		<meta property="og:description" content="<?php echo $meta_info['meta_description']; ?>" />
@@ -103,21 +104,21 @@
 
 				<ul class="social">
 					<li class="facebook">
-						<a href="https://www.facebook.com/SteamchatPodcast">
+						<a href="https://www.facebook.com/SteamchatPodcast" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="icon-element">
 								<path d="M28.34,0H1.66A1.66,1.66,0,0,0,0,1.66V28.34A1.66,1.66,0,0,0,1.66,30H16V18.38H12.11V13.85H16V10.51c0-3.87,2.37-6,5.82-6a32.43,32.43,0,0,1,3.49.18v4h-2.4c-1.88,0-2.24.89-2.24,2.2v2.89h4.48l-.59,4.53H20.7V30h7.64A1.66,1.66,0,0,0,30,28.34V1.65A1.66,1.66,0,0,0,28.34,0Z" fill="#8CC8FE" class="layer"></path>
 							</svg>
 						</a>
 					</li>
 					<li class="twitter">
-						<a href="https://www.twitter.com/thesteamchat">
+						<a href="https://www.twitter.com/thesteamchat" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="icon-element">
 								<path d="M26.93,8.88c0,.26,0,.53,0,.8,0,8.13-6.19,17.51-17.51,17.51A17.38,17.38,0,0,1,0,24.42a12.37,12.37,0,0,0,9.11-2.55A6.16,6.16,0,0,1,3.37,17.6a5.91,5.91,0,0,0,1.16.11,6.08,6.08,0,0,0,1.62-.22,6.16,6.16,0,0,1-4.94-6,.4.4,0,0,1,0-.08A6.07,6.07,0,0,0,4,12.15,6.16,6.16,0,0,1,2.09,3.94a17.48,17.48,0,0,0,12.68,6.43A6.16,6.16,0,0,1,25.26,4.75a12.17,12.17,0,0,0,3.91-1.49,6.18,6.18,0,0,1-2.71,3.41A12.2,12.2,0,0,0,30,5.7a12.52,12.52,0,0,1-3.07,3.18Zm0,0" fill="#8CC8FE" class="layer"></path>
 							</svg>
 						</a>
 					</li>
 					<li class="steam">
-						<a href="https://www.steamcommunity.com/groups/SteamchatPodcast">
+						<a href="https://www.steamcommunity.com/groups/SteamchatPodcast" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="icon-element">
 								<path d="M16,0A16,16,0,0,0,0,14.94H0l8.61,3.54a4.46,4.46,0,0,1,2.63-.73l3.92-5.69s0-.05,0-0.08a6.08,6.08,0,1,1,6.08,6.09H21.1l-5.61,4a4.44,4.44,0,0,1-8.77,1.08l-6.06-2.5A16,16,0,1,0,16,0Z" fill="#8CC8FE" class="layer" />
 								<path d="M10,24.5l-2-.82A3.43,3.43,0,1,0,9.85,19l2,0.85A2.52,2.52,0,0,1,10,24.5Z" fill="#8CC8FE" class="layer" />
@@ -126,7 +127,7 @@
 						</a>
 					</li>
 					<li class="youtube">
-						<a href="https://www.youtube.com/Steamchat">
+						<a href="https://www.youtube.com/Steamchat" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" class="icon-element">
 								<path d="M22.72,20.55a.56.56,0,0,0-.49.2,1.08,1.08,0,0,0-.15.65v.73h1.25v-.73a1.07,1.07,0,0,0-.15-.65A.53.53,0,0,0,22.72,20.55Z" fill="#8CC8FE" class="layer"></path>
 								<path d="M26,14.94c-1.16-1.16-11-1.18-11-1.18s-9.79,0-11,1.18-1.17,6.9-1.17,6.94,0,5.77,1.17,6.94S15,30,15,30s9.79,0,11-1.18,1.18-6.94,1.18-6.94S27.12,16.1,26,14.94ZM10.09,18.32H8.44v8.34H6.85V18.32H5.2V16.91h4.89Zm4.66,8.34H13.34v-.79a3,3,0,0,1-.82.67,1.69,1.69,0,0,1-.82.23.87.87,0,0,1-.74-.32,1.58,1.58,0,0,1-.25-1v-6h1.41V25a.63.63,0,0,0,.09.37.35.35,0,0,0,.29.11.79.79,0,0,0,.4-.15,2,2,0,0,0,.44-.39V19.46h1.41Zm5.14-1.49a1.81,1.81,0,0,1-.33,1.17,1.17,1.17,0,0,1-1,.41,1.67,1.67,0,0,1-.74-.16,1.82,1.82,0,0,1-.6-.49v.55H15.82V16.91h1.43V20a2.18,2.18,0,0,1,.61-.5,1.38,1.38,0,0,1,.65-.17,1.22,1.22,0,0,1,1,.46,2.17,2.17,0,0,1,.36,1.35Zm4.91-1.94H22.09v1.35a1.61,1.61,0,0,0,.14.79.53.53,0,0,0,.48.22.58.58,0,0,0,.49-.19,1.55,1.55,0,0,0,.14-.82v-.33H24.8v.37a2.34,2.34,0,0,1-.53,1.67,2.09,2.09,0,0,1-1.59.56,1.93,1.93,0,0,1-1.5-.59,2.32,2.32,0,0,1-.55-1.63V21.4a2.05,2.05,0,0,1,.6-1.53,2.11,2.11,0,0,1,1.55-.59,2,2,0,0,1,1.49.55,2.18,2.18,0,0,1,.52,1.57Z" fill="#8CC8FE" class="layer"></path>
