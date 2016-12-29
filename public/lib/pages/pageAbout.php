@@ -1,14 +1,15 @@
 <?php
 
-	$pageTitle = "About";
-	$pageType = "misc";
+	require_once '../common.php';
 
-	require_once "../common.php";
-	require_once "../header.php";
+	$info_page = array(
+		'page_type' => 'misc',
+		'page_title' => 'About'
+	);
+
+	require_once '../header.php';
 
 ?>
-
-
 
 <h1>About Steamchat</h1>
 
@@ -57,5 +58,4 @@
 
 <div class="cf"></div>
 
-
-<?php require_once "../footer.php"; ?>
+<?php require_once '../footer.php'; ?>

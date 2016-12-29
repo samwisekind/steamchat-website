@@ -13,12 +13,12 @@ RewriteRule ^specials/?$ lib/pages/pageSpecials.php [L]
 RewriteRule ^about/?$ lib/pages/pageAbout.php [L]
 
 # Episode/Snack Page Rewrites
-RewriteRule ^episodes/([0-9]+)/?$ lib/pages/pageEpisode.php?type=episode&number=$1 [L]
-RewriteRule ^snacks/([0-9]+)/?$ lib/pages/pageEpisode.php?type=snack&number=$1 [L]
+RewriteRule ^episodes/([0-9]+)/?$ lib/pages/pageEpisode.php?type=NORMAL&number=$1 [L]
+RewriteRule ^snacks/([0-9]+)/?$ lib/pages/pageEpisode.php?type=SNACK&number=$1 [L]
 
 # Episode/Snack Download Rewrites
-RewriteRule ^episodes/([0-9]+)/download/?$ lib/pages/pageEpisode.php?type=episode&number=$1&download [L]
-RewriteRule ^snacks/([0-9]+)/download/?$ lib/pages/pageEpisode.php?type=snack&number=$1&download [L]
+RewriteRule ^episodes/([0-9]+)/download/?$ lib/pages/pageEpisode.php?type=NORMAL&number=$1&download [L]
+RewriteRule ^snacks/([0-9]+)/download/?$ lib/pages/pageEpisode.php?type=SNACK&number=$1&download [L]
 
 # Episode/Snack Page Singular Redirect
 RewriteRule ^episode/(.*)/?$ episodes/$1 [L,R=301]

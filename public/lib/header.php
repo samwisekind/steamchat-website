@@ -1,19 +1,45 @@
 <?php
 
-	require_once "common.php";
+	require_once 'common.php';
 
-	$metaDescription = "A Podcast On All Things Valve";
+	$meta_info = array();
 
-	if ($pageType == "index") {
-		$metaTitle = ": " . $metaDescription;
+	$meta_description_base = 'A Podcast On All Things Valve';
+
+	if ($info_page['page_type'] === 'index') {
+		$meta_info['meta_title'] = 'Steamchat: ' . $meta_description_base;
+		$meta_info['meta_description'] = $meta_description_base;
 	}
-	else if ($pageType == "episode") {
-		$metaTitle = " " . ucfirst($episodeType) . " #" . $episodeNumber . ": " . $episodeTitle;
-		$metaDescription = "(Released " . $episode[$episodeType][$episodeNumber][0][2] . ") " . $episode[$episodeType][$episodeNumber][0][1];
+	else if ($info_page['page_type'] === 'episode') {
+		$meta_info['meta_title'] = 'Steamchat ' . $info_page['page_title'];
+		$meta_info['meta_description'] = $info_page['page_description'];
 	}
-	else if ($pageType = "misc") {
-		$metaTitle = ": " . $pageTitle;
+	else if ($info_page['page_type'] === 'misc') {
+		$meta_info['meta_title'] = 'Steamchat ' . $info_page['page_title'];
+		$meta_info['meta_description'] = $meta_description_base;
 	};
+
+	if ($info_page['page_type'] === 'index') {
+
+		$db_query = 'SELECT *
+			FROM ' . $db_info['database_name'] . '.episodes
+			ORDER BY release_date DESC
+			LIMIT 1';
+		$db_result = $db_connection->query($db_query);
+		$db_row = $db_result->fetch_assoc();
+
+		$data_latest = array(
+			'episode_type' => $db_row['episode_type'],
+			'episode_number' => $db_row['episode_number'],
+			'title' => $db_row['title'],
+			'release_date' => date_create($db_row['release_date']),
+			'file_url' => $db_row['file_url'],
+			'header_mask_image' => $db_row['header_mask_image'],
+			'header_background_colour' => $db_row['header_mask_colour'],
+			'header_background_image' => $db_row['header_background_image']
+		);
+
+	}
 
 ?>
 
@@ -21,46 +47,51 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-		<title>Steamchat<?php echo $metaTitle; ?></title>
+		<title><?php echo $meta_info['meta_title'] ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/min/styleGlobal.min.css" type="text/css" media="screen" />
 		<?php
-			if ($pageType != "misc") {
-				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/min/style' . ucfirst($pageType) . '.min.css" type="text/css" media="screen" />';
-			};
+
+			if ($info_page['page_type'] !== 'misc')
+				echo '<link rel="stylesheet" href="' . $hostLocation . 'css/min/style' . ucfirst($info_page['page_type']) . '.min.css" type="text/css" media="screen" />';
+
 		?>
 		<link rel="shortcut icon" href="<?php echo $hostLocation; ?>favicon.ico" />
 		<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700<?php echo "|Lato"; ?>" rel="stylesheet" type="text/css">
 		<meta property="og:url" content="<?php echo $_SERVER["REQUEST_URI"]; ?>" />
-		<meta property="og:title" content="Steamchat<?php echo $metaTitle; ?>" />
-		<meta property="og:description" content="<?php echo $metaDescription; ?>" />
-		<meta name="description" content="<?php echo $metaDescription; ?>" />
+		<meta property="og:title" content="<?php echo $meta_info['meta_title']; ?>" />
+		<meta property="og:description" content="<?php echo $meta_info['meta_description']; ?>" />
+		<meta name="description" content="<?php echo $meta_info['meta_description']; ?>" />
 		<meta property="og:image" content="<?php echo $hostLocation; ?>img/global/og_image.png" />
 		<?php
-			if ($pageType == "episode") {
 
-				$episodeSeconds = $episode[$episodeType][$episodeNumber][2][1];
-				sscanf($episodeSeconds, "%d:%d:%d", $hours, $minutes, $seconds);
-				$episodeSeconds = isset($seconds) ? $hours * 3600 + $minutes * 60 + $seconds : $hours * 60 + $minutes;
+			if ($info_page['page_type'] === 'episode') {
+
+				$episode_seconds = $info_page['page_episode_length'];
+				sscanf($episode_seconds, '%d:%d:%d', $hours, $minutes, $seconds);
+				$episode_seconds = isset($seconds) ? $hours * 3600 + $minutes * 60 + $seconds : $hours * 60 + $minutes;
 
 				echo '
 					<meta property="og:type" content="music.song" />
-					<meta property="music:album" content="Steamchat Podcast ' . ucfirst($episodeType) . 's" />
-					<meta property="music:album:track" content="' . $episodeNumber . '" />
+					<meta property="music:album" content="Steamchat Podcast" />
+					<meta property="music:album:track" content="' . $info_page['page_episode_number'] . '" />
 					<meta property="music:musician" content="Steamchat Podcast" />
-					<meta property="music:duration" content="' . $episodeSeconds . '" />
+					<meta property="music:duration" content="' . $episode_seconds . '" />
 				';
 			}
 			else {
+
 				echo '<meta property="og:type" content="website" />';
+
 			};
+
 		?>
 	</head>
 
-	<body class="<?php echo $pageType; ?>">
+	<body class="<?php echo $info_page['page_type']; ?>">
 
-		<header id="header" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_image.jpg); background-color: "  . $episode["episode"][104][1][2] . "'"; }; ?>>
+		<header id="header" <?php if ($info_page['page_type'] === 'index') echo 'style="background-image: url(' . $data_latest['header_background_image'] . '); background-color: #'  . $data_latest['header_background_colour'] . '"'; ?>>
 
-			<nav id="headerMenu" <?php if ($pageType == "index") { echo "style='background-image: url(episodes/" . $latestEpisode . "/episode" . $latestEpisode . "_latest_overlay.png);'"; }; ?>>
+			<nav id="headerMenu" <?php if ($info_page['page_type'] === 'index') echo 'style="background-image: url(' . $data_latest['header_mask_image'] . ');"'; ?>>
 
 				<div id="headerLogo"><a href="<?php echo $hostLocation; ?>"></a></div>
 
@@ -112,9 +143,8 @@
 
 			<?php
 
-				if ($pageType == "index") {
+				if ($info_page['page_type'] == "index")
 					require_once "headerPlayer.php";
-				};
 
 			?>
 

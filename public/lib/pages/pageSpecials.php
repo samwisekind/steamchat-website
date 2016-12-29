@@ -1,14 +1,15 @@
 <?php
 
-	$pageTitle = "Specials";
-	$pageType = "misc";
-
 	require_once "../common.php";
+
+	$info_page = array(
+		'page_type' => 'misc',
+		'page_title' => 'Specials'
+	);
+
 	require_once "../header.php";
 
 ?>
-
-
 
 <h1>Specials</h1>
 
@@ -68,8 +69,5 @@
 	<div class="cf"></div>
 
 </div>
-
-
-
 
 <?php require_once "../footer.php"; ?>

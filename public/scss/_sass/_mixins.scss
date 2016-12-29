@@ -12,6 +12,38 @@
 	#{$property}: calc(#{$expression});
 }
 
+@mixin calcImportant ($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression}) !important;
+	#{$property}: -moz-calc(#{$expression}) !important;
+	#{$property}: -ms-calc(#{$expression}) !important;
+	#{$property}: -o-calc(#{$expression}) !important;
+	#{$property}: calc(#{$expression}) !important;
+}
+
+@mixin browserPrefix ($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin calcBackgroundHorizontal ($expression) {
+	background-position: -webkit-calc(#{$expression}) center;
+	background-position: -moz-calc(#{$expression}) center;
+	background-position: -ms-calc(#{$expression}) center;
+	background-position: -o-calc(#{$expression}) center;
+	background-position: calc(#{$expression}) center;
+}
+
+@mixin calcBackgroundVertical ($expression) {
+	background-position: center -webkit-calc(#{$expression});
+	background-position: center -moz-calc(#{$expression});
+	background-position: center -ms-calc(#{$expression});
+	background-position: center -o-calc(#{$expression});
+	background-position: center calc(#{$expression});
+}
+
 @mixin transform ($transform) {
 	-webkit-transform: $transform;
 	-moz-transform: $transform;
@@ -26,6 +58,22 @@
 	-ms-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
+}
+
+@mixin transitionTransform ($transition) {
+	-webkit-transition: -webkit-transform $transition;
+	-moz-transition: -moz-transform $transition;
+	-ms-transition: -ms-transform $transition;
+	-o-transition: -o-transform $transition;
+	transition: transform $transition;
+}
+
+@mixin transitionDelay ($delay) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	transition-delay: $delay;
 }
 
 @mixin animation ($animation) {
@@ -52,12 +100,43 @@
 	animation-delay: $delay;
 }
 
+@mixin animationFillMode ($fillMode) {
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
 @mixin filterGrayscale ($value) {
 	-webkit-filter: grayscale($value);
 	-moz-filter: grayscale($value);
 	-ms-filter: grayscale($value);
 	-o-filter: grayscale($value);
 	filter: gray;
+}
+
+@mixin boxShadow ($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin filter ($filters) {
+	-webkit-filter: $filters;
+	-moz-filter: $filters;
+	-ms-filter: $filters;
+	-o-filter: $filters;
+	filter: $filters;
+}
+
+@mixin tableCell {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+	text-align: center;
 }
 
 @mixin userSelect ($value) {
@@ -67,4 +146,10 @@
 	-moz-user-select: $value;
 	-ms-user-select: $value;
 	user-select: $value;
+}
+
+@mixin removeStyling {
+	-webkit-appearance: none;
+	apperance: none;
+	outline: none;
 }
