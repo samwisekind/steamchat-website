@@ -4,71 +4,83 @@
 
 /******* CONTENT *******/
 
-#content {
-	padding: 100px 20px 100px 20px;
+$sidebarWidth: 150px;
+
+.content {
 	max-width: 1000px;
 }
 
-#content .left,
-#content .right {
+.content > .wrapper:after {
+	@include clearFix;
+}
+
+.content .main,
+.content .sidebar {
 	display: inline-block;
 }
 
-#content .left {
+/* MAIN */
+
+.content .main {
 	float: left;
-	width: 700px;
+	@include calc (width, "100% - #{$sidebarWidth + 40px}");
 }
 
-#content h1 {
-	text-align: left;
-	margin-bottom: 10px;
+.content .main h1 {
+	margin-bottom: 0;
 }
 
-#content h2 {
-	margin-top: 0;
+.content .main h2 {
 	color: $color-grey;
 }
 
-#content p {
+.content .main p {
 	margin-bottom: 60px;
 }
 
-#content #episodeAudio {
+.content .main .player {
 	width: 100%;
 }
 
-#content .right {
+/* SIDEBAR */
+
+.content .sidebar {
 	padding-top: 10px;
 	float: right;
-	width: 225px;
+	width: $sidebarWidth;
 }
 
-#content ul,
-#content ul li {
+.content .sidebar > ul,
+.content .sidebar > ul > li {
 	list-style: none;
 }
 
-#content ul {
+.content .sidebar > ul {
 	margin-bottom: 40px;
 }
 
-#content ul li {
+.content .sidebar > ul:last-child {
+	margin-bottom: 0;
+}
+
+.content .sidebar > ul > li {
 	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 14px;
 	text-align: right;
+
 }
 
-#content ul li:last-child {
+.content .sidebar > ul > li:last-child {
 	margin-bottom: 0;
 }
 
-#content ul li.title,
-#content ul li span {
+.content .sidebar > ul > li.title,
+.content .sidebar > ul > li .light {
 	color: $color-grey;
 }
 
-#content ul li.title {
+.content .sidebar > ul > li.title {
 	margin-bottom: 10px;
 	font-size: 16px;
 	line-height: 16px;
@@ -76,206 +88,132 @@
 	text-transform: uppercase;
 }
 
-#content ul li span {
+.content .sidebar > ul > li .light {
 	margin-right: 5px;
 }
 
-#content ul li a {
+.content .sidebar > ul > li a {
 	display: inline-block;
 	font-weight: 700;
 	color: $color-steamchat;
 	text-decoration: none;
 }
 
-#content ul li a:hover {
+.content .sidebar > ul > li a:hover {
 	text-decoration: underline;
 }
 
-#content #episodeTools {
-	margin-bottom: 0;
-}
+/* EPISODE NAV */
 
+$navHeight: 70px;
+$navArrowWidth: 32px;
 
-
-/******* EPISODE NAV *******/
-
-#content #episodeNav {
+.content .navigation {
+	position: relative;
 	margin-top: 100px;
-	margin-bottom: 200px;
+	height: $navHeight;
 }
 
-#content #episodeNav,
-#content #episodeNav li {
+.content .navigation,
+.content .navigation > li {
 	list-style: none;
 }
 
-#content #episodeNav li {
-	display: inline-table;
+.content .navigation > li {
+	position: absolute;
+	top: 0;
 	width: 50%;
-	height: 70px;
+	height: $navHeight;
 }
 
-#content #episodeNav li.prev {
-	float: left;
+.content .navigation > li.prev {
+	left: 0;
+	text-align: left;
 }
 
-#content #episodeNav li.next {
-	float: right;
+.content .navigation > li.next {
+	right: 0;
+	text-align: right;
 }
 
-#content #episodeNav li a {
-	opacity: .6;
-	display: table-cell;
-	padding-left: 20px;
+.content .navigation > li a,
+.content .navigation > li a .wrapper {
+	@include transition (all 0.25s ease-out);
+}
+
+.content .navigation > li a {
+	opacity: 0.6;
+	display: block;
 	height: 100%;
 	color: $color-grey;
-	text-align: left;
 	text-decoration: none;
-	background: url("../../img/episode/episodeNav.svg") no-repeat transparent;
-	vertical-align: middle;
 }
 
-#content #episodeNav li.prev a {
-	padding-left: 60px;
-	background-position: left top;
-}
-
-#content #episodeNav li.next a {
-	padding-right: 60px;
-	text-align: right;
-	background-position: right bottom;
-}
-
-#content #episodeNav li a:hover {
+.content .navigation > li a:hover {
 	opacity: 1;
 }
 
-#content #episodeNav li.prev a:hover {
-	padding-left: 55px;
+.content .navigation > li a .arrow {
+	content: "";
+	position: absolute;
+	top: 0;
+	display: block;
+	width: $navArrowWidth;
+	height: $navHeight;
 }
 
-#content #episodeNav li.next a:hover {
-	padding-right: 55px;
+.content .navigation > li.prev a .arrow {
+	left: 0;
 }
 
-#content #episodeNav li span {
+.content .navigation > li.next a .arrow {
+	right: 0;
+	@include transform (rotate(180deg));
+}
+
+.content .navigation > li .wrapper {
+	position: relative;
+	top: 50%;
+	@include transform (translateY(-50%));
+}
+
+.content .navigation > li.prev a .wrapper {
+	@include transform (translateX($navArrowWidth + 30px) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.next a .wrapper {
+	@include transform (translateX(-($navArrowWidth + 30px)) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.prev a:hover .wrapper {
+	@include transform (translateX($navArrowWidth + 20px) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.next a:hover .wrapper {
+	@include transform (translateX(-($navArrowWidth + 20px)) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li span {
 	display: block;
 }
 
-#content #episodeNav li .title {
+.content .navigation > li .label {
+	margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.content .navigation > li .small {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.content .navigation > li .title {
 	margin-bottom: 5px;
 	font-size: 14px;
 	line-height: 14px;
 }
 
-#content #episodeNav li a:hover .title {
+.content .navigation > li a:hover .title {
 	text-decoration: underline;
-}
-
-#content #episodeNav li .date {
-	font-size: 12px;
-	line-height: 12px;
-}
-
-
-
-/******* TRANSITIONS *******/
-
-#content #episodeNav li a {
-	@include transition (all .25s ease-out);
-}
-
-
-
-/********* RESPONSIVE *********/
-
-@media (max-width: 800px) {
-
-	#content .left,
-	#content .right {
-		float: none;
-		width: 100%;
-	}
-
-	#content .left {
-		margin-bottom: 40px;
-	}
-
-	#content .right {
-		padding-top: 0;
-	}
-
-	#content p,
-	#content ul {
-		margin-bottom: 20px;
-	}
-
-	#content ul::after {
-		content: ("");
-		display: table;
-		clear: both;
-	}
-
-	#content ul li {
-		float: left;
-		margin-right: 10px;
-		margin-bottom: 0;
-		text-align: left;
-		font-size: 12px;
-		line-height: 12px;
-	}
-
-	#content ul li.title,
-	#content ul li:last-child {
-		margin-right: 0;
-	}
-
-	#content ul li.title {
-		float: none;
-		font-size: 14px;
-		line-height: 14px;
-	}
-
-	#content ul li span {
-		margin: 0;
-	}
-
-	#content #episodeNav,
-	#content #episodeNav li {
-		height: 50px;
-	}
-
-	#content #episodeNav {
-		margin-top: 40px;
-		margin-bottom: 40px;
-	}
-
-	#content #episodeNav li {
-		margin: 0;
-	}
-
-	#content #episodeNav li .title {
-		font-size: 10px;
-		line-height: 10px;
-	}
-
-	#content #episodeNav li .date {
-		font-size: 8px;
-		line-height: 8px;
-	}
-
-	#content #episodeNav li a {
-		background-image: url("../../img/episode/episodeNavSmall.svg");
-	}
-
-	#content #episodeNav li.prev a,
-	#content #episodeNav li.prev a:hover {
-		padding-left: 30px;
-	}
-
-	#content #episodeNav li.next a,
-	#content #episodeNav li.next a:hover {
-		padding-right: 30px;
-	}
-
 }

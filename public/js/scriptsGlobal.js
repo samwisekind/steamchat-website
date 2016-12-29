@@ -1,10 +1,14 @@
-function episodeToggle (event) {
+window['episodeToggle'] = function (event) {
+
 	event.preventDefault();
-	var target = document.getElementById("episodeAudio");
-	if (target.paused == true || target.stopped == true) {
+
+	var target = document.getElementsByClassName('js-player')[0];
+
+	if (target.paused === true || target.stopped === true) {
 		target.play();
 	}
 	else {
 		target.pause();
-	};
+	}
+
 };

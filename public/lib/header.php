@@ -150,4 +150,4 @@
 
 		</header>
 
-		<main id="content">
+		<main class="content">

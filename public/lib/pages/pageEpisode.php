@@ -61,39 +61,41 @@
 
 ?>
 
-<div class="left">
+<div class="wrapper">
 
-	<h1><?php echo $data_episode['title']; ?></h1>
-	<h2><?php echo date_format($data_episode['release_date'], 'jS F Y'); ?></h2>
-	<p><?php echo $data_episode['description']; ?></p>
+	<div class="main">
 
-	<audio controls id="episodeAudio" preload="none">
-		<source src="<?php echo $data_episode['file_url']; ?>" type="audio/mp3">
-	</audio>
+		<h1><?php echo $data_episode['title']; ?></h1>
+		<h2>Published <?php echo date_format($data_episode['release_date'], 'jS F Y'); ?></h2>
+		<p><?php echo $data_episode['description']; ?></p>
+
+		<audio controls preload="none" class="player js-player">
+			<source src="<?php echo $data_episode['file_url']; ?>" type="audio/mp3">
+		</audio>
+
+	</div>
+
+	<div class="sidebar">
+
+		<ul>
+			<li class="title">Episode Info</li>
+			<li><span class="light">Duration:</span> <?php echo $data_episode['file_duration']; ?></li>
+			<li><span class="light">Size:</span> <?php echo number_format($data_episode['file_size'] / 1048576, 2); ?> MB</li>
+			<li><span class="light">Format:</span> MP3</li>
+		</ul>
+
+		<ul>
+			<li class="title">Episode Tools</li>
+			<li><a href="#" onclick="episodeToggle(event)">Listen Now</a></li>
+			<li><a href="<?php echo $data_episode['file_url']; ?>">Direct Link</a></li>
+			<li><a href="<?php echo $_SERVER['REQUEST_URI'] . 'download'; ?>">Download MP3</a></li>
+		</ul>
+
+	</div>
 
 </div>
 
-<div class="right">
-
-	<ul>
-		<li class="title">Episode Info</li>
-		<li><span>Duration:</span> <?php echo $data_episode['file_duration']; ?></li>
-		<li><span>Size:</span> <?php echo number_format($data_episode['file_size'] / 1048576, 2); ?> MB</li>
-		<li><span>Format:</span> MP3</li>
-	</ul>
-
-	<ul id="episodeTools">
-		<li class="title">Episode Tools</li>
-		<li><a href="#" onclick="episodeToggle(event)">Listen Now</a></li>
-		<li><a href="<?php echo $data_episode['file_url']; ?>">Direct Link</a></li>
-		<li><a href="<?php echo $_SERVER['REQUEST_URI'] . 'download'; ?>">Download MP3</a></li>
-	</ul>
-
-</div>
-
-<div class="cf"></div>
-
-<ul id="episodeNav">
+<ul class="navigation">
 
 	<?php
 
@@ -101,17 +103,34 @@
 
 			global $hostLocation;
 
-			if ($data['episode_type'] === 'NORMAL') {
-				$type_url = 'episodes';
+			switch ($data['episode_type']) {
+				case 'NORMAL':
+					$type_url = 'episodes';
+					break;
+				case 'SNACK':
+					$type_url = 'snacks';
+					break;
 			}
-			else if ($data['episode_type'] === 'SNACK') {
-				$type_url = 'snacks';
+
+			switch ($class) {
+				case 'prev':
+					$label_text = 'Previously:';
+					break;
+				case 'next':
+					$label_text = 'Up next:';
+					break;
 			}
 
 			echo '<li class="' . $class . '">
 				<a href="' . $hostLocation . $type_url . '/' . $data['episode_number'] . '/">
-					<span class="title">#' . $data['episode_number'] . ': ' . $data['title'] . '</span>
-					<span class="date">' . date_format(date_create($data['release_date']), 'j/m/Y') . '</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 70" class="arrow">
+						<path d="M0,35,30.9,0,32,1,2,35,32,69l-1.1,1Z" style="fill:#999" />
+					</svg>
+					<span class="wrapper">
+						<span class="small label">' . $label_text . '</span>
+						<span class="title">#' . $data['episode_number'] . ': ' . $data['title'] . '</span>
+						<span class="small">' . date_format(date_create($data['release_date']), 'j/m/Y') . '</span>
+					</span>
 				</a>
 			</li>';
 
