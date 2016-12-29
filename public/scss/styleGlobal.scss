@@ -132,9 +132,9 @@
 
 .content {
 	margin: 0 auto 0 auto;
-	padding: 100px 40px 140px 40px;
+	padding: 80px 40px 100px 40px;
 	width: 100%;
-	max-width: 800px;
+	max-width: 750px;
 }
 
 .content:after {
@@ -150,19 +150,15 @@
 }
 
 .content h2 {
-	margin-bottom: 20px;
+	margin-top: 30px;
 	font-size: 24px;
 	font-weight: 300;
 	line-height: calculate-line-height(24px);
 }
 
 .content p {
-	margin-bottom: 20px;
+	margin-top: 20px;
 	text-align: justify;
-}
-
-.content > p:last-child {
-	margin-bottom: 0;
 }
 
 .content p a,

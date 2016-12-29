@@ -31,14 +31,12 @@ $sidebarWidth: 150px;
 }
 
 .content .main h2 {
+	margin-top: 0;
 	color: $color-grey;
 }
 
-.content .main p {
-	margin-bottom: 60px;
-}
-
 .content .main .player {
+	margin-top: 60px;
 	width: 100%;
 }
 

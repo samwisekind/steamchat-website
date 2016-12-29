@@ -24,12 +24,11 @@
   margin-bottom: 0; }
 
 .content .main h2 {
+  margin-top: 0;
   color: #999999; }
 
-.content .main p {
-  margin-bottom: 60px; }
-
 .content .main .player {
+  margin-top: 60px;
   width: 100%; }
 
 /* SIDEBAR */

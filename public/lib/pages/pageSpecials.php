@@ -25,11 +25,11 @@
 			<li><a href="<?php echo $hostLocation; ?>episodes/9/">Gabe Newell 2009</a></li>
 			<li><a href="<?php echo $hostLocation; ?>episodes/47/">Gabe Newell 2011 (Part 1)</a></li>
 			<li><a href="<?php echo $hostLocation; ?>episodes/48/">Gabe Newell 2011 (Part 2)</a></li>
-			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Marc Laidlaw (former lead writer at Valve)</a></li>
-			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Alesia Glidewell (voice of Alyx)</a></li>
-			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Ellen McLain (voice of GLaDOS)</a></li>
-			<li><a href="<?php echo $hostLocation; ?>snacks/2/">Harry Robins (voice of Dr. Kleiner)</a></li>
-			<li><a href="<?php echo $hostLocation; ?>snacks/3/">Jonathan Coulton (Portal songwriter)</a></li>
+			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Marc Laidlaw</a></li>
+			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Al&eacute;sia Glidewell</a></li>
+			<li><a href="<?php echo $hostLocation; ?>pages/portal2party/">Ellen McLain</a></li>
+			<li><a href="<?php echo $hostLocation; ?>snacks/2/">Harry Robins </a></li>
+			<li><a href="<?php echo $hostLocation; ?>snacks/3/">Jonathan Coulton</a></li>
 			<li><a href="<?php echo $hostLocation; ?>snacks/4/">Black Mesa Mod Team</a></li>
 			<li><a href="<?php echo $hostLocation; ?>snacks/1/">LambdaGeneration</a></li
 		</ul>

@@ -140,9 +140,9 @@ footer {
 /******* CONTENT *******/
 .content {
   margin: 0 auto 0 auto;
-  padding: 100px 40px 140px 40px;
+  padding: 80px 40px 100px 40px;
   width: 100%;
-  max-width: 800px; }
+  max-width: 750px; }
 
 .content h1 {
   margin-bottom: 20px;
@@ -152,17 +152,14 @@ footer {
   color: #0064BF; }
 
 .content h2 {
-  margin-bottom: 20px;
+  margin-top: 30px;
   font-size: 24px;
   font-weight: 300;
   line-height: 36px; }
 
 .content p {
-  margin-bottom: 20px;
+  margin-top: 20px;
   text-align: justify; }
-
-.content > p:last-child {
-  margin-bottom: 0; }
 
 .content p a,
 .content ul a {
