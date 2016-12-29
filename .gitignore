@@ -16,3 +16,6 @@ node_modules/
 public-build/
 builds/
 .build
+
+# PHP MySQL information
+public/lib/config.php
