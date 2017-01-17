@@ -17,7 +17,7 @@
 
 			if ($info_page['page_type'] === 'index')
 				echo '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-				<script type="text/javascript" src="' . $hostLocation . 'js/min/scriptsIndex.min.js"></script>';
+				<script type="text/javascript" src="' . $hostLocation . 'js/scriptsIndex.js"></script>';
 
 		?>
 

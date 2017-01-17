@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  text-align: justify;
+  text-align: left;
   color: #222222;
   background: #FFFFFF;
   text-rendering: optimizeLegibility;
@@ -42,8 +42,20 @@ a:hover {
   color: #00498c; }
 
 h1,
-h2 {
+h2,
+h3,
+p,
+li {
+  display: block; }
+
+h1,
+h2,
+h3 {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Verdana, sans-serif; }
+
+p,
+li {
+  text-align: justify; }
 
 /****** COMMON *******/
 .content:after, .content .columns:after {
@@ -170,9 +182,11 @@ h2 {
   font-weight: 400;
   line-height: 36px; }
 
+.content h3 {
+  font-weight: 400; }
+
 .content p {
-  margin-top: 20px;
-  text-align: justify; }
+  margin-top: 20px; }
 
 .content ul,
 .content li {

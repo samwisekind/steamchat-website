@@ -206,3 +206,21 @@ function playerMute (event) {
 	};
 
 };
+
+$(document).ready(function () {
+
+	var archives = $('.js-archives');
+	var sidebar = archives.find('.js-sidebar');
+
+	$(window).scroll(function () {
+
+		if (window.scrollY > (archives.offset().top - 40)) {
+			sidebar.addClass('sticky');
+		}
+		else {
+			sidebar.removeClass('sticky');
+		}
+
+	}).scroll();
+
+});

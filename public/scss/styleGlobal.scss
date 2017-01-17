@@ -11,6 +11,8 @@
 
 $maxWidth: 1000px;
 
+
+
 /******* HEADER *******/
 
 #header {
@@ -156,9 +158,12 @@ $maxWidth: 1000px;
 	line-height: calculate-line-height(24px);
 }
 
+.content h3 {
+	font-weight: 400;
+}
+
 .content p {
 	margin-top: 20px;
-	text-align: justify;
 }
 
 .content ul,

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/****** COMMON *******/
 /******* HEADER *******/
 #header,
 #headerMenu {
@@ -317,76 +318,152 @@
   opacity: 1; }
 
 /******* CONTENT *******/
-#content {
-  max-width: 1000px; }
+.content {
+  max-width: 1400px; }
 
 /******* CONTENT - EPISODE ARCHIVES *******/
-.episodeArchives:after {
-  content: "";
-  display: table;
-  clear: both; }
+.archives {
+  margin-top: 60px; }
 
-.episodeArchives .episode {
-  position: relative;
+.archives .sidebar,
+.archives .list > .episode {
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #FFFFFF; }
+
+.archives .sidebar {
   float: left;
+  padding: 0 20px 20px 20px;
+  width: 200px; }
+
+.archives .sidebar.sticky {
+  position: fixed;
+  top: 40px; }
+
+.archives .sidebar h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 18px; }
+
+.archives .sidebar .year li {
+  margin-bottom: 10px; }
+
+.archives .sidebar .year li:last-child {
+  margin-bottom: 0; }
+
+.archives .sidebar .year li input {
+  display: none; }
+
+.archives .sidebar .year li label {
+  font-size: 16px;
+  line-height: 16px;
+  color: #999999; }
+
+.archives .sidebar .year li label:hover {
+  cursor: pointer; }
+
+.archives .sidebar .year li input:checked + label {
+  color: inherit; }
+
+.archives .sidebar .year li label:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: red; }
+
+.archives .sidebar .year li input:checked + label:before {
+  background: green; }
+
+.archives .list {
+  float: right;
+  width: -webkit-calc(100% - 240px);
+  width: -moz-calc(100% - 240px);
+  width: -ms-calc(100% - 240px);
+  width: -o-calc(100% - 240px);
+  width: calc(100% - 240px); }
+
+.archives .list > .episode {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%; }
+
+.archives .list > .episode:last-child {
+  margin-bottom: 0; }
+
+.archives .episode {
+  position: relative; }
+
+.archives .episode.disabled {
+  opacity: 0.5; }
+
+.archives .episode .play {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #007ff2;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.archives .episode.disabled .play {
+  top: 50%;
+  margin-top: -17.5px; }
+
+.archives .episode .play:hover {
+  background-color: #0064BF; }
+
+.archives .episode .play:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
-  padding-top: 20px;
-  width: 50%;
-  font-size: 0; }
+  margin-left: -6px;
+  margin-top: -6px;
+  width: 12px;
+  height: 12px;
+  background: url("../../img/index/index_archives_play.svg") center 0px no-repeat transparent; }
 
-.episodeArchives .episode:nth-child(1),
-.episodeArchives .episode:nth-child(2) {
-  padding-top: 0; }
+.archives .episode .play.playing:before {
+  background-position: center -12px; }
 
-.episodeArchives .episode:nth-child(even) {
-  padding-left: 20px; }
+.archives .episode .play:hover:before {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2); }
 
-.episodeArchives .episode:nth-child(odd) {
-  clear: both;
-  padding-right: 20px; }
-
-.episodeArchives .episode > h2 {
-  position: relative;
-  margin-bottom: 10px;
-  padding-right: 40px;
+.archives .episode > h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-right: 55px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
   color: #0064BF; }
 
-.episodeArchives .episode > h2 > .play {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #0064BF; }
+.archives .episode.disabled h3,
+.archives .episode.disabled p {
+  display: none; }
 
-.episodeArchives .episode > h2 > .play:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  display: block;
-  margin-top: -5px;
-  width: 100%;
-  height: 10px;
-  background: url("../../img/index/index_archivesPlay_idle.svg") center center no-repeat transparent;
-  background-size: contain; }
+.archives .episode > h3 {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999999; }
 
-.episodeArchives .episode > h2 > .play:hover {
-  background-color: #00498c; }
-
-.episodeArchives .episode > p {
+.archives .episode > p {
+  margin-top: 10px;
   font-size: 14px;
   line-height: 21px; }
 
-.episodeArchives .episode > p > .release {
+.archives .episode > p > .release {
   color: #999999; }
 
-.episodeArchives .episode > p > .release:after {
+.archives .episode > p > .release:after {
   content: "–";
   display: inline;
   padding: 0 5px 0 5px; }
@@ -413,67 +490,3 @@
   -ms-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-/********* RESPONSIVE *********/
-@media (max-width: 800px) {
-  #playerToggle,
-  #playerProgress,
-  .episodeArchives .play,
-  .episodeArchives .link .subtitle {
-    display: none; }
-  #header,
-  #headerPlayer,
-  #playerWrapper {
-    height: 150px; }
-  #header {
-    margin-top: 50px;
-    background-size: cover; }
-  #headerPlayer {
-    z-index: 0;
-    position: relative; }
-  #header #headerMenu {
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    top: -50px;
-    width: 100%; }
-  #playerWrapper {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    margin: 0;
-    width: 100%; }
-  #playerTitle h1 a,
-  #playerTitle h2 a {
-    padding: 10px 10px 10px 20px; }
-  #playerTitle h1 a {
-    max-width: none;
-    font-size: 16px;
-    line-height: 16px; }
-  #playerTitle h1 a:before {
-    content: "";
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 195px; }
-  #playerTitle h2 {
-    bottom: -32px;
-    font-size: 12px;
-    line-height: 12px; }
-  .episodeArchives.special {
-    margin-bottom: 20px; }
-  .episodeArchives .episodeArchives-header td {
-    font-size: 14px;
-    line-height: 14px; }
-  .episodeArchives.special li {
-    width: 50%; }
-  .episodeArchives .header.spacer {
-    margin-top: 10px; }
-  .episodeArchives .link {
-    width: 100%;
-    padding: 5px; }
-  .episodeArchives .title {
-    margin: 0;
-    font-size: 10px;
-    line-height: 10px; } }

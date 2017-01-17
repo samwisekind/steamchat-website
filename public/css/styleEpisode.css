@@ -142,6 +142,12 @@
 .content .navigation > li .wrapper {
   position: relative;
   top: 50%;
+  width: 100%;
+  max-width: -webkit-calc(100% - 62px);
+  max-width: -moz-calc(100% - 62px);
+  max-width: -ms-calc(100% - 62px);
+  max-width: -o-calc(100% - 62px);
+  max-width: calc(100% - 62px);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -149,6 +155,7 @@
   transform: translateY(-50%); }
 
 .content .navigation > li.prev a .wrapper {
+  margin-right: auto;
   -webkit-transform: translateX(62px) translateY(-50%) translateZ(0);
   -moz-transform: translateX(62px) translateY(-50%) translateZ(0);
   -ms-transform: translateX(62px) translateY(-50%) translateZ(0);
@@ -156,6 +163,7 @@
   transform: translateX(62px) translateY(-50%) translateZ(0); }
 
 .content .navigation > li.next a .wrapper {
+  margin-left: auto;
   -webkit-transform: translateX(-62px) translateY(-50%) translateZ(0);
   -moz-transform: translateX(-62px) translateY(-50%) translateZ(0);
   -ms-transform: translateX(-62px) translateY(-50%) translateZ(0);
@@ -177,7 +185,10 @@
   transform: translateX(-52px) translateY(-50%) translateZ(0); }
 
 .content .navigation > li span {
-  display: block; }
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 
 .content .navigation > li .label {
   margin-bottom: 10px;
