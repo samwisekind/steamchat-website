@@ -346,35 +346,101 @@
   font-size: 18px;
   line-height: 18px; }
 
+.archives .sidebar .filter {
+  padding: 0 10px 0 10px;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  border: 1px solid #AAAAAA; }
+
 .archives .sidebar .year li {
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
 
 .archives .sidebar .year li:last-child {
   margin-bottom: 0; }
 
-.archives .sidebar .year li input {
+.archives .sidebar .year li .checkbox {
   display: none; }
 
-.archives .sidebar .year li label {
-  font-size: 16px;
-  line-height: 16px;
-  color: #999999; }
+.archives .sidebar .year li .checkbox + .label {
+  position: relative;
+  padding-left: 25px;
+  display: block;
+  width: 100%;
+  color: #999999;
+  -webkit-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
 
-.archives .sidebar .year li label:hover {
+.archives .sidebar .year li .checkbox + .label:hover {
   cursor: pointer; }
 
-.archives .sidebar .year li input:checked + label {
+.archives .sidebar .year li .checkbox:checked + .label {
   color: inherit; }
 
-.archives .sidebar .year li label:before {
+.archives .sidebar .year li .checkbox + .label:before,
+.archives .sidebar .year li .checkbox + .label:after {
   content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: red; }
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.archives .sidebar .year li input:checked + label:before {
-  background: green; }
+.archives .sidebar .year li .checkbox + .label:before {
+  z-index: 0;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999999;
+  border-radius: 5px;
+  background: #FFFFFF; }
+
+.archives .sidebar .year li .checkbox:checked + .label:before {
+  border-color: #0064BF;
+  background: #0064BF; }
+
+.archives .sidebar .year li .checkbox + .label:hover:before {
+  border-color: #8cc8ff; }
+
+.archives .sidebar .year li .checkbox:checked + .label:hover:before {
+  border-color: #007ff2;
+  background: #007ff2; }
+
+.archives .sidebar .year li .checkbox + .label:after {
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  left: 3.33333px;
+  top: 50%;
+  display: block;
+  margin-top: -6.66667px;
+  width: 13.33333px;
+  height: 13.33333px;
+  background: url("../../img/index/index_checkbox.svg") center center no-repeat;
+  background-size: contain;
+  -webkit-transform: scale(0.25) translateZ(0);
+  -moz-transform: scale(0.25) translateZ(0);
+  -ms-transform: scale(0.25) translateZ(0);
+  -o-transform: scale(0.25) translateZ(0);
+  transform: scale(0.25) translateZ(0); }
+
+.archives .sidebar .year li .checkbox:checked + .label:after {
+  opacity: 1;
+  -webkit-transform: scale(1) translateZ(0);
+  -moz-transform: scale(1) translateZ(0);
+  -ms-transform: scale(1) translateZ(0);
+  -o-transform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0); }
 
 .archives .list {
   float: right;

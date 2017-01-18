@@ -368,42 +368,102 @@ $archivePlayButtonSize: 35px;
 	line-height: 18px;
 }
 
+.archives .sidebar .filter {
+	padding: 0 10px 0 10px;
+	width: 100%;
+	height: 30px;
+	outline: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 5px;
+	border: 1px solid $color-greyLight;
+}
+
 .archives .sidebar .year li {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .archives .sidebar .year li:last-child {
 	margin-bottom: 0;
 }
 
-.archives .sidebar .year li input {
+$checkbox-size: 20px;
+$checkbox-tick-size: ($checkbox-size / 3) * 2;
+
+.archives .sidebar .year li .checkbox {
 	display: none;
 }
 
-.archives .sidebar .year li label {
-	font-size: 16px;
-	line-height: 16px;
+.archives .sidebar .year li .checkbox + .label {
+	position: relative;
+	padding-left: $checkbox-size + 5px;
+	display: block;
+	width: 100%;
 	color: $color-grey;
+	@include transition (color .5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
-.archives .sidebar .year li label:hover {
+.archives .sidebar .year li .checkbox + .label:hover {
 	cursor: pointer;
 }
 
-.archives .sidebar .year li input:checked + label {
+.archives .sidebar .year li .checkbox:checked + .label {
 	color: inherit;
 }
 
-.archives .sidebar .year li label:before {
+.archives .sidebar .year li .checkbox + .label:before,
+.archives .sidebar .year li .checkbox + .label:after {
 	content: "";
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background: red;
+	display: block;
+	position: absolute;
+
+	@include transition (all .25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
 }
 
-.archives .sidebar .year li input:checked + label:before {
-	background: green;
+.archives .sidebar .year li .checkbox + .label:before {
+	z-index: 0;
+	left: 0;
+	top: 50%;
+	margin-top: -($checkbox-size / 2);
+	width: $checkbox-size;
+	height: $checkbox-size;
+	border: 2px solid $color-grey;
+	border-radius: 5px;
+	background: #FFFFFF;
+}
+
+.archives .sidebar .year li .checkbox:checked + .label:before {
+	border-color: $color-steamchat;
+	background: $color-steamchat;
+}
+
+.archives .sidebar .year li .checkbox + .label:hover:before {
+	border-color: $color-steamchatExtraLight;
+}
+
+.archives .sidebar .year li .checkbox:checked + .label:hover:before {
+	border-color: $color-steamchatLight;
+	background: $color-steamchatLight;
+}
+
+.archives .sidebar .year li .checkbox + .label:after {
+	opacity: 0;
+	z-index: 10;
+	position: absolute;
+	left: ($checkbox-size - $checkbox-tick-size) / 2;
+	top: 50%;
+	display: block;
+	margin-top: -($checkbox-tick-size / 2);
+	width: $checkbox-tick-size;
+	height: $checkbox-tick-size;
+	background: url("../../img/index/index_checkbox.svg") center center no-repeat;
+	background-size: contain;
+	@include transform (scale(.25) translateZ(0));
+}
+
+.archives .sidebar .year li .checkbox:checked + .label:after {
+	opacity: 1;
+	@include transform (scale(1) translateZ(0));
 }
 
 .archives .list {

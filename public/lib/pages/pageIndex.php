@@ -13,18 +13,18 @@
 	<div class="sidebar js-sidebar">
 
 		<h2>Search</h2>
-		<input type="search" placeholder="Title, description..." />
+		<input type="search" placeholder="Title, description..." class="filter" />
 
 		<h2>Filter years</h2>
 		<ul class="year">
-			<li><input type="checkbox" id="year-2016" checked /><label for="year-2016">2016</label></li>
-			<li><input type="checkbox" id="year-2015" checked /><label for="year-2015">2015</label></li>
-			<li><input type="checkbox" id="year-2014" checked /><label for="year-2014">2014</label></li>
-			<li><input type="checkbox" id="year-2013" checked /><label for="year-2013">2013</label></li>
-			<li><input type="checkbox" id="year-2012" checked /><label for="year-2012">2012</label></li>
-			<li><input type="checkbox" id="year-2011" checked /><label for="year-2011">2011</label></li>
-			<li><input type="checkbox" id="year-2010" checked /><label for="year-2010">2010</label></li>
-			<li><input type="checkbox" id="year-2009" checked /><label for="year-2009">2009</label></li>
+			<li><input type="checkbox" id="year-2016" class="checkbox" checked /><label for="year-2016" class="label">2016</label></li>
+			<li><input type="checkbox" id="year-2015" class="checkbox" checked /><label for="year-2015" class="label">2015</label></li>
+			<li><input type="checkbox" id="year-2014" class="checkbox" checked /><label for="year-2014" class="label">2014</label></li>
+			<li><input type="checkbox" id="year-2013" class="checkbox" checked /><label for="year-2013" class="label">2013</label></li>
+			<li><input type="checkbox" id="year-2012" class="checkbox" checked /><label for="year-2012" class="label">2012</label></li>
+			<li><input type="checkbox" id="year-2011" class="checkbox" checked /><label for="year-2011" class="label">2011</label></li>
+			<li><input type="checkbox" id="year-2010" class="checkbox" checked /><label for="year-2010" class="label">2010</label></li>
+			<li><input type="checkbox" id="year-2009" class="checkbox" checked /><label for="year-2009" class="label">2009</label></li>
 		</ul>
 
 	</div>
