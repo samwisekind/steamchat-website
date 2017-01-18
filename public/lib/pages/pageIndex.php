@@ -52,6 +52,7 @@
 
 		</div>
 
+		<span class="count js-count"></span>
 		<a href="#" class="reset js-reset">Reset filters</a>
 
 	</div>
@@ -112,6 +113,8 @@
 			$db_connection->close();
 
 		?>
+
+		<div class="no-results">No episodes to show (<a href="#" class="js-reset">reset filters?</a>)</div>
 
 	</div>
 

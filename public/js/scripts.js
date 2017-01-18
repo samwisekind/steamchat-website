@@ -1,23 +1,75 @@
 var $archives;
 
-function bindFilters() {
+function bindSidebar() {
 
-	// Bind checkboxes
+	/*** Binding Sidebar ***/
 
-	$archives.$checkboxes = $archives.find('.js-checkbox');
+	var sidebar = $archives.find('.js-sidebar');
 
-	var checkboxesActive = $archives.$checkboxes.length;
+	$(window).scroll(function() {
 
-	var years = {};
+		if (window.scrollY > ($archives.offset().top - 40)) {
+			sidebar.addClass('sticky');
+		}
+		else {
+			sidebar.removeClass('sticky');
+		}
+
+	}).scroll();
+
+
+
+	/*** Binding Search ***/
+
+	var searchField = sidebar.find('.js-search');
+
+	searchField.on('input', function() {
+
+		var value = this.value;
+		var regex = new RegExp(value, 'gi');
+
+		for (i = 0; i < $archives.$episodes.length; i++) {
+
+			var targetElement = $archives.$episodes.eq(i);
+
+			if (targetElement.attr('data-keywords').search(regex) < 0) {
+				targetElement.addClass('filter-keyword');
+			}
+			else {
+				targetElement.removeClass('filter-keyword');
+			}
+
+		}
+
+		if (value !== '') {
+			searchField.addClass('active');
+		}
+		else {
+			searchField.removeClass('active');
+		}
+
+		updateFilteringDisplay();
+
+	});
+
+
+
+	/*** Binding Checkboxes ***/
+
+	var checkboxes = {
+		elements: sidebar.find('.js-checkbox'),
+		years: {}
+	};
+
+	checkboxes.total = checkboxes.active = checkboxes.elements.length;
 
 	// Cache the episodes into groups per year
-
 	for (var i = 0; i < $archives.$episodes.length; i++) {
 
 		var targetYear = $archives.$episodes[i].getAttribute('data-year');
 
-		if (years.hasOwnProperty(targetYear) === false) {
-			years[targetYear] = $archives.$episodes.filter('[data-year="' + targetYear + '"]');
+		if (checkboxes.years.hasOwnProperty(targetYear) === false) {
+			checkboxes.years[targetYear] = $archives.$episodes.filter('[data-year="' + targetYear + '"]');
 		}
 		else {
 			continue;
@@ -25,91 +77,120 @@ function bindFilters() {
 
 	}
 
-	$archives.$checkboxes.on('change', function() {
+	checkboxes.elements.on('change', function() {
 
 		// If this is the last checkbox checked, prevent it from becoming unchecked
-
-		if (this.checked === false && checkboxesActive <= 1) {
+		if (this.checked === false && checkboxes.active <= 1) {
 
 			this.checked = true;
 
 		}
 		else {
 
-			var targetYearGroup = years[this.value];
+			this.disabled = false;
+
+			var targetYearGroup = checkboxes.years[this.value];
 
 			if (this.checked === true) {
-				checkboxesActive++;
+				checkboxes.active++;
 				targetYearGroup.removeClass('filter-year');
+				checkboxes.elements.attr('disabled', false);
 			}
 			else {
-				checkboxesActive--;
+				checkboxes.active--;
 				targetYearGroup.addClass('filter-year');
 			}
 
-		}
+			if (checkboxes.active <= 1){
 
-	});
+				checkboxes.elements.filter(':checked').attr('disabled', true);
 
-	// Bind search
-
-	$archives.$search = $archives.find('.js-search');
-
-	$archives.$search.on('input', function() {
-
-		var value = this.value;
-		var regex = new RegExp(value, "i");
-
-		for (i = 0; i < $archives.$episodes.length; i++) {
-
-			var targetElement = $archives.$episodes.eq(i);
-
-			if (targetElement.attr('data-keywords').search(regex) < 0) {
-				targetElement.addClass("filter-keyword");
-			}
-			else {
-				targetElement.removeClass("filter-keyword");
 			}
 
 		}
 
+		updateFilteringDisplay();
+
 	});
 
-	// Bind reset
+
+
+	/*** Episode Count ***/
+
+	var counter = {
+		element: sidebar.find('.js-count'),
+		total: $archives.$episodes.length,
+		showing: $archives.$episodes.length
+	};
+
+	function updateFilteringDisplay () {
+
+		counter.showing = counter.total - $archives.$episodes.filter('.filter-year, .filter-keyword').length;
+
+		if (counter.showing < counter.total) {
+			counter.element.html('Showing ' + counter.showing + ' of ' + counter.total + ' episodes');
+			sidebar.addClass('active');
+		}
+		else {
+			sidebar.removeClass('active');
+		}
+
+		if (counter.showing === 0) {
+			$archives.addClass('empty');
+		}
+		else {
+			$archives.removeClass('empty');
+		}
+
+	}
+
+
+
+	/*** Binding Reset Button ***/
 
 	$archives.find('.js-reset').on('click', function(event) {
 
 		event.preventDefault();
 
-		$archives.$search.val('').trigger('input');
+		searchField.val('').trigger('input');
 
-		for (var i = 0; i < $archives.$checkboxes.length; i++) {
-			var targetCheckbox = $archives.$checkboxes.eq(i);
+		for (var i = 0; i < checkboxes.elements.length; i++) {
+			var targetCheckbox = checkboxes.elements.eq(i);
 			targetCheckbox[0].checked = true;
 			targetCheckbox.trigger('change');
 		}
+
+		updateFilteringDisplay();
 
 	});
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 $(function() {
 
 	$archives = $('.js-archives');
-		$archives.$episodes = $archives.find('.js-episode');
 
-	bindFilters();
+	if ($archives.length > 0) {
+
+		$archives.$episodes = $archives.find('.js-episode');
+		bindSidebar();
+
+	}
+
+	$('.js-listen').on('click', function(event) {
+
+		event.preventDefault();
+
+		var target = document.getElementsByClassName('js-player')[0];
+
+		if (target.paused === true || target.stopped === true) {
+			target.play();
+		}
+		else {
+			target.pause();
+		}
+
+	});
 
 });
 
@@ -345,18 +426,6 @@ function playerMute (event) {
 
 $(document).ready(function () {
 
-	var archives = $('.js-archives');
-	var sidebar = archives.find('.js-sidebar');
 
-	$(window).scroll(function () {
-
-		if (window.scrollY > (archives.offset().top - 40)) {
-			sidebar.addClass('sticky');
-		}
-		else {
-			sidebar.removeClass('sticky');
-		}
-
-	}).scroll();
 
 });

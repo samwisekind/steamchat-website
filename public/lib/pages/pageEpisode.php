@@ -86,7 +86,7 @@
 
 		<ul>
 			<li class="title">Episode Tools</li>
-			<li><a href="#" onclick="episodeToggle(event)">Listen Now</a></li>
+			<li><a href="#" class="js-listen">Listen Now</a></li>
 			<li><a href="<?php echo $data_episode['file_url']; ?>">Direct Link</a></li>
 			<li><a href="<?php echo $_SERVER['REQUEST_URI'] . 'download'; ?>">Download MP3</a></li>
 		</ul>

@@ -339,7 +339,11 @@
 .archives .sidebar {
   position: relative;
   float: left;
+  padding-bottom: 20px;
   width: 200px; }
+
+.archives .sidebar.active {
+  padding-bottom: 0; }
 
 .archives .sidebar.sticky {
   position: fixed;
@@ -429,6 +433,10 @@
   border-color: #0064BF;
   background: #0064BF; }
 
+.archives .sidebar .year li .checkbox:disabled + .label:before {
+  border-color: #AAAAAA !important;
+  background: #AAAAAA !important; }
+
 .archives .sidebar .year li .checkbox + .label:hover:before {
   border-color: #8cc8ff; }
 
@@ -462,14 +470,25 @@
   -o-transform: scale(1) translateZ(0);
   transform: scale(1) translateZ(0); }
 
+.archives .sidebar .count,
 .archives .sidebar .reset {
-  display: block;
-  margin-top: 20px;
-  padding: 10px 20px 10px 20px;
+  display: none;
   width: 100%;
   font-size: 12px;
   line-height: 12px;
   text-align: center; }
+
+.archives .sidebar.active .count,
+.archives .sidebar.active .reset {
+  display: block; }
+
+.archives .sidebar.active .count {
+  margin-top: 20px;
+  color: #737373; }
+
+.archives .sidebar .reset {
+  margin-top: 5px;
+  padding: 10px 20px 10px 20px; }
 
 .archives .sidebar .reset:hover {
   background: #F1F1F1; }
@@ -558,6 +577,25 @@
   content: "–";
   display: inline;
   padding: 0 5px 0 5px; }
+
+.archives .list .no-results {
+  display: none;
+  margin: 0 auto 0 auto;
+  padding-top: 100px;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #AAAAAA; }
+
+.archives .list .no-results,
+.archives .list .no-results a {
+  color: #AAAAAA; }
+
+.archives.empty .list .no-results {
+  display: block; }
+
+.archives.empty .list .no-results a:hover {
+  color: #999999; }
 
 /******* TRANSITIONS *******/
 #playerToggle,

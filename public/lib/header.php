@@ -47,7 +47,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title><?php echo $meta_info['meta_title'] ?></title>
 		<link rel="stylesheet" href="<?php echo $hostLocation; ?>css/min/styleGlobal.min.css" type="text/css" media="screen" />
 		<?php

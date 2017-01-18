@@ -354,11 +354,15 @@ $archivePlayButtonSize: 35px;
 	background: #FFFFFF;
 }
 
-
 .archives .sidebar {
 	position: relative;
 	float: left;
+	padding-bottom: 20px;
 	width: $archiveSidebarSize;
+}
+
+.archives .sidebar.active {
+	padding-bottom: 0;
 }
 
 .archives .sidebar.sticky {
@@ -455,6 +459,11 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	background: $color-steamchat;
 }
 
+.archives .sidebar .year li .checkbox:disabled + .label:before {
+	border-color: $color-greyLight !important;
+	background: $color-greyLight !important;
+}
+
 .archives .sidebar .year li .checkbox + .label:hover:before {
 	border-color: $color-steamchatExtraLight;
 }
@@ -484,14 +493,28 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	@include transform (scale(1) translateZ(0));
 }
 
+.archives .sidebar .count,
 .archives .sidebar .reset {
-	display: block;
-	margin-top: 20px;
-	padding: 10px 20px 10px 20px;
+	display: none;
 	width: 100%;
 	font-size: 12px;
 	line-height: 12px;
 	text-align: center;
+}
+
+.archives .sidebar.active .count,
+.archives .sidebar.active .reset {
+	display: block;
+}
+
+.archives .sidebar.active .count {
+	margin-top: 20px;
+	color: darken($color-grey, 15%);
+}
+
+.archives .sidebar .reset {
+	margin-top: 5px;
+	padding: 10px 20px 10px 20px;
 }
 
 .archives .sidebar .reset:hover {
@@ -590,8 +613,28 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	padding: 0 5px 0 5px;
 }
 
+.archives .list .no-results {
+	display: none;
+	margin: 0 auto 0 auto;
+	padding-top: 100px;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: $color-greyLight;
+}
 
+.archives .list .no-results,
+.archives .list .no-results a {
+	color: $color-greyLight;
+}
 
+.archives.empty .list .no-results {
+	display: block;
+}
+
+.archives.empty .list .no-results a:hover {
+	color: $color-grey;
+}
 
 
 
