@@ -12,20 +12,47 @@
 
 	<div class="sidebar js-sidebar">
 
-		<h2>Search</h2>
-		<input type="search" placeholder="Title, description..." class="filter" />
+		<div class="wrapper">
 
-		<h2>Filter years</h2>
-		<ul class="year">
-			<li><input type="checkbox" id="year-2016" class="checkbox" checked /><label for="year-2016" class="label">2016</label></li>
-			<li><input type="checkbox" id="year-2015" class="checkbox" checked /><label for="year-2015" class="label">2015</label></li>
-			<li><input type="checkbox" id="year-2014" class="checkbox" checked /><label for="year-2014" class="label">2014</label></li>
-			<li><input type="checkbox" id="year-2013" class="checkbox" checked /><label for="year-2013" class="label">2013</label></li>
-			<li><input type="checkbox" id="year-2012" class="checkbox" checked /><label for="year-2012" class="label">2012</label></li>
-			<li><input type="checkbox" id="year-2011" class="checkbox" checked /><label for="year-2011" class="label">2011</label></li>
-			<li><input type="checkbox" id="year-2010" class="checkbox" checked /><label for="year-2010" class="label">2010</label></li>
-			<li><input type="checkbox" id="year-2009" class="checkbox" checked /><label for="year-2009" class="label">2009</label></li>
-		</ul>
+			<h2>Search</h2>
+			<input type="search" placeholder="Enter keywords here..." class="search js-search" />
+
+			<?php
+
+				$years = array();
+
+				$db_query = 'SELECT DISTINCT YEAR(release_date)
+					FROM ' . $db_info['database_name'] . '.episodes
+					ORDER BY release_date DESC';
+
+				$db_result = $db_connection->query($db_query);
+
+				if ($db_result->num_rows > 0) {
+
+					while ($db_row = $db_result->fetch_assoc()) {
+						array_push($years, $db_row['YEAR(release_date)']);
+					}
+
+					function returnElement ($year) {
+						return '<li><input type="checkbox" id="year-' . $year . '" value="' . $year . '" class="checkbox js-checkbox" checked /><label for="year-' . $year . '" class="label">' . $year . '</label></li>';
+					}
+
+					echo '<h2>Filter years</h2>
+						<ul class="year">';
+
+					for ($i = 0; $i < count($years); $i++) {
+						echo returnElement($years[$i]);
+					}
+
+					echo '</ul>';
+
+				}
+
+			?>
+
+		</div>
+
+		<a href="#" class="reset js-reset">Reset filters</a>
 
 	</div>
 
@@ -47,6 +74,7 @@
 						'episode_number' => $db_row['episode_number'],
 						'title' => $db_row['title'],
 						'description' => $db_row['description'],
+						'keywords' => $db_row['keywords'],
 						'release_date' => date_create($db_row['release_date']),
 						'file_url' => $db_row['file_url'],
 						'file_duration' => $db_row['file_duration'],
@@ -64,14 +92,13 @@
 						$type_url = 'snacks';
 					}
 
-					$release_epoch = date_format($data_episode['release_date'], 'U');
 					$release_readable = date_format($data_episode['release_date'], 'jS F Y');
 
-	   				echo '<div class="episode">
+	   				echo '<div class="episode js-episode" data-year="' .date_format($data_episode['release_date'], 'Y') . '" data-keywords="' . $data_episode['keywords'] . '">
 	   					<a href="#" class="play" data-audio="' . $data_episode['file_url'] . '" onclick="playerChange(event, this);" data-header="' . $data_episode['header_mask_image'] . '" data-background="' . $data_episode['header_background_image'] . '" data-color="#' . $data_episode['header_background_colour'] . '"></a>
 	   					<h2>
 	   						<a href="' . $hostLocation . $type_url . '/' . $data_episode['episode_number'] . '/">' . $data_episode['title'] .'</a></h2>
-	   						<h3><span class="js-release" data-epoch="' . $release_epoch . '">' . $release_readable . '</span> – ' . $data_episode['file_duration'] . '</h3>
+	   						<h3><span>' . $release_readable . '</span> – ' . $data_episode['file_duration'] . '</h3>
 	   						<p>' . $data_episode['description'] . '</p>
 	   				</div>';
 

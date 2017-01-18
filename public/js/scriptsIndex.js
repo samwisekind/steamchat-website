@@ -1,3 +1,139 @@
+var $archives;
+
+function bindFilters() {
+
+	// Bind checkboxes
+
+	$archives.$checkboxes = $archives.find('.js-checkbox');
+
+	var checkboxesActive = $archives.$checkboxes.length;
+
+	var years = {};
+
+	// Cache the episodes into groups per year
+
+	for (var i = 0; i < $archives.$episodes.length; i++) {
+
+		var targetYear = $archives.$episodes[i].getAttribute('data-year');
+
+		if (years.hasOwnProperty(targetYear) === false) {
+			years[targetYear] = $archives.$episodes.filter('[data-year="' + targetYear + '"]');
+		}
+		else {
+			continue;
+		}
+
+	}
+
+	$archives.$checkboxes.on('change', function() {
+
+		// If this is the last checkbox checked, prevent it from becoming unchecked
+
+		if (this.checked === false && checkboxesActive <= 1) {
+
+			this.checked = true;
+
+		}
+		else {
+
+			var targetYearGroup = years[this.value];
+
+			if (this.checked === true) {
+				checkboxesActive++;
+				targetYearGroup.removeClass('filter-year');
+			}
+			else {
+				checkboxesActive--;
+				targetYearGroup.addClass('filter-year');
+			}
+
+		}
+
+	});
+
+	// Bind search
+
+	$archives.$search = $archives.find('.js-search');
+
+	$archives.$search.on('input', function() {
+
+		var value = this.value;
+		var regex = new RegExp(value, "i");
+
+		for (i = 0; i < $archives.$episodes.length; i++) {
+
+			var targetElement = $archives.$episodes.eq(i);
+
+			if (targetElement.attr('data-keywords').search(regex) < 0) {
+				targetElement.addClass("filter-keyword");
+			}
+			else {
+				targetElement.removeClass("filter-keyword");
+			}
+
+		}
+
+	});
+
+	// Bind reset
+
+	$archives.find('.js-reset').on('click', function(event) {
+
+		event.preventDefault();
+
+		$archives.$search.val('').trigger('input');
+
+		for (var i = 0; i < $archives.$checkboxes.length; i++) {
+			var targetCheckbox = $archives.$checkboxes.eq(i);
+			targetCheckbox[0].checked = true;
+			targetCheckbox.trigger('change');
+		}
+
+	});
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+$(function() {
+
+	$archives = $('.js-archives');
+		$archives.$episodes = $archives.find('.js-episode');
+
+	bindFilters();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var $cacheAudio, $cacheProgress, playerWasPaused, playerUpdateInterval, playerUpdateTimeout, playerPreviousVolume, playerTitleOriginal;
 var playerLoaded = playerBinded = playerHover = false;
 var playerInt = true;

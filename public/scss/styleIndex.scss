@@ -343,6 +343,10 @@ $archivePlayButtonSize: 35px;
 	margin-top: 60px;
 }
 
+.archives:after {
+	@include clearFix;
+}
+
 .archives .sidebar,
 .archives .list > .episode {
 	border-radius: 2px;
@@ -350,15 +354,20 @@ $archivePlayButtonSize: 35px;
 	background: #FFFFFF;
 }
 
+
 .archives .sidebar {
+	position: relative;
 	float: left;
-	padding: 0 20px 20px 20px;
 	width: $archiveSidebarSize;
 }
 
 .archives .sidebar.sticky {
 	position: fixed;
 	top: 40px;
+}
+
+.archives .sidebar .wrapper {
+	padding: 0 20px 0 20px;
 }
 
 .archives .sidebar h2 {
@@ -368,15 +377,25 @@ $archivePlayButtonSize: 35px;
 	line-height: 18px;
 }
 
-.archives .sidebar .filter {
+.archives .sidebar .search {
 	padding: 0 10px 0 10px;
 	width: 100%;
-	height: 30px;
+	height: 35px;
 	outline: none;
 	-webkit-appearance: none;
 	appearance: none;
 	border-radius: 5px;
-	border: 1px solid $color-greyLight;
+	border: 2px solid $color-greyLight;
+	@include transition (border-color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+}
+
+.archives .sidebar .search:hover,
+.archives .sidebar .search:focus {
+	border-color: $color-steamchatLight;
+}
+
+.archives .sidebar .search.active {
+	border-color: $color-steamchat;
 }
 
 .archives .sidebar .year li {
@@ -400,7 +419,7 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	display: block;
 	width: 100%;
 	color: $color-grey;
-	@include transition (color .5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+	@include transition (color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
 .archives .sidebar .year li .checkbox + .label:hover {
@@ -416,8 +435,7 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	content: "";
 	display: block;
 	position: absolute;
-
-	@include transition (all .25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
+	@include transition (all 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
 }
 
 .archives .sidebar .year li .checkbox + .label:before {
@@ -466,6 +484,20 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	@include transform (scale(1) translateZ(0));
 }
 
+.archives .sidebar .reset {
+	display: block;
+	margin-top: 20px;
+	padding: 10px 20px 10px 20px;
+	width: 100%;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+}
+
+.archives .sidebar .reset:hover {
+	background: #F1F1F1;
+}
+
 .archives .list {
 	float: right;
 	@include calc (width, "100% - #{$archiveSidebarSize + 40px}");
@@ -485,8 +517,9 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	position: relative;
 }
 
-.archives .episode.disabled {
-	opacity: 0.5;
+.archives .episode.filter-year,
+.archives .episode.filter-keyword {
+	display: none;
 }
 
 .archives .episode .play {
@@ -498,11 +531,6 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	border-radius: 50%;
 	background-color: $color-steamchatLight;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-
-.archives .episode.disabled .play {
-	top: 50%;
-	margin-top: -($archivePlayButtonSize / 2);
 }
 
 .archives .episode .play:hover {
@@ -538,11 +566,6 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	line-height: 18px;
 	font-weight: 400;
 	color: $color-steamchat;
-}
-
-.archives .episode.disabled h3,
-.archives .episode.disabled p {
-	display: none;
 }
 
 .archives .episode > h3 {
