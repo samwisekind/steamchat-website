@@ -324,6 +324,36 @@
 	opacity: 1;
 }
 
+/******* TRANSITIONS *******/
+
+#playerToggle,
+#playerProgress .line {
+	@include transition (opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+#playerLoading {
+	@include transition (opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+#playerProgress .cover.smooth {
+	@include transition (all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /******* CONTENT *******/
@@ -334,10 +364,9 @@
 
 
 
-/******* CONTENT - EPISODE ARCHIVES *******/
+/******* ARCHIVES *******/
 
-$archiveSidebarSize: 200px;
-$archivePlayButtonSize: 35px;
+/* ARCHIVES: COMMON */
 
 .archives {
 	margin-top: 60px;
@@ -350,15 +379,91 @@ $archivePlayButtonSize: 35px;
 .archives .sidebar,
 .archives .list > .episode {
 	border-radius: 2px;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+	@include boxShadow ("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)");
 	background: #FFFFFF;
 }
+
+/* ARCHIVES: TYPES */
+
+$type-padding-x: 8px;
+$type-padding-y: 6px;
+$typeIcon-size: 12px;
+
+.archives .types .type {
+	position: relative;
+	display: block;
+	padding: $type-padding-y $type-padding-x $type-padding-y (($type-padding-x * 2) + $typeIcon-size);
+	border-radius: 4px;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: left;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.archives .types .type.interview,
+.archives .types .input:checked + .label .type.interview {
+	background: #FF4081;
+}
+
+.archives .types .type.game,
+.archives .types .input:checked + .label .type.game {
+	background: #7C4DFF;
+}
+
+.archives .types .type.event,
+.archives .types .input:checked + .label .type.event {
+	background: #FF5722;
+}
+
+.archives .types .input + label .type.interview {
+	background: #FF80AB;
+}
+
+.archives .types .input + label .type.game {
+	background: #B388FF;
+}
+
+.archives .types .input + label .type.event {
+	background: #FF9E80;
+}
+
+.archives .types .type:before {
+	content: "";
+	position: absolute;
+	left: $type-padding-x;
+	top: 50%;
+	margin-top: -($typeIcon-size / 2);
+	display: block;
+	width: $typeIcon-size;
+	height: $typeIcon-size;
+	background: center center no-repeat transparent;
+	background-size: contain;
+}
+
+.archives .types .type.interview:before {
+	background-image: url('../../img/index/index_type_interview.svg');
+}
+
+.archives .types .type.game:before {
+	background-image: url('../../img/index/index_type_game.svg');
+}
+
+.archives .types .type.event:before {
+	background-image: url('../../img/index/index_type_event.svg');
+}
+
+
+
+/* ARCHIVES: SIDEBAR */
+
+$sidebar-size: 200px;
 
 .archives .sidebar {
 	position: relative;
 	float: left;
 	padding-bottom: 20px;
-	width: $archiveSidebarSize;
+	width: $sidebar-size;
 }
 
 .archives .sidebar.active {
@@ -368,6 +473,10 @@ $archivePlayButtonSize: 35px;
 .archives .sidebar.sticky {
 	position: fixed;
 	top: 40px;
+	@include calc (max-height, "100% - #{40px * 2}");
+	overflow: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 .archives .sidebar .wrapper {
@@ -379,6 +488,7 @@ $archivePlayButtonSize: 35px;
 	margin-bottom: 5px;
 	font-size: 18px;
 	line-height: 18px;
+	font-weight: 500;
 }
 
 .archives .sidebar .search {
@@ -402,95 +512,129 @@ $archivePlayButtonSize: 35px;
 	border-color: $color-steamchat;
 }
 
-.archives .sidebar .year li {
+.archives .sidebar .filter li {
 	margin-bottom: 5px;
 }
 
-.archives .sidebar .year li:last-child {
+.archives .sidebar .filter li:last-child {
 	margin-bottom: 0;
 }
 
-$checkbox-size: 20px;
-$checkbox-tick-size: ($checkbox-size / 3) * 2;
+$input-size: 20px;
 
-.archives .sidebar .year li .checkbox {
+.archives .sidebar .filter li .input {
 	display: none;
 }
 
-.archives .sidebar .year li .checkbox + .label {
+.archives .sidebar .filter li .input + .label {
 	position: relative;
-	padding-left: $checkbox-size + 5px;
+	padding-left: $input-size + 5px;
 	display: block;
 	width: 100%;
-	color: $color-grey;
-	@include transition (color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
-.archives .sidebar .year li .checkbox + .label:hover {
+.archives .sidebar .filter li .input + .label:hover {
 	cursor: pointer;
 }
 
-.archives .sidebar .year li .checkbox:checked + .label {
-	color: inherit;
-}
-
-.archives .sidebar .year li .checkbox + .label:before,
-.archives .sidebar .year li .checkbox + .label:after {
+.archives .sidebar .filter li .input + .label:before,
+.archives .sidebar .filter li .input + .label:after {
 	content: "";
 	display: block;
 	position: absolute;
+}
+
+.archives .sidebar .filter li .input + .label:before,
+.archives .sidebar .filter li .input:checked + .label:after {
 	@include transition (all 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
 }
 
-.archives .sidebar .year li .checkbox + .label:before {
+.archives .sidebar .filter li .input + .label:before {
 	z-index: 0;
 	left: 0;
 	top: 50%;
-	margin-top: -($checkbox-size / 2);
-	width: $checkbox-size;
-	height: $checkbox-size;
+	margin-top: -($input-size / 2);
+	width: $input-size;
+	height: $input-size;
 	border: 2px solid $color-grey;
-	border-radius: 5px;
 	background: #FFFFFF;
 }
 
-.archives .sidebar .year li .checkbox:checked + .label:before {
+.archives .sidebar .filter li .input:checked + .label:before {
 	border-color: $color-steamchat;
 	background: $color-steamchat;
 }
 
-.archives .sidebar .year li .checkbox:disabled + .label:before {
-	border-color: $color-greyLight !important;
-	background: $color-greyLight !important;
-}
-
-.archives .sidebar .year li .checkbox + .label:hover:before {
+.archives .sidebar .filter li .input + .label:hover:before {
 	border-color: $color-steamchatExtraLight;
 }
 
-.archives .sidebar .year li .checkbox:checked + .label:hover:before {
+.archives .sidebar .filter li .input:checked + .label:hover:before {
 	border-color: $color-steamchatLight;
 	background: $color-steamchatLight;
 }
 
-.archives .sidebar .year li .checkbox + .label:after {
+.archives .sidebar .filter li .input + .label:after {
 	opacity: 0;
 	z-index: 10;
 	position: absolute;
-	left: ($checkbox-size - $checkbox-tick-size) / 2;
 	top: 50%;
 	display: block;
-	margin-top: -($checkbox-tick-size / 2);
-	width: $checkbox-tick-size;
-	height: $checkbox-tick-size;
-	background: url("../../img/index/index_checkbox.svg") center center no-repeat;
-	background-size: contain;
-	@include transform (scale(.25) translateZ(0));
 }
 
-.archives .sidebar .year li .checkbox:checked + .label:after {
+.archives .sidebar .filter li .input:checked + .label:after {
 	opacity: 1;
-	@include transform (scale(1) translateZ(0));
+	@include transform (scale(1) translateZ(0) !important);
+}
+
+/* ARCHIVES: SIDEBAR: CHECKBOXES */
+
+$checkbox-size: $input-size - 8px;
+
+.archives .sidebar .filter.year li .input + .label {
+	color: $color-grey;
+	@include transition (color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+}
+
+.archives .sidebar .filter.year li .input:checked + .label {
+	color: inherit;
+}
+
+.archives .sidebar .filter.year li .input + .label:before {
+	border-radius: 5px;
+}
+
+.archives .sidebar .filter.year li .input:disabled + .label:before {
+	border-color: $color-greyLight !important;
+	background: $color-greyLight !important;
+}
+
+.archives .sidebar .filter.year li .input + .label:after {
+	left: ($input-size - $checkbox-size) / 2;
+	margin-top: -($checkbox-size / 2);
+	width: $checkbox-size;
+	height: $checkbox-size;
+	background: url("../../img/index/index_checkbox.svg") center center no-repeat;
+	background-size: contain;
+	@include transform (scale(0.25) translateZ(0));
+}
+
+/* ARCHIVES: SIDEBAR: RADIO */
+
+.archives .sidebar .filter.types li .input + .label:before {
+	border-radius: 50%;
+}
+
+$radio-size: $input-size - 10px;
+
+.archives .sidebar .filter.types li .input + .label:after {
+	left: ($input-size - $radio-size) / 2;
+	margin-top: -($radio-size / 2);
+	width: $radio-size;
+	height: $radio-size;
+	border-radius: 50%;
+	background: #FFFFFF;
+	@include transform (scale(0) translateZ(0));
 }
 
 .archives .sidebar .count,
@@ -521,9 +665,14 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	background: #F1F1F1;
 }
 
+/* ARCHIVES: EPISODES */
+
+$playButton-size: 35px;
+$playButton-icon-size: 12px;
+
 .archives .list {
 	float: right;
-	@include calc (width, "100% - #{$archiveSidebarSize + 40px}");
+	@include calc (width, "100% - #{$sidebar-size + 40px}");
 }
 
 .archives .list > .episode {
@@ -549,11 +698,11 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	width: $archivePlayButtonSize;
-	height: $archivePlayButtonSize;
+	width: $playButton-size;
+	height: $playButton-size;
 	border-radius: 50%;
 	background-color: $color-steamchatLight;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)");
 }
 
 .archives .episode .play:hover {
@@ -566,15 +715,15 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	left: 50%;
 	top: 50%;
 	display: block;
-	margin-left: -(12px / 2);
-	margin-top: -(12px / 2);
-	width: 12px;
-	height: 12px;
+	margin-left: -($playButton-icon-size / 2);
+	margin-top: -($playButton-icon-size / 2);
+	width: $playButton-icon-size;
+	height: $playButton-icon-size;
 	background: url("../../img/index/index_archives_play.svg") center 0px no-repeat transparent;
 }
 
 .archives .episode .play.playing:before {
-	background-position: center -12px;
+	background-position: center -$playButton-icon-size;
 }
 
 .archives .episode .play:hover:before {
@@ -584,11 +733,21 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 .archives .episode > h2 {
 	margin-top: 0;
 	margin-bottom: 5px;
-	padding-right: $archivePlayButtonSize + 20px;
+	padding-right: $playButton-size + 20px;
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: 400;
 	color: $color-steamchat;
+}
+
+.archives .episode > p > .release {
+	color: $color-grey;
+}
+
+.archives .episode > p > .release:after {
+	content: "–";
+	display: inline;
+	padding: 0 5px 0 5px;
 }
 
 .archives .episode > h3 {
@@ -603,14 +762,22 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 	line-height: 14px + (14px / 2);
 }
 
-.archives .episode > p > .release {
-	color: $color-grey;
+.archives .episode > .types {
+	margin-top: 10px;
+	list-style: none;
 }
 
-.archives .episode > p > .release:after {
-	content: "–";
-	display: inline;
-	padding: 0 5px 0 5px;
+.archives .episode > .types:after {
+	@include clearFix;
+}
+
+.archives .episode > .types > li {
+	margin-right: 10px;
+	float: left;
+}
+
+.archives .episode > .types > li:last-child {
+	margin-right: 0;
 }
 
 .archives .list .no-results {
@@ -634,26 +801,4 @@ $checkbox-tick-size: ($checkbox-size / 3) * 2;
 
 .archives.empty .list .no-results a:hover {
 	color: $color-grey;
-}
-
-
-
-
-
-
-
-
-/******* TRANSITIONS *******/
-
-#playerToggle,
-#playerProgress .line {
-	@include transition (opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
-
-#playerLoading {
-	@include transition (opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
-
-#playerProgress .cover.smooth {
-	@include transition (all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
 }

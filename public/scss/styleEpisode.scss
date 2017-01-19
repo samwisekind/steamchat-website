@@ -2,7 +2,9 @@
 
 
 
-/******* CONTENT *******/
+/******* EPISODE *******/
+
+/* EPISODE: COMMON */
 
 $sidebarWidth: 150px;
 
@@ -19,7 +21,7 @@ $sidebarWidth: 150px;
 	display: inline-block;
 }
 
-/* MAIN */
+/* EPISODE: MAIN */
 
 .content .main {
 	float: left;
@@ -40,7 +42,7 @@ $sidebarWidth: 150px;
 	width: 100%;
 }
 
-/* SIDEBAR */
+/* EPISODE: SIDEBAR */
 
 .content .sidebar {
 	padding-top: 10px;
@@ -100,7 +102,7 @@ $sidebarWidth: 150px;
 	text-decoration: underline;
 }
 
-/* EPISODE NAV */
+/* EPISODE: NAVIGATION */
 
 $navHeight: 70px;
 $navArrowWidth: 32px;
