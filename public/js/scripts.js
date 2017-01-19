@@ -160,6 +160,8 @@ function bindSidebar() {
 			targetCheckbox.trigger('change');
 		}
 
+		checkboxes.active = checkboxes.total;
+
 		updateFilteringDisplay();
 
 	});
