@@ -6,22 +6,21 @@ var $ = require('jquery');
 
 		var i, targetElement, targetYear, targetCategory;
 
-		/*** Binding Sidebar ***/
+		/*** Bind Sidebar ***/
 
 		var sidebar = $archives.find('.js-sidebar');
 
 		$(window).scroll(function() {
-
-			if (window.scrollY > ($archives.offset().top - 40)) {
+			var padding = 40;
+			if (window.scrollY > ($archives.offset().top - padding)) {
 				sidebar.addClass('sticky');
 			}
 			else {
 				sidebar.removeClass('sticky');
 			}
-
 		}).scroll();
 
-		/*** Binding Search ***/
+		/*** Bind Search ***/
 
 		var searchField = sidebar.find('.js-search');
 
@@ -31,16 +30,13 @@ var $ = require('jquery');
 			var regex = new RegExp(value, 'gi');
 
 			for (i = 0; i < $archives.$episodes.length; i++) {
-
 				targetElement = $archives.$episodes.eq(i);
-
 				if (targetElement.attr('data-description').search(regex) < 0) {
 					targetElement.addClass('filter-description');
 				}
 				else {
 					targetElement.removeClass('filter-description');
 				}
-
 			}
 
 			if (value !== '') {
@@ -54,7 +50,7 @@ var $ = require('jquery');
 
 		});
 
-		/*** Caching episodes **/
+		/*** Caching episodes and inputs by years and categories ***/
 
 		var episodeCache = {
 			inputs: {
@@ -68,7 +64,6 @@ var $ = require('jquery');
 		};
 
 		// Cache episodes by year
-
 		for (i = 0; i < episodeCache.inputs.years.length; i++) {
 
 			// Get the element
@@ -85,8 +80,7 @@ var $ = require('jquery');
 		}
 
 		// Cache episodes by categoryx
-
-		for (i = 0; i < episodeCache.inputs.categories.length; i++) {
+		for(i = 0; i < episodeCache.inputs.categories.length; i++) {
 
 			// Get the element
 			targetElement = episodeCache.inputs.categories.eq(i);
@@ -101,7 +95,7 @@ var $ = require('jquery');
 
 		}
 
-		/*** Binding Year Checkboxes ***/
+		/*** Bind Year Inputs ***/
 
 		var yearsTotal, yearsActive = episodeCache.inputs.years.length;
 
@@ -136,7 +130,7 @@ var $ = require('jquery');
 
 		});
 
-		/*** Binding Category Checkboxes ***/
+		/*** Bind Category Inputs ***/
 
 		episodeCache.inputs.categories.on('change', function() {
 
@@ -183,7 +177,7 @@ var $ = require('jquery');
 
 		}
 
-		/*** Binding Reset Button ***/
+		/*** Bind Reset Button ***/
 
 		$archives.find('.js-reset').on('click', function(event) {
 
