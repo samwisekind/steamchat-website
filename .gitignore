@@ -1,21 +1,11 @@
-# Binary Files
-*.mp3
-*.m4a
-
-# Mac Files
-.DS_Store
-
-# SASS/SCSS
-.sass-cache
-.sass-cache/*
-
-# NPM/Node
-node_modules/
-
-# Builds from gulp tasks
-public-build/
-builds/
-.build
-
-# PHP MySQL information
-public/lib/config.php
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
