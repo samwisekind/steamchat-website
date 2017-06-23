@@ -14,6 +14,17 @@
 use App\Episode;
 
 Route::get('/', function () {
-	$episodes = Episode::all();
-    return $episodes;
+
+	$episodes = Episode::orderBy('release_date', 'desc')->get();
+
+	$years = Episode::select(DB::raw('DISTINCT YEAR(release_date)'))
+		->orderBy('release_date', 'desc')
+		->get();
+
+    return view('layouts.home', [
+		'section' => 'home',
+		'episodes' => $episodes,
+		'years' => $years
+	]);
+
 });

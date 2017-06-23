@@ -1,0 +1,227 @@
+@import "_sass/common";
+
+
+
+/******* EPISODE *******/
+
+/* EPISODE: COMMON */
+
+$sidebarWidth: 150px;
+
+.content {
+	max-width: 1000px;
+}
+
+.content > .wrapper:after {
+	@include clearFix;
+}
+
+.content .main,
+.content .sidebar {
+	display: inline-block;
+}
+
+/* EPISODE: MAIN */
+
+.content .main {
+	float: left;
+	@include calc (width, "100% - #{$sidebarWidth + 40px}");
+}
+
+.content .main h1 {
+	margin-bottom: 0;
+}
+
+.content .main h2 {
+	margin-top: 0;
+	color: $color-grey;
+}
+
+.content .main .player {
+	margin-top: 60px;
+	width: 100%;
+}
+
+/* EPISODE: SIDEBAR */
+
+.content .sidebar {
+	padding-top: 10px;
+	float: right;
+	width: $sidebarWidth;
+}
+
+.content .sidebar > ul,
+.content .sidebar > ul > li {
+	list-style: none;
+}
+
+.content .sidebar > ul {
+	margin-bottom: 40px;
+}
+
+.content .sidebar > ul:last-child {
+	margin-bottom: 0;
+}
+
+.content .sidebar > ul > li {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: right;
+
+}
+
+.content .sidebar > ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.content .sidebar > ul > li.title,
+.content .sidebar > ul > li .light {
+	color: $color-grey;
+}
+
+.content .sidebar > ul > li.title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.content .sidebar > ul > li .light {
+	margin-right: 5px;
+}
+
+.content .sidebar > ul > li a {
+	display: inline-block;
+	color: $color-steamchat;
+	text-decoration: none;
+}
+
+.content .sidebar > ul > li a:hover {
+	text-decoration: underline;
+}
+
+/* EPISODE: NAVIGATION */
+
+$navHeight: 70px;
+$navArrowWidth: 32px;
+
+.content .navigation {
+	position: relative;
+	margin-top: 100px;
+	height: $navHeight;
+}
+
+.content .navigation,
+.content .navigation > li {
+	list-style: none;
+}
+
+.content .navigation > li {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: $navHeight;
+}
+
+.content .navigation > li.prev {
+	left: 0;
+	text-align: left;
+}
+
+.content .navigation > li.next {
+	right: 0;
+	text-align: right;
+}
+
+.content .navigation > li a,
+.content .navigation > li a .wrapper {
+	@include transition (all 0.25s ease-out);
+}
+
+.content .navigation > li a {
+	opacity: 0.6;
+	display: block;
+	height: 100%;
+	color: $color-grey;
+	text-decoration: none;
+}
+
+.content .navigation > li a:hover {
+	opacity: 1;
+}
+
+.content .navigation > li a .arrow {
+	content: "";
+	position: absolute;
+	top: 0;
+	display: block;
+	width: $navArrowWidth;
+	height: $navHeight;
+}
+
+.content .navigation > li.prev a .arrow {
+	left: 0;
+}
+
+.content .navigation > li.next a .arrow {
+	right: 0;
+	@include transform (rotate(180deg));
+}
+
+$navOffset: 30px;
+
+.content .navigation > li .wrapper {
+	position: relative;
+	top: 50%;
+	width: 100%;
+	@include calc (max-width, "100% - #{$navArrowWidth + $navOffset}")
+	@include transform (translateY(-50%));
+}
+
+.content .navigation > li.prev a .wrapper {
+	margin-right: auto;
+	@include transform (translateX($navArrowWidth + 30px) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.next a .wrapper {
+	margin-left: auto;
+	@include transform (translateX(-($navArrowWidth + 30px)) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.prev a:hover .wrapper {
+	@include transform (translateX($navArrowWidth + 20px) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.next a:hover .wrapper {
+	@include transform (translateX(-($navArrowWidth + 20px)) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li span {
+	display: block;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.content .navigation > li .label {
+	margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.content .navigation > li .small {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.content .navigation > li .title {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.content .navigation > li a:hover .title {
+	text-decoration: underline;
+}

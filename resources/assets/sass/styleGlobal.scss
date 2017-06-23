@@ -1,0 +1,255 @@
+@import "_sass/common";
+@import "_sass/base";
+
+
+
+/****** COMMON *******/
+
+%clearFix {
+	@include clearFix;
+}
+
+$maxWidth: 1000px;
+
+
+
+/******* HEADER *******/
+
+#header {
+	position: relative;
+	width: 100%;
+	background: $color-white;
+	box-shadow: 0 0 1px $color-grey;
+}
+
+#headerMenu {
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 100%;
+	height: 75px;
+	max-width: $maxWidth;
+}
+
+#headerMenu #headerLogo {
+	z-index: 10;
+	position: absolute;
+	left: -20px;
+	top: -15px;
+	width: 105px;
+	height: 120px;
+}
+
+#headerMenu #headerLogo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("../../images/global/globalLogo.svg") center center no-repeat transparent;
+	background-size: contain;
+}
+
+#headerMenu ul,
+#headerMenu ul li {
+	list-style: none;
+}
+
+#header #headerMenu ul.menu {
+	display: inline-block;
+	padding-left: 100px;
+	height: 100%;
+	background: $color-white;
+}
+
+#header #headerMenu ul.menu li {
+	display: table;
+	float: left;
+	height: 75px;
+}
+
+#header #headerMenu ul.menu li a {
+	display: table-cell;
+	padding: 0 15px 0 15px;
+	width: 100%;
+	height: 75px;
+	color: $color-steamchat;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+#header #headerMenu ul.menu li a:hover {
+	color: $color-white;
+	background: $color-steamchat;
+	cursor: pointer;
+}
+
+#header #headerMenu ul.social {
+	float: right;
+	height: 100%;
+}
+
+#header #headerMenu ul.social:after {
+	@include clearFix;
+}
+
+#header #headerMenu ul.social li {
+	float: left;
+	display: table;
+	width: 40px;
+	height: 75px;
+}
+
+#header #headerMenu ul.social li > a {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#header #headerMenu ul.social li > a:hover {
+	background: $color-steamchat;
+}
+
+#header #headerMenu ul.social li > a > .icon-element {
+	margin: 0 auto 0 auto;
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+#header #headerMenu ul.social li > a > .icon-element > .layer {
+	fill: $color-steamchatLight;
+}
+
+#header #headerMenu ul.social li > a:hover > .icon-element > .layer {
+	fill: #FFFFFF;
+}
+
+
+
+/******* CONTENT *******/
+
+.content {
+	margin: 0 auto 0 auto;
+	padding: 80px 40px 120px 40px;
+	width: 100%;
+	max-width: 750px;
+}
+
+.content:after {
+	@extend %clearFix;
+}
+
+.content h1 {
+	margin-bottom: 20px;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: calculate-line-height(32px);
+	color: $color-steamchat;
+}
+
+.content h2 {
+	margin-top: 30px;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: calculate-line-height(24px);
+}
+
+.content h3 {
+	font-weight: 400;
+}
+
+.content p {
+	margin-top: 20px;
+}
+
+.content ul,
+.content li {
+	list-style: none;
+}
+
+
+
+/******* COLUMNS *******/
+
+.content .columns {
+	width: 100%;
+}
+
+.content .columns:after {
+	@extend %clearFix;
+}
+
+.content .columns > .left,
+.content .columns > .right {
+	max-width: 50%;
+}
+
+.content .columns > .left {
+	float: left;
+	padding-right: 10px;
+}
+
+.content .columns > .right {
+	float: right;
+	padding-left: 10px;
+}
+
+
+
+/******* SPECIAL LIST *******/
+
+.content .list-special, {
+	padding-left: 15px;
+	border-left: 5px solid $color-steamchat;
+}
+
+.content .list-special ul {
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.content .list-special li {
+	margin-top: 10px;
+}
+
+.content .list-special li:first-child {
+	margin-bottom: 0;
+}
+
+
+
+/******* FOOTER *******/
+
+#footer {
+	margin: 0 auto 0 auto;
+	padding: 0 40px 40px 40px;
+	width: 100%;
+	max-width: 700px;
+}
+
+#footer > .logo,
+#footer > .logo > .logo-element {
+	display: block;
+	width: 200px;
+	height: 60px;
+}
+
+#footer > .logo {
+	margin: 0 auto 40px auto;
+}
+
+#footer > p {
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: calculate-line-height(12px);
+	text-align: center;
+	color: $color-grey;
+}
+
+#footer > p a {
+	color: inherit;
+}

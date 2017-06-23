@@ -1,0 +1,6 @@
+@import "colours";
+@import "mixins";
+
+@function calculate-line-height ($font-size) {
+	@return $font-size * 1.5;
+}

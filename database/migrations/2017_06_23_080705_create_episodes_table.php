@@ -20,6 +20,7 @@ class CreateEpisodesTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->date('release_date');
+            $table->enum('category', ['interview', 'game-special', 'event-special'])->nullable()->default(null);
             $table->integer('file_size');
             $table->string('file_url');
             $table->string('file_duration');
