@@ -9,7 +9,7 @@
 			<div class="wrapper">
 
 				<h2>Search</h2>
-				<input type="search" placeholder="Filter by keywords..." class="search js-search" />
+				<input type="search" placeholder="Filter by description..." class="search js-search" />
 
 				<h2>Filter years</h2>
 				<ul class="filter years">
@@ -54,7 +54,7 @@
 
 				<div class="episode js-episode" data-description="{{ $episode->description }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
 					<a href="#" class="play" onclick="playerChange(event, this);"></a>
-					<h2><a href="#">{{ $episode->title }}</a></h2>
+					<h2><a href="#">{{ $episode->episodeTitle() }}</a></h2>
 					<h3><span>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</span> – {{ $episode->file_duration }}</h3>
 					<p>{{ $episode->description }}</p>
 					<ul class="categories">
