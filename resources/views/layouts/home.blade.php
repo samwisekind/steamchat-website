@@ -1,5 +1,11 @@
 @extends('master')
 
+@section('css')
+
+	<link href="{{ $url = asset('css/styleIndex.css') }}" rel="stylesheet" type="text/css">
+
+@endsection
+
 @section('content')
 
 	<section class="archives js-archives">
@@ -54,7 +60,7 @@
 
 				<div class="episode js-episode" data-description="{{ $episode->description }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
 					<a href="#" class="play" onclick="playerChange(event, this);"></a>
-					<h2><a href="#">{{ $episode->episodeTitle() }}</a></h2>
+					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle() }}</a></h2>
 					<h3><span>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</span> – {{ $episode->file_duration }}</h3>
 					<p>{{ $episode->description }}</p>
 					<ul class="categories">

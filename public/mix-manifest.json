@@ -1,5 +1,6 @@
 {
     "/js/scripts.js": "/js/scripts.js",
     "/css/styleGlobal.css": "/css/styleGlobal.css",
-    "/css/styleIndex.css": "/css/styleIndex.css"
+    "/css/styleIndex.css": "/css/styleIndex.css",
+    "/css/styleEpisode.css": "/css/styleEpisode.css"
 }

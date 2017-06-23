@@ -18,5 +18,8 @@ mix//.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/styleIndex.scss', 'public/css').options({
       processCssUrls: false
    })
+   .sass('resources/assets/sass/styleEpisode.scss', 'public/css').options({
+      processCssUrls: false
+   })
    .js('resources/assets/js/scripts.js', 'public/js')
    .copyDirectory('resources/assets/images', 'public/images');

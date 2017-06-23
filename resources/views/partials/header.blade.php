@@ -8,7 +8,7 @@
 		<title>Steamchat</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link href="{{ $url = asset('css/styleGlobal.css') }}" rel="stylesheet" type="text/css">
-		<link href="{{ $url = asset('css/styleIndex.css') }}" rel="stylesheet" type="text/css">
+		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
 		<meta property="og:url" content="TBA" />
 		<meta property="og:title" content="TBA" />
@@ -32,10 +32,10 @@
 
 			<nav id="headerMenu">
 
-				<div id="headerLogo"><a href="#"></a></div>
+				<div id="headerLogo"><a href="{{ route('home') }}"></a></div>
 
 				<ul class="menu">
-					<li><a href="#">Episodes</a></li>
+					<li><a href="{{ route('home') }}">Episodes</a></li>
 				</ul>
 
 				<ul class="social">

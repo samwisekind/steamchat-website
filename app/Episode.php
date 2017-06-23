@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Episode extends Model
 {
-	public function episodeTitle() {
+
+	public function getTitle() {
 		$type = $this->type;
 		$number = $this->number;
 		$title = $this->title;
@@ -18,30 +19,30 @@ class Episode extends Model
 		}
 		return $prepend . ' #' . $number . ': ' . $title;
 	}
-	public function previousEpisode() {
+
+	public function getURL() {
+		return route('episode', [
+			'type' => $this->type,
+			'number' => $this->number
+		]);
+	}
+
+	public function getPreviousEpisode() {
 		$type = $this->type;
 		$number = $this->number - 1;
 		$previousEpisode = static::where('type', $type)
 			->where('number', $number)
 			->first();
-		if (isset($previousEpisode) === true) {
-			return $previousEpisode;
-		}
-		else {
-			return false;
-		}
+		return $previousEpisode;
 	}
-	public function nextEpisode() {
+
+	public function getNextEpisode() {
 		$type = $this->type;
 		$number = $this->number + 1;
 		$nextEpisode = static::where('type', $type)
 			->where('number', $number)
 			->first();
-		if (isset($nextEpisode) === true) {
-			return $nextEpisode;
-		}
-		else {
-			return false;
-		}
+		return $nextEpisode;
 	}
+
 }
