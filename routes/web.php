@@ -18,11 +18,27 @@ Route::get('/', function () {
 
 })->name('home');
 
-Route::get('/{type}/{number}', function ($type, $number) {
+// Permanent redirect for plural of 'episode'
+Route::get('/episodes/{number}', function ($number) {
 
-	if ($type === 'episodes') {
-		$type = 'episode';
-	}
+    return redirect()->route('episode', [
+    	'type' => 'episode',
+    	'number' => $number
+    ]);
+
+});
+
+// Permanent redirect for plural of 'snack'
+Route::get('/snacks/{number}', function ($number) {
+
+    return redirect()->route('episode', [
+    	'type' => 'snack',
+    	'number' => $number
+    ]);
+
+});
+
+Route::get('/{type}/{number}', function ($type, $number) {
 
 	$episode = Episode::where('type', $type)
 		->where('number', $number)
