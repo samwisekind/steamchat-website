@@ -383,16 +383,16 @@
 	background: #FFFFFF;
 }
 
-/* ARCHIVES: TYPES */
+/* ARCHIVES: categories */
 
-$type-padding-x: 8px;
-$type-padding-y: 6px;
-$typeIcon-size: 12px;
+$category-padding-x: 8px;
+$category-padding-y: 6px;
+$categoryIcon-size: 12px;
 
-.archives .types .type {
+.archives .categories .category {
 	position: relative;
 	display: block;
-	padding: $type-padding-y $type-padding-x $type-padding-y (($type-padding-x * 2) + $typeIcon-size);
+	padding: $category-padding-y $category-padding-x $category-padding-y (($category-padding-x * 2) + $categoryIcon-size);
 	border-radius: 4px;
 	font-size: 12px;
 	line-height: 12px;
@@ -401,56 +401,56 @@ $typeIcon-size: 12px;
 	text-decoration: none;
 }
 
-.archives .types .type.interview,
-.archives .types .input:checked + .label .type.interview {
+.archives .categories .category.interview,
+.archives .categories .input:checked + .label .category.interview {
 	background: #FF4081;
 }
 
-.archives .types .type.game,
-.archives .types .input:checked + .label .type.game {
+.archives .categories .category.game,
+.archives .categories .input:checked + .label .category.game {
 	background: #7C4DFF;
 }
 
-.archives .types .type.event,
-.archives .types .input:checked + .label .type.event {
+.archives .categories .category.event,
+.archives .categories .input:checked + .label .category.event {
 	background: #FF5722;
 }
 
-.archives .types .input + label .type.interview {
+.archives .categories .input + label .category.interview {
 	background: #FF80AB;
 }
 
-.archives .types .input + label .type.game {
+.archives .categories .input + label .category.game {
 	background: #B388FF;
 }
 
-.archives .types .input + label .type.event {
+.archives .categories .input + label .category.event {
 	background: #FF9E80;
 }
 
-.archives .types .type:before {
+.archives .categories .category:before {
 	content: "";
 	position: absolute;
-	left: $type-padding-x;
+	left: $category-padding-x;
 	top: 50%;
-	margin-top: -($typeIcon-size / 2);
+	margin-top: -($categoryIcon-size / 2);
 	display: block;
-	width: $typeIcon-size;
-	height: $typeIcon-size;
+	width: $categoryIcon-size;
+	height: $categoryIcon-size;
 	background: center center no-repeat transparent;
 	background-size: contain;
 }
 
-.archives .types .type.interview:before {
-	background-image: url('../../images/index/index_type_interview.svg');
+.archives .categories .category.interview:before {
+	background-image: url('../../images/index/index_category_interview.svg');
 }
 
-.archives .types .type.game:before {
-	background-image: url('../../images/index/index_type_game.svg');
+.archives .categories .category.game:before {
+	background-image: url('../../images/index/index_category_game.svg');
 }
 
-.archives .types .type.event:before {
-	background-image: url('../../images/index/index_type_event.svg');
+.archives .categories .category.event:before {
+	background-image: url('../../images/index/index_category_event.svg');
 }
 
 
@@ -591,25 +591,25 @@ $input-size: 20px;
 
 $checkbox-size: $input-size - 8px;
 
-.archives .sidebar .filter.year li .input + .label {
+.archives .sidebar .filter.years li .input + .label {
 	color: $color-grey;
 	@include transition (color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
-.archives .sidebar .filter.year li .input:checked + .label {
+.archives .sidebar .filter.years li .input:checked + .label {
 	color: inherit;
 }
 
-.archives .sidebar .filter.year li .input + .label:before {
+.archives .sidebar .filter.years li .input + .label:before {
 	border-radius: 5px;
 }
 
-.archives .sidebar .filter.year li .input:disabled + .label:before {
+.archives .sidebar .filter.years li .input:disabled + .label:before {
 	border-color: $color-greyLight !important;
 	background: $color-greyLight !important;
 }
 
-.archives .sidebar .filter.year li .input + .label:after {
+.archives .sidebar .filter.years li .input + .label:after {
 	left: ($input-size - $checkbox-size) / 2;
 	margin-top: -($checkbox-size / 2);
 	width: $checkbox-size;
@@ -621,13 +621,13 @@ $checkbox-size: $input-size - 8px;
 
 /* ARCHIVES: SIDEBAR: RADIO */
 
-.archives .sidebar .filter.types li .input + .label:before {
+.archives .sidebar .filter.categories li .input + .label:before {
 	border-radius: 50%;
 }
 
 $radio-size: $input-size - 10px;
 
-.archives .sidebar .filter.types li .input + .label:after {
+.archives .sidebar .filter.categories li .input + .label:after {
 	left: ($input-size - $radio-size) / 2;
 	margin-top: -($radio-size / 2);
 	width: $radio-size;
@@ -690,7 +690,8 @@ $playButton-icon-size: 12px;
 }
 
 .archives .episode.filter-year,
-.archives .episode.filter-description {
+.archives .episode.filter-description,
+.archives .episode.filter-category {
 	display: none;
 }
 
@@ -762,21 +763,21 @@ $playButton-icon-size: 12px;
 	line-height: 14px + (14px / 2);
 }
 
-.archives .episode > .types {
+.archives .episode > .categories {
 	margin-top: 10px;
 	list-style: none;
 }
 
-.archives .episode > .types:after {
+.archives .episode > .categories:after {
 	@include clearFix;
 }
 
-.archives .episode > .types > li {
+.archives .episode > .categories > li {
 	margin-right: 10px;
 	float: left;
 }
 
-.archives .episode > .types > li:last-child {
+.archives .episode > .categories > li:last-child {
 	margin-right: 0;
 }
 
