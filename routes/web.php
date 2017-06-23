@@ -11,6 +11,9 @@
 |
 */
 
+use App\Episode;
+
 Route::get('/', function () {
-    return view('welcome');
+	$episodes = Episode::all();
+    return $episodes;
 });
