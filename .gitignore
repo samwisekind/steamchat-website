@@ -5,6 +5,7 @@
 /public/fonts
 /public/js
 /public/images
+/public/favicon.ico
 /storage/*.key
 /vendor
 /.idea

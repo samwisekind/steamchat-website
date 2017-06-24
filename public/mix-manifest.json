@@ -1,6 +1,7 @@
 {
     "/js/scripts.js": "/js/scripts.js",
+    "/css/global.css": "/css/global.css",
     "/css/index.css": "/css/index.css",
     "/css/episode.css": "/css/episode.css",
-    "/css/global.css": "/css/global.css"
+    "/favicon.ico": "/favicon.ico"
 }

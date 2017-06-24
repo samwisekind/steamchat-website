@@ -22,4 +22,5 @@ mix//.js('resources/assets/js/app.js', 'public/js')
       processCssUrls: false
    })
    .js('resources/assets/js/scripts.js', 'public/js')
+   .copy('resources/assets/favicon.ico', 'public')
    .copyDirectory('resources/assets/images', 'public/images');

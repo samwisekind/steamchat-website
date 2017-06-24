@@ -1,3 +1,18 @@
+@php
+
+	$meta_title = 'Steamchat';
+	$meta_description = 'A Podcast On All Things Valve';
+
+	if (Route::current()->getName() === 'episode') {
+		$meta_title = $meta_title . ' ' . $episode->getTitle(false);
+		$meta_description = '(Released ' . date_format(new DateTime($episode->release_date), 'j/m/Y') . ') '. $episode->description;
+	}
+	else {
+		$meta_title = $meta_title . ': ' . $meta_description;
+	};
+
+@endphp
+
 <!DOCTYPE html>
 
 <html>
@@ -5,22 +20,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-		<title>Steamchat</title>
+		<title>{{ $meta_title }}</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link href="{{ $url = asset('css/global.css') }}" rel="stylesheet" type="text/css">
 		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
-		<meta property="og:url" content="TBA" />
-		<meta property="og:title" content="TBA" />
-		<meta property="og:description" content="TBA" />
-		<meta name="description" content="TBA" />
-		<meta property="og:image" content="TBA" />
-		@if(1 === 1)
+		<meta property="og:url" content="{{ Request::url() }}" />
+		<meta property="og:title" content="{{ $meta_title }}" />
+		<meta property="og:description" content="{{ $meta_description }}" />
+		<meta name="description" content="{{ $meta_description }}" />
+		<meta property="og:image" content="{{ asset('images/global/og_image.png') }}" />
+		@if(Route::current()->getName() === 'episode')
 			<meta property="og:type" content="music.song" />
 			<meta property="music:album" content="Steamchat Podcast" />
-			<meta property="music:album:track" content="TBA" />
+			<meta property="music:album:track" content="{{ $episode->number }}" />
 			<meta property="music:musician" content="Steamchat Podcast" />
-			<meta property="music:duration" content="TBA" />
+			<meta property="music:duration" content="{{ $episode->getDurationSeconds() }}" />
 		@else
 			<meta property="og:type" content="website" />
 		@endif

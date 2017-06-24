@@ -30,6 +30,16 @@ class Episode extends Model
 		]);
 	}
 
+	public function getDurationSeconds() {
+		$duration = $this->file_duration;
+		sscanf($duration, '%d:%d:%d', $hours, $minutes, $seconds);
+		$duration = ($hours * 3600) + ($minutes * 60);
+		if ($seconds !== null) {
+			$duration += $seconds;
+		}
+		return $duration;
+	}
+
 	public function getPreviousEpisode() {
 		$type = $this->type;
 		$number = $this->number - 1;
