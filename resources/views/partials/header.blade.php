@@ -28,9 +28,9 @@
 
 	<body>
 
-		<header id="header">
+		<header id="header" @isset($latest) style="background-image: url('{{ $latest->header_background_image }}'); background-color: {{ $latest->header_mask_colour }}" @endisset>
 
-			<nav id="headerMenu">
+			<nav id="headerMenu" @isset($latest) style="background-image: url('{{ $latest->header_mask_image }}');" @endisset>
 
 				<div id="headerLogo"><a href="{{ route('home') }}"></a></div>
 
@@ -77,6 +77,12 @@
 				</ul>
 
 			</nav>
+
+			@isset($latest)
+				@include('components.headerPlayer', [
+					'episode' => $latest
+				])
+			@endisset
 
 		</header>
 

@@ -11,8 +11,12 @@ Route::get('/', function () {
 		->orderBy('release_date', 'desc')
 		->get();
 
+	$latest = $episodes->where('type', 'episode')
+		->first();
+
     return view('layouts.home', [
 		'episodes' => $episodes,
+		'latest' => $latest,
 		'years' => $years
 	]);
 

@@ -7,17 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Episode extends Model
 {
 
-	public function getTitle() {
+	public function getTitle($short) {
 		$type = $this->type;
 		$number = $this->number;
 		$title = $this->title;
-		if ($type === 'episode') {
-			$prepend = 'Episode';
+		if ($short === true) {
+			$prepend = '';
+		}
+		else if ($type === 'episode') {
+			$prepend = 'Episode ';
 		}
 		else if ($type === 'snack') {
-			$prepend = 'Snack';
+			$prepend = 'Snack ';
 		}
-		return $prepend . ' #' . $number . ': ' . $title;
+		return $prepend . '#' . $number . ': ' . $title;
 	}
 
 	public function getURL() {

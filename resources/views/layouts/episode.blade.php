@@ -12,7 +12,7 @@
 
 		<div class="main">
 
-			<h1>{{ $episode->getTitle() }}</h1>
+			<h1>{{ $episode->getTitle(false) }}</h1>
 			<h2>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</h2>
 			<p>{{ $episode->description }}</p>
 
@@ -52,7 +52,7 @@
 					</svg>
 					<span class="wrapper">
 						<span class="small label">Previously:</span>
-						<span class="title">{{ $previous->getTitle() }}</span>
+						<span class="title">{{ $previous->getTitle(true) }}</span>
 						<span class="small">{{ date_format(new DateTime($previous->release_date), 'j/m/Y') }}</span>
 					</span>
 				</a>
@@ -67,7 +67,7 @@
 					</svg>
 					<span class="wrapper">
 						<span class="small label">Up next:</span>
-						<span class="title">{{ $next->getTitle() }}</span>
+						<span class="title">{{ $next->getTitle(true) }}</span>
 						<span class="small">{{ date_format(new DateTime($next->release_date), 'j/m/Y') }}</span>
 					</span>
 				</a>
