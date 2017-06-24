@@ -57,3 +57,9 @@ Route::get('/{type}/{number}', function ($type, $number) {
 	]);
 
 })->name('episode');
+
+Route::get('/about', function () {
+
+    return view('layouts.about');
+
+})->name('about');

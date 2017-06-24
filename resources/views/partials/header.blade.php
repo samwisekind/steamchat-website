@@ -36,6 +36,7 @@
 
 				<ul class="links">
 					<li><a href="{{ route('home') }}">Episodes</a></li>
+					<li><a href="{{ route('about') }}">About</a></li>
 				</ul>
 
 				<ul class="social">
