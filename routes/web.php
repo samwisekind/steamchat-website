@@ -63,3 +63,9 @@ Route::get('/about', function () {
     return view('layouts.about');
 
 })->name('about');
+
+Route::get('/specials', function () {
+
+    return view('layouts.specials');
+
+})->name('specials');

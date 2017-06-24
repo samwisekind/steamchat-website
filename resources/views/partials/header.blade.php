@@ -37,6 +37,7 @@
 				<ul class="links">
 					<li @if(Route::current()->getName() === 'episode') class="current" @endif><a href="{{ route('home') }}">Episodes</a></li>
 					<li @if(Route::current()->getName() === 'about') class="current" @endif><a href="{{ route('about') }}">About</a></li>
+					<li @if(Route::current()->getName() === 'specials') class="current" @endif><a href="{{ route('specials') }}">Specials</a></li>
 				</ul>
 
 				<ul class="social">
