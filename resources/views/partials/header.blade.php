@@ -35,8 +35,8 @@
 				<div class="logo"><a href="{{ route('home') }}"></a></div>
 
 				<ul class="links">
-					<li><a href="{{ route('home') }}">Episodes</a></li>
-					<li><a href="{{ route('about') }}">About</a></li>
+					<li @if(Route::current()->getName() === 'episode') class="current" @endif><a href="{{ route('home') }}">Episodes</a></li>
+					<li @if(Route::current()->getName() === 'about') class="current" @endif><a href="{{ route('about') }}">About</a></li>
 				</ul>
 
 				<ul class="social">
