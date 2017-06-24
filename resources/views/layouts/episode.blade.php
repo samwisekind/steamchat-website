@@ -2,7 +2,7 @@
 
 @section('css')
 
-	<link href="{{ $url = asset('css/styleEpisode.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ $url = asset('css/episode.css') }}" rel="stylesheet" type="text/css">
 
 @endsection
 

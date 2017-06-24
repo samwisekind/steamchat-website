@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 var sidebar = require('./modules/sidebar.js');
-var headerPlayer = require('./modules/headerPlayer.js');
+// var headerPlayer = require('./modules/header-player.js');
 var listen = require('./modules/listen.js');
 
 (function(){
@@ -9,6 +9,12 @@ var listen = require('./modules/listen.js');
 	var $archives = $('.js-archives');
 	if ($archives.length > 0) {
 		sidebar.init($archives);
+	}
+
+	// Bind the headerPlayer
+	var $headerPlayer = $('.js-headerPlayer');
+	if ($headerPlayer.length > 0) {
+		// headerPlayer.init($headerPlayer);
 	}
 
 	// Bind any listening elements

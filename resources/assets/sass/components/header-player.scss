@@ -1,0 +1,330 @@
+/* PLAYER */
+
+.player {
+	width: 100%;
+	height: 100%;
+	border-bottom: 5px solid $color-steamchat;
+}
+
+.player > .container {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -500px;
+	width: 1000px;
+	height: 400px;
+}
+
+
+
+/* TOGGLE */
+
+.player > .toggle {
+	opacity: .75;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	width: 100px;
+	height: 100px;
+	background: url("../../images/index/playerIcons.svg") -60px 0 no-repeat transparent;
+}
+
+.player > .toggle:hover {
+	opacity: 1;
+	background-position: -160px 0;
+}
+
+.player.playing > .toggle {
+	background-position: -60px -100px;
+}
+
+.player.playing > .toggle:hover {
+	background-position: -160px -100px;
+}
+
+
+
+/* TITLE */
+
+.player .title h1,
+.player .title h2 {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+}
+
+.player .title h1 a,
+.player .title h2 a {
+	display: block;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	color: $color-white;
+	text-decoration: none;
+	background: $color-steamchat;
+}
+
+.player .title h1 {
+	z-index: 30;
+	bottom: 0;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.player .title h1 a {
+	padding-bottom: 15px;
+	max-width: 700px;
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.player .title:hover h1 a {
+	max-width: 100%;
+	text-decoration: underline;
+}
+
+.player .title h2 {
+	z-index: 0;
+	bottom: -40px;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+}
+
+
+
+/* TIME */
+
+.player .time {
+	pointer-events: none;
+	z-index: 20;
+	position: absolute;
+	right: 0;
+	bottom: 15px;
+	color: $color-white;
+	font-family: "Lato", Verdana, sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 32px;
+	letter-spacing: 0px;
+	text-align: right;
+	text-shadow: 0 0 3px $color-black;
+	@include userSelect(none);
+}
+
+#header.noBackground .player .time {
+	text-shadow: none;
+}
+
+
+
+/* VOLUME */
+
+.player .volume {
+	display: table;
+	position: absolute;
+	bottom: -40px;
+	right: 0;
+	width: 150px;
+	height: 35px;
+	background: $color-steamchat;
+	@include userSelect(none);
+}
+
+.player .volume > .wrapper {
+	display: table-cell;
+	padding: 0 10px 0 10px;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.player .volume-toggle {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url("../../images/index/playerIcons.svg") -3px 0 no-repeat;
+}
+
+.player .volume.muted .volume-toggle {
+	background-position: -27px 0;
+}
+
+.player .volume.muted .volume-slider {
+	margin-left: auto;
+	display: block;
+	width: 105px;
+	height: 15px;
+}
+
+
+
+/* PROGRESS */
+
+.player > .progress {
+	z-index: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.player > .progress:hover {
+	cursor: pointer;
+}
+
+.player.int .player > .progress:hover {
+	cursor: default;
+}
+
+.player > .progress > div {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	height: 400px;
+}
+
+.player > .progress > .progress-cover {
+	z-index: 0;
+	background: url("../../images/index/playerCover.svg") left center repeat $color-steamchatCover;
+}
+
+.player > .progress > .progress-.line {
+	opacity: 0;
+	z-index: 10;
+	left: 0;
+	width: 5px;
+	background-color: $color-steamchat;
+}
+
+.player > .progress:hover .line {
+	opacity: 1;
+}
+
+
+
+/* LOADING  */
+
+.player > .loading {
+	pointer-events: none;
+	opacity: 0;
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+
+ .player > .loading > .wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 80px;
+	margin: -10px 0 0 -40px;
+	text-align: center;
+}
+
+ .player > .loading .circle {
+	float: left;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #FFFFFF;
+	border-radius: 100%;
+	display: inline-block;
+	@include transform(scale(0));
+	@include animation(circle 1.5s infinite ease-in-out both);
+	@include animationPlayState(paused);
+}
+
+.player.loading .player > .loading .circle {
+	@include animationPlayState(running);
+}
+
+.player > .loading .circle2 {
+ 	@include animationDelay(0.2s);
+}
+
+.player > .loading .circle3 {
+	margin-right: 0;
+	@include animationDelay(0.4s);
+}
+
+@-webkit-keyframes circle {
+	0% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+	80% { -webkit-transform: scale(0); }
+}
+
+@-moz-keyframes circle {
+	0% { -moz-transform: scale(0); }
+	40% { -moz-transform: scale(1.0); }
+	80% { -moz-transform: scale(0); }
+}
+
+@-ms-keyframes circle {
+	0% { -ms-transform: scale(0); }
+	40% { -ms-transform: scale(1.0); }
+	80% { -ms-transform: scale(0); }
+}
+
+@-o-keyframes circle {
+	0% { -o-transform: scale(0); }
+	40% { -o-transform: scale(1.0); }
+	80% { -o-transform: scale(0); }
+}
+
+@keyframes circle {
+	0% { transform: scale(0); }
+	40% { transform: scale(1.0); }
+	80% { transform: scale(0); }
+}
+
+.player.int .player .time,
+.player.int .player > .progress > .progress-cover,
+.player.int .player > .progress > .progress-.line,
+.player.int .volume {
+	display: none;
+}
+
+.player.loading .player > .toggle,
+.player.loading .player .time,
+.player.loading .player > .progress > .progress-cover,
+.player.loading .player > .progress > .progress-.line {
+	display: none;
+}
+
+.player.loading > .loading {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+
+
+/* TRANSITIONS */
+
+.player > .toggle,
+.player > .progress > .line {
+	@include transition(opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+.player > .loading {
+	@include transition(opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}
+
+.player > .progress > .progress-cover.smooth {
+	@include transition(all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+}

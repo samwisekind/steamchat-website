@@ -1,12 +1,12 @@
-<div id="headerplayer" class="int">
+<div class="player js-player int">
 
-	<audio id="playerAudio" preload="none">
+	<audio class="js-audio" preload="none">
 		<source src="{{ $latest->episode_url }}" type="audio/mp3">
 	</audio>
 
-	<div id="playerWrapper">
+	<div class="container">
 
-		<div id="playerTitle">
+		<div class="title">
 			<h1>
 				<a href="{{ $latest->getURL() }}">{{ $latest->getTitle(true) }}</a>
 			</h1>
@@ -15,27 +15,27 @@
 			</h2>
 		</div>
 
-		<div id="playerTime">
-			<span id="playerTime-current">--:--:--</span> / <span id="playerTime-total">--:--:--</span>
+		<div class="time">
+			<span class="time-current">--:--:--</span> / <span class="time-total">--:--:--</span>
 		</div>
 
-		<div id="playerVolume">
+		<div class="volume">
 			<div class="wrapper">
-				<a id="playerVolume-toggle" href="#" onclick="playerMute(event)"></a>
-				<input id="playerVolume-slider" type="range" value="80" min="0" max="100">
+				<a class="volume-toggle" href="#"></a>
+				<input class="volume-slider" type="range" value="80" min="0" max="100">
 			</div>
 		</div>
 
 	</div>
 
-	<a id="playerToggle" class="playing" href="#" onclick="playerToggle(event)"></a>
+	<a class="toggle playing js-play" href="#"></a>
 
-	<div id="playerProgress">
-		<div class="cover"></div>
-		<div class="line"></div>
+	<div class="progress">
+		<div class="progress-cover"></div>
+		<div class="progress-line"></div>
 	</div>
 
-	<div id="playerLoading">
+	<div class="loading">
 		<div class="wrapper">
 			<div class="circle circle1"></div>
 			<div class="circle circle2"></div>

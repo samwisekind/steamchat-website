@@ -7,7 +7,7 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title>Steamchat</title>
 		<link rel="shortcut icon" href="favicon.ico" />
-		<link href="{{ $url = asset('css/styleGlobal.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ $url = asset('css/global.css') }}" rel="stylesheet" type="text/css">
 		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
 		<meta property="og:url" content="TBA" />
@@ -28,13 +28,13 @@
 
 	<body>
 
-		<header id="header" @isset($latest) style="background-image: url('{{ $latest->header_background_image }}'); background-color: {{ $latest->header_mask_colour }}" @endisset>
+		<header class="global-header" @isset($latest) style="background-image: url('{{ $latest->header_background_image }}'); background-color: {{ $latest->header_mask_colour }}" @endisset>
 
-			<nav id="headerMenu" @isset($latest) style="background-image: url('{{ $latest->header_mask_image }}');" @endisset>
+			<nav class="menu" @isset($latest) style="background-image: url('{{ $latest->header_mask_image }}');" @endisset>
 
-				<div id="headerLogo"><a href="{{ route('home') }}"></a></div>
+				<div class="logo"><a href="{{ route('home') }}"></a></div>
 
-				<ul class="menu">
+				<ul class="links">
 					<li><a href="{{ route('home') }}">Episodes</a></li>
 				</ul>
 

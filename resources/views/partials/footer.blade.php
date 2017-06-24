@@ -1,6 +1,6 @@
 	</main>
 
-		<footer id="footer">
+		<footer class="global-footer">
 
 			<a href="#" class="logo">
 				<img src="http://placehold.it/200x60" alt="" class="logo-element" />

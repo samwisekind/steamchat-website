@@ -1,29 +1,24 @@
-@import "_sass/common";
+/* PARIALS */
+@import "partials/mixins";
+@import "partials/constants";
+@import "partials/colours";
 
 
 
-/****** COMMON *******/
+/* HEADER */
 
-%clearFix {
-	@include clearFix;
-}
-
-
-
-/******* HEADER *******/
-
-#header,
-#headerMenu {
+.global-header,
+.global-header > .menu {
 	background-color: transparent;
 	box-shadow: none;
 }
 
-#header {
+.global-header {
 	height: 400px;
 	background: center top no-repeat $color-steamchatExtraLight;
 }
 
-#headerMenu {
+.global-header > .menu {
 	z-index: 10;
 	position: absolute;
 	left: 50%;
@@ -31,342 +26,31 @@
 	margin: 0 0 0 -500px;
 }
 
-#header.noBackground {
+.global-header.noBackground {
 	background-image: none !important;
 }
 
-#header.noBackground #headerMenu {
+.global-header.noBackground > .menu {
 	background-color: $color-white !important;
 }
 
-/******* HEADER - PLAYER *******/
 
-#headerPlayer {
-	border-bottom: 5px solid $color-steamchat;
-}
 
-#playerToggle {
-	opacity: .75;
-	z-index: 10;
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -50px;
-	margin-top: -50px;
-	width: 100px;
-	height: 100px;
-	background: url("../../images/index/playerIcons.svg") -60px 0 no-repeat transparent;
-}
-
-#playerToggle:hover {
-	opacity: 1;
-	background-position: -160px 0;
-}
-
-#headerPlayer.playing #playerToggle {
-	background-position: -60px -100px;
-}
-
-#headerPlayer.playing #playerToggle:hover {
-	background-position: -160px -100px;
-}
-
-#playerWrapper {
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	margin-left: -500px;
-	width: 1000px;
-	height: 400px;
-}
-
-#playerTitle h1,
-#playerTitle h2 {
-	display: inline-block;
-	position: absolute;
-	left: 0;
-}
-
-#playerTitle h1 a,
-#playerTitle h2 a {
-	display: block;
-	padding: 10px;
-	width: 100%;
-	height: 100%;
-	color: $color-white;
-	text-decoration: none;
-	background: $color-steamchat;
-}
-
-#playerTitle h1 {
-	z-index: 30;
-	bottom: 0;
-	display: inline-block;
-	max-width: 100%;
-}
-
-#playerTitle h1 a {
-	padding-bottom: 15px;
-	max-width: 700px;
-	font-size: 48px;
-	line-height: 48px;
-	font-weight: 700;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-#playerTitle:hover h1 a {
-	max-width: 100%;
-	text-decoration: underline;
-}
-
-#playerTitle h2 {
-	z-index: 0;
-	bottom: -40px;
-	font-size: 20px;
-	line-height: 20px;
-	font-weight: normal;
-}
-
-#playerTime {
-	pointer-events: none;
-	z-index: 20;
-	position: absolute;
-	right: 0;
-	bottom: 15px;
-	color: $color-white;
-	font-family: "Lato", Verdana, sans-serif;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 32px;
-	letter-spacing: 0px;
-	text-align: right;
-	text-shadow: 0 0 3px $color-black;
-	@include userSelect (none);
-}
-
-#header.noBackground #playerTime {
-	text-shadow: none;
-}
-
-#playerVolume {
-	display: table;
-	position: absolute;
-	bottom: -40px;
-	right: 0;
-	width: 150px;
-	height: 35px;
-	background: $color-steamchat;
-	@include userSelect (none);
-}
-
-#playerVolume .wrapper {
-	display: table-cell;
-	padding: 0 10px 0 10px;
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
-}
-
-#playerVolume-toggle {
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background: url("../../images/index/playerIcons.svg") -3px 0 no-repeat;
-}
-
-#playerVolume.muted #playerVolume-toggle {
-	background-position: -27px 0;
-}
-
-#playerVolume-slider {
-	margin-left: auto;
-	display: block;
-	width: 105px;
-	height: 15px;
-}
-
-#playerProgress {
-	z-index: 0;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-#playerProgress:hover {
-	cursor: pointer;
-}
-
-#headerPlayer.int #playerProgress:hover {
-	cursor: default;
-}
-
-#playerProgress > div {
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	height: 400px;
-}
-
-#playerProgress .cover {
-	z-index: 0;
-	background: url("../../images/index/playerCover.svg") left center repeat $color-steamchatCover;
-}
-
-#playerProgress .line {
-	opacity: 0;
-	z-index: 10;
-	left: 0;
-	width: 5px;
-	background-color: $color-steamchat;
-}
-
-#playerProgress:hover .line {
-	opacity: 1;
-}
-
-#playerLoading {
-	pointer-events: none;
-	opacity: 0;
-	z-index: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .5);
-}
-
- #playerLoading .wrapper {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 80px;
-	margin: -10px 0 0 -40px;
-	text-align: center;
-}
-
- #playerLoading .circle {
-	float: left;
-	margin-right: 10px;
-	width: 20px;
-	height: 20px;
-	background-color: #FFFFFF;
-	border-radius: 100%;
-	display: inline-block;
-	@include transform (scale(0));
-	@include animation (circle 1.5s infinite ease-in-out both);
-	@include animationPlayState (paused);
-}
-
-#headerPlayer.loading #playerLoading .circle {
-	@include animationPlayState (running);
-}
-
- #playerLoading .circle2 {
- 	@include animationDelay (0.2s);
-}
-
- #playerLoading .circle3 {
-	margin-right: 0;
-	@include animationDelay (0.4s);
-}
-
-@-webkit-keyframes circle {
-	0% { -webkit-transform: scale(0); }
-	40% { -webkit-transform: scale(1.0); }
-	80% { -webkit-transform: scale(0); }
-}
-
-@-moz-keyframes circle {
-	0% { -moz-transform: scale(0); }
-	40% { -moz-transform: scale(1.0); }
-	80% { -moz-transform: scale(0); }
-}
-
-@-ms-keyframes circle {
-	0% { -ms-transform: scale(0); }
-	40% { -ms-transform: scale(1.0); }
-	80% { -ms-transform: scale(0); }
-}
-
-@-o-keyframes circle {
-	0% { -o-transform: scale(0); }
-	40% { -o-transform: scale(1.0); }
-	80% { -o-transform: scale(0); }
-}
-
-@keyframes circle {
-	0% { transform: scale(0); }
-	40% { transform: scale(1.0); }
-	80% { transform: scale(0); }
-}
-
-#headerPlayer.loading #playerToggle,
-#headerPlayer.int #playerTime,
-#headerPlayer.loading #playerTime,
-#headerPlayer.int #playerProgress .cover,
-#headerPlayer.loading #playerProgress .cover,
-#headerPlayer.int #playerProgress .line,
-#headerPlayer.loading #playerProgress .line,
-#headerPlayer.int #playerVolume {
-	display: none !important;
-}
-
-#headerPlayer.loading #playerLoading {
-	pointer-events: auto;
-	opacity: 1;
-}
-
-/******* TRANSITIONS *******/
-
-#playerToggle,
-#playerProgress .line {
-	@include transition (opacity .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
-
-#playerLoading {
-	@include transition (opacity .5s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
-
-#playerProgress .cover.smooth {
-	@include transition (all .25s cubic-bezier(0.165, 0.840, 0.440, 1.000));
-}
+/* HEADER PLAYER */
+@import "components/header-player";
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/******* CONTENT *******/
+/* CONTENT*/
 
 .content {
-	max-width: 1400px;
+	max-width: $maxWidth;
 }
 
 
 
-/******* ARCHIVES *******/
-
-/* ARCHIVES: COMMON */
+/* ARCHIVES */
 
 .archives {
 	margin-top: 60px;
@@ -379,7 +63,7 @@
 .archives .sidebar,
 .archives .list > .episode {
 	border-radius: 2px;
-	@include boxShadow ("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)");
+	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)");
 	background: #FFFFFF;
 }
 
@@ -453,10 +137,6 @@ $categoryIcon-size: 12px;
 	background-image: url('../../images/index/index_category_event.svg');
 }
 
-
-
-/* ARCHIVES: SIDEBAR */
-
 $sidebar-size: 200px;
 
 .archives .sidebar {
@@ -473,7 +153,7 @@ $sidebar-size: 200px;
 .archives .sidebar.sticky {
 	position: fixed;
 	top: 40px;
-	@include calc (max-height, "100% - #{40px * 2}");
+	@include calc(max-height, "100% - #{40px * 2}");
 	overflow: hidden;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
@@ -500,7 +180,7 @@ $sidebar-size: 200px;
 	appearance: none;
 	border-radius: 5px;
 	border: 2px solid $color-greyLight;
-	@include transition (border-color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+	@include transition(border-color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
 .archives .sidebar .search:hover,
@@ -546,7 +226,7 @@ $input-size: 20px;
 
 .archives .sidebar .filter li .input + .label:before,
 .archives .sidebar .filter li .input:checked + .label:after {
-	@include transition (all 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
+	@include transition(all 0.25s cubic-bezier(0.175, 0.885, 0.320, 1.275));
 }
 
 .archives .sidebar .filter li .input + .label:before {
@@ -584,16 +264,14 @@ $input-size: 20px;
 
 .archives .sidebar .filter li .input:checked + .label:after {
 	opacity: 1;
-	@include transform (scale(1) translateZ(0) !important);
+	@include transform(scale(1) translateZ(0) !important);
 }
-
-/* ARCHIVES: SIDEBAR: CHECKBOXES */
 
 $checkbox-size: $input-size - 8px;
 
 .archives .sidebar .filter.years li .input + .label {
 	color: $color-grey;
-	@include transition (color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+	@include transition(color 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 }
 
 .archives .sidebar .filter.years li .input:checked + .label {
@@ -616,7 +294,7 @@ $checkbox-size: $input-size - 8px;
 	height: $checkbox-size;
 	background: url("../../images/index/index_checkbox.svg") center center no-repeat;
 	background-size: contain;
-	@include transform (scale(0.25) translateZ(0));
+	@include transform(scale(0.25) translateZ(0));
 }
 
 /* ARCHIVES: SIDEBAR: RADIO */
@@ -634,7 +312,7 @@ $radio-size: $input-size - 10px;
 	height: $radio-size;
 	border-radius: 50%;
 	background: #FFFFFF;
-	@include transform (scale(0) translateZ(0));
+	@include transform(scale(0) translateZ(0));
 }
 
 .archives .sidebar .count,
@@ -665,14 +343,12 @@ $radio-size: $input-size - 10px;
 	background: #F1F1F1;
 }
 
-/* ARCHIVES: EPISODES */
-
 $playButton-size: 35px;
 $playButton-icon-size: 12px;
 
 .archives .list {
 	float: right;
-	@include calc (width, "100% - #{$sidebar-size + 40px}");
+	@include calc(width, "100% - #{$sidebar-size + 40px}");
 }
 
 .archives .list > .episode {
@@ -728,7 +404,7 @@ $playButton-icon-size: 12px;
 }
 
 .archives .episode .play:hover:before {
-	@include transform (scale(1.2));
+	@include transform(scale(1.2));
 }
 
 .archives .episode > h2 {

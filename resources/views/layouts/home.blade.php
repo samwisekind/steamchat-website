@@ -2,7 +2,7 @@
 
 @section('css')
 
-	<link href="{{ $url = asset('css/styleIndex.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ $url = asset('css/index.css') }}" rel="stylesheet" type="text/css">
 
 @endsection
 
@@ -59,7 +59,7 @@
 			@foreach($episodes as $episode)
 
 				<div class="episode js-episode" data-description="{{ $episode->description }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
-					<a href="#" class="play" onclick="playerChange(event, this);"></a>
+					<a href="#" class="play"></a>
 					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle(false) }}</a></h2>
 					<h3><span>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</span> – {{ $episode->file_duration }}</h3>
 					<p>{{ $episode->description }}</p>
