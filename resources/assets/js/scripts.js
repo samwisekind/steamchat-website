@@ -1,5 +1,5 @@
 var sidebar = require('./modules/sidebar.js');
-// var headerPlayer = require('./modules/header-player.js');
+var headerPlayer = require('./modules/header-player.js');
 var listen = require('./modules/listen.js');
 
 (function(){

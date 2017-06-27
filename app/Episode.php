@@ -58,4 +58,19 @@ class Episode extends Model
 		return $nextEpisode;
 	}
 
+	public function getJSONData() {
+
+		return response()->json([
+			'title' => static::getTitle(true),
+			'release' => date_format(new \DateTime($this->release_date), 'd/m/Y'),
+			'url' => static::getURL(),
+			'file' => $this->file_url,
+			'duration' => static::getDurationSeconds(),
+			'header-mask' => $this->header_mask_image,
+			'header-colour' => $this->header_mask_colour,
+			'header-background' => $this->header_background_image
+		]);
+
+	}
+
 }

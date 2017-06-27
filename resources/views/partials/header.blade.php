@@ -95,11 +95,9 @@
 
 			</nav>
 
-			@isset($latest)
-				@include('components.headerPlayer', [
-					'episode' => $latest
-				])
-			@endisset
+			@if(Route::current()->getName() === 'home')
+				<div class="js-player"></div>
+			@endif
 
 		</header>
 

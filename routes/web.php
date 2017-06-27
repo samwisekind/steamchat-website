@@ -7,7 +7,8 @@ Route::get('/api/latest', function () {
 
 	return Episode::where('type', 'episode')
 		->orderBy('release_date', 'desc')
-		->first();
+		->first()
+		->getJSONData();
 
 });
 
@@ -28,12 +29,8 @@ Route::get('/', function () {
 		->orderBy('release_date', 'desc')
 		->get();
 
-	$latest = $episodes->where('type', 'episode')
-		->first();
-
     return view('layouts.home', [
 		'episodes' => $episodes,
-		'latest' => $latest,
 		'years' => $years
 	]);
 
