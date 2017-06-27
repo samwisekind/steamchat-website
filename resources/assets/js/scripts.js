@@ -1,24 +1,23 @@
-window.$ = window.jQuery = require('jquery');
 var sidebar = require('./modules/sidebar.js');
-// var headerPlayer = require('./modules/header-player.js');
+var headerPlayer = require('./modules/header-player.js');
 var listen = require('./modules/listen.js');
 
 (function(){
 
 	// Bind the archive behaviours
-	var $archives = $('.js-archives');
-	if ($archives.length > 0) {
-		sidebar.init($archives);
+	var $sidebar = document.getElementsByClassName('js-archives');
+	if ($sidebar.length > 0) {
+		sidebar.init($sidebar[0]);
 	}
 
 	// Bind the headerPlayer
-	var $headerPlayer = $('.js-headerPlayer');
+	var $headerPlayer = document.getElementsByClassName('js-headerPlayer');
 	if ($headerPlayer.length > 0) {
 		// headerPlayer.init($headerPlayer);
 	}
 
 	// Bind any listening elements
-	var $listen = $('.js-listen');
+	var $listen = document.getElementsByClassName('js-listen');
 	if ($listen.length > 0) {
 		listen.init($listen);
 	}

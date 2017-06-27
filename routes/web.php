@@ -2,6 +2,24 @@
 
 use App\Episode;
 
+// Return JSON for latest episode
+Route::get('/api/latest', function () {
+
+	return Episode::where('type', 'episode')
+		->orderBy('release_date', 'desc')
+		->first()
+		->getJSONData();
+
+});
+
+// Return JSON for episode data by episode ID
+Route::get('/api/episode/{id}', function ($id) {
+
+	return Episode::where('id', $id)
+		->first();
+
+});
+
 Route::get('/', function () {
 
 	$episodes = Episode::orderBy('release_date', 'desc')
@@ -11,12 +29,8 @@ Route::get('/', function () {
 		->orderBy('release_date', 'desc')
 		->get();
 
-	$latest = $episodes->where('type', 'episode')
-		->first();
-
     return view('layouts.home', [
 		'episodes' => $episodes,
-		'latest' => $latest,
 		'years' => $years
 	]);
 
