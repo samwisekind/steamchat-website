@@ -44,6 +44,7 @@ class Episode extends Model
 		$type = $this->type;
 		$number = $this->number - 1;
 		$previousEpisode = static::where('type', $type)
+			->where('active', true)
 			->where('number', $number)
 			->first();
 		return $previousEpisode;
@@ -53,6 +54,7 @@ class Episode extends Model
 		$type = $this->type;
 		$number = $this->number + 1;
 		$nextEpisode = static::where('type', $type)
+			->where('active', true)
 			->where('number', $number)
 			->first();
 		return $nextEpisode;

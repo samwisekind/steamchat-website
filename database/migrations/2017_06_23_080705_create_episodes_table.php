@@ -15,6 +15,7 @@ class CreateEpisodesTable extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('active')->default(false);
             $table->enum('type', ['episode', 'snack']);
             $table->integer('number');
             $table->string('title');

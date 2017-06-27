@@ -6,6 +6,7 @@ use App\Episode;
 Route::get('/api/latest', function () {
 
 	return Episode::where('type', 'episode')
+		->where('active', true)
 		->orderBy('release_date', 'desc')
 		->first()
 		->getJSONData();
@@ -24,9 +25,11 @@ Route::get('/api/episode/{id}', function ($id) {
 Route::get('/', function () {
 
 	$episodes = Episode::orderBy('release_date', 'desc')
+		->where('active', true)
 		->get();
 
 	$years = Episode::select(DB::raw('DISTINCT YEAR(release_date)'))
+		->where('active', true)
 		->orderBy('release_date', 'desc')
 		->get();
 
