@@ -1,4 +1,3 @@
-window.$ = window.jQuery = require('jquery');
 var sidebar = require('./modules/sidebar.js');
 // var headerPlayer = require('./modules/header-player.js');
 var listen = require('./modules/listen.js');
@@ -6,9 +5,9 @@ var listen = require('./modules/listen.js');
 (function(){
 
 	// Bind the archive behaviours
-	var $archives = $('.js-archives');
-	if ($archives.length > 0) {
-		sidebar.init($archives);
+	var $sidebar = document.getElementsByClassName('js-archives');
+	if ($sidebar.length > 0) {
+		sidebar.init($sidebar[0]);
 	}
 
 	// Bind the headerPlayer
