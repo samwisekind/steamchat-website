@@ -1,5 +1,5 @@
 var sidebar = require('./modules/sidebar.js');
-var headerPlayer = require('./modules/header-player.js');
+var player = require('./modules/player.js');
 var listen = require('./modules/listen.js');
 
 (function(){
@@ -10,10 +10,10 @@ var listen = require('./modules/listen.js');
 		sidebar.init($sidebar[0]);
 	}
 
-	// Bind the headerPlayer
-	var $headerPlayer = document.getElementsByClassName('js-headerPlayer');
-	if ($headerPlayer.length > 0) {
-		// headerPlayer.init($headerPlayer);
+	// Bind the player
+	var $player = document.getElementsByClassName('js-player');
+	if ($player.length > 0) {
+		player.init($player[0]);
 	}
 
 	// Bind any listening elements

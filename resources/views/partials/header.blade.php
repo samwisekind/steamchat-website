@@ -43,9 +43,9 @@
 
 	<body>
 
-		<header class="global-header" @isset($latest) style="background-image: url('{{ $latest->header_background_image }}'); background-color: {{ $latest->header_mask_colour }}" @endisset>
+		<header class="global-header">
 
-			<nav class="menu" @isset($latest) style="background-image: url('{{ $latest->header_mask_image }}');" @endisset>
+			<nav class="menu js-menu">
 
 				<div class="logo"><a href="{{ route('home') }}"></a></div>
 

@@ -16,7 +16,7 @@
 			<h2>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</h2>
 			<p>{{ $episode->description }}</p>
 
-			<audio controls preload="none" class="player js-player">
+			<audio controls preload="none" class="audio js-audio">
 				<source src="{{ $episode->file_url }}" type="audio/mp3">
 			</audio>
 

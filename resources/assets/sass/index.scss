@@ -14,31 +14,20 @@
 	box-shadow: none;
 }
 
-.global-header {
-	height: 400px;
-	background: center top no-repeat $color-steamchatExtraLight;
-}
-
 .global-header > .menu {
 	z-index: 10;
 	position: absolute;
 	left: 50%;
 	top: 0;
 	margin: 0 0 0 -500px;
-}
-
-.global-header.noBackground {
-	background-image: none !important;
-}
-
-.global-header.noBackground > .menu {
-	background-color: $color-white !important;
+	background: center center no-repeat #FFFFFF;
 }
 
 
 
 /* HEADER PLAYER */
-@import "components/header-player";
+
+@import "components/player";
 
 
 

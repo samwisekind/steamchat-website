@@ -66,9 +66,9 @@ class Episode extends Model
 			'url' => static::getURL(),
 			'file' => $this->file_url,
 			'duration' => static::getDurationSeconds(),
-			'header-mask' => $this->header_mask_image,
-			'header-colour' => $this->header_mask_colour,
-			'header-background' => $this->header_background_image
+			'mask' => $this->header_mask_image,
+			'colour' => $this->header_mask_colour,
+			'background' => $this->header_background_image
 		]);
 
 	}

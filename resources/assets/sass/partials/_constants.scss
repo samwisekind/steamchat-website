@@ -1,1 +1,6 @@
 $maxWidth: 1400px;
+$easeStandard: cubic-bezier(0.4, 0.0, 0.2, 1);
+$easeDeceleration: cubic-bezier(0.0, 0.0, 0.2, 1);
+$easeAcceleration: cubic-bezier(0.4, 0.0, 1, 1);
+$easeSharp: cubic-bezier(0.4, 0.0, 0.6, 1);
+

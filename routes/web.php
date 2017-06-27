@@ -16,7 +16,8 @@ Route::get('/api/latest', function () {
 Route::get('/api/episode/{id}', function ($id) {
 
 	return Episode::where('id', $id)
-		->first();
+		->first()
+		->getJSONData();
 
 });
 
