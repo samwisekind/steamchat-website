@@ -11,13 +11,13 @@ var listen = require('./modules/listen.js');
 	}
 
 	// Bind the headerPlayer
-	var $headerPlayer = $('.js-headerPlayer');
+	var $headerPlayer = document.getElementsByClassName('js-headerPlayer');
 	if ($headerPlayer.length > 0) {
 		// headerPlayer.init($headerPlayer);
 	}
 
 	// Bind any listening elements
-	var $listen = $('.js-listen');
+	var $listen = document.getElementsByClassName('js-listen');
 	if ($listen.length > 0) {
 		listen.init($listen);
 	}

@@ -14,5 +14,7 @@ function listenBehaviour(event) {
 }
 
 export function init(elements) {
-	elements.on('click', listenBehaviour);
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].addEventListener('click', listenBehaviour);
+	}
 }
