@@ -12,7 +12,7 @@
 
 		</footer>
 
-		<script src="{{ $url = asset('js/scripts.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('js/scripts.js') }}" type="text/javascript"></script>
 
 	</body>
 

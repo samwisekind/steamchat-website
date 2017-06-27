@@ -22,7 +22,7 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title>{{ $meta_title }}</title>
 		<link rel="shortcut icon" href="favicon.ico" />
-		<link href="{{ $url = asset('css/global.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('css/global.css') }}" rel="stylesheet" type="text/css">
 		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
 		<meta property="og:url" content="{{ Request::url() }}" />
