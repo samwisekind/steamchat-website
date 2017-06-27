@@ -30,12 +30,12 @@ Route::get('/', function () {
 		->orderBy('release_date', 'desc')
 		->get();
 
-    return view('layouts.home', [
+    return view('layouts.index', [
 		'episodes' => $episodes,
 		'years' => $years
 	]);
 
-})->name('home');
+})->name('index');
 
 // Permanent redirect for plural of 'episode'
 Route::get('/episodes/{number}', function ($number) {
@@ -64,7 +64,7 @@ Route::get('/{type}/{number}', function ($type, $number) {
 		->first();
 
 	if ($episode === null) {
-		return redirect()->route('home');
+		return redirect()->route('index');
 	}
 
     return view('layouts.episode', [

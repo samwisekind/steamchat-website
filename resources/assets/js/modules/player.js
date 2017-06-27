@@ -80,7 +80,7 @@ function player(element) {
 						}
 						else {
 							self.globalMenu.style.backgroundImage = null;
-							self.globalMenu.style.backgroundColor = null;
+							self.globalMenu.style.backgroundColor = '#FFFFFF';
 						}
 
 						if (autoplay === true) {

@@ -10,7 +10,6 @@
 
 .global-header,
 .global-header > .menu {
-	background-color: transparent;
 	box-shadow: none;
 }
 
@@ -19,8 +18,8 @@
 	position: absolute;
 	left: 50%;
 	top: 0;
-	margin: 0 0 0 -500px;
-	background: center center no-repeat #FFFFFF;
+	background: top center no-repeat #FFFFFF;
+	@include transform(translateX(-50%));
 }
 
 
@@ -31,11 +30,10 @@
 
 
 
-
-/* CONTENT*/
+/* CONTENT */
 
 .content {
-	max-width: $maxWidth;
+	max-width: $maxWidthLarge + ($paddingLarge * 2);
 }
 
 

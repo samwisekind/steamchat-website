@@ -47,10 +47,10 @@
 
 			<nav class="menu js-menu">
 
-				<div class="logo"><a href="{{ route('home') }}"></a></div>
+				<div class="logo"><a href="{{ route('index') }}"></a></div>
 
 				<ul class="links">
-					<li @if(Route::current()->getName() === 'episode') class="current" @endif><a href="{{ route('home') }}">Episodes</a></li>
+					<li @if(Route::current()->getName() === 'episode') class="current" @endif><a href="{{ route('index') }}">Episodes</a></li>
 					<li @if(Route::current()->getName() === 'specials') class="current" @endif><a href="{{ route('specials') }}">Specials</a></li>
 					<li @if(Route::current()->getName() === 'about') class="current" @endif><a href="{{ route('about') }}">About</a></li>
 				</ul>
@@ -95,7 +95,7 @@
 
 			</nav>
 
-			@if(Route::current()->getName() === 'home')
+			@if(Route::current()->getName() === 'index')
 				<div class="js-player"></div>
 			@endif
 
