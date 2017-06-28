@@ -69,7 +69,7 @@ class Episode extends Model
 			'file' => $this->file_url,
 			'duration' => static::getDurationSeconds(),
 			'mask' => $this->mask,
-			'colour' => $this->mask,
+			'colour' => $this->colour,
 			'background' => $this->background
 		]);
 
