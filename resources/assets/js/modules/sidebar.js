@@ -68,7 +68,7 @@ function searchBehaviour() {
 	}
 
 	if (value !== '') {
-		$archives.$sidebar.$search.classList.remove('active');
+		$archives.$sidebar.$search.classList.add('active');
 	}
 	else {
 		$archives.$sidebar.$search.classList.remove('active');

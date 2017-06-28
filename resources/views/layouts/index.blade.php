@@ -37,14 +37,14 @@
 						<input type="radio" name="category" id="category-interview" value="interview" class="input js-category" />
 						<label for="category-interview" class="label"><span data-type="interview" class="category interview">Interview</span></label>
 					</li>
-		   			<li>
-		   				<input type="radio" name="category" id="category-game" value="game-special" class="input js-category" />
-		   				<label for="category-game" class="label"><span data-type="game" class="category game">Game Special</span></label>
-		   			</li>
-		   			<li>
-		   				<input type="radio" name="category" id="category-event" value="event-special" class="input js-category" />
-		   				<label for="category-event" class="label"><span data-type="event" class="category event">Event Special</span></label>
-		   			</li>
+					<li>
+						<input type="radio" name="category" id="category-game" value="game-special" class="input js-category" />
+						<label for="category-game" class="label"><span data-type="game" class="category game">Game Special</span></label>
+					</li>
+					<li>
+						<input type="radio" name="category" id="category-event" value="event-special" class="input js-category" />
+						<label for="category-event" class="label"><span data-type="event" class="category event">Event Special</span></label>
+					</li>
 				</ul>
 
 			</div>
