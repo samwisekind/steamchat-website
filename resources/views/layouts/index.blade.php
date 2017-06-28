@@ -29,21 +29,21 @@
 
 				<h2>Filter type</h2>
 				<ul class="filter categories">
-					<li>
+					<li class="category all">
 						<input type="radio" name="category" id="category-all" value="all" class="input js-category" checked />
 						<label for="category-all" class="label">All</label>
 					</li>
-					<li>
+					<li class="category interview">
 						<input type="radio" name="category" id="category-interview" value="interview" class="input js-category" />
-						<label for="category-interview" class="label"><span data-type="interview" class="category interview">Interview</span></label>
+						<label for="category-interview" class="label"><span class="container">Interview</span></label>
 					</li>
-					<li>
+					<li class="category game">
 						<input type="radio" name="category" id="category-game" value="game-special" class="input js-category" />
-						<label for="category-game" class="label"><span data-type="game" class="category game">Game Special</span></label>
+						<label for="category-game" class="label"><span class="container">Game Special</span></label>
 					</li>
-					<li>
+					<li class="category event">
 						<input type="radio" name="category" id="category-event" value="event-special" class="input js-category" />
-						<label for="category-event" class="label"><span data-type="event" class="category event">Event Special</span></label>
+						<label for="category-event" class="label"><span class="container">Event Special</span></label>
 					</li>
 				</ul>
 
@@ -63,14 +63,14 @@
 					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle(false) }}</a></h2>
 					<h3><span>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</span> – {{ $episode->file_duration }}</h3>
 					<p>{{ $episode->description }}</p>
-					<ul class="categories">
+					<ul class="categories active">
 						@isset($episode->category)
 							@if($episode->category === 'interview')
-								<li><span class="category interview">Interview</span></li>
+								<li class="category interview"><span class="container">Interview</span></li>
 							@elseif($episode->category === 'game-special')
-								<li><span class="category game">Game Special</span></li>
+								<li class="category game"><span class="container">Game Special</span></li>
 							@elseif($episode->category === 'event-special')
-								<li><span class="category event">Event Special</span></li>
+								<li class="category event"><span class="container">Event Special</span></li>
 							@endif
 						@endisset
 					</ul>

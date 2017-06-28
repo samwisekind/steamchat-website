@@ -18,7 +18,7 @@
 	position: absolute;
 	left: 50%;
 	top: 0;
-	background: top center no-repeat #FFFFFF;
+	background: top center no-repeat $colour-white;
 	@include transform(translateX(-50%));
 }
 
@@ -52,7 +52,7 @@
 .archives .list > .episode {
 	border-radius: 2px;
 	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)");
-	background: #FFFFFF;
+	background: $colour-white;
 }
 
 
@@ -61,68 +61,61 @@
 
 $category-padding-x: 8px;
 $category-padding-y: 6px;
-$categoryIcon-size: 12px;
+$categoryIconSize: 12px;
 
-.archives .categories .category {
+.archives .categories .category .container {
 	position: relative;
 	display: block;
-	padding: $category-padding-y $category-padding-x $category-padding-y (($category-padding-x * 2) + $categoryIcon-size);
+	padding: $category-padding-y $category-padding-x $category-padding-y (($category-padding-x * 2) + $categoryIconSize);
 	border-radius: 4px;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 14px;
+	line-height: 14px;
 	text-align: left;
+	color: $colour-white;
 	text-decoration: none;
 }
 
-.archives .categories .category.interview,
-.archives .categories .input:checked + .label .category.interview {
-	background: #FF4081;
+$categories: (
+	("interview", $colour-category-interview, $colour-category-interviewLight),
+	("game", $colour-category-game, $colour-category-gameLight),
+	("event", $colour-category-event, $colour-category-eventLight)
+);
+
+@each $categoryName, $activeColour, $inactiveColour in $categories {
+
+	.archives .categories .category.#{$categoryName} .container, {
+		background: $inactiveColour;
+	}
+
+	.archives .categories.active .category.#{$categoryName} .container,
+	.archives .categories .category.#{$categoryName} .input:checked + .label .container {
+		background: $activeColour;
+	}
+
 }
 
-.archives .categories .category.game,
-.archives .categories .input:checked + .label .category.game {
-	background: #7C4DFF;
-}
-
-.archives .categories .category.event,
-.archives .categories .input:checked + .label .category.event {
-	background: #FF5722;
-}
-
-.archives .categories .input + label .category.interview {
-	background: #FF80AB;
-}
-
-.archives .categories .input + label .category.game {
-	background: #B388FF;
-}
-
-.archives .categories .input + label .category.event {
-	background: #FF9E80;
-}
-
-.archives .categories .category:before {
+.archives .categories .category .container:before {
 	content: "";
 	position: absolute;
 	left: $category-padding-x;
 	top: 50%;
-	margin-top: -($categoryIcon-size / 2);
+	margin-top: -($categoryIconSize / 2);
 	display: block;
-	width: $categoryIcon-size;
-	height: $categoryIcon-size;
+	width: $categoryIconSize;
+	height: $categoryIconSize;
 	background: center center no-repeat transparent;
 	background-size: contain;
 }
 
-.archives .categories .category.interview:before {
+.archives .categories .category.interview .container:before {
 	background-image: url("../../images/index/archives/category-interview.svg");
 }
 
-.archives .categories .category.game:before {
+.archives .categories .category.game .container:before {
 	background-image: url("../../images/index/archives/category-game.svg");
 }
 
-.archives .categories .category.event:before {
+.archives .categories .category.event .container:before {
 	background-image: url("../../images/index/archives/category-event.svg");
 }
 
@@ -168,22 +161,22 @@ $sidebar-size: 200px;
 	width: 100%;
 	height: 35px;
 	border-radius: 5px;
-	border: 2px solid $color-greyLight;
+	border: 2px solid $colour-greyLight;
 	@include removeStyling;
 	@include transition(border-color 0.2s $easeStandard);
 }
 
 .archives > .sidebar .search:hover {
-	border-color: $color-steamchatExtraLight;
+	border-color: $colour-steamchatExtraLight;
 }
 
 .archives > .sidebar .search:focus,
 .archives > .sidebar .search.active {
-	border-color: $color-steamchat;
+	border-color: $colour-steamchat;
 }
 
 .archives > .sidebar .search.active:hover {
-	border-color: $color-steamchatLight;
+	border-color: $colour-steamchatLight;
 }
 
 
@@ -233,22 +226,22 @@ $inputSize: 20px;
 	margin-top: -($inputSize / 2);
 	width: $inputSize;
 	height: $inputSize;
-	border: 2px solid $color-grey;
-	background: #FFFFFF;
+	border: 2px solid $colour-grey;
+	background: $colour-white;
 }
 
 .archives > .sidebar .filter .input + .label:hover:before {
-	border-color: $color-steamchatExtraLight;
+	border-color: $colour-steamchatExtraLight;
 }
 
 .archives > .sidebar .filter .input:checked + .label:before {
-	border-color: $color-steamchat;
-	background: $color-steamchat;
+	border-color: $colour-steamchat;
+	background: $colour-steamchat;
 }
 
 .archives > .sidebar .filter .input:checked + .label:hover:before {
-	border-color: $color-steamchatLight;
-	background: $color-steamchatLight;
+	border-color: $colour-steamchatLight;
+	background: $colour-steamchatLight;
 }
 
 .archives > .sidebar .filter .input + .label:after {
@@ -272,7 +265,7 @@ $inputSize: 20px;
 $tickSize: $inputSize - 8px;
 
 .archives .sidebar .filter.years .input + .label {
-	color: $color-grey;
+	color: $colour-grey;
 	@include transition(color 0.2s $easeStandard);
 }
 
@@ -285,8 +278,8 @@ $tickSize: $inputSize - 8px;
 }
 
 .archives .sidebar .filter.years .input:disabled + .label:before {
-	border-color: $color-greyLight;
-	background: $color-greyLight;
+	border-color: $colour-greyLight;
+	background: $colour-greyLight;
 }
 
 .archives .sidebar .filter.years .input + .label:after {
@@ -314,7 +307,7 @@ $circleSize: $inputSize - 10px;
 	width: $circleSize;
 	height: $circleSize;
 	border-radius: 50%;
-	background: #FFFFFF;
+	background: $colour-white;
 }
 
 
@@ -336,7 +329,7 @@ $circleSize: $inputSize - 10px;
 }
 
 .archives .sidebar.active .count {
-	color: darken($color-grey, 15%);
+	color: $colour-greyDark;
 }
 
 .archives .sidebar .reset {
@@ -345,8 +338,18 @@ $circleSize: $inputSize - 10px;
 }
 
 .archives .sidebar .reset:hover {
-	background: #F1F1F1;
+	background: $colour-steamchatExtraLight;
 }
+
+
+
+
+
+
+
+
+
+
 
 $playButton-size: 35px;
 $playButton-icon-size: 12px;
@@ -383,12 +386,12 @@ $playButton-icon-size: 12px;
 	width: $playButton-size;
 	height: $playButton-size;
 	border-radius: 50%;
-	background-color: $color-steamchatLight;
+	background-color: $colour-steamchatLight;
 	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)");
 }
 
 .archives .episode .play:hover {
-	background-color: $color-steamchat;
+	background-color: $colour-steamchat;
 }
 
 .archives .episode .play:before {
@@ -419,11 +422,11 @@ $playButton-icon-size: 12px;
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: 400;
-	color: $color-steamchat;
+	color: $colour-steamchat;
 }
 
 .archives .episode > p > .release {
-	color: $color-grey;
+	color: $colour-grey;
 }
 
 .archives .episode > p > .release:after {
@@ -435,7 +438,7 @@ $playButton-icon-size: 12px;
 .archives .episode > h3 {
 	font-size: 14px;
 	line-height: 14px;
-	color: $color-grey;
+	color: $colour-grey;
 }
 
 .archives .episode > p {
@@ -469,12 +472,12 @@ $playButton-icon-size: 12px;
 	font-size: 32px;
 	line-height: 32px;
 	text-align: center;
-	color: $color-greyLight;
+	color: $colour-greyLight;
 }
 
 .archives .list .no-results,
 .archives .list .no-results a {
-	color: $color-greyLight;
+	color: $colour-greyLight;
 }
 
 .archives.empty .list .no-results {
@@ -482,5 +485,5 @@ $playButton-icon-size: 12px;
 }
 
 .archives.empty .list .no-results a:hover {
-	color: $color-grey;
+	color: $colour-grey;
 }

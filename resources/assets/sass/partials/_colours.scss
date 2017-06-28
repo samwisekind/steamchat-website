@@ -1,15 +1,28 @@
 /* BRAND */
 
-$color-steamchat: #0064BF;
-$color-steamchatDark: darken($color-steamchat, 10);
-$color-steamchatLight: lighten($color-steamchat, 10);
-$color-steamchatExtraLight: lighten($color-steamchat, 40);
-$color-steamchatOpaque: rgba($color-steamchatExtraLight, 0.5);
-$color-steamchatCover: rgba($color-steamchat, 0.25);
+$colour-steamchat: #0064BF;
+$colour-steamchatDark: darken($colour-steamchat, 10);
+$colour-steamchatLight: lighten($colour-steamchat, 10);
+$colour-steamchatExtraLight: lighten($colour-steamchat, 40);
+$colour-steamchatOpaque: rgba($colour-steamchatExtraLight, 0.5);
+$colour-steamchatCover: rgba($colour-steamchat, 0.25);
 
 /* GENERAL */
 
-$color-white: #FFFFFF;
-$color-grey: #999999;
-$color-greyLight: #AAAAAA;
-$color-black: #222222;
+$colour-white: #FFFFFF;
+$colour-background: #ECEFF1;
+$colour-greyLight: #90A4AE;
+$colour-grey: #607D8B;
+$colour-greyDark: #455A64;
+$colour-text: #263238;
+$colour-black: #263238;
+
+/* CATEGORIES */
+
+$colour-category-interview: #2979FF;
+$colour-category-game: #D500F9;
+$colour-category-event: #F50057;
+
+$colour-category-interviewLight: #82B1FF;
+$colour-category-gameLight: #EA80FC;
+$colour-category-eventLight: #FF80AB;

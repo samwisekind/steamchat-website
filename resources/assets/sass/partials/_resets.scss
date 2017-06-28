@@ -1,4 +1,8 @@
-html {
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
 	@include browserPrefix("box-sizing", "border-box");
 }
 
@@ -9,20 +13,13 @@ body {
     font-size: 16px;
     @include lineHeight(16px);
     text-align: left;
-	color: $color-black;
-	background: $color-white;
+	color: $colour-text;
+	background: $colour-background;
 	text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
 }
-
-*,
-*:before,
-*:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;  }
 
 aside,
 section,
@@ -35,17 +32,19 @@ footer, {
 
 a {
 	font-weight: 500;
-	color: $color-steamchat;
+	color: $colour-steamchat;
 }
 
 a:hover {
-	color: $color-steamchatDark;
+	color: $colour-steamchatDark;
 }
 
 h1,
 h2,
 h3,
 p,
+ul,
+ol,
 li {
 	display: block;
 }
