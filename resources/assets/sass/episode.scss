@@ -8,6 +8,12 @@
 
 /* CONTENT */
 
+$transcriptHeight: 70px;
+$transcriptBookWidth: 26px;
+$transcriptArrowWidth: 22px;
+$transcriptButtonWidth: 70px + ($transcriptArrowWidth * 2);
+$transcriptButtonHeight: $transcriptHeight - $paddingSmall;
+
 .content .main > h1 {
 	margin-bottom: 10px;
 }
@@ -17,8 +23,68 @@
 	color: $colour-greyDark;
 }
 
+.content .main > .transcript {
+	position: relative;
+	margin-top: 40px;
+	padding: 0 $paddingSmall 0 $paddingSmall;
+	height: $transcriptHeight;
+	color: #FFFFFF;
+	background: $colour-steamchatLight;
+	@include boxShadow($paperShadow);
+}
+
+.content .main > .transcript > .transcript-icon,
+.content .main > .transcript .wrapper,
+.content .main > .transcript > .transcript-view > .view-icon {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+.content .main > .transcript > .transcript-icon {
+	position: absolute;
+	left: $paddingSmall;
+	width: $transcriptBookWidth;
+}
+
+.content .main > .transcript .wrapper {
+	position: relative;
+	display: block;
+}
+
+.content .main > .transcript > .transcript-text {
+	padding-left: $transcriptBookWidth + $paddingSmall;
+	padding-right: $transcriptButtonWidth + $paddingSmall;
+}
+
+.content .main > .transcript > .transcript-view {
+	position: absolute;
+	right: $paddingSmall / 2;
+	top: 50%;
+	display: block;
+	margin-top: -($transcriptButtonHeight / 2);
+	padding-left: $transcriptArrowWidth;
+	padding-right: $transcriptArrowWidth * 2;
+	width: $transcriptButtonWidth;
+	height: $transcriptButtonHeight;
+	color: inherit;
+	text-align: left;
+	text-decoration: none;
+	background: $colour-steamchat;
+}
+
+.content .main > .transcript > .transcript-view:hover {
+	text-decoration: underline;
+	background: $colour-steamchatDark;
+}
+
+.content .main > .transcript > .transcript-view > .view-icon {
+	position: absolute;
+	right: $transcriptArrowWidth;
+	width: $transcriptArrowWidth;
+}
+
 .content .main > .audio {
-	margin-top: 60px;
+	margin-top: 40px;
 	width: 100%;
 }
 
