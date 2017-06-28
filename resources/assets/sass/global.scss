@@ -21,6 +21,13 @@
 
 /* HEADER */
 
+$logoWidth: 105px;
+$logoHeight: 120px;
+$logoOffsetX: -20px;
+$logoOffsetY: -15px;
+$listMargin: 10px;
+$iconSize: 20px;
+
 .global-header {
 	position: relative;
 	width: 100%;
@@ -39,13 +46,13 @@
 .global-header > .menu > .logo {
 	z-index: 10;
 	position: absolute;
-	left: -20px;
-	top: -15px;
-	width: 105px;
-	height: 120px;
+	left: $logoOffsetX;
+	top: $logoOffsetY;
+	width: $logoWidth;
+	height: $logoHeight;
 }
 
-.global-header > .menu > .logo a {
+.global-header > .menu > .logo > a {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -53,83 +60,73 @@
 	background-size: contain;
 }
 
-.global-header > .menu ul,
-.global-header > .menu ul li {
+.global-header > .menu > ul,
+.global-header > .menu > ul > li {
 	list-style: none;
 }
 
-.global-header > .menu > .links {
-	display: inline-block;
-	padding-left: 100px;
-	height: 100%;
-	background: $color-white;
-}
-
-.global-header > .menu > .links li {
-	display: table;
-	float: left;
-	height: 75px;
-}
-
-.global-header > .menu > .links li a {
-	display: table-cell;
-	padding: 0 15px 0 15px;
-	width: 100%;
-	height: 75px;
-	color: $color-steamchat;
-	font-weight: 400;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	vertical-align: middle;
-}
-
-.global-header > .menu > .links li.current a,
-.global-header > .menu > .links li a:hover {
-	color: $color-white;
-	background: $color-steamchat;
-	cursor: pointer;
-}
-
-.global-header > .menu ul.social {
-	float: right;
+.global-header > .menu > ul {
 	height: 100%;
 }
 
-.global-header > .menu ul.social:after {
+.global-header > .menu > ul:after {
 	@extend %clearFix;
 }
 
-.global-header > .menu ul.social li {
-	float: left;
+.global-header > .menu > ul > li {
 	display: table;
-	width: 40px;
-	height: 75px;
-}
-
-.global-header > .menu ul.social li > a {
-	display: table-cell;
-	width: 100%;
+	float: left;
 	height: 100%;
-	vertical-align: middle;
 }
 
-.global-header > .menu ul.social li > a:hover {
+.global-header > .menu > ul > li > a {
+	display: table-cell;
+	vertical-align: middle;
+	color: $color-steamchat;
+}
+
+.global-header > .menu > ul > li.current > a,
+.global-header > .menu > ul > li > a:hover {
+	cursor: pointer;
+	color: $color-white;
 	background: $color-steamchat;
 }
 
-.global-header > .menu ul.social li > a > .icon-element {
-	margin: 0 auto 0 auto;
-	display: block;
-	width: 24px;
-	height: 24px;
+.global-header > .menu > ul.links {
+	display: inline-block;
+	padding-left: ($logoWidth + $logoOffsetX) + $listMargin;
+	background: $color-white;
 }
 
-.global-header > .menu ul.social li > a > .icon-element > .layer {
+.global-header > .menu > ul.links > li > a {
+	padding: 0 $listMargin 0 $listMargin;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.global-header > .menu > ul.social {
+	float: right;
+	margin-right: $listMargin;
+}
+
+.global-header > .menu > ul.social > li {
+	width: 40px;
+}
+
+.global-header > .menu > ul.social > li > a > .icon {
+	margin: 0 auto 0 auto;
+	display: block;
+	width: $iconSize;
+	height: auto;
+}
+
+.global-header > .menu > ul.social > li > a > .icon > .icon-layer {
 	fill: $color-steamchatLight;
 }
 
-.global-header > .menu ul.social li > a:hover > .icon-element > .layer {
+.global-header > .menu > ul.social > li > a:hover > .icon > .icon-layer {
 	fill: #FFFFFF;
 }
 
@@ -140,7 +137,6 @@
 .content {
 	margin: 0 auto 0 auto;
 	padding: ($paddingLarge * 2) $paddingLarge ($paddingLarge * 3) $paddingLarge;
-	width: 100%;
 	max-width: $maxWidthSmall;
 }
 
@@ -159,12 +155,8 @@
 .content h2 {
 	margin-top: 30px;
 	font-size: 24px;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: lineHeight(24px);
-}
-
-.content h3 {
-	font-weight: 400;
 }
 
 .content p {
@@ -255,6 +247,6 @@
 	color: $color-grey;
 }
 
-.global-footer > p a {
+.global-footer > p > a {
 	color: inherit;
 }
