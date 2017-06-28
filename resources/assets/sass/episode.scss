@@ -8,63 +8,36 @@
 
 /* CONTENT */
 
-$sidebarWidth: 150px;
-
-.content {
-	max-width: 1000px;
-}
-
-.content > .wrapper:after {
-	@include clearFix;
-}
-
-.content .main,
-.content .sidebar {
-	display: inline-block;
-}
-
-
-
-/* MAIN */
-
-.content .main {
-	float: left;
-	@include calc(width, "100% - #{$sidebarWidth + 40px}");
-}
-
-.content .main h1 {
+.content .main > h1 {
 	margin-bottom: 10px;
 }
 
-.content .main h2 {
+.content .main > h2 {
 	margin-top: 0;
-	color: $colour-grey;
+	color: $colour-greyDark;
 }
 
-.content .main .audio {
+.content .main > .audio {
 	margin-top: 60px;
 	width: 100%;
 }
+
+
 
 /* SIDEBAR */
 
 .content .sidebar {
 	padding-top: 10px;
-	float: right;
-	width: $sidebarWidth;
 }
 
-.content .sidebar > ul,
-.content .sidebar > ul > li {
-	list-style: none;
+.content .sidebar > ul:last-child,
+.content .sidebar > ul > li:last-child {
+	margin-bottom: 0;
 }
 
 .content .sidebar > ul {
 	margin-bottom: 40px;
-}
-
-.content .sidebar > ul:last-child {
-	margin-bottom: 0;
+	list-style: none;
 }
 
 .content .sidebar > ul > li {
@@ -72,19 +45,14 @@ $sidebarWidth: 150px;
 	font-size: 14px;
 	line-height: 14px;
 	text-align: right;
-
 }
 
-.content .sidebar > ul > li:last-child {
-	margin-bottom: 0;
+.content .sidebar > ul .title,
+.content .sidebar > ul .subtitle {
+	color: $colour-greyDark;
 }
 
-.content .sidebar > ul > li.title,
-.content .sidebar > ul > li .light {
-	color: $colour-grey;
-}
-
-.content .sidebar > ul > li.title {
+.content .sidebar > ul .title {
 	margin-bottom: 10px;
 	font-size: 16px;
 	line-height: 16px;
@@ -92,13 +60,11 @@ $sidebarWidth: 150px;
 	text-transform: uppercase;
 }
 
-.content .sidebar > ul > li .light {
+.content .sidebar > ul .subtitle {
 	margin-right: 5px;
 }
 
 .content .sidebar > ul > li a {
-	display: inline-block;
-	color: $colour-steamchat;
 	text-decoration: none;
 }
 
@@ -110,13 +76,14 @@ $sidebarWidth: 150px;
 
 /* NAVIGATION */
 
-$navHeight: 70px;
-$navArrowWidth: 32px;
+$navArrowWidth: 30px;
+$navArrowHeight: 56px;
+$navOffset: 30px;
 
 .content .navigation {
 	position: relative;
 	margin-top: 100px;
-	height: $navHeight;
+	height: $navArrowHeight;
 }
 
 .content .navigation,
@@ -128,7 +95,7 @@ $navArrowWidth: 32px;
 	position: absolute;
 	top: 0;
 	width: 50%;
-	height: $navHeight;
+	height: $navArrowHeight;
 }
 
 .content .navigation > li.prev {
@@ -141,70 +108,71 @@ $navArrowWidth: 32px;
 	text-align: right;
 }
 
-.content .navigation > li a,
-.content .navigation > li a .wrapper {
-	@include transition(all 0.25s ease-out);
-}
-
 .content .navigation > li a {
-	opacity: 0.6;
 	display: block;
 	height: 100%;
-	color: $colour-grey;
+	color: $colour-greyDark;
 	text-decoration: none;
+}
+
+.content .navigation > li.prev a {
+	padding-left: $navArrowWidth + $navOffset;
+}
+
+.content .navigation > li.next a {
+	padding-right: $navArrowWidth + $navOffset;
 }
 
 .content .navigation > li a:hover {
 	opacity: 1;
 }
 
-.content .navigation > li a .arrow {
+.content .navigation > li a:before {
 	content: "";
 	position: absolute;
 	top: 0;
 	display: block;
 	width: $navArrowWidth;
-	height: $navHeight;
+	height: $navArrowHeight;
+	background: url("../../images/episode/navigation-arrow.svg")
 }
 
-.content .navigation > li.prev a .arrow {
+.content .navigation > li.prev a:before {
 	left: 0;
 }
 
-.content .navigation > li.next a .arrow {
+.content .navigation > li.next a:before {
 	right: 0;
 	@include transform(rotate(180deg));
 }
 
-$navOffset: 30px;
-
-.content .navigation > li .wrapper {
-	position: relative;
+.content .navigation > li .container {
+	position: absolute;
 	top: 50%;
-	width: 100%;
-	@include calc(max-width, "100% - #{$navArrowWidth + $navOffset}")
+	@include calc(max-width, "100% - #{$navArrowWidth + $navOffset}");
 	@include transform(translateY(-50%));
+	@include transition(all 0.2s $easeStandard);
 }
 
-.content .navigation > li.prev a .wrapper {
-	margin-right: auto;
-	@include transform(translateX($navArrowWidth + 30px) translateY(-50%) translateZ(0));
+.content .navigation > li.prev .container {
+	left: $navArrowWidth + $navOffset;
 }
 
-.content .navigation > li.next a .wrapper {
-	margin-left: auto;
-	@include transform(translateX(-($navArrowWidth + 30px)) translateY(-50%) translateZ(0));
+.content .navigation > li.next .container {
+	right: $navArrowWidth + $navOffset;
 }
 
-.content .navigation > li.prev a:hover .wrapper {
-	@include transform(translateX($navArrowWidth + 20px) translateY(-50%) translateZ(0));
+.content .navigation > li.prev a:hover .container {
+	@include transform(translateX(-($navOffset / 2)) translateY(-50%) translateZ(0));
 }
 
-.content .navigation > li.next a:hover .wrapper {
-	@include transform(translateX(-($navArrowWidth + 20px)) translateY(-50%) translateZ(0));
+.content .navigation > li.next a:hover .container {
+	@include transform(translateX($navOffset / 2) translateY(-50%) translateZ(0));
 }
 
-.content .navigation > li span {
+.content .navigation > li .label,
+.content .navigation > li .small,
+.content .navigation > li .title {
 	display: block;
 	white-space: nowrap;
     text-overflow: ellipsis;

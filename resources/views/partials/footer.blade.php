@@ -1,5 +1,3 @@
-	</main>
-
 		<footer class="global-footer">
 
 			<a href="#" class="logo">

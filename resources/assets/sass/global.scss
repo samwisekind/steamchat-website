@@ -134,20 +134,21 @@ $iconSize: 20px;
 
 /* CONTENT */
 
+$smallSize: 200px;
+
 .content {
-	margin: 0 auto 0 auto;
-	padding: ($paddingLarge * 2) $paddingLarge ($paddingLarge * 3) $paddingLarge;
+	margin: ($paddingLarge * 3) auto 0 auto;
+	padding: 0 $paddingLarge ($paddingLarge * 3) $paddingLarge;
 	max-width: $maxWidthSmall;
 }
 
-.content:after {
-	@extend %clearFix;
+.content.wide {
+	max-width: $maxWidthLarge + ($paddingLarge * 2);
 }
 
 .content h1 {
 	margin-bottom: 20px;
 	font-size: 32px;
-	font-weight: 700;
 	line-height: lineHeight(32px);
 	color: $colour-steamchat;
 }
@@ -155,7 +156,6 @@ $iconSize: 20px;
 .content h2 {
 	margin-top: 30px;
 	font-size: 24px;
-	font-weight: 500;
 	line-height: lineHeight(24px);
 }
 
@@ -172,28 +172,31 @@ $iconSize: 20px;
 
 /* COLUMNS */
 
-.content .columns {
-	width: 100%;
-}
-
-.content .columns:after {
+.columns:after {
 	@extend %clearFix;
 }
 
-.content .columns > .left,
-.content .columns > .right {
-	max-width: 50%;
+.columns > .small {
+	position: relative;
+	width: $smallSize;
 }
 
-.content .columns > .left {
+.columns > .large {
+	@include calc(width, "100% - #{$smallSize + 40px}");
+}
+
+.columns > .even {
+	@include calc(width, "50% - #{$paddingSmall}");
+}
+
+.columns > .left {
 	float: left;
-	padding-right: 10px;
 }
 
-.content .columns > .right {
+.columns > .right {
 	float: right;
-	padding-left: 10px;
 }
+
 
 
 

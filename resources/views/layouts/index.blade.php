@@ -8,9 +8,9 @@
 
 @section('content')
 
-	<section class="archives js-archives">
+	<main class="content wide columns archives js-archives">
 
-		<div class="sidebar js-sidebar">
+		<section class="small left sidebar js-sidebar">
 
 			<div class="wrapper">
 
@@ -51,9 +51,9 @@
 
 			<a href="#" class="reset js-reset">Reset filters</a>
 
-		</div>
+		</section>
 
-		<div class="list">
+		<section class="large right list">
 
 			<div class="header">
 				<span class="count js-count"></span>
@@ -82,8 +82,8 @@
 
 			@endforeach
 
-		</div>
+		</section>
 
-	</section>
+	</main>
 
 @endsection

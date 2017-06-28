@@ -94,5 +94,3 @@
 			@endif
 
 		</header>
-
-		<main class="content">
