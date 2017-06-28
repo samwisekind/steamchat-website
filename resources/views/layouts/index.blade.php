@@ -49,12 +49,16 @@
 
 			</div>
 
-			<span class="count js-count"></span>
 			<a href="#" class="reset js-reset">Reset filters</a>
 
 		</div>
 
 		<div class="list">
+
+			<div class="header">
+				<span class="count js-count"></span>
+				<span class="empty">No episodes to show (<a href="#" class="js-reset">reset filters?</a>)</span>
+			</div>
 
 			@foreach($episodes as $episode)
 
@@ -63,8 +67,8 @@
 					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle(false) }}</a></h2>
 					<h3><span>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</span> – {{ $episode->file_duration }}</h3>
 					<p>{{ $episode->description }}</p>
-					<ul class="categories active">
-						@isset($episode->category)
+					@isset($episode->category)
+						<ul class="categories active">
 							@if($episode->category === 'interview')
 								<li class="category interview"><span class="container">Interview</span></li>
 							@elseif($episode->category === 'game-special')
@@ -72,13 +76,11 @@
 							@elseif($episode->category === 'event-special')
 								<li class="category event"><span class="container">Event Special</span></li>
 							@endif
-						@endisset
-					</ul>
+						</ul>
+					@endisset
 				</div>
 
 			@endforeach
-
-			<div class="no-results">No episodes to show (<a href="#" class="js-reset">reset filters?</a>)</div>
 
 		</div>
 

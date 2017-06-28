@@ -228,11 +228,11 @@ function updateFilteringDisplay() {
 	var showing = total - hiding;
 
 	if (showing < total) {
-		$archives.$sidebar.$counter.innerHTML = 'Showing ' + showing + ' of ' + total + ' episodes';
-		$archives.$sidebar.classList.add('active');
+		$archives.$counter.innerHTML = 'Showing ' + showing + ' of ' + total + ' episodes:';
+		$archives.classList.add('filtering');
 	}
 	else {
-		$archives.$sidebar.classList.remove('active');
+		$archives.classList.remove('filtering');
 	}
 
 	if (showing === 0) {
@@ -254,8 +254,8 @@ export function init(element) {
 			$archives.$sidebar.$search = $archives.$sidebar.getElementsByClassName('js-search')[0];
 			$archives.$sidebar.$years = $archives.$sidebar.getElementsByClassName('js-year');
 			$archives.$sidebar.$categories = $archives.$sidebar.getElementsByClassName('js-category');
-			$archives.$sidebar.$counter = $archives.$sidebar.getElementsByClassName('js-count')[0];
 		$archives.$episodes = $archives.getElementsByClassName('js-episode');
+		$archives.$counter = $archives.getElementsByClassName('js-count')[0];
 
 	/*** Bind sidebar scrolling ***/
 	window.addEventListener('scroll', function() {

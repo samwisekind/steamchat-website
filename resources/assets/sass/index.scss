@@ -87,7 +87,7 @@ $categories: (
 		background: $inactiveColour;
 	}
 
-	.archives .categories.active .category.#{$categoryName} .container,
+	.archives.filtering .categories .category.#{$categoryName} .container,
 	.archives .categories .category.#{$categoryName} .input:checked + .label .container {
 		background: $activeColour;
 	}
@@ -123,12 +123,12 @@ $categories: (
 
 /* SIDEBAR */
 
-$sidebar-size: 200px;
+$sidebarSize: 200px;
 
 .archives > .sidebar {
 	position: relative;
 	float: left;
-	width: $sidebar-size;
+	width: $sidebarSize;
 }
 
 .archives > .sidebar.sticky {
@@ -141,7 +141,7 @@ $sidebar-size: 200px;
 }
 
 .archives > .sidebar > .wrapper {
-	padding: 0 20px 20px 20px;
+	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
 }
 
 .archives > .sidebar h2 {
@@ -312,29 +312,20 @@ $circleSize: $inputSize - 10px;
 
 
 
-/* COUNT/RESET */
+/* RESET */
 
-.archives .sidebar .count,
 .archives .sidebar .reset {
 	display: none;
+	margin-top: 5px;
+	padding: 10px $paddingSmall 10px $paddingSmall;
 	width: 100%;
 	font-size: 12px;
 	line-height: 12px;
 	text-align: center;
 }
 
-.archives .sidebar.active .count,
-.archives .sidebar.active .reset {
+.archives.filtering .sidebar .reset {
 	display: block;
-}
-
-.archives .sidebar.active .count {
-	color: $colour-greyDark;
-}
-
-.archives .sidebar .reset {
-	margin-top: 5px;
-	padding: 10px 20px 10px 20px;
 }
 
 .archives .sidebar .reset:hover {
@@ -343,96 +334,80 @@ $circleSize: $inputSize - 10px;
 
 
 
+/* LIST */
 
-
-
-
-
-
-
-
-$playButton-size: 35px;
-$playButton-icon-size: 12px;
-
-.archives .list {
+.archives > .list {
 	float: right;
-	@include calc(width, "100% - #{$sidebar-size + 40px}");
+	@include calc(width, "100% - #{$sidebarSize + 40px}");
 }
 
-.archives .list > .episode {
+
+
+/* LIST: EPISODE */
+
+$playSize: 35px;
+$playIconSize: 12px;
+$playIconOffset: 2px;
+
+.archives > .list > .episode {
+	position: relative;
 	margin-bottom: 20px;
-	padding: 20px;
-	width: 100%;
+	padding: $paddingSmall;
 }
 
-.archives .list > .episode:last-child {
+.archives > .list > .episode:last-child {
 	margin-bottom: 0;
 }
 
-.archives .episode {
-	position: relative;
-}
-
-.archives .episode.filter-year,
-.archives .episode.filter-description,
-.archives .episode.filter-category {
+.archives > .list > .episode.filter-year,
+.archives > .list > .episode.filter-description,
+.archives > .list > .episode.filter-category {
 	display: none;
 }
 
-.archives .episode .play {
+.archives > .list > .episode > .play {
+	z-index: 10;
 	position: absolute;
-	right: 20px;
-	top: 20px;
-	width: $playButton-size;
-	height: $playButton-size;
+	right: $paddingSmall;
+	top: $paddingSmall;
+	width: $playSize;
+	height: $playSize;
 	border-radius: 50%;
 	background-color: $colour-steamchatLight;
+	@include transitionTransform(0.2s $easeStandard);
 	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)");
 }
 
-.archives .episode .play:hover {
+.archives > .list > .episode > .play:hover {
 	background-color: $colour-steamchat;
+	@include transform(scale(1.2));
 }
 
-.archives .episode .play:before {
+.archives > .list > .episode > .play:before {
 	content: "";
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	display: block;
-	margin-left: -($playButton-icon-size / 2);
-	margin-top: -($playButton-icon-size / 2);
-	width: $playButton-icon-size;
-	height: $playButton-icon-size;
-	background: url("../../images/index/archives/play.svg") center 0px no-repeat transparent;
-}
-
-.archives .episode .play.playing:before {
-	background-position: center -$playButton-icon-size;
-}
-
-.archives .episode .play:hover:before {
-	@include transform(scale(1.2));
+	margin-left: -(($playIconSize - $playIconOffset) / 2);
+	margin-top: -($playIconSize / 2);
+	width: $playIconSize;
+	height: $playIconSize;
+	background: url("../../images/index/archives/play.svg") center center no-repeat transparent;
+	background-size: contain;
 }
 
 .archives .episode > h2 {
 	margin-top: 0;
 	margin-bottom: 5px;
-	padding-right: $playButton-size + 20px;
+	padding-right: $playSize + $paddingSmall;
 	font-size: 18px;
 	line-height: 18px;
-	font-weight: 400;
 	color: $colour-steamchat;
 }
 
-.archives .episode > p > .release {
-	color: $colour-grey;
-}
-
-.archives .episode > p > .release:after {
-	content: "–";
-	display: inline;
-	padding: 0 5px 0 5px;
+.archives .episode > h2 > a {
+	display: block;
 }
 
 .archives .episode > h3 {
@@ -443,8 +418,6 @@ $playButton-icon-size: 12px;
 
 .archives .episode > p {
 	margin-top: 10px;
-	font-size: 14px;
-	line-height: 14px + (14px / 2);
 }
 
 .archives .episode > .categories {
@@ -465,25 +438,43 @@ $playButton-icon-size: 12px;
 	margin-right: 0;
 }
 
-.archives .list .no-results {
+
+
+/* LIST: HEADER */
+
+.archives > .list > .header {
+	color: $colour-grey;
+}
+
+.archives > .list > .header > .count,
+.archives.filtering.empty > .list > .header > .count,
+.archives > .list > .header > .empty {
 	display: none;
-	margin: 0 auto 0 auto;
-	padding-top: 100px;
-	font-size: 32px;
-	line-height: 32px;
-	text-align: center;
-	color: $colour-greyLight;
 }
 
-.archives .list .no-results,
-.archives .list .no-results a {
-	color: $colour-greyLight;
-}
-
-.archives.empty .list .no-results {
+.archives.filtering > .list > .header > .count,
+.archives.filtering.empty > .list > .header > .empty {
 	display: block;
 }
 
-.archives.empty .list .no-results a:hover {
-	color: $colour-grey;
+.archives > .list > .header > .count {
+	margin-bottom: $paddingSmall;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: left;
+}
+
+.archives > .list > .header > .empty {
+	padding-top: $paddingLarge * 2;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.archives > .list > .header > .empty > a {
+	color: inherit;
+}
+
+.archives > .list > .header > .empty > a:hover {
+	color: $colour-greyDark;
 }
