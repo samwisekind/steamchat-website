@@ -25,9 +25,9 @@ class CreateEpisodesTable extends Migration
             $table->integer('file_size');
             $table->string('file_url');
             $table->string('file_duration');
-            $table->string('header_mask_image')->nullable()->default(null);
-            $table->string('header_mask_colour')->nullable()->default(null);
-            $table->string('header_background_image')->nullable()->default(null);
+            $table->string('mask')->nullable()->default(null);
+            $table->string('colour')->nullable()->default(null);
+            $table->string('background')->nullable()->default(null);
             $table->timestamps();
         });
     }
