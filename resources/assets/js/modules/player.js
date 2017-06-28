@@ -261,6 +261,7 @@ function player(element) {
 			var loadEpisode = function(event) {
 				event.preventDefault();
 				self.getEpisode(this.getAttribute('data-id'), true);
+				window.scrollTo(0, 0);
 			};
 
 			var buttons = document.body.getElementsByClassName('js-play');
