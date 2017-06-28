@@ -10,6 +10,10 @@ $timeWidth: 250px + $paddingLarge;
 	background: url("../../images/index/player/player-background.png") center center repeat $colour-steamchatExtraLight;
 }
 
+.global-header > .menu {
+	z-index: 20;
+}
+
 
 
 /* PLAYER */
@@ -27,6 +31,80 @@ $timeWidth: 250px + $paddingLarge;
 	width: 100%;
 	max-width: $maxWidthLarge + ($paddingLarge * 2);
 	height: 400px;
+}
+
+
+
+/* LOADING */
+
+$loadingSize: 64px;
+
+.player > .loading {
+	pointer-events: none;
+	opacity: 1;
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: $colour-steamchatOpaque;
+	@include transition(opacity 0.2s $easeStandard);
+}
+
+.player > .loading:before,
+.player > .loading:after {
+	content: "";
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -($loadingSize / 2);
+	margin-top: -($loadingSize / 2);
+	width: $loadingSize;
+	height: $loadingSize;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	@include animation("loading" 1s infinite $easeDeceleration);
+}
+
+.player > .loading:before {
+	z-index: 0;
+}
+
+.player > .loading:after {
+	z-index: 10;
+	@include animationDelay(0.5s);
+}
+
+@-webkit-keyframes "loading" {
+	0% { -webkit-transform: scale(0.1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { -webkit-transform: scale(1); opacity: 0; }
+}
+
+@-moz-keyframes "loading" {
+	0% { -moz-transform: scale(0.1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { -moz-transform: scale(1); opacity: 0; }
+}
+
+@-ms-keyframes "loading" {
+	0% { -ms-transform: scale(0.1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { -ms-transform: scale(1); opacity: 0; }
+}
+
+@-o-keyframes "loading" {
+	0% { -o-transform: scale(0.1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { -o-transform: scale(1); opacity: 0; }
+}
+
+@keyframes "loading" {
+	0% { transform: scale(0.1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { transform: scale(1); opacity: 0; }
 }
 
 

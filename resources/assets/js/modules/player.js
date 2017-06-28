@@ -7,6 +7,8 @@ function player(element) {
 		el: element,
 		template: `<div class="player" v-bind:class="{ playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
 
+				<div v-show="isLoading" class="loading"></div>
+
 				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:loadedmetadata="loaded" v-on:timeupdate="updateTime" v-on:ended="isPlaying = false">
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
