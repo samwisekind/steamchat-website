@@ -18,6 +18,8 @@
 	position: absolute;
 	left: 50%;
 	top: 0;
+	padding-right: 0;
+	max-width: $maxWidthLarge;
 	background: top center no-repeat $colour-white;
 	@include transform(translateX(-50%));
 }
