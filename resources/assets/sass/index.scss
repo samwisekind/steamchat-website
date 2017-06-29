@@ -385,6 +385,31 @@ $playIconOffset: 2px;
 	color: $colour-grey;
 }
 
+$iconWidth: 17px;
+$iconHeight: 13px;
+
+.archives .episode > h3 > a.transcript {
+	position: relative;
+	padding-left: $iconWidth + 5px;
+	color: inherit;
+}
+
+.archives .episode > h3 > a.transcript:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -($iconHeight / 2);
+	width: $iconWidth;
+	height: $iconHeight;
+	background: url("../../images/index/archives/transcript-icon.svg") center center no-repeat transparent;
+	background-size: contain;
+}
+
+.archives .episode > h3 a.transcript:hover {
+	color: $colour-greyDark;
+}
+
 .archives .episode > p {
 	margin-top: 10px;
 }
