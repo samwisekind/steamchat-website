@@ -33,7 +33,7 @@ Route::get('/', function () {
 		->orderBy('release_date', 'desc')
 		->get();
 
-    return view('layouts.index', [
+	return view('layouts.index', [
 		'episodes' => $episodes,
 		'years' => $years
 	]);
@@ -43,20 +43,20 @@ Route::get('/', function () {
 // Permanent redirect for plural of 'episode'
 Route::get('/episodes/{number}', function ($number) {
 
-    return redirect()->route('episode', [
-    	'type' => 'episode',
-    	'number' => $number
-    ]);
+	return redirect()->route('episode', [
+		'type' => 'episode',
+		'number' => $number
+	]);
 
 });
 
 // Permanent redirect for plural of 'snack'
 Route::get('/snacks/{number}', function ($number) {
 
-    return redirect()->route('episode', [
-    	'type' => 'snack',
-    	'number' => $number
-    ]);
+	return redirect()->route('episode', [
+		'type' => 'snack',
+		'number' => $number
+	]);
 
 });
 
@@ -70,7 +70,7 @@ Route::get('/{type}/{number}', function ($type, $number) {
 		return redirect()->route('index');
 	}
 
-    return view('layouts.episode', [
+	return view('layouts.episode', [
 		'episode' => $episode,
 	]);
 
@@ -78,12 +78,40 @@ Route::get('/{type}/{number}', function ($type, $number) {
 
 Route::get('/about', function () {
 
-    return view('layouts.about');
+	return view('layouts.about');
 
 })->name('about');
 
 Route::get('/specials', function () {
 
-    return view('layouts.specials');
+	return view('layouts.specials');
 
 })->name('specials');
+
+Route::get('/steamchat_feed_mp3.xml', function(){
+
+	$episodes = Episode::orderBy('release_date', 'desc')
+		->where('active', true)
+		->get();
+
+	PodcastFeed::setHeader([
+		'link' => route('index'),
+		'image' => asset('images/global/og_image.png')
+	]);
+
+	foreach($episodes as $episode) {
+		PodcastFeed::addMedia([
+			'title' => $episode->title,
+			'description' => $episode->description,
+			'publish_at' => $episode->release_date,
+			'guid' => $episode->file_url,
+			'url' => $episode->file_url,
+			'type' => 'audio/mpeg',
+			'duration' => $episode->file_duration
+		]);
+	}
+
+	return Response::make(PodcastFeed::toString())
+        ->header('Content-Type', 'text/xml');
+
+});
