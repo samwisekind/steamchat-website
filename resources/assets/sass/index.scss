@@ -109,15 +109,6 @@ $categories: (
 
 /* SIDEBAR */
 
-.archives > .sidebar.sticky {
-	position: fixed;
-	top: $paddingLarge;
-	@include calc(max-height, "100% - #{$paddingLarge * 2}");
-	overflow: hidden;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-}
-
 .archives > .sidebar > .wrapper {
 	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
 }
@@ -471,4 +462,57 @@ $iconHeight: 13px;
 
 .archives > .list > .header > .empty > a:hover {
 	color: $colour-greyDark;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: $breakpointLarge) {
+
+
+
+}
+
+@media (min-width: $breakpointSmall) {
+
+	.archives > .sidebar.sticky {
+		position: fixed;
+		top: $paddingLarge;
+		@include calc(max-height, "100% - #{$paddingLarge * 2}");
+		overflow: hidden;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+}
+
+
+@media (max-width: $breakpointSmall) {
+
+	/* CONTENT */
+
+	.archives {
+		padding: 0;
+	}
+
+
+	/* LIST: EPISODE */
+
+	.archives > .list > .episode > .play {
+		display: none;
+	}
+
+	.archives .episode > h2 {
+		margin-bottom: 0;
+		padding-right: 0;
+		font-size: 16px;
+		@include lineHeight(16px);
+	}
+
+	.archives .episode > h3 {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
 }

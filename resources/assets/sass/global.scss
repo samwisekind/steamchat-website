@@ -183,7 +183,7 @@ $smallSize: 200px;
 }
 
 .columns > .large {
-	@include calc(width, "100% - #{$smallSize + 40px}");
+	@include calc(width, "100% - #{$smallSize + $paddingLarge}");
 }
 
 .columns > .even {
@@ -253,4 +253,65 @@ $smallSize: 200px;
 
 .global-footer > p > a {
 	color: inherit;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: $breakpointLarge) {
+
+	/* CONTENT */
+
+	.content {
+		margin-top: $paddingSmall * 3;
+		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
+	}
+
+
+
+	/* COLUMNS */
+
+	.columns > .large {
+		@include calc(width, "100% - #{$smallSize + $paddingSmall}");
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	/* CONTENT */
+
+
+	.content h1 {
+		margin-bottom: 0;
+		font-size: 20px;
+		@include lineHeight(20px);
+	}
+
+	.content h2 {
+		margin-top: 10px;
+		font-size: 18px;
+		@include lineHeight(18px);
+	}
+
+	.content p {
+		margin-top: 10px;
+	}
+
+
+
+	/* COLUMNS */
+
+	.columns > .large,
+	.columns > .small,
+	.columns > .even {
+		width: 100%;
+	}
+
+	.columns > .left,
+	.columns > .right {
+		float: none;
+	}
+
 }
