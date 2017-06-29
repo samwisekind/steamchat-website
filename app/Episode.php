@@ -11,16 +11,16 @@ class Episode extends Model
 		$type = $this->type;
 		$number = $this->number;
 		$title = $this->title;
-		if ($short === true) {
-			$prepend = '';
-		}
-		else if ($type === 'episode') {
-			$prepend = 'Episode ';
+		if ($type === 'episode') {
+			$prepend = '#' . $number;
+			if ($short === false) {
+				$prepend = 'Episode ' . $prepend;
+			}
 		}
 		else if ($type === 'snack') {
-			$prepend = 'Snack ';
+			$prepend = 'Snack';
 		}
-		return $prepend . '#' . $number . ': ' . $title;
+		return $prepend . ': ' . $title;
 	}
 
 	public function getURL() {
