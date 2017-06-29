@@ -23,7 +23,7 @@ function player(element) {
 					</div>
 
 					<div class="time" v-show="isReady">
-						<span class="time-current" v-text="durationCurrent"></span> / <span class="time-total" v-text="durationTotal"></span>
+						<span class="time-current" v-text="durationCurrent"></span><span class="slash">/</span><span class="time-total" v-text="durationTotal"></span>
 					</div>
 
 					<div class="volume" v-show="isReady">

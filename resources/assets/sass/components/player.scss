@@ -1,6 +1,6 @@
 /* COMMON */
 
-$timeWidth: 250px + $paddingLarge;
+$timeWidth: 235px + $paddingSmall;
 
 
 
@@ -214,6 +214,10 @@ $loadingSize: 64px;
 	text-align: right;
 	text-shadow: 0 0 3px $colour-black;
 	@include userSelect(none);
+}
+
+.player .time > .slash {
+	margin: 0 5px 0 5px;
 }
 
 

@@ -150,14 +150,14 @@ $smallSize: 200px;
 .content h1 {
 	margin-bottom: 20px;
 	font-size: 32px;
-	line-height: lineHeight(32px);
+	@include lineHeight(32px);
 	color: $colour-steamchat;
 }
 
 .content h2 {
 	margin-top: 30px;
 	font-size: 24px;
-	line-height: lineHeight(24px);
+	@include lineHeight(24px);
 }
 
 .content p {
@@ -246,7 +246,7 @@ $smallSize: 200px;
 .global-footer > p {
 	margin-top: 10px;
 	font-size: 12px;
-	line-height: lineHeight(12px);
+	@include lineHeight(12px);
 	text-align: center;
 	color: $colour-grey;
 }
