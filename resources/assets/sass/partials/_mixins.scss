@@ -84,6 +84,14 @@
 	transition-delay: $delay;
 }
 
+@mixin transitionDuration ($duration) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-ms-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	transition-duration: $duration;
+}
+
 @mixin transitionTimingFunction ($function) {
 	-webkit-transition-timing-function: $function;
 	-moz-transition-timing-function: $function;

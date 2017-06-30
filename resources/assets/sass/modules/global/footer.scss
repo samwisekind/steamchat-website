@@ -1,19 +1,20 @@
 .global-footer {
 	margin: 0 auto 0 auto;
-	padding: 0 40px 40px 40px;
+	padding: 0 $paddingLarge $paddingLarge $paddingLarge;
 	width: 100%;
 	max-width: 700px;
 }
 
-.global-footer > .logo,
-.global-footer > .logo > .logo-element {
+.global-footer > .logo {
 	display: block;
+	margin: 0 auto $paddingLarge auto;
 	width: 200px;
-	height: 60px;
 }
 
-.global-footer > .logo {
-	margin: 0 auto 40px auto;
+.global-footer > .logo > .logo-element {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .global-footer > p {
@@ -26,4 +27,23 @@
 
 .global-footer > p > a {
 	color: inherit;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.global-footer {
+		padding: 0 $paddingSmall $paddingSmall $paddingSmall;
+	}
+
+	.global-footer > .logo {
+		margin-bottom: 20px;
+		width: 150px;
+	}
+
+	.global-footer > p {
+		margin-top: 5px;
+		font-size: 8px;
+		@include lineHeight(8px);
+	}
+
 }
