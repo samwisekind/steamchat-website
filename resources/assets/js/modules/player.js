@@ -5,15 +5,20 @@ function player(element) {
 
 	return new Vue({
 		el: element,
-		template: `<div class="player" v-bind:class="{ playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
-
-				<div v-show="isLoading" class="loading"></div>
+		template: `<div class="player" v-bind:class="{ loading: isLoading, playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
 
 				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:loadedmetadata="loaded" v-on:timeupdate="updateTime" v-on:ended="isPlaying = false">
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
 
-				<a v-show="!isLoading" class="toggle" href="#" v-on:click="togglePlay(!isPlaying)"></a>
+				<a class="toggle" href="#" v-on:click="togglePlay(!isPlaying)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="toggle-element">
+						<path d="M50,10A40,40,0,1,1,10,50,40,40,0,0,1,50,10M50,0a50,50,0,1,0,50,50A50,50,0,0,0,50,0Z" class="layer outline" />
+						<path d="M69.63,46.45,43.25,28.3a4.31,4.31,0,0,0-6.75,3.55v36.3a4.31,4.31,0,0,0,6.75,3.55L69.63,53.55a4.31,4.31,0,0,0,0-7.1Z" class="layer play" />
+						<path d="M68,33.8V66.2a6.26,6.26,0,0,1-12.51,0V33.8A6.26,6.26,0,0,1,68,33.8ZM38.26,27.54A6.26,6.26,0,0,0,32,33.8V66.2a6.26,6.26,0,0,0,12.51,0V33.8A6.26,6.26,0,0,0,38.26,27.54Z" class="layer pause" />
+						<path d="M50,27.52a2.08,2.08,0,0,1,2.16,2.16v8.45A2.15,2.15,0,0,1,50,40.38a2.23,2.23,0,0,1-2.25-2.25V29.68A2.15,2.15,0,0,1,50,27.52ZM39.84,32.29l4.95,6.83A2.21,2.21,0,0,1,43,42.63a2,2,0,0,1-1.71-.9l-4.95-6.83a2.18,2.18,0,1,1,3.51-2.61ZM30,45.86a2.22,2.22,0,1,1,1.35-4.23l8,2.61A2.22,2.22,0,0,1,40.83,47a2.33,2.33,0,0,1-2.16,1.53,1.67,1.67,0,0,1-.63-.18ZM40.83,53a2.22,2.22,0,0,1-1.44,2.79l-8,2.61a2,2,0,0,1-.72.09A2.21,2.21,0,0,1,30,54.14l8-2.61A2.22,2.22,0,0,1,40.83,53Zm3.51,4.86a2.16,2.16,0,0,1,.45,3.06l-4.95,6.83a2.1,2.1,0,0,1-1.8.9,2.18,2.18,0,0,1-1.71-3.51l4.95-6.83A2.16,2.16,0,0,1,44.34,57.82ZM50,59.62a2.15,2.15,0,0,1,2.16,2.25v8.36A2.15,2.15,0,0,1,50,72.48a2.23,2.23,0,0,1-2.25-2.25V61.87A2.23,2.23,0,0,1,50,59.62Zm8.72-1.35,4.95,6.83a2.21,2.21,0,0,1-1.8,3.51,2,2,0,0,1-1.71-.9l-4.95-6.83a2.18,2.18,0,0,1,3.51-2.61ZM70,54.14a2.22,2.22,0,0,1,1.44,2.79,2.33,2.33,0,0,1-2.16,1.53,1.53,1.53,0,0,1-.63-.09l-8-2.61A2.22,2.22,0,0,1,62,51.53ZM59.17,47a2.22,2.22,0,0,1,1.44-2.79l8-2.61A2.22,2.22,0,1,1,70,45.86l-8,2.52a2.12,2.12,0,0,1-.72.18A2.21,2.21,0,0,1,59.17,47Zm-2.25-4.41a2.18,2.18,0,0,1-1.71-3.51l4.95-6.83a2.18,2.18,0,0,1,3.51,2.61l-4.95,6.83A2.1,2.1,0,0,1,56.92,42.63Z" class="layer loading" />
+					</svg>
+				</a>
 
 				<div class="container">
 
@@ -50,15 +55,14 @@ function player(element) {
 			movingLine: false,
 			lineHover: null,
 			volume: 100,
-			globalMenu: null
+			globalMenu: document.body.getElementsByClassName('js-menu')[0]
 		},
 		methods: {
 			getEpisode: function(episode, autoplay) {
 
 				this.episodeData = false;
 				this.isLoading = true;
-				this.isPlaying = false;
-				this.isReady = false;
+				this.isPlaying = this.isReady = false;
 				this.currentTime = 0;
 
 				var self = this;
@@ -74,7 +78,6 @@ function player(element) {
 					.then(function(response) {
 
 						self.episodeData = response.data;
-						self.isLoading = false;
 
 						if (self.episodeData.mask !== null) {
 							self.globalMenu.style.backgroundImage = 'url(' + self.episodeData.mask + ')';
@@ -87,8 +90,11 @@ function player(element) {
 
 						if (autoplay === true) {
 							setTimeout(function() {
-								self.togglePlay(true);
+								self.$refs.audioElement.load();
 							}, 0);
+						}
+						else {
+							self.isLoading = false;
 						}
 
 					})
@@ -104,22 +110,24 @@ function player(element) {
 			},
 			togglePlay: function(target) {
 
-				if (this.isReady === false && this.isLoading !== true) {
+				if (this.isLoading === false) {
 
-					this.isLoading = true;
-					this.isPlaying = true;
-					this.$refs.audioElement.load();
-
-				}
-				else if (this.isLoading === false) {
-
-					if (target === false) {
-						this.$refs.audioElement.pause();
+					if (this.isReady === false) {
+						this.isLoading = true;
+						this.$refs.audioElement.load();
 					}
-					else if (target === true) {
-						this.$refs.audioElement.play();
+					else {
+
+						if (target === false) {
+							this.$refs.audioElement.pause();
+						}
+						else if (target === true) {
+							this.$refs.audioElement.play();
+						}
+
+						this.isPlaying = target;
+
 					}
-					this.isPlaying = target;
 
 				}
 
@@ -257,8 +265,6 @@ function player(element) {
 		mounted: function() {
 
 			this.getEpisode('latest', false);
-
-			this.globalMenu = document.body.getElementsByClassName('js-menu')[0];
 
 			var self = this;
 
