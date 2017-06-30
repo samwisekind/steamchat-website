@@ -1,0 +1,198 @@
+$playSize: 35px;
+$playIconSize: 12px;
+$playIconOffset: 2px;
+
+.archives > .list > .episode {
+	position: relative;
+	margin-bottom: 20px;
+	padding: $paddingSmall;
+}
+
+.archives > .list > .episode:last-child {
+	margin-bottom: 0;
+}
+
+.archives > .list > .episode.filter-year,
+.archives > .list > .episode.filter-description,
+.archives > .list > .episode.filter-category {
+	display: none;
+}
+
+.archives > .list > .episode > .play {
+	z-index: 10;
+	position: absolute;
+	right: $paddingSmall;
+	top: $paddingSmall;
+	width: $playSize;
+	height: $playSize;
+	border-radius: 50%;
+	background-color: $colour-steamchatLight;
+	@include transitionTransform(0.2s $easeStandard);
+	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)");
+}
+
+.archives > .list > .episode > .play:hover {
+	background-color: $colour-steamchat;
+	@include transform(scale(1.2));
+}
+
+.archives > .list > .episode > .play:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	margin-left: -(($playIconSize - $playIconOffset) / 2);
+	margin-top: -($playIconSize / 2);
+	width: $playIconSize;
+	height: $playIconSize;
+	background: url("../../images/index/archives/play.svg") center center no-repeat transparent;
+	background-size: contain;
+}
+
+.archives .episode > h2 {
+	margin-top: 0;
+	margin-bottom: 5px;
+	padding-right: $playSize + $paddingSmall;
+	font-size: 18px;
+	line-height: 18px;
+	color: $colour-steamchat;
+}
+
+.archives .episode > h2 > a {
+	display: block;
+}
+
+.archives .episode > h3 {
+	font-size: 14px;
+	line-height: 14px;
+	color: $colour-grey;
+}
+
+$iconWidth: 17px;
+$iconHeight: 13px;
+
+.archives .episode > h3 > a.transcript {
+	position: relative;
+	padding-left: $iconWidth + 5px;
+	color: inherit;
+}
+
+.archives .episode > h3 > a.transcript:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -($iconHeight / 2);
+	width: $iconWidth;
+	height: $iconHeight;
+	background: url("../../images/index/archives/transcript-icon.svg") center center no-repeat transparent;
+	background-size: contain;
+}
+
+.archives .episode > h3 a.transcript:hover {
+	color: $colour-greyDark;
+}
+
+.archives .episode > p {
+	margin-top: 10px;
+}
+
+.archives .episode > .categories {
+	margin-top: 10px;
+	list-style: none;
+}
+
+.archives .episode > .categories:after {
+	@include clearFix;
+}
+
+.archives .episode > .categories > li {
+	margin-right: 10px;
+	float: left;
+}
+
+.archives .episode > .categories > li:last-child {
+	margin-right: 0;
+}
+
+/* LIST: HEADER */
+
+.archives > .list > .header {
+	color: $colour-grey;
+}
+
+.archives > .list > .header > .count,
+.archives.filtering.empty > .list > .header > .count,
+.archives > .list > .header > .empty {
+	display: none;
+}
+
+.archives.filtering > .list > .header > .count,
+.archives.filtering.empty > .list > .header > .empty {
+	display: block;
+}
+
+.archives > .list > .header > .count {
+	margin-bottom: $paddingSmall;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: left;
+}
+
+.archives > .list > .header > .empty {
+	padding-top: $paddingLarge * 2;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.archives > .list > .header > .empty > a {
+	color: inherit;
+}
+
+.archives > .list > .header > .empty > a:hover {
+	color: $colour-greyDark;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.archives > .list > .episode > .play {
+		display: none;
+	}
+
+	.archives .episode > h2 {
+		margin-bottom: 0;
+		padding-right: 0;
+		font-size: 16px;
+		@include lineHeight(16px);
+	}
+
+	.archives .episode > h3 {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.archives .episode > h3 > a.transcript {
+		padding-left: 0;
+	}
+
+	.archives .episode > h3 > a.transcript:before {
+		content: none;
+		display: none;
+	}
+
+	/* LIST: HEADER */
+
+	.archives > .list > .header > .count,
+	.archives > .list > .header > .empty {
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	.archives > .list > .header > .count,
+	.archives > .list > .header > .empty  {
+		padding: $paddingSmall $paddingSmall 0 $paddingSmall;
+	}
+
+}

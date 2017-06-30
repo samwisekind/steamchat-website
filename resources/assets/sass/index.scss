@@ -8,27 +8,31 @@
 
 /* HEADER */
 
-.global-header,
-.global-header > .menu {
-	box-shadow: none;
-}
+@media (min-width: $breakpointSmall) {
 
-.global-header > .menu {
-	z-index: 10;
-	position: absolute;
-	left: 50%;
-	top: 0;
-	padding-right: 0;
-	max-width: $maxWidthLarge;
-	background: top center no-repeat $colour-white;
-	@include transform(translateX(-50%));
+	.global-header,
+	.global-header > .menu {
+		box-shadow: none;
+	}
+
+	.global-header > .menu {
+		z-index: 10;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		padding-right: 0;
+		max-width: $maxWidthLarge;
+		background: top center no-repeat $colour-white;
+		@include transform(translateX(-50%));
+	}
+
 }
 
 
 
 /* HEADER PLAYER */
 
-@import "components/player";
+@import "modules/index/player";
 
 
 
@@ -41,478 +45,33 @@
 	@include boxShadow($paperShadow);
 }
 
-
-
-/* CATEGORIES */
-
-$category-padding-x: 8px;
-$category-padding-y: 6px;
-$categoryIconSize: 12px;
-
-.archives .categories .category .container {
-	position: relative;
-	display: block;
-	padding: $category-padding-y $category-padding-x $category-padding-y (($category-padding-x * 2) + $categoryIconSize);
-	border-radius: 4px;
-	font-size: 14px;
-	line-height: 14px;
-	text-align: left;
-	color: $colour-white;
-	text-decoration: none;
-}
-
-$categories: (
-	("interview", $colour-category-interview, $colour-category-interviewLight),
-	("game", $colour-category-game, $colour-category-gameLight),
-	("event", $colour-category-event, $colour-category-eventLight)
-);
-
-@each $categoryName, $activeColour, $inactiveColour in $categories {
-
-	.archives .categories .category.#{$categoryName} .container {
-		background: $inactiveColour;
-	}
-
-	.archives > .list .categories .category.#{$categoryName} .container,
-	.archives .categories .category.#{$categoryName} .input:checked + .label .container {
-		background: $activeColour;
-	}
-
-}
-
-.archives .categories .category .container:before {
-	content: "";
-	position: absolute;
-	left: $category-padding-x;
-	top: 50%;
-	margin-top: -($categoryIconSize / 2);
-	display: block;
-	width: $categoryIconSize;
-	height: $categoryIconSize;
-	background: center center no-repeat transparent;
-	background-size: contain;
-}
-
-.archives .categories .category.interview .container:before {
-	background-image: url("../../images/index/archives/category-interview.svg");
-}
-
-.archives .categories .category.game .container:before {
-	background-image: url("../../images/index/archives/category-game.svg");
-}
-
-.archives .categories .category.event .container:before {
-	background-image: url("../../images/index/archives/category-event.svg");
-}
-
-
-
-/* SIDEBAR */
-
-.archives > .sidebar > .wrapper {
-	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
-}
-
-.archives > .sidebar h2 {
-	margin-top: 20px;
-	margin-bottom: 5px;
-	font-size: 18px;
-	line-height: 18px;
-}
-
-
-
-/* SEARCH */
-
-.archives > .sidebar .search {
-	padding: 0 10px 0 10px;
-	width: 100%;
-	height: 35px;
-	font-size: 14px;
-	border-radius: 5px;
-	border: 2px solid $colour-greyLight;
-	@include removeStyling;
-	@include transition(border-color 0.2s $easeStandard);
-}
-
-.archives > .sidebar .search:hover {
-	border-color: $colour-steamchatExtraLight;
-}
-
-.archives > .sidebar .search:focus,
-.archives > .sidebar .search.active {
-	border-color: $colour-steamchat;
-}
-
-.archives > .sidebar .search.active:hover {
-	border-color: $colour-steamchatLight;
-}
-
-
-
-/* FILTER */
-
-$inputSize: 20px;
-
-.archives > .sidebar .filter > li {
-	margin-bottom: 5px;
-}
-
-.archives > .sidebar .filter > li:last-child {
-	margin-bottom: 0;
-}
-
-.archives > .sidebar .filter .input {
-	display: none;
-}
-
-.archives > .sidebar .filter .input + .label {
-	position: relative;
-	padding-left: $inputSize + 5px;
-	display: block;
-}
-
-.archives > .sidebar .filter .input + .label:hover {
-	cursor: pointer;
-}
-
-.archives > .sidebar .filter .input + .label:before,
-.archives > .sidebar .filter .input + .label:after {
-	content: "";
-	display: block;
-	position: absolute;
-}
-
-.archives > .sidebar .filter .input + .label:before,
-.archives > .sidebar .filter .input:checked + .label:after {
-	@include transition(all 0.2s $easeStandard);
-}
-
-.archives > .sidebar .filter .input + .label:before {
-	z-index: 0;
-	left: 0;
-	top: 50%;
-	margin-top: -($inputSize / 2);
-	width: $inputSize;
-	height: $inputSize;
-	border: 2px solid $colour-grey;
-	background: $colour-white;
-}
-
-.archives > .sidebar .filter .input + .label:hover:before {
-	border-color: $colour-steamchatExtraLight;
-}
-
-.archives > .sidebar .filter .input:checked + .label:before {
-	border-color: $colour-steamchat;
-	background: $colour-steamchat;
-}
-
-.archives > .sidebar .filter .input:checked + .label:hover:before {
-	border-color: $colour-steamchatLight;
-	background: $colour-steamchatLight;
-}
-
-.archives > .sidebar .filter .input + .label:after {
-	opacity: 0;
-	z-index: 10;
-	position: absolute;
-	top: 50%;
-	display: block;
-	@include transform(scale(0.25) translateZ(0));
-}
-
-.archives > .sidebar .filter .input:checked + .label:after {
-	opacity: 1;
-	@include transform(scale(1) translateZ(0));
-}
-
-
-
-/* FILTER: YEARS */
-
-$tickSize: $inputSize - 8px;
-
-.archives .sidebar .filter.years .input + .label {
-	color: $colour-grey;
-	@include transition(color 0.2s $easeStandard);
-}
-
-.archives .sidebar .filter.years .input:checked + .label {
-	color: inherit;
-}
-
-.archives .sidebar .filter.years .input + .label:before {
-	border-radius: 5px;
-}
-
-.archives .sidebar .filter.years .input:disabled + .label:before {
-	border-color: $colour-greyLight;
-	background: $colour-greyLight;
-}
-
-.archives .sidebar .filter.years .input + .label:after {
-	left: ($inputSize - $tickSize) / 2;
-	margin-top: -($tickSize / 2);
-	width: $tickSize;
-	height: $tickSize;
-	background: url("../../images/index/archives/checkbox.svg") center center no-repeat;
-	background-size: contain;
-}
-
-
-
-/* FILTER: CATEGORIES */
-
-$circleSize: $inputSize - 10px;
-
-.archives .sidebar .filter.categories .input + .label:before {
-	border-radius: 50%;
-}
-
-.archives .sidebar .filter.categories .input + .label:after {
-	left: ($inputSize - $circleSize) / 2;
-	margin-top: -($circleSize / 2);
-	width: $circleSize;
-	height: $circleSize;
-	border-radius: 50%;
-	background: $colour-white;
-}
-
-
-
-/* RESET */
-
-.archives .sidebar .reset {
-	display: none;
-	margin-top: 5px;
-	padding: 10px $paddingSmall 10px $paddingSmall;
-	width: 100%;
-	font-size: 12px;
-	line-height: 12px;
-	text-align: center;
-}
-
-.archives.filtering .sidebar .reset {
-	display: block;
-}
-
-.archives .sidebar .reset:hover {
-	background: $colour-steamchatExtraLight;
-}
-
-
-
-/* LIST: EPISODE */
-
-$playSize: 35px;
-$playIconSize: 12px;
-$playIconOffset: 2px;
-
-.archives > .list > .episode {
-	position: relative;
-	margin-bottom: 20px;
-	padding: $paddingSmall;
-}
-
-.archives > .list > .episode:last-child {
-	margin-bottom: 0;
-}
-
-.archives > .list > .episode.filter-year,
-.archives > .list > .episode.filter-description,
-.archives > .list > .episode.filter-category {
-	display: none;
-}
-
-.archives > .list > .episode > .play {
-	z-index: 10;
-	position: absolute;
-	right: $paddingSmall;
-	top: $paddingSmall;
-	width: $playSize;
-	height: $playSize;
-	border-radius: 50%;
-	background-color: $colour-steamchatLight;
-	@include transitionTransform(0.2s $easeStandard);
-	@include boxShadow("0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)");
-}
-
-.archives > .list > .episode > .play:hover {
-	background-color: $colour-steamchat;
-	@include transform(scale(1.2));
-}
-
-.archives > .list > .episode > .play:before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	display: block;
-	margin-left: -(($playIconSize - $playIconOffset) / 2);
-	margin-top: -($playIconSize / 2);
-	width: $playIconSize;
-	height: $playIconSize;
-	background: url("../../images/index/archives/play.svg") center center no-repeat transparent;
-	background-size: contain;
-}
-
-.archives .episode > h2 {
-	margin-top: 0;
-	margin-bottom: 5px;
-	padding-right: $playSize + $paddingSmall;
-	font-size: 18px;
-	line-height: 18px;
-	color: $colour-steamchat;
-}
-
-.archives .episode > h2 > a {
-	display: block;
-}
-
-.archives .episode > h3 {
-	font-size: 14px;
-	line-height: 14px;
-	color: $colour-grey;
-}
-
-$iconWidth: 17px;
-$iconHeight: 13px;
-
-.archives .episode > h3 > a.transcript {
-	position: relative;
-	padding-left: $iconWidth + 5px;
-	color: inherit;
-}
-
-.archives .episode > h3 > a.transcript:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 50%;
-	margin-top: -($iconHeight / 2);
-	width: $iconWidth;
-	height: $iconHeight;
-	background: url("../../images/index/archives/transcript-icon.svg") center center no-repeat transparent;
-	background-size: contain;
-}
-
-.archives .episode > h3 a.transcript:hover {
-	color: $colour-greyDark;
-}
-
-.archives .episode > p {
-	margin-top: 10px;
-}
-
-.archives .episode > .categories {
-	margin-top: 10px;
-	list-style: none;
-}
-
-.archives .episode > .categories:after {
-	@include clearFix;
-}
-
-.archives .episode > .categories > li {
-	margin-right: 10px;
-	float: left;
-}
-
-.archives .episode > .categories > li:last-child {
-	margin-right: 0;
-}
-
-
-
-/* LIST: HEADER */
-
-.archives > .list > .header {
-	color: $colour-grey;
-}
-
-.archives > .list > .header > .count,
-.archives.filtering.empty > .list > .header > .count,
-.archives > .list > .header > .empty {
-	display: none;
-}
-
-.archives.filtering > .list > .header > .count,
-.archives.filtering.empty > .list > .header > .empty {
-	display: block;
-}
-
-.archives > .list > .header > .count {
-	margin-bottom: $paddingSmall;
-	font-size: 24px;
-	line-height: 24px;
-	text-align: left;
-}
-
-.archives > .list > .header > .empty {
-	padding-top: $paddingLarge * 2;
-	font-size: 32px;
-	line-height: 32px;
-	text-align: center;
-}
-
-.archives > .list > .header > .empty > a {
-	color: inherit;
-}
-
-.archives > .list > .header > .empty > a:hover {
-	color: $colour-greyDark;
-}
-
-
-
-/* RESPONSIVE */
-
-@media (max-width: $breakpointLarge) {
-
-
-
-}
-
-@media (min-width: $breakpointSmall) {
-
-	.archives > .sidebar.sticky {
-		position: fixed;
-		top: $paddingLarge;
-		@include calc(max-height, "100% - #{$paddingLarge * 2}");
-		overflow: hidden;
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
-	}
-
-}
-
-
 @media (max-width: $breakpointSmall) {
 
-	/* CONTENT */
+	.archives > .sidebar,
+	.archives > .list > .episode {
+		border-radius: 0;
+	}
 
 	.archives {
 		padding: 0;
 	}
 
-
-	/* LIST: EPISODE */
-
-	.archives > .list > .episode > .play {
-		display: none;
-	}
-
-	.archives .episode > h2 {
-		margin-bottom: 0;
-		padding-right: 0;
-		font-size: 16px;
-		@include lineHeight(16px);
-	}
-
-	.archives .episode > h3 {
-		font-size: 12px;
-		line-height: 12px;
-	}
-
 }
+
+
+
+/* CATEGORIES */
+
+@import "components/categories";
+
+
+
+/* SIDEBAR */
+
+@import "modules/index/sidebar";
+
+
+
+/* LIST: */
+
+@import "modules/index/list";

@@ -156,7 +156,7 @@ $socialIconSize: 20px;
 	.global-header > .menu > .nav {
 		opacity: 0;
 		overflow: hidden;
-		z-index: 10;
+		z-index: 100;
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -245,7 +245,6 @@ $socialIconSize: 20px;
 	$hamburgerSize: 24px;
 
 	.global-header > .menu > .hamburger {
-		z-index: 20;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -255,6 +254,7 @@ $socialIconSize: 20px;
 	}
 
 	.global-header > .menu.open > .hamburger {
+		z-index: 200;
 		position: fixed;
 	}
 

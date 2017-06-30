@@ -1,22 +1,44 @@
-/* COMMON */
-
 $timeWidth: 235px + $paddingSmall;
 $playerHeight: 400px;
 
-
-
 /* RESETS */
+
+.global-header,
+.global-header > .menu {
+	box-shadow: none;
+}
 
 .global-header {
 	height: $playerHeight;
 	background: url("../../images/index/player/player-background.png") center center repeat $colour-steamchatExtraLight;
 }
 
-.global-header > .menu {
-	z-index: 20;
+@media (min-width: $breakpointSmall) {
+
+	.global-header > .menu {
+		z-index: 10;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		padding-right: 0;
+		max-width: $maxWidthLarge;
+		background: top center no-repeat $colour-white;
+		@include transform(translateX(-50%));
+	}
+
 }
 
+@media (max-width: $breakpointSmall) {
 
+	.global-header {
+		height: auto;
+	}
+
+	.global-header > .menu {
+		background: #FFFFFF !important;
+	}
+
+}
 
 /* PLAYER */
 
@@ -35,7 +57,20 @@ $playerHeight: 400px;
 	height: 400px;
 }
 
+@media (max-width: $breakpointSmall) {
 
+	$playerHeight: 50vw;
+
+	.player {
+		height: $playerHeight;
+		background-size: cover;
+	}
+
+	.player > .container {
+		height: 100%;
+	}
+
+}
 
 /* LOADING */
 
@@ -109,7 +144,13 @@ $loadingSize: 64px;
 	100% { transform: scale(1); opacity: 0; }
 }
 
+@media (max-width: $breakpointSmall) {
 
+	.player > .loading {
+		display: none;
+	}
+
+}
 
 /* TOGGLE */
 
@@ -140,7 +181,13 @@ $loadingSize: 64px;
 	background-position: -160px -100px;
 }
 
+@media (max-width: $breakpointSmall) {
 
+	.player > .toggle {
+		display: none;
+	}
+
+}
 
 /* TITLE */
 
@@ -198,7 +245,41 @@ $loadingSize: 64px;
 	line-height: 20px;
 }
 
+@media (max-width: $breakpointLarge) {
 
+	.player .title {
+		left: $paddingSmall;
+		@include calc(width, "100% - #{$timeWidth + ($paddingSmall * 2)}");
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.player .title {
+		left: 0;
+		width: 100%;
+	}
+
+	.player .title h1 a,
+	.player .title h2 a {
+		padding: 5px 5px 5px $paddingSmall;
+	}
+
+	.player .title h1 a {
+		padding-bottom: 5px;
+		max-width: none;
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	.player .title h2 {
+		bottom: -25px;
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+}
 
 /* TIME */
 
@@ -222,7 +303,21 @@ $loadingSize: 64px;
 	margin: 0 5px 0 5px;
 }
 
+@media (max-width: $breakpointLarge) {
 
+	.player .time {
+		right: $paddingSmall;
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.player .time {
+		dispaly: none;
+	}
+
+}
 
 /* VOLUME */
 
@@ -270,7 +365,21 @@ $loadingSize: 64px;
 	@include transform(translateY(-50%));
 }
 
+@media (max-width: $breakpointLarge) {
 
+	.player .volume {
+		right: $paddingSmall;
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.player .volume {
+		display: none;
+	}
+
+}
 
 /* PROGRESS */
 
@@ -310,4 +419,12 @@ $loadingSize: 64px;
 	left: 0;
 	width: 5px;
 	background-color: $colour-steamchat;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.player > .progress {
+		display: none;
+	}
+
 }
