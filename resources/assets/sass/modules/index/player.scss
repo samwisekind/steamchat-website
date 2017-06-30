@@ -348,6 +348,9 @@ $toggleSize: 100px;
 
 /* VOLUME */
 
+$volumeIconWidth: 20px;
+$volumeIconHeight: 15px;
+
 .player .volume {
 	position: absolute;
 	bottom: -35px;
@@ -370,15 +373,16 @@ $toggleSize: 100px;
 .player .volume-toggle:before {
 	content: "";
 	position: absolute;
-	left: 10px;
-	top: 10px;
-	width: 20px;
-	height: 20px;
-	background: url("../../images/index/playerIcons.svg") -3px 0 no-repeat;
+	left: 50%;
+	top: 50%;
+	width: $volumeIconWidth;
+	height: $volumeIconHeight;
+	background: url("../../images/index/player/volume-icons.svg") 0 0 no-repeat;
+	@include transform(translateX(-50%) translateY(-50%));
 }
 
 .player .volume .volume-toggle.muted:before {
-	background-position: -27px 0;
+	background-position: -$volumeIconWidth 0;
 }
 
 .player .volume .volume-slider {
