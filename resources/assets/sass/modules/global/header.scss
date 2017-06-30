@@ -145,9 +145,8 @@ $socialIconSize: 20px;
 
 	.global-header > .menu > .logo {
 		position: absolute;
-		left: 50%;
+		left: 5px;
 		top: -10px;
-		margin-left: -($logoWidth / 2);
 		width: $logoWidth;
 		height: $logoHeight;
 	}
