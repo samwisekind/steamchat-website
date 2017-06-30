@@ -62,7 +62,7 @@ $playerHeight: 350px;
 
 @media (min-width: 1000px) {
 
-	$playerHeight: 400px;
+	$playerHeight: 450px;
 
 	.player {
 		height: $playerHeight;
@@ -100,7 +100,7 @@ $toggleSize: 100px;
 	margin-top: -($toggleSize / 2);
 	width: $toggleSize;
 	height: $toggleSize;
-	@include transition(opacity 0.2s $easeSharp);
+	@include transition(opacity 0.2s $easeStandard);
 }
 
 .player > .toggle:hover {
@@ -112,8 +112,19 @@ $toggleSize: 100px;
 	opacity: 1;
 }
 
+.player > .toggle > .toggle-element,
+.player.loading > .toggle > .toggle-element {
+	@include transform(scale(1) translateZ(0));
+}
+
 .player > .toggle > .toggle-element {
 	display: block;
+	@include transitionTransform(0.2s $easeOutBack);
+	@include transformOrigin(50%, 50%);
+}
+
+.player > .toggle:hover > .toggle-element {
+	@include transform(scale(1.1) translateZ(0));
 }
 
 .player > .toggle .layer {
@@ -128,7 +139,7 @@ $toggleSize: 100px;
 .player > .toggle .layer.pause,
 .player.loading > .toggle .layer.outline {
 	opacity: 0;
-	@include transform(scale(0));
+	@include transform(scale(0) translateZ(0));
 }
 
 .player.loading > .toggle .layer.loading,
@@ -136,7 +147,7 @@ $toggleSize: 100px;
 .player.playing > .toggle .layer.pause,
 .player > .toggle .layer.outline {
 	opacity: 1;
-	@include transform(scale(1));
+	@include transform(scale(1) translateZ(0));
 }
 
 .player.loading > .toggle .layer.loading {
@@ -401,7 +412,7 @@ $toggleSize: 100px;
 	pointer-events: none;
 	position: absolute;
 	top: 0;
-	height: 400px;
+	height: 100%;
 }
 
 .player > .progress > .progress-cover {
