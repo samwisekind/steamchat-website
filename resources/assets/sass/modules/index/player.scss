@@ -70,13 +70,30 @@ $playerHeight: 350px;
 
 }
 
+@media (max-width: 1000px - 1px) {
+
+	.player {
+		background-size: cover;
+	}
+
+}
+
+@media (max-width: $breakpointLarge) {
+
+	$playerHeight: 300px;
+
+	.player {
+		height: $playerHeight;
+	}
+
+}
+
 @media (max-width: $breakpointSmall) {
 
 	$playerHeight: 50vw;
 
 	.player {
 		height: $playerHeight;
-		background-size: cover;
 	}
 
 	.player > .container {
