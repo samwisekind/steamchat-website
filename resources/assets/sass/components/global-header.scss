@@ -162,7 +162,7 @@ $socialIconSize: 20px;
 		top: 0;
 		width: 100%;
 		height: 0%;
-		background: rgba($colour-steamchat, 0.8);
+		background: rgba($colour-steamchat, 0.85);
 		@include transition(all 0.4s $easeStandard);
 	}
 
@@ -181,7 +181,9 @@ $socialIconSize: 20px;
 	}
 
 	.global-header > .menu ul.links {
-		top: $headerHeight + ($paddingSmall * 2);
+		margin-top: -$socialSize;
+		top: 50%;
+		@include transform(translateY(-50%));
 	}
 
 	.global-header > .menu ul.links > li {

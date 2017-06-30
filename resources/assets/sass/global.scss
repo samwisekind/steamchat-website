@@ -62,13 +62,17 @@
 @media (max-width: $breakpointLarge) {
 
 	.content {
-		margin-top: $paddingSmall * 2;
+		margin-top: $paddingLarge * 2;
 		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
 	}
 
 }
 
 @media (max-width: $breakpointSmall) {
+
+	.content {
+		margin-top: $paddingSmall * 2;
+	}
 
 	.content h1 {
 		margin-bottom: 0;
@@ -78,8 +82,8 @@
 
 	.content h2 {
 		margin-top: 20px;
-		font-size: 18px;
-		@include lineHeight(18px);
+		font-size: 17px;
+		@include lineHeight(17px);
 	}
 
 	.content p {
