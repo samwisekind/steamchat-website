@@ -1,6 +1,4 @@
-$headerHeight: 80px;
 $timeWidth: 235px + $paddingSmall;
-$playerHeight: 400px;
 
 /* RESETS */
 
@@ -19,10 +17,6 @@ $playerHeight: 400px;
 	.global-header,
 	.global-header > .menu {
 		box-shadow: none;
-	}
-
-	.global-header {
-		height: $playerHeight;
 	}
 
 	.global-header > .menu {
@@ -48,10 +42,12 @@ $playerHeight: 400px;
 
 /* PLAYER */
 
+$playerHeight: 350px;
+
 .player {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: $playerHeight;
 	border-bottom: 5px solid $colour-steamchat;
 	background: center center no-repeat transparent;
 }
@@ -61,7 +57,7 @@ $playerHeight: 400px;
 	margin: 0 auto 0 auto;
 	width: 100%;
 	max-width: $maxWidthLarge + ($paddingLarge * 2);
-	height: 400px;
+	height: 100%;
 }
 
 @media (min-width: 1000px) {
