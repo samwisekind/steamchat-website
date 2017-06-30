@@ -438,7 +438,7 @@ $volumeIconHeight: 15px;
 
 .player > .progress > .progress-cover {
 	z-index: 0;
-	background: url("../../images/index/playerCover.svg") left center repeat $colour-steamchatCover;
+	background: url("../../images/index/player/player-cover.svg") left center repeat $colour-steamchatCover;
 }
 
 .player > .progress:hover > .progress-cover {
