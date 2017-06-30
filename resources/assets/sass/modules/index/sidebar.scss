@@ -289,7 +289,7 @@ $circleSize: $inputSize - 10px;
 	background: $colour-steamchatExtraLight;
 }
 
-@media (min-width: $breakpointSmall) {
+@media (min-width: $breakpointSmall + 1px) {
 
 	.archives > .sidebar.sticky {
 		position: fixed;

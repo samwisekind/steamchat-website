@@ -6,30 +6,6 @@
 
 
 
-/* HEADER */
-
-@media (min-width: $breakpointSmall) {
-
-	.global-header,
-	.global-header > .menu {
-		box-shadow: none;
-	}
-
-	.global-header > .menu {
-		z-index: 10;
-		position: absolute;
-		left: 50%;
-		top: 0;
-		padding-right: 0;
-		max-width: $maxWidthLarge;
-		background: top center no-repeat $colour-white;
-		@include transform(translateX(-50%));
-	}
-
-}
-
-
-
 /* HEADER PLAYER */
 
 @import "modules/index/player";

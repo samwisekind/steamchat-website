@@ -124,6 +124,10 @@ function player(element) {
 				}
 
 			},
+			stop: function() {
+				this.$refs.audioElement.pause();
+				this.isPlaying = false;
+			},
 			moveLine: function(event) {
 				this.lineHover = ((event.pageX - 2) / window.innerWidth) * 100;
 				this.hoverTime = this.$refs.audioElement.duration * (event.pageX / window.innerWidth);
@@ -269,6 +273,12 @@ function player(element) {
 			for (var i = 0; i < buttons.length; i++) {
 				buttons[i].addEventListener('click', loadEpisode);
 			}
+
+			window.addEventListener('resize', function() {
+				if (window.innerWidth <= 650) {
+					self.stop();
+				}
+			});
 
 		}
 	});
