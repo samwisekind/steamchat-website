@@ -132,7 +132,7 @@ $navOffset: 30px;
 
 .content .navigation {
 	position: relative;
-	margin-top: 100px;
+	margin-top: $paddingLarge * 3;
 	height: $navArrowHeight;
 }
 
@@ -165,14 +165,6 @@ $navOffset: 30px;
 	text-decoration: none;
 }
 
-.content .navigation > li.prev a {
-	padding-left: $navArrowWidth + $navOffset;
-}
-
-.content .navigation > li.next a {
-	padding-right: $navArrowWidth + $navOffset;
-}
-
 .content .navigation > li a:hover {
 	opacity: 1;
 }
@@ -184,15 +176,18 @@ $navOffset: 30px;
 	display: block;
 	width: $navArrowWidth;
 	height: $navArrowHeight;
-	background: url("../../images/episode/navigation-arrow.svg")
+	background: url("../../images/episode/navigation-arrow.svg") no-repeat transparent;
+	background-size: contain;
 }
 
 .content .navigation > li.prev a:before {
 	left: 0;
+	background-position: left center;
 }
 
 .content .navigation > li.next a:before {
 	right: 0;
+	background-position: right center;
 	@include transform(rotate(180deg));
 }
 
@@ -225,8 +220,8 @@ $navOffset: 30px;
 .content .navigation > li .title {
 	display: block;
 	white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .content .navigation > li .label {
@@ -248,4 +243,152 @@ $navOffset: 30px;
 
 .content .navigation > li a:hover .title {
 	text-decoration: underline;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: $breakpointSmall) {
+
+	/* CONTENT */
+
+	$transcriptPadding: $paddingSmall / 2;
+	$buttonHeight: 30px;
+
+	.content .main > .transcript {
+		margin-top: $paddingSmall;
+		padding: $transcriptPadding $transcriptPadding (($transcriptPadding * 2) + $buttonHeight) (($transcriptPadding * 2) + $iconWidth);
+	}
+
+	.content .main > .transcript:before,
+	.content .main > .transcript > .transcript-view {
+		@include transform(none);
+	}
+
+	.content .main > .transcript:before {
+		left: $transcriptPadding;
+		top: $transcriptPadding;
+	}
+
+	.content .main > .transcript > .transcript-view {
+		right: $transcriptPadding;
+		top: auto;
+		bottom: $transcriptPadding;
+		@include calc(width, "100% - #{$transcriptPadding * 2}");
+		height: $buttonHeight;
+	}
+
+	.content .main > .audio {
+		margin-top: $paddingSmall;
+	}
+
+
+
+	/* SIDEBAR */
+
+	.content .sidebar {
+		margin-top: $paddingSmall;
+		padding-top: 0;
+	}
+
+	.content .sidebar:after {
+		@include clearFix;
+	}
+
+	.content .sidebar > ul {
+		margin-bottom: 0;
+		width: 50%;
+	}
+
+	.content .sidebar > ul:first-child {
+		float: left;
+	}
+
+	.content .sidebar > ul:last-child {
+		float: right;
+	}
+
+	.content .sidebar > ul > li {
+		margin-bottom: 5px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.content .sidebar > ul:first-child > li {
+		text-align: left;
+	}
+
+	.content .sidebar > ul .title {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.content .sidebar > ul .subtitle {
+		margin-right: 5px;
+	}
+
+
+
+	/* NAVIGATION */
+
+	$navArrowWidth: 24px;
+	$navArrowHeight: 45px;
+	$navOffset: 10px;
+
+	.content .navigation {
+		margin-top: $paddingLarge * 2;
+		height: auto;
+	}
+
+	.content .navigation > li {
+		position: relative;
+		left: auto;
+		width: 100%;
+		height: $navArrowHeight;
+	}
+
+	.content .navigation > li.prev {
+		margin-bottom: 20px;
+	}
+
+	.content .navigation > li a:before {
+		width: $navArrowWidth;
+		height: $navArrowHeight;
+	}
+
+	.content .navigation > li .container {
+		@include calc(max-width, "100% - #{$navArrowWidth + $navOffset}");
+	}
+
+	.content .navigation > li.prev .container {
+		left: $navArrowWidth + $navOffset;
+	}
+
+	.content .navigation > li.next .container {
+		right: $navArrowWidth + $navOffset;
+	}
+
+	.content .navigation > li.prev a:hover .container {
+		@include transform(translateX(-($navOffset / 2)) translateY(-50%) translateZ(0));
+	}
+
+	.content .navigation > li.next a:hover .container {
+		@include transform(translateX($navOffset / 2) translateY(-50%) translateZ(0));
+	}
+
+	.content .navigation > li .label {
+		margin-bottom: 5px;
+	}
+
+	.content .navigation > li .small {
+		font-size: 10px;
+		line-height: 10px;
+	}
+
+	.content .navigation > li .title {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
 }

@@ -28,7 +28,7 @@ $logoOffsetX: -20px;
 $logoOffsetY: -15px;
 $listMargin: 10px;
 $socialSize: 40px;
-$iconSize: 20px;
+$socialIconSize: 20px;
 
 .global-header {
 	position: relative;
@@ -125,7 +125,7 @@ $iconSize: 20px;
 .global-header > .menu ul.social > li > a > .icon {
 	margin: 0 auto 0 auto;
 	display: block;
-	width: $iconSize;
+	width: $socialIconSize;
 	height: auto;
 }
 
@@ -300,7 +300,7 @@ $smallSize: 200px;
 	$logoWidth: 66px;
 	$logoHeight: 75px;
 
-	$iconSize: 20px;
+	$socialSize: 50px;
 
 	.global-header {
 		height: $headerHeight;
@@ -308,7 +308,6 @@ $smallSize: 200px;
 
 	.global-header > .menu {
 		padding-right: 0;
-		width: 100%;
 		height: $headerHeight;
 	}
 
@@ -341,14 +340,16 @@ $smallSize: 200px;
 	}
 
 	.global-header > .menu ul {
-		z-index: 20;
 		position: absolute;
 		left: 0;
-		top: $headerHeight + ($paddingSmall * 2);
 		padding: 0 !important;
 		width: 100%;
 		height: auto;
 		background: transparent !important;
+	}
+
+	.global-header > .menu ul.links {
+		top: $headerHeight + ($paddingSmall * 2);
 	}
 
 	.global-header > .menu ul.links > li {
@@ -392,12 +393,15 @@ $smallSize: 200px;
 
 	.global-header > .menu ul.social {
 		left: 50%;
-		top: auto;
 		bottom: $paddingSmall;
 		float: none;
 		margin-left: -(($socialSize * 4) / 2);
 		width: $socialSize * 4;
 		height: $socialSize;
+	}
+
+	.global-header > .menu ul.social > li {
+		width: $socialSize;
 	}
 
 	.global-header > .menu ul.social > li > a > .icon > .icon-layer {
