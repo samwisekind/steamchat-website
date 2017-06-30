@@ -22,4 +22,12 @@ var listen = require('./modules/listen.js');
 		listen.init($listen);
 	}
 
+	// Bind hamburger
+	var $menu = document.body.getElementsByClassName('js-menu')[0];
+	$menu.$hamburger = $menu.getElementsByClassName('js-hamburger');
+	$menu.$hamburger[0].addEventListener('click', function(event) {
+		event.preventDefault();
+		$menu.classList.toggle('open');
+	});
+
 })();

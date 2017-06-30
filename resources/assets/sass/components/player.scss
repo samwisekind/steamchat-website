@@ -1,12 +1,14 @@
 /* COMMON */
 
 $timeWidth: 235px + $paddingSmall;
+$playerHeight: 400px;
 
 
 
 /* RESETS */
 
 .global-header {
+	height: $playerHeight;
 	background: url("../../images/index/player/player-background.png") center center repeat $colour-steamchatExtraLight;
 }
 
@@ -20,7 +22,7 @@ $timeWidth: 235px + $paddingSmall;
 
 .player {
 	width: 100%;
-	height: 400px;
+	height: 100%;
 	border-bottom: 5px solid $colour-steamchat;
 	background: center center no-repeat transparent;
 }

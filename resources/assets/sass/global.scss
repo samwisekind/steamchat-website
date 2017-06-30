@@ -21,16 +21,19 @@
 
 /* HEADER */
 
+$headerHeight: 75px;
 $logoWidth: 105px;
 $logoHeight: 120px;
 $logoOffsetX: -20px;
 $logoOffsetY: -15px;
 $listMargin: 10px;
+$socialSize: 40px;
 $iconSize: 20px;
 
 .global-header {
 	position: relative;
 	width: 100%;
+	height: $headerHeight;
 	background: $colour-white;
 	box-shadow: 0 0 1px $colour-grey;
 }
@@ -38,9 +41,9 @@ $iconSize: 20px;
 .global-header > .menu {
 	position: relative;
 	margin: 0 auto 0 auto;
-	padding-right: $paddingLarge - $listMargin;
+	padding-right: $paddingLarge;
 	width: 100%;
-	height: 75px;
+	height: $headerHeight;
 	max-width: $maxWidthLarge + ($paddingLarge * 2);
 }
 
@@ -57,49 +60,53 @@ $iconSize: 20px;
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("../../images/global/globalLogo.svg") center center no-repeat transparent;
+	background: url("../../images/global/logo.svg") center center no-repeat transparent;
 	background-size: contain;
 }
 
-.global-header > .menu > ul,
-.global-header > .menu > ul > li {
-	list-style: none;
-}
-
-.global-header > .menu > ul {
+.global-header > .menu > .nav {
 	height: 100%;
 }
 
-.global-header > .menu > ul:after {
+.global-header > .menu ul,
+.global-header > .menu ul > li {
+	list-style: none;
+}
+
+.global-header > .menu ul {
+	height: 100%;
+}
+
+.global-header > .menu ul:after {
 	@extend %clearFix;
 }
 
-.global-header > .menu > ul > li {
+.global-header > .menu ul > li {
 	display: table;
 	float: left;
 	height: 100%;
 }
 
-.global-header > .menu > ul > li > a {
+.global-header > .menu ul > li > a {
 	display: table-cell;
 	vertical-align: middle;
 	color: $colour-steamchat;
 }
 
-.global-header > .menu > ul > li.current > a,
-.global-header > .menu > ul > li > a:hover {
+.global-header > .menu ul > li.current > a,
+.global-header > .menu ul > li > a:hover {
 	cursor: pointer;
 	color: $colour-white;
 	background: $colour-steamchat;
 }
 
-.global-header > .menu > ul.links {
+.global-header > .menu ul.links {
 	display: inline-block;
 	padding-left: ($logoWidth + $logoOffsetX) + $listMargin;
 	background: $colour-white;
 }
 
-.global-header > .menu > ul.links > li > a {
+.global-header > .menu ul.links > li > a {
 	padding: 0 $listMargin 0 $listMargin;
 	font-weight: 700;
 	text-align: center;
@@ -107,28 +114,31 @@ $iconSize: 20px;
 	text-transform: uppercase;
 }
 
-.global-header > .menu > ul.social {
+.global-header > .menu ul.social {
 	float: right;
-	margin-right: $listMargin;
 }
 
-.global-header > .menu > ul.social > li {
-	width: 40px;
+.global-header > .menu ul.social > li {
+	width: $socialSize;
 }
 
-.global-header > .menu > ul.social > li > a > .icon {
+.global-header > .menu ul.social > li > a > .icon {
 	margin: 0 auto 0 auto;
 	display: block;
 	width: $iconSize;
 	height: auto;
 }
 
-.global-header > .menu > ul.social > li > a > .icon > .icon-layer {
+.global-header > .menu ul.social > li > a > .icon > .icon-layer {
 	fill: $colour-steamchatLight;
 }
 
-.global-header > .menu > ul.social > li > a:hover > .icon > .icon-layer {
-	fill: #FFFFFF;
+.global-header > .menu ul.social > li > a:hover > .icon > .icon-layer {
+	fill: $colour-white;
+}
+
+.global-header > .menu > .hamburger {
+	display: none;
 }
 
 
@@ -261,14 +271,18 @@ $smallSize: 200px;
 
 @media (max-width: $breakpointLarge) {
 
+	/* HEADER */
+
+	.global-header > .menu {
+		padding-right: $paddingSmall;
+	}
+
 	/* CONTENT */
 
 	.content {
 		margin-top: $paddingSmall * 3;
 		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
 	}
-
-
 
 	/* COLUMNS */
 
@@ -280,8 +294,152 @@ $smallSize: 200px;
 
 @media (max-width: $breakpointSmall) {
 
-	/* CONTENT */
+	/* HEADER */
 
+	$headerHeight: 50px;
+	$logoWidth: 66px;
+	$logoHeight: 75px;
+
+	$iconSize: 20px;
+
+	.global-header {
+		height: $headerHeight;
+	}
+
+	.global-header > .menu {
+		padding-right: 0;
+		width: 100%;
+		height: $headerHeight;
+	}
+
+	.global-header > .menu > .logo {
+		z-index: 0;
+		position: absolute;
+		left: 50%;
+		top: -10px;
+		margin-left: -($logoWidth / 2);
+		width: $logoWidth;
+		height: $logoHeight;
+	}
+
+	.global-header > .menu > .nav {
+		opacity: 0;
+		overflow: hidden;
+		z-index: 10;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 0%;
+		background: rgba($colour-steamchat, 0.8);
+		@include transition(all 0.4s $easeStandard);
+	}
+
+	.global-header > .menu.open > .nav {
+		opacity: 1;
+		height: 100%;
+	}
+
+	.global-header > .menu ul {
+		z-index: 20;
+		position: absolute;
+		left: 0;
+		top: $headerHeight + ($paddingSmall * 2);
+		padding: 0 !important;
+		width: 100%;
+		height: auto;
+		background: transparent !important;
+	}
+
+	.global-header > .menu ul.links > li {
+		opacity: 0;
+		float: none;
+		margin-bottom: $paddingSmall / 2;
+		width: 100%;
+		@include transform(translateY(-$paddingSmall) translateZ(0));
+		@include transition(all 0.5s $easeStandard);
+	}
+
+	.global-header > .menu ul.links > li:last-child {
+		margin-bottom: 0;
+	}
+
+	@for $i from 1 through 3 {
+
+		.global-header > .menu.open ul.links > li:nth-child(#{$i}) {
+			@include transitionDelay(#{0.05s * $i});
+		}
+
+	}
+
+	.global-header > .menu.open ul.links > li {
+		opacity: 1;
+		@include transform(translateY(0px) translateZ(0));
+	}
+
+	.global-header > .menu ul.links > li > a {
+		padding: $paddingSmall;
+		font-size: 22px;
+		line-height: 22px;
+		color: $colour-white;
+	}
+
+	.global-header > .menu ul.links > li.current > a,
+	.global-header > .menu ul.links > li > a:hover {
+		color: $colour-steamchat;
+		background: $colour-white;
+	}
+
+	.global-header > .menu ul.social {
+		left: 50%;
+		top: auto;
+		bottom: $paddingSmall;
+		float: none;
+		margin-left: -(($socialSize * 4) / 2);
+		width: $socialSize * 4;
+		height: $socialSize;
+	}
+
+	.global-header > .menu ul.social > li > a > .icon > .icon-layer {
+		fill: $colour-white !important;
+	}
+
+	$hamburgerSize: 24px;
+
+	.global-header > .menu > .hamburger {
+		z-index: 20;
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: $headerHeight;
+		height: $headerHeight;
+	}
+
+	.global-header > .menu.open > .hamburger {
+		position: fixed;
+	}
+
+	.global-header > .menu > .hamburger:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -($hamburgerSize / 2);
+		margin-top: -($hamburgerSize / 2);
+		width: $hamburgerSize;
+		height: $hamburgerSize;
+		background: url("../../images/global/hamburger-open.svg") center center no-repeat transparent;
+		background-size: contain;
+	}
+
+	.global-header > .menu.open > .hamburger:before {
+		background-image: url("../../images/global/hamburger-close.svg");
+	}
+
+
+
+	/* CONTENT */
 
 	.content h1 {
 		margin-bottom: 0;
