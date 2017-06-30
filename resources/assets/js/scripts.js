@@ -28,6 +28,7 @@ var listen = require('./modules/listen.js');
 	$menu.$hamburger[0].addEventListener('click', function(event) {
 		event.preventDefault();
 		$menu.classList.toggle('open');
+		document.body.classList.toggle('noscroll');
 	});
 
 })();

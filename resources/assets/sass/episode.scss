@@ -72,6 +72,40 @@ $buttonWidth: 100px;
 	width: 100%;
 }
 
+@media (max-width: $breakpointSmall) {
+
+	$transcriptPadding: $paddingSmall / 2;
+	$buttonHeight: 30px;
+
+	.content .main > .transcript {
+		margin-top: $paddingSmall;
+		padding: $transcriptPadding $transcriptPadding (($transcriptPadding * 2) + $buttonHeight) (($transcriptPadding * 2) + $iconWidth);
+	}
+
+	.content .main > .transcript:before,
+	.content .main > .transcript > .transcript-view {
+		@include transform(none);
+	}
+
+	.content .main > .transcript:before {
+		left: $transcriptPadding;
+		top: $transcriptPadding;
+	}
+
+	.content .main > .transcript > .transcript-view {
+		right: $transcriptPadding;
+		top: auto;
+		bottom: $transcriptPadding;
+		@include calc(width, "100% - #{$transcriptPadding * 2}");
+		height: $buttonHeight;
+	}
+
+	.content .main > .audio {
+		margin-top: $paddingSmall;
+	}
+
+}
+
 
 
 /* SIDEBAR */
@@ -120,6 +154,53 @@ $buttonWidth: 100px;
 
 .content .sidebar > ul > li a:hover {
 	text-decoration: underline;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	/* SIDEBAR */
+
+	.content .sidebar {
+		margin-top: $paddingSmall;
+		padding-top: 0;
+	}
+
+	.content .sidebar:after {
+		@include clearFix;
+	}
+
+	.content .sidebar > ul {
+		margin-bottom: 0;
+		width: 50%;
+	}
+
+	.content .sidebar > ul:first-child {
+		float: left;
+	}
+
+	.content .sidebar > ul:last-child {
+		float: right;
+	}
+
+	.content .sidebar > ul > li {
+		margin-bottom: 5px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.content .sidebar > ul:first-child > li {
+		text-align: left;
+	}
+
+	.content .sidebar > ul .title {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.content .sidebar > ul .subtitle {
+		margin-right: 5px;
+	}
+
 }
 
 
@@ -245,92 +326,7 @@ $navOffset: 30px;
 	text-decoration: underline;
 }
 
-
-
-/* RESPONSIVE */
-
 @media (max-width: $breakpointSmall) {
-
-	/* CONTENT */
-
-	$transcriptPadding: $paddingSmall / 2;
-	$buttonHeight: 30px;
-
-	.content .main > .transcript {
-		margin-top: $paddingSmall;
-		padding: $transcriptPadding $transcriptPadding (($transcriptPadding * 2) + $buttonHeight) (($transcriptPadding * 2) + $iconWidth);
-	}
-
-	.content .main > .transcript:before,
-	.content .main > .transcript > .transcript-view {
-		@include transform(none);
-	}
-
-	.content .main > .transcript:before {
-		left: $transcriptPadding;
-		top: $transcriptPadding;
-	}
-
-	.content .main > .transcript > .transcript-view {
-		right: $transcriptPadding;
-		top: auto;
-		bottom: $transcriptPadding;
-		@include calc(width, "100% - #{$transcriptPadding * 2}");
-		height: $buttonHeight;
-	}
-
-	.content .main > .audio {
-		margin-top: $paddingSmall;
-	}
-
-
-
-	/* SIDEBAR */
-
-	.content .sidebar {
-		margin-top: $paddingSmall;
-		padding-top: 0;
-	}
-
-	.content .sidebar:after {
-		@include clearFix;
-	}
-
-	.content .sidebar > ul {
-		margin-bottom: 0;
-		width: 50%;
-	}
-
-	.content .sidebar > ul:first-child {
-		float: left;
-	}
-
-	.content .sidebar > ul:last-child {
-		float: right;
-	}
-
-	.content .sidebar > ul > li {
-		margin-bottom: 5px;
-		font-size: 12px;
-		line-height: 12px;
-	}
-
-	.content .sidebar > ul:first-child > li {
-		text-align: left;
-	}
-
-	.content .sidebar > ul .title {
-		font-size: 14px;
-		line-height: 14px;
-	}
-
-	.content .sidebar > ul .subtitle {
-		margin-right: 5px;
-	}
-
-
-
-	/* NAVIGATION */
 
 	$navArrowWidth: 24px;
 	$navArrowHeight: 45px;

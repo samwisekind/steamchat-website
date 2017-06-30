@@ -63,4 +63,8 @@ li {
 		@include lineHeight(14px);
 	}
 
+	body.noscroll {
+		overflow-y: hidden;
+	}
+
 }

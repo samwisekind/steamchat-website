@@ -19,133 +19,13 @@
 
 
 
-/* HEADER */
+/* GLOBAL HEADER */
 
-$headerHeight: 75px;
-$logoWidth: 105px;
-$logoHeight: 120px;
-$logoOffsetX: -20px;
-$logoOffsetY: -15px;
-$listMargin: 10px;
-$socialSize: 40px;
-$socialIconSize: 20px;
-
-.global-header {
-	position: relative;
-	width: 100%;
-	height: $headerHeight;
-	background: $colour-white;
-	box-shadow: 0 0 1px $colour-grey;
-}
-
-.global-header > .menu {
-	position: relative;
-	margin: 0 auto 0 auto;
-	padding-right: $paddingLarge;
-	width: 100%;
-	height: $headerHeight;
-	max-width: $maxWidthLarge + ($paddingLarge * 2);
-}
-
-.global-header > .menu > .logo {
-	z-index: 10;
-	position: absolute;
-	left: $logoOffsetX;
-	top: $logoOffsetY;
-	width: $logoWidth;
-	height: $logoHeight;
-}
-
-.global-header > .menu > .logo > a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: url("../../images/global/logo.svg") center center no-repeat transparent;
-	background-size: contain;
-}
-
-.global-header > .menu > .nav {
-	height: 100%;
-}
-
-.global-header > .menu ul,
-.global-header > .menu ul > li {
-	list-style: none;
-}
-
-.global-header > .menu ul {
-	height: 100%;
-}
-
-.global-header > .menu ul:after {
-	@extend %clearFix;
-}
-
-.global-header > .menu ul > li {
-	display: table;
-	float: left;
-	height: 100%;
-}
-
-.global-header > .menu ul > li > a {
-	display: table-cell;
-	vertical-align: middle;
-	color: $colour-steamchat;
-}
-
-.global-header > .menu ul > li.current > a,
-.global-header > .menu ul > li > a:hover {
-	cursor: pointer;
-	color: $colour-white;
-	background: $colour-steamchat;
-}
-
-.global-header > .menu ul.links {
-	display: inline-block;
-	padding-left: ($logoWidth + $logoOffsetX) + $listMargin;
-	background: $colour-white;
-}
-
-.global-header > .menu ul.links > li > a {
-	padding: 0 $listMargin 0 $listMargin;
-	font-weight: 700;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.global-header > .menu ul.social {
-	float: right;
-}
-
-.global-header > .menu ul.social > li {
-	width: $socialSize;
-}
-
-.global-header > .menu ul.social > li > a > .icon {
-	margin: 0 auto 0 auto;
-	display: block;
-	width: $socialIconSize;
-	height: auto;
-}
-
-.global-header > .menu ul.social > li > a > .icon > .icon-layer {
-	fill: $colour-steamchatLight;
-}
-
-.global-header > .menu ul.social > li > a:hover > .icon > .icon-layer {
-	fill: $colour-white;
-}
-
-.global-header > .menu > .hamburger {
-	display: none;
-}
+@import "components/global-header";
 
 
 
 /* CONTENT */
-
-$smallSize: 200px;
 
 .content {
 	margin: ($paddingLarge * 3) auto 0 auto;
@@ -179,9 +59,40 @@ $smallSize: 200px;
 	list-style: none;
 }
 
+@media (max-width: $breakpointLarge) {
+
+	.content {
+		margin-top: $paddingSmall * 2;
+		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.content h1 {
+		margin-bottom: 0;
+		font-size: 20px;
+		@include lineHeight(20px);
+	}
+
+	.content h2 {
+		margin-top: 20px;
+		font-size: 18px;
+		@include lineHeight(18px);
+	}
+
+	.content p {
+		margin-top: 10px;
+	}
+
+}
+
 
 
 /* COLUMNS */
+
+$smallSize: 200px;
 
 .columns:after {
 	@extend %clearFix;
@@ -208,83 +119,7 @@ $smallSize: 200px;
 	float: right;
 }
 
-
-
-
-/* SPECIAL LIST */
-
-.content .list-special {
-	padding-left: 15px;
-	border-left: 5px solid $colour-steamchat;
-}
-
-.content .list-special ul {
-	padding-left: 15px;
-	margin-bottom: 20px;
-}
-
-.content .list-special li {
-	margin-top: 10px;
-}
-
-.content .list-special li:first-child {
-	margin-bottom: 0;
-}
-
-
-
-/* FOOTER */
-
-.global-footer {
-	margin: 0 auto 0 auto;
-	padding: 0 40px 40px 40px;
-	width: 100%;
-	max-width: 700px;
-}
-
-.global-footer > .logo,
-.global-footer > .logo > .logo-element {
-	display: block;
-	width: 200px;
-	height: 60px;
-}
-
-.global-footer > .logo {
-	margin: 0 auto 40px auto;
-}
-
-.global-footer > p {
-	margin-top: 10px;
-	font-size: 12px;
-	@include lineHeight(12px);
-	text-align: center;
-	color: $colour-grey;
-}
-
-.global-footer > p > a {
-	color: inherit;
-}
-
-
-
-/* RESPONSIVE */
-
 @media (max-width: $breakpointLarge) {
-
-	/* HEADER */
-
-	.global-header > .menu {
-		padding-right: $paddingSmall;
-	}
-
-	/* CONTENT */
-
-	.content {
-		margin-top: $paddingSmall * 3;
-		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
-	}
-
-	/* COLUMNS */
 
 	.columns > .large {
 		@include calc(width, "100% - #{$smallSize + $paddingSmall}");
@@ -293,177 +128,6 @@ $smallSize: 200px;
 }
 
 @media (max-width: $breakpointSmall) {
-
-	/* HEADER */
-
-	$headerHeight: 50px;
-	$logoWidth: 66px;
-	$logoHeight: 75px;
-
-	$socialSize: 50px;
-
-	.global-header {
-		height: $headerHeight;
-	}
-
-	.global-header > .menu {
-		padding-right: 0;
-		height: $headerHeight;
-	}
-
-	.global-header > .menu > .logo {
-		z-index: 0;
-		position: absolute;
-		left: 50%;
-		top: -10px;
-		margin-left: -($logoWidth / 2);
-		width: $logoWidth;
-		height: $logoHeight;
-	}
-
-	.global-header > .menu > .nav {
-		opacity: 0;
-		overflow: hidden;
-		z-index: 10;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 0%;
-		background: rgba($colour-steamchat, 0.8);
-		@include transition(all 0.4s $easeStandard);
-	}
-
-	.global-header > .menu.open > .nav {
-		opacity: 1;
-		height: 100%;
-	}
-
-	.global-header > .menu ul {
-		position: absolute;
-		left: 0;
-		padding: 0 !important;
-		width: 100%;
-		height: auto;
-		background: transparent !important;
-	}
-
-	.global-header > .menu ul.links {
-		top: $headerHeight + ($paddingSmall * 2);
-	}
-
-	.global-header > .menu ul.links > li {
-		opacity: 0;
-		float: none;
-		margin-bottom: $paddingSmall / 2;
-		width: 100%;
-		@include transform(translateY(-$paddingSmall) translateZ(0));
-		@include transition(all 0.5s $easeStandard);
-	}
-
-	.global-header > .menu ul.links > li:last-child {
-		margin-bottom: 0;
-	}
-
-	@for $i from 1 through 3 {
-
-		.global-header > .menu.open ul.links > li:nth-child(#{$i}) {
-			@include transitionDelay(#{0.05s * $i});
-		}
-
-	}
-
-	.global-header > .menu.open ul.links > li {
-		opacity: 1;
-		@include transform(translateY(0px) translateZ(0));
-	}
-
-	.global-header > .menu ul.links > li > a {
-		padding: $paddingSmall;
-		font-size: 22px;
-		line-height: 22px;
-		color: $colour-white;
-	}
-
-	.global-header > .menu ul.links > li.current > a,
-	.global-header > .menu ul.links > li > a:hover {
-		color: $colour-steamchat;
-		background: $colour-white;
-	}
-
-	.global-header > .menu ul.social {
-		left: 50%;
-		bottom: $paddingSmall;
-		float: none;
-		margin-left: -(($socialSize * 4) / 2);
-		width: $socialSize * 4;
-		height: $socialSize;
-	}
-
-	.global-header > .menu ul.social > li {
-		width: $socialSize;
-	}
-
-	.global-header > .menu ul.social > li > a > .icon > .icon-layer {
-		fill: $colour-white !important;
-	}
-
-	$hamburgerSize: 24px;
-
-	.global-header > .menu > .hamburger {
-		z-index: 20;
-		position: absolute;
-		right: 0;
-		top: 0;
-		display: block;
-		width: $headerHeight;
-		height: $headerHeight;
-	}
-
-	.global-header > .menu.open > .hamburger {
-		position: fixed;
-	}
-
-	.global-header > .menu > .hamburger:before {
-		content: "";
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin-left: -($hamburgerSize / 2);
-		margin-top: -($hamburgerSize / 2);
-		width: $hamburgerSize;
-		height: $hamburgerSize;
-		background: url("../../images/global/hamburger-open.svg") center center no-repeat transparent;
-		background-size: contain;
-	}
-
-	.global-header > .menu.open > .hamburger:before {
-		background-image: url("../../images/global/hamburger-close.svg");
-	}
-
-
-
-	/* CONTENT */
-
-	.content h1 {
-		margin-bottom: 0;
-		font-size: 20px;
-		@include lineHeight(20px);
-	}
-
-	.content h2 {
-		margin-top: 10px;
-		font-size: 18px;
-		@include lineHeight(18px);
-	}
-
-	.content p {
-		margin-top: 10px;
-	}
-
-
-
-	/* COLUMNS */
 
 	.columns > .large,
 	.columns > .small,
@@ -477,3 +141,44 @@ $smallSize: 200px;
 	}
 
 }
+
+
+
+/* SPECIAL LIST */
+
+.list-special {
+	padding-left: 15px;
+	border-left: 5px solid $colour-steamchat;
+}
+
+.list-special ul {
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.list-special li {
+	margin-top: 10px;
+}
+
+.list-special li:first-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.list-special ul {
+		padding-left: 10px;
+		margin-bottom: 10px;
+	}
+
+	.list-special li {
+		margin-top: 5px;
+	}
+
+}
+
+
+
+/* GLOBAL FOOTER */
+
+@import "components/global-footer";

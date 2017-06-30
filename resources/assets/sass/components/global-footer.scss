@@ -1,0 +1,29 @@
+.global-footer {
+	margin: 0 auto 0 auto;
+	padding: 0 40px 40px 40px;
+	width: 100%;
+	max-width: 700px;
+}
+
+.global-footer > .logo,
+.global-footer > .logo > .logo-element {
+	display: block;
+	width: 200px;
+	height: 60px;
+}
+
+.global-footer > .logo {
+	margin: 0 auto 40px auto;
+}
+
+.global-footer > p {
+	margin-top: 10px;
+	font-size: 12px;
+	@include lineHeight(12px);
+	text-align: center;
+	color: $colour-grey;
+}
+
+.global-footer > p > a {
+	color: inherit;
+}
