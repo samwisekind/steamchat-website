@@ -1,4 +1,4 @@
-$headerHeight: 75px;
+$headerHeight: 80px;
 $timeWidth: 235px + $paddingSmall;
 $playerHeight: 400px;
 
@@ -176,7 +176,7 @@ $toggleSize: 100px;
 
 @media (min-width: 1000px) {
 
-	$headerHeight: 75px;
+	$headerHeight: 80px;
 
 	.player > .toggle {
 		@include transform(translateY($headerHeight / 2));
