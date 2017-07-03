@@ -251,7 +251,7 @@ export function init(element) {
 
 	var i;
 
-	// jQuery binds
+	// Cache element selectors
 	$archives = element;
 		$archives.$sidebar = $archives.getElementsByClassName('js-sidebar')[0];
 			$archives.$sidebar.$search = $archives.$sidebar.getElementsByClassName('js-search')[0];
