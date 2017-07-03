@@ -22,7 +22,7 @@
 			<div class="container">
 
 				<h2>Search</h2>
-				<input type="search" placeholder="Filter descriptions" class="search js-search" />
+				<input type="input" placeholder="Filter descriptions..." class="search js-search" />
 
 				<h2>Filter years</h2>
 				<ul class="filter years">

@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix//.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/scripts.js', 'public/js')
    .sass('resources/assets/sass/global.scss', 'public/css').options({
       processCssUrls: false
    })
@@ -21,6 +21,5 @@ mix//.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/episode.scss', 'public/css').options({
       processCssUrls: false
    })
-   .js('resources/assets/js/scripts.js', 'public/js')
    .copy('resources/assets/favicon.ico', 'public')
    .copyDirectory('resources/assets/images', 'public/images');

@@ -28,7 +28,7 @@
 /* CONTENT */
 
 .content {
-	margin: ($paddingLarge * 3) auto 0 auto;
+	margin: ($paddingLarge * 2) auto 0 auto;
 	padding: 0 $paddingLarge ($paddingLarge * 4) $paddingLarge;
 	max-width: $maxWidthSmall;
 }
@@ -62,7 +62,6 @@
 @media (max-width: $breakpointLarge) {
 
 	.content {
-		margin-top: $paddingLarge * 2;
 		padding: 0 $paddingSmall ($paddingSmall * 3) $paddingSmall;
 	}
 
