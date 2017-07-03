@@ -28,7 +28,6 @@
 		<meta name="subject" content="{{ $meta_description_default }}">
 
 		<!-- Link -->
-		<link rel="shortcut icon" href="favicon.ico" />
 		<link href="{{ asset('css/global.css') }}" rel="stylesheet" type="text/css">
 		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
@@ -46,6 +45,22 @@
 		@endif
  		<link rel="alternate" href="{{ route('feed') }}" type="application/rss+xml" title="RSS">
 
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-16x16.png') }}" sizes="16x16" />
+		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-32x32.png') }}" sizes="32x32" />
+		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-96x96.png') }}" sizes="96x96" />
+		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-128.png') }}" sizes="128x128" />
+		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-196x196.png') }}" sizes="196x196" />
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('images/seo/apple-touch-icon-57x57.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ asset('images/seo/apple-touch-icon-60x60.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/seo/apple-touch-icon-72x72.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset('images/seo/apple-touch-icon-76x76.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/seo/apple-touch-icon-114x114.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('images/seo/apple-touch-icon-120x120.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/seo/apple-touch-icon-144x144.png') }}" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('images/seo/apple-touch-icon-152x152.png') }}" />
+
 		<!-- Open Graph -->
 		<meta property="og:url" content="{{ Request::url() }}" />
 		<meta property="og:title" content="{{ $meta_title }}" />
@@ -54,7 +69,7 @@
 		@isset($episode->background)
 			<meta property="og:image" content="{{ asset($episode->background) }}">
 		@else
-			<meta property="og:image" content="{{ asset('images/global/og_image.png') }}">
+			<meta property="og:image" content="{{ asset('images/seo/og_image.png') }}">
 		@endisset
 		@if(Route::current()->getName() === 'episode')
 			<meta property="og:type" content="music.song" />
@@ -75,17 +90,25 @@
 		@isset($episode->background)
 			<meta name="twitter:image" content="{{ asset($episode->background) }}">
 		@else
-			<meta name="twitter:image" content="{{ asset('images/global/og_image.png') }}">
+			<meta name="twitter:image" content="{{ asset('images/seo/og_image.png') }}">
 		@endisset
 
 		<!-- Apple iOS -->
-		<link rel="apple-touch-icon" href="TBA">
+		<link rel="apple-touch-icon" href="{{ asset('images/seo/apple-touch-icon.png') }}">
 
 		<!-- Apple Safari -->
-		<link rel="mask-icon" href="{{ asset('images/global/mask_icon.svg') }}" color="#0064BF">
+		<link rel="mask-icon" href="{{ asset('images/seo/mask_icon.svg') }}" color="#0064BF">
 
 		<!-- Google Android -->
 		<meta name="theme-color" content="#0064BF">
+
+		<!-- Microsoft -->
+		<meta name="msapplication-TileColor" content="#0064BF" />
+		<meta name="msapplication-square70x70logo" content="{{ asset('images/seo/mstile-70x70.png') }}" />
+		<meta name="msapplication-TileImage" content="{{ asset('images/seo/mstile-144x144.png') }}" />
+		<meta name="msapplication-square150x150logo" content="{{ asset('images/seo/mstile-150x150.png') }}" />
+		<meta name="msapplication-wide310x150logo" content="{{ asset('images/seo/mstile-310x150.png') }}" />
+		<meta name="msapplication-square310x310logo" content="{{ asset('images/seo/mstile-310x310.png') }}" />
 	</head>
 
 	<body>
