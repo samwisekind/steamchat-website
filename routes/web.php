@@ -66,9 +66,9 @@ Route::get('/snacks/{number}', function ($number) {
 Route::get('/{type}/{number}', function ($type, $number) {
 
 	// Get episode by its type, number, and active state
-	$episode = Episode::where('type', $type)
+	$episode = Episode::where('active', true)
+		->where('type', $type)
 		->where('number', $number)
-		->where('active', true)
 		->first();
 
 	// Redirect to index if episode does not exist in the database
@@ -76,8 +76,20 @@ Route::get('/{type}/{number}', function ($type, $number) {
 		return redirect()->route('index');
 	}
 
+	$first = Episode::where('active', true)
+		->where('type', $type)
+		->orderBy('release_date', 'asc')
+		->first();
+
+	$last = Episode::where('active', true)
+		->where('type', $type)
+		->orderBy('release_date', 'desc')
+		->first();
+
 	return view('layouts.episode', [
 		'episode' => $episode,
+		'first' => $first->getURL(),
+		'last' => $last->getURL()
 	]);
 
 })->name('episode');
@@ -123,4 +135,4 @@ Route::get('/steamchat_feed_mp3.xml', function(){
 	return Response::make(PodcastFeed::toString())
         ->header('Content-Type', 'text/xml');
 
-});
+})->name('feed');

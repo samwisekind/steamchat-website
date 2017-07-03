@@ -1,14 +1,15 @@
 @php
 
-	$meta_title = 'Steamchat';
-	$meta_description = 'A Podcast On All Things Valve';
+	$meta_title_default = 'Steamchat';
+	$meta_description_default = 'A Podcast On All Things Valve';
 
 	if (Route::current()->getName() === 'episode') {
-		$meta_title = $meta_title . ' ' . $episode->getTitle(false);
+		$meta_title = $meta_title_default . ' ' . $episode->getTitle(false);
 		$meta_description = '(Released ' . date_format(new DateTime($episode->release_date), 'j/m/Y') . ') '. $episode->description;
 	}
 	else {
-		$meta_title = $meta_title . ': ' . $meta_description;
+		$meta_title = $meta_title_default . ': ' . $meta_description_default;
+		$meta_description = $meta_description_default;
 	};
 
 @endphp
@@ -18,18 +19,43 @@
 <html>
 
 	<head>
+		<!-- Meta -->
 		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title>{{ $meta_title }}</title>
+		<meta name="description" content="{{ $meta_description }}" />
+		<meta name="subject" content="{{ $meta_description_default }}">
+
+		<!-- Link -->
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link href="{{ asset('css/global.css') }}" rel="stylesheet" type="text/css">
 		@yield ('css')
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
+		<link rel="archives" href="{{ route('index') }}">
+		<link rel="index" href="{{ route('index') }}">
+		@if(Route::current()->getName() === 'episode')
+			<link rel="first" href="{{ $first }}">
+			@if($episode->getPreviousEpisode() !== null)
+				<link rel="prev" href="{{ $episode->getPreviousEpisode()->getURL() }}">
+			@endif
+			@if($episode->getNextEpisode() !== null)
+				<link rel="next" href="{{ $episode->getNextEpisode()->getURL() }}">
+			@endif
+			<link rel="last" href="{{ $last }}">
+		@endif
+ 		<link rel="alternate" href="{{ route('feed') }}" type="application/rss+xml" title="RSS">
+
+		<!-- Open Graph -->
 		<meta property="og:url" content="{{ Request::url() }}" />
 		<meta property="og:title" content="{{ $meta_title }}" />
+		<meta property="og:site_name" content="{{ $meta_title_default }}">
 		<meta property="og:description" content="{{ $meta_description }}" />
-		<meta name="description" content="{{ $meta_description }}" />
-		<meta property="og:image" content="{{ asset('images/global/og_image.png') }}" />
+		@isset($episode->background)
+			<meta property="og:image" content="{{ asset($episode->background) }}">
+		@else
+			<meta property="og:image" content="{{ asset('images/global/og_image.png') }}">
+		@endisset
 		@if(Route::current()->getName() === 'episode')
 			<meta property="og:type" content="music.song" />
 			<meta property="music:album" content="Steamchat Podcast" />
@@ -39,6 +65,27 @@
 		@else
 			<meta property="og:type" content="website" />
 		@endif
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@thesteamchat">
+		<meta name="twitter:url" content="{{ Request::url() }}">
+		<meta name="twitter:title" content="{{ $meta_title }}">
+		<meta name="twitter:description" content="{{ $meta_description }}">
+		@isset($episode->background)
+			<meta name="twitter:image" content="{{ asset($episode->background) }}">
+		@else
+			<meta name="twitter:image" content="{{ asset('images/global/og_image.png') }}">
+		@endisset
+
+		<!-- Apple iOS -->
+		<link rel="apple-touch-icon" href="TBA">
+
+		<!-- Apple Safari -->
+		<link rel="mask-icon" href="{{ asset('images/global/mask_icon.svg') }}" color="#0064BF">
+
+		<!-- Google Android -->
+		<meta name="theme-color" content="#0064BF">
 	</head>
 
 	<body>
