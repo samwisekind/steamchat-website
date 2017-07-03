@@ -55,13 +55,14 @@ $timeWidth: 235px + $paddingSmall;
 /* PLAYER */
 
 $playerHeight: 350px;
+$playerBorderSize: 5px;
 
 .player {
 	position: relative;
 	width: 100%;
-	height: $playerHeight;
-	border-bottom: 5px solid $colour-steamchat;
-	background: center center no-repeat transparent;
+	height: $playerHeight + $playerBorderSize;
+	border-bottom: $playerBorderSize solid $colour-steamchat;
+	background: top center no-repeat transparent;
 }
 
 .player > .container {
@@ -77,7 +78,7 @@ $playerHeight: 350px;
 	$playerHeight: 450px;
 
 	.player {
-		height: $playerHeight;
+		height: $playerHeight + $playerBorderSize;
 	}
 
 }
@@ -85,6 +86,7 @@ $playerHeight: 350px;
 @media (max-width: 1000px - 1px) {
 
 	.player {
+		background-position: center center;
 		background-size: cover;
 	}
 
