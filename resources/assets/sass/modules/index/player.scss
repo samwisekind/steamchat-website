@@ -24,10 +24,22 @@ $timeWidth: 235px + $paddingSmall;
 		position: absolute;
 		left: 50%;
 		top: 0;
-		padding-right: 0;
+		padding: 0;
 		max-width: $maxWidthLarge;
 		background: top center no-repeat $colour-white;
 		@include transform(translateX(-50%));
+	}
+
+	$logoWidth: 105px;
+	$logoOffsetX: -20px;
+	$listMargin: 10px;
+
+	.global-header > .menu > .logo {
+		left: $logoOffsetX;
+	}
+
+	.global-header > .menu ul.links {
+		padding-left: ($logoWidth + $logoOffsetX) + $listMargin;
 	}
 
 }
