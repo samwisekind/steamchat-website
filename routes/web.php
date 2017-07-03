@@ -2,18 +2,17 @@
 
 use App\Episode;
 
-// Return JSON for latest episode
+// Return JSON data for latest episode
 Route::get('/api/latest', function () {
 
-	return Episode::where('type', 'episode')
-		->where('active', true)
+	return Episode::where('active', true)
 		->orderBy('release_date', 'desc')
 		->first()
 		->getJSONData();
 
 });
 
-// Return JSON for episode data by episode ID
+// Return JSON data for episode data by episode ID
 Route::get('/api/episode/{id}', function ($id) {
 
 	return Episode::where('id', $id)
@@ -22,14 +21,18 @@ Route::get('/api/episode/{id}', function ($id) {
 
 });
 
+// Index route
 Route::get('/', function () {
 
-	$episodes = Episode::orderBy('release_date', 'desc')
-		->where('active', true)
+	// Get all episodes ordered by release date (and episode number for episodes released on the same date)
+	$episodes = Episode::where('active', true)
+		->orderBy('release_date', 'desc')
+		->orderBy('number', 'desc')
 		->get();
 
-	$years = Episode::select(DB::raw('DISTINCT YEAR(release_date)'))
-		->where('active', true)
+	// Get all unique release date years
+	$years = Episode::where('active', true)
+		->select(DB::raw('DISTINCT YEAR(release_date)'))
 		->orderBy('release_date', 'desc')
 		->get();
 
@@ -62,10 +65,13 @@ Route::get('/snacks/{number}', function ($number) {
 
 Route::get('/{type}/{number}', function ($type, $number) {
 
+	// Get episode by its type, number, and active state
 	$episode = Episode::where('type', $type)
 		->where('number', $number)
+		->where('active', true)
 		->first();
 
+	// Redirect to index if episode does not exist in the database
 	if ($episode === null) {
 		return redirect()->route('index');
 	}
@@ -76,18 +82,21 @@ Route::get('/{type}/{number}', function ($type, $number) {
 
 })->name('episode');
 
-Route::get('/about', function () {
-
-	return view('layouts.about');
-
-})->name('about');
-
+// Specials page route
 Route::get('/specials', function () {
 
 	return view('layouts.specials');
 
 })->name('specials');
 
+// About page route
+Route::get('/about', function () {
+
+	return view('layouts.about');
+
+})->name('about');
+
+// RSS feed XML
 Route::get('/steamchat_feed_mp3.xml', function(){
 
 	$episodes = Episode::orderBy('release_date', 'desc')
