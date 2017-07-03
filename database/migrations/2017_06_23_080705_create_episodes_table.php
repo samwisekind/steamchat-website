@@ -71,8 +71,7 @@ class CreateEpisodesTable extends Migration
                 ->default(null)
                 ->comment('Optional relative URL (from root of website) of the episode player background image file');
 
-            $table->timestamps()
-                ->comment('Creation and modification timestamps');
+            $table->timestamps();
 
         });
     }
