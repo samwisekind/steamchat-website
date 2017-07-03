@@ -1,4 +1,4 @@
-.archives > .sidebar > .wrapper {
+.archives > .sidebar > .container {
 	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
 }
 
@@ -8,6 +8,13 @@
 	font-size: 18px;
 	line-height: 18px;
 }
+
+/* SHOW */
+
+.archives > .sidebar > .show {
+	display: none;
+}
+
 
 /* SEARCH */
 
@@ -160,11 +167,14 @@ $circleSize: $inputSize - 10px;
 	background: $colour-white;
 }
 
+
+
+/* RESPONSIVE */
+
 @media (max-width: $breakpointSmall) {
 
 	.archives > .sidebar {
 		margin-bottom: $paddingSmall;
-		padding-top: $paddingSmall;
 	}
 
 	.archives > .sidebar h2 {
@@ -172,6 +182,69 @@ $circleSize: $inputSize - 10px;
 		margin-bottom: 5px;
 		font-size: 14px;
 		line-height: 14px;
+	}
+
+	.archives > .sidebar > .container {
+		display: none;
+	}
+
+	/* SHOW */
+
+	.archives > .sidebar > .container {
+		display: none;
+	}
+
+	.archives > .sidebar.active > .container {
+		display: block;
+	}
+
+	$showHeight: 40px;
+	$showIconWidth: 12px;
+	$showIconHeight: 14px;
+
+	.archives > .sidebar > .show {
+		position: relative;
+		display: block;
+		padding: 0 ($paddingSmall + $showIconWidth) 0 $paddingSmall;
+		height: $showHeight;
+		color: inherit;
+	}
+
+	.archives > .sidebar.active > .show {
+		margin-bottom: 10px;
+	}
+
+	.archives > .sidebar > .show > .wrapper {
+		position: relative;
+	}
+
+	.archives > .sidebar.active > .show .text.open,
+	.archives > .sidebar > .show .text.close {
+		display: none;
+	}
+
+	.archives > .sidebar.active > .show .text.close {
+		display: block;
+	}
+
+	.archives > .sidebar > .show:after,
+	.archives > .sidebar > .show > .wrapper {
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	.archives > .sidebar > .show:after {
+		content: "";
+		position: absolute;
+		right: $paddingSmall;
+		width: $showIconWidth;
+		height: $showIconHeight;
+		background: url("../../images/index/archives/show-icon.svg") center center no-repeat transparent;
+		background-size: contain;
+	}
+
+	.archives > .sidebar.active > .show:after {
+		@include transform(translateY(-50%) rotate(180deg));
 	}
 
 	/* SEARCH */

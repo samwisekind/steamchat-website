@@ -12,7 +12,14 @@
 
 		<section class="small left sidebar js-sidebar">
 
-			<div class="wrapper">
+			<a href="#" class="show js-show">
+				<div class="wrapper">
+					<span class="text open">Show filters</span>
+					<span class="text close">Hide &amp; reset filters</span>
+				</div>
+			</a>
+
+			<div class="container">
 
 				<h2>Search</h2>
 				<input type="search" placeholder="Filter descriptions" class="search js-search" />

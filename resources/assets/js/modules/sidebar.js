@@ -162,7 +162,9 @@ function categoryBehaviour() {
 
 function resetBehaviour(event) {
 
-	event.preventDefault();
+	if (event !== null) {
+		event.preventDefault();
+	}
 
 	var i;
 
@@ -230,6 +232,7 @@ function updateFilteringDisplay() {
 	if (showing < total) {
 		$archives.$counter.innerHTML = 'Showing ' + showing + ' of ' + total + ' episodes:';
 		$archives.classList.add('filtering');
+		$archives.$sidebar.classList.add('active');
 	}
 	else {
 		$archives.classList.remove('filtering');
@@ -270,6 +273,18 @@ export function init(element) {
 
 	/*** Caching episodes and inputs by years and categories ***/
 	createCache();
+
+	/*** Bind Show Button ***/
+	var show = $archives.getElementsByClassName('js-show');
+	if (show.length > 0) {
+		show[0].addEventListener('click', function(event) {
+			event.preventDefault();
+			if ($archives.$sidebar.classList.contains('active') === true) {
+				resetBehaviour(null);
+			}
+			$archives.$sidebar.classList.toggle('active');
+		});
+	}
 
 	/*** Bind Search ***/
 	$archives.$sidebar.$search.addEventListener('input', searchBehaviour);
