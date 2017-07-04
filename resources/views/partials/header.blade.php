@@ -90,7 +90,7 @@
 		@isset($episode->background)
 			<meta name="twitter:image" content="{{ asset($episode->background) }}">
 		@else
-			<meta name="twitter:image" content="{{ asset('images/seo/og_image.png') }}">
+			<meta name="twitter:image" content="{{ asset('images/seo/twitter_image.png') }}">
 		@endisset
 
 		<!-- Apple iOS -->
