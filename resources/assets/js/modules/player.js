@@ -11,6 +11,8 @@ function player(element) {
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
 
+				<a class="link" v-bind:href="episodeData.url"></a>
+
 				<a class="toggle" href="#" v-on:click="togglePlay(!isPlaying)">
 					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="toggle-element">
 						<path d="M50 10a40 40 0 1 1-40 40 40 40 0 0 1 40-40m0-10a50 50 0 1 0 50 50A50 50 0 0 0 50 0z" class="layer outline" />
