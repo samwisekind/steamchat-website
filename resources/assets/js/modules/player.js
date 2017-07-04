@@ -5,9 +5,9 @@ function player(element) {
 
 	return new Vue({
 		el: element,
-		template: `<div class="player" v-bind:class="{ loading: isLoading, playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
+		template: `<div class="player" v-bind:class="{ loading: isLoading, buffering: isBuffering, playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
 
-				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:loadedmetadata="loaded" v-on:timeupdate="updateTime" v-on:ended="isPlaying = false">
+				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:canplay="loaded" v-on:loadeddata="loaded" v-on:timeupdate="updateTime" v-on:waiting="isBuffering = true" v-on:ended="isPlaying = false">
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
 
@@ -50,6 +50,7 @@ function player(element) {
 			episodeData: false, // Episode data JSON object
 			pageTitle: document.title, // Store the default document title
 			isLoading: true, // Boolean to show/hide loading state
+			isBuffering: false, // Boolean to show/hide buffering state
 			isReady: false, // Boolean for the audio element 'loadedmetadata' event
 			isPlaying: false, // Boolean to show/hide loading state
 			currentTime: 0, // Audio element current time in seconds
@@ -111,10 +112,12 @@ function player(element) {
 			},
 			loaded: function() {
 
-				// Start playing the audio once its ready to be played
-				this.isReady = true;
-				this.isLoading = false;
-				this.togglePlay(true);
+				if (this.isReady === false) {
+					// Start playing the audio once its ready to be played
+					this.isReady = true;
+					this.isLoading = false;
+					this.togglePlay(true);
+				}
 
 			},
 			togglePlay: function(target) {
@@ -157,7 +160,7 @@ function player(element) {
 
 				// Move the seek line depending on the window y-coordinate during hover event
 				this.lineHover = ((event.pageX - 2) / window.innerWidth) * 100;
-				this.hoverTime = this.$refs.audioElement.duration * (event.pageX / window.innerWidth);
+				this.hoverTime = this.episodeData.duration * (event.pageX / window.innerWidth);
 
 			},
 			changeTime: function(event) {
@@ -165,12 +168,15 @@ function player(element) {
 				// Change audio element time by calculating the target time by y-coordinate and total duration
 				if (this.isReady === true) {
 					var coordinateX = event.pageX / window.innerWidth;
-					this.$refs.audioElement.currentTime = this.$refs.audioElement.duration * coordinateX;
+					this.$refs.audioElement.currentTime = this.episodeData.duration * coordinateX;
 					this.updateTime();
 				}
 
 			},
 			updateTime: function() {
+
+				// Hide buffering state
+				this.isBuffering = false;
 
 				// Update the timestamps
 				if (this.isReady === true) {
@@ -223,12 +229,7 @@ function player(element) {
 			durationTotal: function() {
 
 				// Returns timestamp for total duration
-				if (this.isReady === true) {
-					return this.formatTime(this.$refs.audioElement.duration);
-				}
-				else {
-					return false;
-				}
+				return this.formatTime(this.episodeData.duration);
 
 			},
 			linePosition: function() {
@@ -238,7 +239,7 @@ function player(element) {
 					return this.lineHover + '%';
 				}
 				else {
-					return this.progressWidth;
+					return false;
 				}
 
 			},
@@ -248,7 +249,7 @@ function player(element) {
 				var targetWidth;
 
 				if (this.isReady === true) {
-					targetWidth = (this.currentTime / this.$refs.audioElement.duration) * 100;
+					targetWidth = (this.currentTime / this.episodeData.duration) * 100;
 				}
 				else {
 					targetWidth = 0;

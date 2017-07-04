@@ -186,16 +186,8 @@ $toggleSize: 100px;
 	@include transformOrigin(50%, 50%);
 }
 
-.player > .toggle .layer.loading,
-.player.loading > .toggle .layer.play,
-.player.playing > .toggle .layer.play,
-.player > .toggle .layer.pause,
-.player.loading > .toggle .layer.outline {
-	opacity: 0;
-	@include transform(scale(0) translateZ(0));
-}
-
 .player.loading > .toggle .layer.loading,
+.player.buffering > .toggle .layer.loading,
 .player > .toggle .layer.play,
 .player.playing > .toggle .layer.pause,
 .player > .toggle .layer.outline {
@@ -203,7 +195,18 @@ $toggleSize: 100px;
 	@include transform(scale(1) translateZ(0));
 }
 
-.player.loading > .toggle .layer.loading {
+.player > .toggle .layer.loading,
+.player.loading > .toggle .layer.play,
+.player.playing > .toggle .layer.play,
+.player > .toggle .layer.pause,
+.player.buffering > .toggle .layer.pause,
+.player.loading > .toggle .layer.outline {
+	opacity: 0;
+	@include transform(scale(0) translateZ(0));
+}
+
+.player.loading > .toggle .layer.loading,
+.player.buffering > .toggle .layer.loading {
 	@include animation (2s "spin" infinite linear);
 }
 
@@ -231,8 +234,6 @@ $toggleSize: 100px;
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(359deg); }
 }
-
-
 
 @media (min-width: 1000px) {
 
@@ -474,6 +475,7 @@ $volumeIconHeight: 15px;
 
 .player > .progress > .progress-cover {
 	z-index: 0;
+	width: 0%;
 	background: url("../../images/index/player/player-cover.svg") left center repeat $colour-steamchatCover;
 }
 
