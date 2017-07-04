@@ -12,7 +12,7 @@ For more information on how the website is structured, [check out the wiki](http
 
 ### Repository Branches
 
-| Branch Name | Note |
+| Branch Name | Notes |
 |---|---|
 | `master` | Used for deployment of the [production website](http://www.thesteamchat.com/). |
 | `dev` | Development branch. |
