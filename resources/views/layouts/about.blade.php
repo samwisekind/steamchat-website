@@ -24,6 +24,8 @@
 
 		<p>We love to hear from our listeners, and have always kept our promise to read and discuss every email and message we get on the show. If you would like for us to discuss something on the show, or just want to get in touch, please feel free to send us an email at <a href="mailto:podcast@thesteamchat.com">podcast@thesteamchat.com</a>.</p>
 
+		<p>The source code for this website is also <a href="https://github.com/Flamov/steamchat-website" target="_blank" rel="noopener noreferrer">avaliable on GitHub</a>.</p>
+
 	</main>
 
 @endsection

@@ -6,15 +6,46 @@
 }
 
 .global-footer > p {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	font-size: 12px;
 	@include lineHeight(12px);
 	text-align: center;
 	color: $colour-grey;
 }
 
+.global-footer > p:last-child {
+	margin-bottom: 0;
+}
+
 .global-footer > p > a {
 	color: inherit;
+}
+
+.global-footer > p > a:hover {
+	color: $colour-greyDark;
+}
+
+$footerIconSize: 16px;
+
+.global-footer > p > a.icon {
+	position: relative;
+	padding-left: $footerIconSize + 5px;
+}
+
+.global-footer > p > a.icon > .icon-element {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	display: block;
+	@include transform(translateY(-50%));
+}
+
+.global-footer > p > a.icon > .icon-element > .icon-layer {
+	fill: $colour-grey;
+}
+
+.global-footer > p > a.icon:hover > .icon-element > .icon-layer {
+	fill: $colour-greyDark;
 }
 
 @media (max-width: $breakpointSmall) {
@@ -24,9 +55,9 @@
 	}
 
 	.global-footer > p {
-		margin-bottom: 5px;
-		font-size: 8px;
-		@include lineHeight(8px);
+		margin-bottom: 10px;
+		font-size: 10px;
+		@include lineHeight(10px);
 	}
 
 }
