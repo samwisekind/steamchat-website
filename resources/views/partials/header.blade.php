@@ -46,20 +46,21 @@
  		<link rel="alternate" href="{{ route('feed') }}" type="application/rss+xml" title="RSS">
 
 		<!-- Favicons -->
-		<link rel="shortcut icon" href="favicon.ico" />
-		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-16x16.png') }}" sizes="16x16" />
-		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-32x32.png') }}" sizes="32x32" />
-		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-96x96.png') }}" sizes="96x96" />
-		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-128.png') }}" sizes="128x128" />
-		<link rel="icon" type="image/png" href="{{ asset('images/seo/favicon-196x196.png') }}" sizes="196x196" />
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('images/seo/apple-touch-icon-57x57.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ asset('images/seo/apple-touch-icon-60x60.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/seo/apple-touch-icon-72x72.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset('images/seo/apple-touch-icon-76x76.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/seo/apple-touch-icon-114x114.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('images/seo/apple-touch-icon-120x120.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/seo/apple-touch-icon-144x144.png') }}" />
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('images/seo/apple-touch-icon-152x152.png') }}" />
+		<link href="{{ asset('images/seo/favicon-16x16.png') }}?v=1499313450" rel="icon" type="image/png" sizes="16x16" />
+		<link href="{{ asset('images/seo/favicon-32x32.png') }}?v=1499313450" rel="icon" type="image/png" sizes="32x32" />
+		<link href="{{ asset('images/seo/favicon-96x96.png') }}?v=1499313450" rel="icon" type="image/png" sizes="96x96" />
+		<link href="{{ asset('images/seo/favicon-128.png') }}?v=1499313450" rel="icon" type="image/png" sizes="128x128" />
+		<link href="{{ asset('images/seo/favicon-192x192.png') }}?v=1499313450" rel="icon" type="image/png" sizes="192x192" />
+		<link href="{{ asset('images/seo/favicon-196x196.png') }}?v=1499313450" rel="icon" type="image/png" sizes="196x196" />
+		<link href="{{ asset('images/seo/apple-touch-icon-57x57.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="57x57" />
+		<link href="{{ asset('images/seo/apple-touch-icon-60x60.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="60x60" />
+		<link href="{{ asset('images/seo/apple-touch-icon-72x72.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="72x72" />
+		<link href="{{ asset('images/seo/apple-touch-icon-76x76.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="76x76" />
+		<link href="{{ asset('images/seo/apple-touch-icon-114x114.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="114x114" />
+		<link href="{{ asset('images/seo/apple-touch-icon-120x120.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="120x120" />
+		<link href="{{ asset('images/seo/apple-touch-icon-144x144.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="144x144" />
+		<link href="{{ asset('images/seo/apple-touch-icon-152x152.png') }}?v=1499313450" rel="apple-touch-icon-precomposed" sizes="152x152" />
+		<link rel="shortcut icon" href="favicon.ico?v=1499313450" />
 
 		<!-- Open Graph -->
 		<meta property="og:url" content="{{ Request::url() }}" />
