@@ -5,20 +5,8 @@
 	max-width: 700px;
 }
 
-.global-footer > .logo {
-	display: block;
-	margin: 0 auto $paddingLarge auto;
-	width: 200px;
-}
-
-.global-footer > .logo > .logo-element {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
 .global-footer > p {
-	margin-top: 10px;
+	margin-bottom: 10px;
 	font-size: 12px;
 	@include lineHeight(12px);
 	text-align: center;
@@ -35,13 +23,8 @@
 		padding: 0 $paddingSmall $paddingSmall $paddingSmall;
 	}
 
-	.global-footer > .logo {
-		margin-bottom: 20px;
-		width: 150px;
-	}
-
 	.global-footer > p {
-		margin-top: 5px;
+		margin-bottom: 5px;
 		font-size: 8px;
 		@include lineHeight(8px);
 	}
