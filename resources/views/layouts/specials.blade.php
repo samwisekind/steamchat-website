@@ -18,9 +18,9 @@
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 9]) }}">Gabe Newell 2009</a></li>
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 47]) }}">Gabe Newell 2011 (Part 1)</a></li>
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 48]) }}">Gabe Newell 2011 (Part 2)</a></li>
-					<li><a href="#">Marc Laidlaw</a></li>
-					<li><a href="#">Al&eacute;sia Glidewell</a></li>
-					<li><a href="#">Ellen McLain</a></li>
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Marc Laidlaw</a></li>
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Al&eacute;sia Glidewell</a></li>
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Ellen McLain</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 2]) }}">Harry Robins </a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 3]) }}">Jonathan Coulton</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 4]) }}">Black Mesa Mod Team</a></li>
