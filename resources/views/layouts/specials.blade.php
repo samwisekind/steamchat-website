@@ -23,7 +23,7 @@
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Ellen McLain</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 2]) }}">Harry Robins </a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 3]) }}">Jonathan Coulton</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 4]) }}">Black Mesa Mod Team</a></li>
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 4]) }}">Black Mesa Team</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 1]) }}">LambdaGeneration</a></li
 				</ul>
 
@@ -35,27 +35,24 @@
 
 				<ul class="list-special">
 					<li>
-						Games
+						Community Specials
 						<ul>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 67]) }}">Black Mesa Mod Team Special</a></li>
+							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 16]) }}">Left 4 Dead 2 Community Special</a></li>
+							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 58]) }}">Portal 2 Community Special</a></li>
+						</ul>
+					</li>
+					<li>
+						Game Specials
+						<ul>
+							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 57]) }}">Portal 2 Launch Party</a></li>
+							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 67]) }}">Black Mesa Team Special</a></li>
+							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 105]) }}">The Beginner's Guide</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 12]) }}">Half-Life Special</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 16]) }}">Left 4 Dead 2 Special</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 21]) }}">Portal 2 Special (Part 1)</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 22]) }}">Portal 2 Special (Part 2)</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 95]) }}">Mass Effect 3 Special</a></li>
 						</ul>
 					</li>
 					<li>
-						Events
-						<ul>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 104]) }}">E3 2016 Special</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 29]) }}">E3 2010 Special (Part 1)</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 30]) }}">E3 2010 Special (Part 2)</a></li>
-							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 31]) }}">E3 2010 Special (Part 3)</a></li>
-						</ul>
-					</li>
-					<li>
-						Other
+						Others
 						<ul>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 28]) }}">LOST Special</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 23]) }}">April Fools' 2010</a></li>
