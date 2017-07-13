@@ -1,0 +1,54 @@
+/* PARIALS */
+
+@import "partials/mixins";
+@import "partials/constants";
+@import "partials/colours";
+
+
+
+/* HEADER PLAYER */
+
+@import "modules/index/player";
+
+
+
+/* CONTENT */
+
+.archives > .sidebar,
+.archives > .list > .episode {
+	border-radius: 2px;
+	background: $colour-white;
+	@include boxShadow($paperShadow);
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.archives > .sidebar,
+	.archives > .list > .episode {
+		border-radius: 0;
+	}
+
+	.archives {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
+
+
+/* CATEGORIES */
+
+@import "components/categories";
+
+
+
+/* SIDEBAR */
+
+@import "modules/index/sidebar";
+
+
+
+/* LIST: */
+
+@import "modules/index/list";

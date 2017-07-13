@@ -1,0 +1,390 @@
+/* PARIALS */
+
+@import "partials/mixins";
+@import "partials/constants";
+@import "partials/colours";
+
+
+
+/* CONTENT */
+
+$iconWidth: 30px;
+$iconHeight: 23px;
+$buttonWidth: 100px;
+
+.content .main > h1 {
+	margin-bottom: 0;
+}
+
+.content .main > h2 {
+	margin-top: 0;
+	color: $colour-greyDark;
+}
+
+.content .main > .transcript {
+	position: relative;
+	margin-top: 40px;
+	padding: $paddingSmall (($paddingSmall * 2) + $buttonWidth) $paddingSmall (($paddingSmall * 2) + $iconWidth);
+	color: #FFFFFF;
+	background: $colour-steamchatLight;
+	@include boxShadow($paperShadow);
+}
+
+.content .main > .transcript:before,
+.content .main > .transcript > .transcript-view,
+.content .main > .transcript > .transcript-view > .wrapper {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+.content .main > .transcript:before {
+	content: "";
+	position: absolute;
+	left: 20px;
+	width: $iconWidth;
+	height: $iconHeight;
+	background: url("../../images/episode/transcript-icon.svg") center center no-repeat transparent;
+}
+
+.content .main > .transcript > .transcript-view {
+	position: absolute;
+	right: $paddingSmall / 2;
+	width: $buttonWidth;
+	@include calc(height, "100% - #{$paddingSmall}");
+	color: inherit;
+	text-decoration: none;
+	background: $colour-steamchat;
+}
+
+.content .main > .transcript > .transcript-view:hover {
+	text-decoration: underline;
+	background: $colour-steamchatDark;
+}
+
+.content .main > .transcript > .transcript-view > .wrapper {
+	position: relative;
+	text-align: center;
+}
+
+.content .main > .audio {
+	margin-top: 40px;
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	$transcriptPadding: $paddingSmall / 2;
+	$buttonHeight: 30px;
+
+	.content .main > .transcript {
+		margin-top: $paddingSmall;
+		padding: $transcriptPadding $transcriptPadding (($transcriptPadding * 2) + $buttonHeight) (($transcriptPadding * 2) + $iconWidth);
+	}
+
+	.content .main > .transcript:before,
+	.content .main > .transcript > .transcript-view {
+		@include transform(none);
+	}
+
+	.content .main > .transcript:before {
+		left: $transcriptPadding;
+		top: $transcriptPadding;
+	}
+
+	.content .main > .transcript > .transcript-view {
+		right: $transcriptPadding;
+		top: auto;
+		bottom: $transcriptPadding;
+		@include calc(width, "100% - #{$transcriptPadding * 2}");
+		height: $buttonHeight;
+	}
+
+	.content .main > .audio {
+		margin-top: $paddingSmall;
+	}
+
+}
+
+
+
+/* SIDEBAR */
+
+.content .sidebar {
+	padding-top: 10px;
+}
+
+.content .sidebar > ul:last-child,
+.content .sidebar > ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.content .sidebar > ul {
+	margin-bottom: 40px;
+	list-style: none;
+}
+
+.content .sidebar > ul > li {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: right;
+}
+
+.content .sidebar > ul .title,
+.content .sidebar > ul .subtitle {
+	color: $colour-greyDark;
+}
+
+.content .sidebar > ul .title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.content .sidebar > ul .subtitle {
+	margin-right: 5px;
+}
+
+.content .sidebar > ul > li a {
+	text-decoration: none;
+}
+
+.content .sidebar > ul > li a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	/* SIDEBAR */
+
+	.content .sidebar {
+		margin-top: $paddingSmall;
+		padding-top: 0;
+	}
+
+	.content .sidebar:after {
+		@include clearFix;
+	}
+
+	.content .sidebar > ul {
+		margin-bottom: 0;
+		width: 50%;
+	}
+
+	.content .sidebar > ul:first-child {
+		float: left;
+	}
+
+	.content .sidebar > ul:last-child {
+		float: right;
+	}
+
+	.content .sidebar > ul > li {
+		margin-bottom: 5px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.content .sidebar > ul:first-child > li {
+		text-align: left;
+	}
+
+	.content .sidebar > ul .title {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.content .sidebar > ul .subtitle {
+		margin-right: 5px;
+	}
+
+}
+
+
+
+/* NAVIGATION */
+
+$navArrowWidth: 30px;
+$navArrowHeight: 56px;
+$navOffset: 30px;
+
+.content .navigation {
+	position: relative;
+	margin-top: $paddingLarge * 3;
+	height: $navArrowHeight;
+}
+
+.content .navigation,
+.content .navigation > li {
+	list-style: none;
+}
+
+.content .navigation > li {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: $navArrowHeight;
+}
+
+.content .navigation > li.prev {
+	left: 0;
+	text-align: left;
+}
+
+.content .navigation > li.next {
+	right: 0;
+	text-align: right;
+}
+
+.content .navigation > li a {
+	display: block;
+	height: 100%;
+	color: $colour-greyDark;
+	text-decoration: none;
+}
+
+.content .navigation > li a:hover {
+	opacity: 1;
+}
+
+.content .navigation > li a:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	display: block;
+	width: $navArrowWidth;
+	height: $navArrowHeight;
+	background: url("../../images/episode/navigation-arrow.svg") no-repeat transparent;
+	background-size: contain;
+}
+
+.content .navigation > li.prev a:before {
+	left: 0;
+	background-position: left center;
+}
+
+.content .navigation > li.next a:before {
+	right: 0;
+	background-position: right center;
+	@include transform(rotate(180deg));
+}
+
+.content .navigation > li .container {
+	position: absolute;
+	top: 50%;
+	@include calc(max-width, "100% - #{$navArrowWidth + $navOffset}");
+	@include transform(translateY(-50%));
+	@include transition(all 0.2s $easeStandard);
+}
+
+.content .navigation > li.prev .container {
+	left: $navArrowWidth + $navOffset;
+}
+
+.content .navigation > li.next .container {
+	right: $navArrowWidth + $navOffset;
+}
+
+.content .navigation > li.prev a:hover .container {
+	@include transform(translateX(-($navOffset / 2)) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li.next a:hover .container {
+	@include transform(translateX($navOffset / 2) translateY(-50%) translateZ(0));
+}
+
+.content .navigation > li .label,
+.content .navigation > li .small,
+.content .navigation > li .title {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.content .navigation > li .label {
+	margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.content .navigation > li .small {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.content .navigation > li .title {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.content .navigation > li a:hover .title {
+	text-decoration: underline;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	$navArrowWidth: 24px;
+	$navArrowHeight: 45px;
+	$navOffset: 10px;
+
+	.content .navigation {
+		margin-top: $paddingLarge * 2;
+		height: auto;
+	}
+
+	.content .navigation > li {
+		position: relative;
+		left: auto;
+		width: 100%;
+		height: $navArrowHeight;
+	}
+
+	.content .navigation > li.prev {
+		margin-bottom: 20px;
+	}
+
+	.content .navigation > li a:before {
+		width: $navArrowWidth;
+		height: $navArrowHeight;
+	}
+
+	.content .navigation > li .container {
+		@include calc(max-width, "100% - #{$navArrowWidth + $navOffset}");
+	}
+
+	.content .navigation > li.prev .container {
+		left: $navArrowWidth + $navOffset;
+	}
+
+	.content .navigation > li.next .container {
+		right: $navArrowWidth + $navOffset;
+	}
+
+	.content .navigation > li.prev a:hover .container {
+		@include transform(translateX(-($navOffset / 2)) translateY(-50%) translateZ(0));
+	}
+
+	.content .navigation > li.next a:hover .container {
+		@include transform(translateX($navOffset / 2) translateY(-50%) translateZ(0));
+	}
+
+	.content .navigation > li .label {
+		margin-bottom: 5px;
+	}
+
+	.content .navigation > li .small {
+		font-size: 10px;
+		line-height: 10px;
+	}
+
+	.content .navigation > li .title {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+}

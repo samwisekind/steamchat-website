@@ -1,0 +1,189 @@
+/* PARIALS */
+
+@import "partials/mixins";
+@import "partials/constants";
+@import "partials/colours";
+
+/* GLOBALS */
+
+@import "partials/resets";
+@import "partials/fonts";
+
+
+
+/* COMMON */
+
+%clearFix {
+	@include clearFix;
+}
+
+
+
+/* GLOBAL HEADER */
+
+@import "modules/global/header";
+
+
+
+/* CONTENT */
+
+.content {
+	margin: ($paddingLarge * 2) auto 0 auto;
+	padding: 0 $paddingLarge ($paddingLarge * 4) $paddingLarge;
+	max-width: $maxWidthSmall;
+}
+
+.content.wide {
+	max-width: $maxWidthLarge + ($paddingLarge * 2);
+}
+
+.content h1 {
+	margin-bottom: 20px;
+	font-size: 32px;
+	@include lineHeight(32px);
+	color: $colour-steamchat;
+}
+
+.content h2 {
+	margin-top: 30px;
+	font-size: 24px;
+	@include lineHeight(24px);
+}
+
+.content p {
+	margin-top: 20px;
+}
+
+.content ul,
+.content li {
+	list-style: none;
+}
+
+@media (max-width: $breakpointLarge) {
+
+	.content {
+		margin-top: $paddingSmall * 3;
+		padding: 0 $paddingSmall ($paddingLarge * 2) $paddingSmall;
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.content {
+		margin-top: $paddingSmall * 2;
+		padding-bottom: $paddingLarge;
+	}
+
+	.content h1 {
+		margin-bottom: 0;
+		font-size: 20px;
+		@include lineHeight(20px);
+	}
+
+	.content h2 {
+		margin-top: 20px;
+		font-size: 17px;
+		@include lineHeight(17px);
+	}
+
+	.content p {
+		margin-top: 10px;
+	}
+
+}
+
+
+
+/* COLUMNS */
+
+$smallSize: 200px;
+
+.columns:after {
+	@extend %clearFix;
+}
+
+.columns > .small {
+	position: relative;
+	width: $smallSize;
+}
+
+.columns > .large {
+	@include calc(width, "100% - #{$smallSize + $paddingLarge}");
+}
+
+.columns > .even {
+	@include calc(width, "50% - #{$paddingSmall}");
+}
+
+.columns > .left {
+	float: left;
+}
+
+.columns > .right {
+	float: right;
+}
+
+@media (max-width: $breakpointLarge) {
+
+	.columns > .large {
+		@include calc(width, "100% - #{$smallSize + $paddingSmall}");
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.columns > .large,
+	.columns > .small,
+	.columns > .even {
+		width: 100%;
+	}
+
+	.columns > .left,
+	.columns > .right {
+		float: none;
+	}
+
+}
+
+
+
+/* SPECIAL LIST */
+
+.list-special {
+	padding-left: 15px;
+	border-left: 5px solid $colour-steamchat;
+}
+
+.list-special ul {
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.list-special li {
+	margin-top: 10px;
+}
+
+.list-special li:first-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.list-special ul {
+		padding-left: 10px;
+		margin-bottom: 10px;
+	}
+
+	.list-special li {
+		margin-top: 5px;
+	}
+
+}
+
+
+
+/* GLOBAL FOOTER */
+
+@import "modules/global/footer";

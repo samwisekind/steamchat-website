@@ -1,0 +1,386 @@
+.archives > .sidebar > .container {
+	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
+}
+
+.archives > .sidebar h2 {
+	margin-top: $paddingSmall;
+	margin-bottom: 5px;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+/* SHOW */
+
+.archives > .sidebar > .show {
+	display: none;
+}
+
+
+/* SEARCH */
+
+.archives > .sidebar .search {
+	padding: 0 10px 0 10px;
+	width: 100%;
+	height: 35px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 2px solid $colour-greyLight;
+	@include removeStyling;
+	@include transition(border-color 0.2s $easeStandard);
+}
+
+.archives > .sidebar .search:hover {
+	border-color: $colour-steamchatExtraLight;
+}
+
+.archives > .sidebar .search:focus,
+.archives > .sidebar .search.active {
+	border-color: $colour-steamchat;
+}
+
+.archives > .sidebar .search.active:hover {
+	border-color: $colour-steamchatLight;
+}
+
+/* FILTER */
+
+$inputSize: 20px;
+
+.archives > .sidebar .filter > li {
+	margin-bottom: 5px;
+}
+
+.archives > .sidebar .filter > li:last-child {
+	margin-bottom: 0;
+}
+
+.archives > .sidebar .filter .input {
+	display: none;
+}
+
+.archives > .sidebar .filter .input + .label {
+	position: relative;
+	padding-left: $inputSize + 5px;
+	display: block;
+}
+
+.archives > .sidebar .filter .input + .label:hover {
+	cursor: pointer;
+}
+
+.archives > .sidebar .filter .input + .label:before,
+.archives > .sidebar .filter .input + .label:after {
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+.archives > .sidebar .filter .input + .label:before,
+.archives > .sidebar .filter .input:checked + .label:after {
+	@include transition(all 0.2s $easeStandard);
+}
+
+.archives > .sidebar .filter .input + .label:before {
+	z-index: 0;
+	left: 0;
+	top: 50%;
+	margin-top: -($inputSize / 2);
+	width: $inputSize;
+	height: $inputSize;
+	border: 2px solid $colour-grey;
+	background: $colour-white;
+}
+
+.archives > .sidebar .filter .input + .label:hover:before {
+	border-color: $colour-steamchatExtraLight;
+}
+
+.archives > .sidebar .filter .input:checked + .label:before {
+	border-color: $colour-steamchat;
+	background: $colour-steamchat;
+}
+
+.archives > .sidebar .filter .input:checked + .label:hover:before {
+	border-color: $colour-steamchatLight;
+	background: $colour-steamchatLight;
+}
+
+.archives > .sidebar .filter .input + .label:after {
+	opacity: 0;
+	z-index: 10;
+	position: absolute;
+	top: 50%;
+	display: block;
+	@include transform(scale(0.25) translateZ(0));
+}
+
+.archives > .sidebar .filter .input:checked + .label:after {
+	opacity: 1;
+	@include transform(scale(1) translateZ(0));
+}
+
+/* TICK */
+
+$tickSize: $inputSize - 8px;
+
+.archives .sidebar .filter.years .input + .label {
+	color: $colour-grey;
+	@include transition(color 0.2s $easeStandard);
+}
+
+.archives .sidebar .filter.years .input:checked + .label {
+	color: inherit;
+}
+
+.archives .sidebar .filter.years .input + .label:before {
+	border-radius: 5px;
+}
+
+.archives .sidebar .filter.years .input:disabled + .label:before {
+	border-color: $colour-greyLight;
+	background: $colour-greyLight;
+}
+
+.archives .sidebar .filter.years .input + .label:after {
+	left: ($inputSize - $tickSize) / 2;
+	margin-top: -($tickSize / 2);
+	width: $tickSize;
+	height: $tickSize;
+	background: url("../../images/index/archives/checkbox.svg") center center no-repeat;
+	background-size: contain;
+}
+
+/* CIRCLE */
+
+$circleSize: $inputSize - 10px;
+
+.archives .sidebar .filter.categories .input + .label:before {
+	border-radius: 50%;
+}
+
+.archives .sidebar .filter.categories .input + .label:after {
+	left: ($inputSize - $circleSize) / 2;
+	margin-top: -($circleSize / 2);
+	width: $circleSize;
+	height: $circleSize;
+	border-radius: 50%;
+	background: $colour-white;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: $breakpointSmall) {
+
+	.archives > .sidebar {
+		margin-bottom: $paddingSmall;
+	}
+
+	.archives > .sidebar h2 {
+		margin-top: 0;
+		margin-bottom: 5px;
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.archives > .sidebar > .container {
+		display: none;
+	}
+
+	/* SHOW */
+
+	.archives > .sidebar > .container {
+		display: none;
+	}
+
+	.archives > .sidebar.active > .container {
+		display: block;
+	}
+
+	$showHeight: 40px;
+	$showIconWidth: 12px;
+	$showIconHeight: 14px;
+
+	.archives > .sidebar > .show {
+		position: relative;
+		display: block;
+		padding: 0 ($paddingSmall + $showIconWidth) 0 $paddingSmall;
+		height: $showHeight;
+		color: inherit;
+	}
+
+	.archives > .sidebar.active > .show {
+		margin-bottom: 10px;
+	}
+
+	.archives > .sidebar > .show > .wrapper {
+		position: relative;
+	}
+
+	.archives > .sidebar.active > .show .text.open,
+	.archives > .sidebar > .show .text.close {
+		display: none;
+	}
+
+	.archives > .sidebar.active > .show .text.close {
+		display: block;
+	}
+
+	.archives > .sidebar > .show:after,
+	.archives > .sidebar > .show > .wrapper {
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	.archives > .sidebar > .show:after {
+		content: "";
+		position: absolute;
+		right: $paddingSmall;
+		width: $showIconWidth;
+		height: $showIconHeight;
+		background: url("../../images/index/archives/show-icon.svg") center center no-repeat transparent;
+		background-size: contain;
+	}
+
+	.archives > .sidebar.active > .show:after {
+		@include transform(translateY(-50%) rotate(180deg));
+	}
+
+	/* SEARCH */
+
+	.archives > .sidebar .search {
+		margin-bottom: 15px;
+		padding: 0 5px 0 5px;
+		height: 30px;
+		font-size: 12px;
+	}
+
+	/* FILTER */
+
+	$inputSize: 15px;
+
+	.archives > .sidebar .filter:after {
+		@include clearFix;
+	}
+
+	.archives > .sidebar .filter > li {
+		float: left;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.archives > .sidebar .filter > li:nth-child(even) {
+		padding-left: 5px;
+	}
+
+	.archives > .sidebar .filter > li:nth-child(odd) {
+		padding-right: 5px;
+	}
+
+	.archives > .sidebar .filter .input + .label {
+		padding-left: $inputSize + 5px;
+	}
+
+	.archives > .sidebar .filter .input + .label:before {
+		margin-top: -($inputSize / 2);
+		width: $inputSize;
+		height: $inputSize;
+	}
+
+	/* TICK */
+
+	$tickSize: $inputSize - 6px;
+
+	.archives > .sidebar .filter.years {
+		margin-bottom: 15px;
+	}
+
+	.archives > .sidebar .filter.years > li {
+		width: 25%;
+	}
+
+	.archives > .sidebar .filter.years > li:nth-child(-n+4) {
+		margin-top: 0;
+	}
+
+	.archives .sidebar .filter.years .input + .label:before {
+		border-radius: 4px;
+	}
+
+	.archives .sidebar .filter.years .input + .label:after {
+		left: ($inputSize - $tickSize) / 2;
+		margin-top: -($tickSize / 2);
+		width: $tickSize;
+		height: $tickSize;
+	}
+
+	/* CIRCLE */
+
+	$circleSize: $inputSize - 6px;
+
+	.archives > .sidebar .filter.categories > li {
+		width: 50%;
+	}
+
+	.archives > .sidebar .filter.categories > li:nth-child(-n+2) {
+		margin-top: 0;
+	}
+
+	.archives > .sidebar .filter.categories > li:nth-child(odd) {
+		clear: both;
+	}
+
+	.archives .sidebar .filter.categories .input + .label:after {
+		left: ($inputSize - $circleSize) / 2;
+		margin-top: -($circleSize / 2);
+		width: $circleSize;
+		height: $circleSize;
+	}
+
+}
+
+
+
+/* RESET */
+
+.archives .sidebar .reset {
+	display: none;
+	margin-top: 5px;
+	padding: 10px $paddingSmall 10px $paddingSmall;
+	width: 100%;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+}
+
+.archives.filtering .sidebar .reset {
+	display: block;
+}
+
+.archives .sidebar .reset:hover {
+	background: $colour-steamchatExtraLight;
+}
+
+@media (min-width: $breakpointSmall + 1px) {
+
+	.archives > .sidebar.sticky {
+		position: fixed;
+		top: $paddingLarge;
+		@include calc(max-height, "100% - #{$paddingLarge * 2}");
+		overflow: hidden;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+}
+
+@media (max-width: $breakpointSmall) {
+
+	.archives .sidebar .reset {
+		margin-top: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+}

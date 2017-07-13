@@ -1,0 +1,80 @@
+$categoryPaddingX: 8px;
+$categoryPaddingY: 6px;
+$categoryIconSize: 12px;
+
+.archives .categories .category .container {
+	position: relative;
+	display: block;
+	padding: $categoryPaddingY $categoryPaddingX $categoryPaddingY (($categoryPaddingX * 2) + $categoryIconSize);
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: left;
+	color: $colour-white;
+	text-decoration: none;
+}
+
+$categories: (
+	("interview", $colour-category-interview, $colour-category-interviewLight),
+	("game", $colour-category-game, $colour-category-gameLight),
+	("event", $colour-category-event, $colour-category-eventLight)
+);
+
+@each $categoryName, $activeColour, $inactiveColour in $categories {
+
+	.archives .categories .category.#{$categoryName} .container {
+		background: $inactiveColour;
+	}
+
+	.archives > .list .categories .category.#{$categoryName} .container,
+	.archives .categories .category.#{$categoryName} .input:checked + .label .container {
+		background: $activeColour;
+	}
+
+}
+
+.archives .categories .category .container:before {
+	content: "";
+	position: absolute;
+	left: $categoryPaddingX;
+	top: 50%;
+	margin-top: -($categoryIconSize / 2);
+	display: block;
+	width: $categoryIconSize;
+	height: $categoryIconSize;
+	background: center center no-repeat transparent;
+	background-size: contain;
+}
+
+.archives .categories .category.interview .container:before {
+	background-image: url("../../images/index/archives/category-interview.svg");
+}
+
+.archives .categories .category.game .container:before {
+	background-image: url("../../images/index/archives/category-game.svg");
+}
+
+.archives .categories .category.event .container:before {
+	background-image: url("../../images/index/archives/category-event.svg");
+}
+
+@media (max-width: $breakpointSmall) {
+
+	$categoryPaddingX: 6px;
+	$categoryPaddingY: 4px;
+	$categoryIconSize: 10px;
+
+	.archives .categories .category .container {
+		padding: $categoryPaddingY $categoryPaddingX $categoryPaddingY (($categoryPaddingX * 2) + $categoryIconSize);
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.archives .categories .category .container:before {
+		left: $categoryPaddingX;
+		margin-top: -($categoryIconSize / 2);
+		width: $categoryIconSize;
+		height: $categoryIconSize
+	}
+
+}
