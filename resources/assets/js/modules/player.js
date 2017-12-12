@@ -1,7 +1,6 @@
 function player(element) {
 
 	var Vue = require('vue');
-	var axios = require('axios');
 
 	return new Vue({
 		el: element,
@@ -78,11 +77,15 @@ function player(element) {
 					episode = '/api/episode/' + episode;
 				}
 
-				axios.get(episode)
-					.then(function(response) {
+				var request = new XMLHttpRequest();
+				request.open('GET', episode, true);
+
+				request.onload = function() {
+
+					if (request.status >= 200 && request.status < 400) {
 
 						// Store the episode data
-						self.episodeData = response.data;
+						self.episodeData = JSON.parse(request.responseText);
 
 						// Show the episode mask image, otherwise reset the header back its default state
 						if (self.episodeData.mask !== null) {
@@ -104,10 +107,11 @@ function player(element) {
 							self.isLoading = false;
 						}
 
-					})
-					.catch(function(error) {
-						console.error(error);
-					});
+					}
+
+				};
+
+				request.send();
 
 			},
 			loaded: function() {
