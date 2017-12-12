@@ -1,7 +1,6 @@
 function player(element) {
 
 	var Vue = require('vue');
-	var axios = require('axios');
 
 	return new Vue({
 		el: element,
@@ -78,11 +77,15 @@ function player(element) {
 					episode = '/api/episode/' + episode;
 				}
 
-				axios.get(episode)
-					.then(function(response) {
+				var request = new XMLHttpRequest();
+				request.open('GET', episode, true);
+
+				request.onload = function() {
+
+					if (request.status >= 200 && request.status < 400) {
 
 						// Store the episode data
-						self.episodeData = response.data;
+						self.episodeData = JSON.parse(request.responseText);
 
 						// Show the episode mask image, otherwise reset the header back its default state
 						if (self.episodeData.mask !== null) {
@@ -104,10 +107,11 @@ function player(element) {
 							self.isLoading = false;
 						}
 
-					})
-					.catch(function(error) {
-						console.error(error);
-					});
+					}
+
+				};
+
+				request.send();
 
 			},
 			loaded: function() {
@@ -121,6 +125,8 @@ function player(element) {
 
 			},
 			togglePlay: function(target) {
+
+				var self = this;
 
 				// Do not do anything if the player is still in a loading state
 				if (this.isLoading === false) {
@@ -137,12 +143,22 @@ function player(element) {
 						// Otherwise call the pause/play methods
 						if (target === false) {
 							this.$refs.audioElement.pause();
+							this.isPlaying = false;
 						}
 						else if (target === true) {
-							this.$refs.audioElement.play();
+							// Attempt autoplay for Safari 11
+							// More info: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
+							var promiseError = false;
+							var promise = this.$refs.audioElement.play();
+							promise.catch(function(error) {
+								promiseError = true;
+								self.isPlaying = false;
+							}).then(function() {
+								if (!promiseError) {
+									self.isPlaying = true;
+								}
+							});
 						}
-
-						this.isPlaying = target;
 
 					}
 
