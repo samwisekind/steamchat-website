@@ -33,8 +33,11 @@ Route::get('/', function () {
 	// Get all unique release date years
 	$years = Episode::where('active', true)
 		->select(DB::raw('DISTINCT YEAR(release_date)'))
-		->orderBy('release_date', 'desc')
-		->get();
+		->get()
+		->toArray();
+
+	// Sort array of years in descending order
+	rsort($years);
 
 	return view('layouts.index', [
 		'episodes' => $episodes,
