@@ -5,7 +5,7 @@ function player(element) {
 		el: element,
 		template: `<div class="player" v-bind:class="{ loading: isLoading, buffering: isBuffering, playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
 
-				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:canplay="loaded" v-on:loadeddata="loaded" v-on:timeupdate="updateTime" v-on:waiting="isBuffering = true" v-on:ended="isPlaying = false">
+				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:canplay="loaded" v-on:loadeddata="loaded" v-on:timeupdate="updateTime" v-on:waiting="showBuffering" v-on:stalled="showBuffering" v-on:ended="isPlaying = false">
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
 
@@ -167,6 +167,9 @@ function player(element) {
 					this.$refs.audioElement.currentTime = this.episodeData.duration * coordinateX;
 					this.updateTime();
 				}
+			},
+			showBuffering: function() {
+				this.isBuffering = true;
 			},
 			updateTime: function() {
 				// Hide buffering state
