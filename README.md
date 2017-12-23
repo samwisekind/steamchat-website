@@ -36,4 +36,3 @@ The website makes use of SVG files. Make sure your web server is configured to p
 
 ### Credits:
 * Some icons used are provided by _feather_: https://www.github.com/colebemis/feather
-* RSS feed generation is done with _podcastfeed_: https://www.github.com/torann/podcastfeed

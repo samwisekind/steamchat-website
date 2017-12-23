@@ -16,13 +16,14 @@
 
 				<h1>{{ $episode->getTitle(false) }}</h1>
 				<h2>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }}</h2>
+
 				<p>{{ $episode->description }}</p>
 
 				@isset($episode->transcript_url)
 
 					<div class="transcript">
 						A transcript for this episode is avaliable
-						<a href="{{ $episode->transcript_url}}" class="transcript-view" target="_blank" rel="noopener noreferrer">
+						<a href="{{ $episode->transcript_url }}" class="transcript-view" target="_blank" rel="noopener noreferrer">
 							<div class="wrapper">View</div>
 						</a>
 					</div>
@@ -37,18 +38,31 @@
 
 			<section class="small right sidebar">
 
-				<ul>
+				<ul class="info">
 					<li class="title">Episode Info</li>
 					<li><span class="subtitle">Duration:</span> {{ $episode->file_duration }}</li>
 					<li><span class="subtitle">Size:</span> {{ number_format($episode->file_size / 1048576, 2) }} MB</li>
 					<li><span class="subtitle">Format:</span> MP3</li>
 				</ul>
 
-				<ul>
+				<ul class="tools">
 					<li class="title">Episode Tools</li>
 					<li><a href="#" class="js-listen">Listen Now</a></li>
 					<li><a href="{{ $episode->file_url }}">Direct Link</a></li>
 					<li><a href="{{ $episode->file_url }}">Download MP3</a></li>
+				</ul>
+
+				<ul class="more">
+					<li class="title">More Episodes</li>
+					<li class="rss">
+						<a href="{{ route('feed-mp3') }}">RSS Feed</a>
+					</li>
+					<li class="itunes">
+						<a href="#" target="_blank" rel="noopener noreferrer">iTunes Store</a>
+					</li>
+					<li class="google">
+						<a href="#" target="_blank" rel="noopener noreferrer">Google Play</a>
+					</li>
 				</ul>
 
 			</section>

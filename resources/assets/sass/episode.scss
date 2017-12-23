@@ -152,6 +152,23 @@ $buttonWidth: 100px;
 	text-decoration: none;
 }
 
+.content .sidebar > ul.more > li a {
+	display: inline-block;
+	padding-left: 15px + 5px;
+	background: left center no-repeat transparent;
+	background-size: contain;
+}
+
+$list: "rss", "itunes", "google";
+
+@each $service in $list {
+
+	.content .sidebar > ul.more > li.#{$service} a {
+		background-image: url("../../images/global/more-icon-#{$service}.svg");
+	}
+
+}
+
 .content .sidebar > ul > li a:hover {
 	text-decoration: underline;
 }
@@ -174,12 +191,21 @@ $buttonWidth: 100px;
 		width: 50%;
 	}
 
-	.content .sidebar > ul:first-child {
+	.content .sidebar > ul.info {
 		float: left;
 	}
 
-	.content .sidebar > ul:last-child {
+	.content .sidebar > ul.tools {
 		float: right;
+	}
+
+	.content .sidebar > ul.more {
+		clear: both;
+		float: none;
+		padding-top: $paddingSmall;
+		width: auto;
+		text-align: center;
+		font-size: 0;
 	}
 
 	.content .sidebar > ul > li {
@@ -188,8 +214,30 @@ $buttonWidth: 100px;
 		line-height: 12px;
 	}
 
+	.content .sidebar > ul.more > li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.content .sidebar > ul.more > li.title,
+	.content .sidebar > ul.more > li:last-child {
+		margin-right: 0;
+	}
+
+	.content .sidebar > ul.more > li.title {
+		display: block;
+	}
+
+	.content .sidebar > ul.more > li.title {
+		text-align: center;
+	}
+
 	.content .sidebar > ul:first-child > li {
 		text-align: left;
+	}
+
+	.content .sidebar > ul.more > li a {
+		padding-left: 15px + 2px;
 	}
 
 	.content .sidebar > ul .title {

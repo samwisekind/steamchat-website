@@ -14,7 +14,7 @@
 
 /* CONTENT */
 
-.archives > .sidebar,
+.archives > .sidebar > .container,
 .archives > .list > .episode {
 	border-radius: 2px;
 	background: $colour-white;
@@ -23,7 +23,7 @@
 
 @media (max-width: $breakpointSmall) {
 
-	.archives > .sidebar,
+	.archives > .sidebar > .container,
 	.archives > .list > .episode {
 		border-radius: 0;
 	}

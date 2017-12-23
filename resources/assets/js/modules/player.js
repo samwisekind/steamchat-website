@@ -1,18 +1,17 @@
 function player(element) {
-
-	var Vue = require('vue');
+	const Vue = require('vue');
 
 	return new Vue({
 		el: element,
 		template: `<div class="player" v-bind:class="{ loading: isLoading, buffering: isBuffering, playing: isPlaying }" v-bind:style="{ backgroundImage: playerBackground, backgroundColor: playerColour }">
 
-				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:canplay="loaded" v-on:loadeddata="loaded" v-on:timeupdate="updateTime" v-on:waiting="isBuffering = true" v-on:ended="isPlaying = false">
+				<audio v-if="episodeData" preload="none" ref="audioElement" v-on:canplay="loaded" v-on:loadeddata="loaded" v-on:timeupdate="updateTime" v-on:waiting="showBuffering" v-on:stalled="showBuffering" v-on:ended="isPlaying = false">
 					<source v-bind:src="episodeData.file" type="audio/mp3">
 				</audio>
 
 				<a class="link" v-bind:href="episodeData.url"></a>
 
-				<a class="toggle" href="#" v-on:click="togglePlay(!isPlaying)">
+				<a class="toggle" href="#" v-on:click="togglePlay(!isPlaying, $event)">
 					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="toggle-element">
 						<path d="M50 10a40 40 0 1 1-40 40 40 40 0 0 1 40-40m0-10a50 50 0 1 0 50 50A50 50 0 0 0 50 0z" class="layer outline" />
 						<path d="M69.63 46.45L43.25 28.3a4.31 4.31 0 0 0-6.75 3.55v36.3a4.31 4.31 0 0 0 6.75 3.55l26.38-18.15a4.31 4.31 0 0 0 0-7.1z" class="layer play" />
@@ -33,7 +32,7 @@ function player(element) {
 					</div>
 
 					<div class="volume" v-show="isReady">
-						<a class="volume-toggle" href="#" v-on:click="toggleMute" v-bind:class="{ muted: isMuted }"></a>
+						<a class="volume-toggle" href="#" v-on:click="toggleMute($event)" v-bind:class="{ muted: isMuted }"></a>
 						<input class="volume-slider" type="range" value="80" min="0" max="100" v-model="volume">
 					</div>
 
@@ -61,14 +60,13 @@ function player(element) {
 		},
 		methods: {
 			getEpisode: function(episode, autoplay) {
+				const self = this;
 
 				// Clear episode data and reset player state
 				this.episodeData = false;
 				this.isLoading = true;
 				this.isPlaying = this.isReady = false;
 				this.currentTime = 0;
-
-				var self = this;
 
 				if (episode === 'latest') {
 					episode = '/api/latest';
@@ -77,13 +75,10 @@ function player(element) {
 					episode = '/api/episode/' + episode;
 				}
 
-				var request = new XMLHttpRequest();
+				const request = new XMLHttpRequest();
 				request.open('GET', episode, true);
-
 				request.onload = function() {
-
 					if (request.status >= 200 && request.status < 400) {
-
 						// Store the episode data
 						self.episodeData = JSON.parse(request.responseText);
 
@@ -106,40 +101,33 @@ function player(element) {
 						else {
 							self.isLoading = false;
 						}
-
 					}
-
 				};
-
 				request.send();
-
 			},
 			loaded: function() {
-
 				if (this.isReady === false) {
 					// Start playing the audio once its ready to be played
 					this.isReady = true;
 					this.isLoading = false;
-					this.togglePlay(true);
+					this.togglePlay(true, null);
 				}
-
 			},
-			togglePlay: function(target) {
+			togglePlay: function(target, event) {
+				const self = this;
 
-				var self = this;
+				if (event !== null) {
+					event.preventDefault();
+				}
 
 				// Do not do anything if the player is still in a loading state
 				if (this.isLoading === false) {
-
 					if (this.isReady === false) {
-
 						// If the audio element is not ready yet, start loading it
 						this.isLoading = true;
 						this.$refs.audioElement.load();
-
 					}
 					else {
-
 						// Otherwise call the pause/play methods
 						if (target === false) {
 							this.$refs.audioElement.pause();
@@ -148,8 +136,8 @@ function player(element) {
 						else if (target === true) {
 							// Attempt autoplay for Safari 11
 							// More info: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-							var promiseError = false;
-							var promise = this.$refs.audioElement.play();
+							let promiseError = false;
+							const promise = this.$refs.audioElement.play();
 							promise.catch(function(error) {
 								promiseError = true;
 								self.isPlaying = false;
@@ -159,38 +147,31 @@ function player(element) {
 								}
 							});
 						}
-
 					}
-
 				}
-
 			},
 			stop: function() {
-
 				// Call the pause method on the audio element
 				this.$refs.audioElement.pause();
 				this.isPlaying = false;
-
 			},
 			moveLine: function(event) {
-
 				// Move the seek line depending on the window y-coordinate during hover event
 				this.lineHover = ((event.pageX - 2) / window.innerWidth) * 100;
 				this.hoverTime = this.episodeData.duration * (event.pageX / window.innerWidth);
-
 			},
 			changeTime: function(event) {
-
 				// Change audio element time by calculating the target time by y-coordinate and total duration
 				if (this.isReady === true) {
-					var coordinateX = event.pageX / window.innerWidth;
+					const coordinateX = event.pageX / window.innerWidth;
 					this.$refs.audioElement.currentTime = this.episodeData.duration * coordinateX;
 					this.updateTime();
 				}
-
+			},
+			showBuffering: function() {
+				this.isBuffering = true;
 			},
 			updateTime: function() {
-
 				// Hide buffering state
 				this.isBuffering = false;
 
@@ -201,19 +182,17 @@ function player(element) {
 				else {
 					return null;
 				}
-
 			},
 			formatTime: function(target) {
-
 				// Returns a HH:MM:SS formatted time string
 				target = Number(target);
-				var hours = Math.floor(target / 3600),
-					minutes = Math.floor(target % 3600 / 60),
-					seconds = Math.floor(target % 3600 % 60);
+				const hours = Math.floor(target / 3600);
+				const minutes = Math.floor(target % 3600 / 60);
+				const seconds = Math.floor(target % 3600 % 60);
 				return (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-
 			},
-			toggleMute: function() {
+			toggleMute: function(event) {
+				event.preventDefault();
 
 				// Toggle between mute (0) and normal volume (100)
 				if (this.volume === 0) {
@@ -222,12 +201,10 @@ function player(element) {
 				else {
 					this.volume = 0;
 				}
-
 			}
 		},
 		computed: {
 			durationCurrent: function() {
-
 				// Returns timestamp for current time or hover-position time
 				if (this.isReady === true) {
 					if (this.movingLine === true) {
@@ -240,16 +217,12 @@ function player(element) {
 				else {
 					return false;
 				}
-
 			},
 			durationTotal: function() {
-
 				// Returns timestamp for total duration
 				return this.formatTime(this.episodeData.duration);
-
 			},
 			linePosition: function() {
-
 				// Returns CSS left-position for seek line hover position
 				if (this.isReady === true && this.movingLine === true) {
 					return this.lineHover + '%';
@@ -257,31 +230,23 @@ function player(element) {
 				else {
 					return false;
 				}
-
 			},
 			progressWidth: function() {
-
 				// Returns CSS position for progress cover element
-				var targetWidth;
-
+				let targetWidth;
 				if (this.isReady === true) {
 					targetWidth = (this.currentTime / this.episodeData.duration) * 100;
 				}
 				else {
 					targetWidth = 0;
 				}
-
 				return targetWidth + '%';
-
 			},
 			isMuted: function() {
-
 				// Returns boolean if audio is currently muted (0)
 				return parseInt(this.volume, 10) === 0;
-
 			},
 			playerBackground: function() {
-
 				// Returns CSS background-image
 				if (this.episodeData !== false && this.episodeData.background !== null) {
 					return 'url(' + this.episodeData.background + ')';
@@ -289,10 +254,8 @@ function player(element) {
 				else {
 					return null;
 				}
-
 			},
 			playerColour: function() {
-
 				// Returns CSS background-color
 				if (this.episodeData !== false && this.episodeData.colour !== null) {
 					return this.episodeData.colour;
@@ -300,12 +263,10 @@ function player(element) {
 				else {
 					return null;
 				}
-
 			}
 		},
 		watch: {
 			isPlaying: function(value) {
-
 				// Update the document title if audio is playing
 				if (value === true) {
 					document.title = 'Playing ' + this.episodeData.title;
@@ -313,34 +274,29 @@ function player(element) {
 				else {
 					document.title = this.pageTitle;
 				}
-
 			},
 			volume: function(value) {
-
 				// Convert the volume percentage into a valid input-slider value
 				if (this.isReady === true) {
 					this.$refs.audioElement.volume = parseInt(value, 10) * 0.01;
 				}
-
 			}
 		},
 		mounted: function() {
+			const self = this;
 
 			// Once mounted, get the latest episode
 			this.getEpisode('latest', false);
 
-			var self = this;
-
-			var loadEpisode = function(event) {
+			const loadEpisode = function(event) {
 				event.preventDefault();
 				self.getEpisode(this.getAttribute('data-id'), true);
 				window.scrollTo(0, 0);
 			};
 
-			var buttons = document.body.getElementsByClassName('js-play');
-
 			// Bind the archive play buttons
-			for (var i = 0; i < buttons.length; i++) {
+			const buttons = document.body.getElementsByClassName('js-play');
+			for (let i = 0; i < buttons.length; i++) {
 				buttons[i].addEventListener('click', loadEpisode);
 			}
 
@@ -350,14 +306,10 @@ function player(element) {
 					self.stop();
 				}
 			});
-
 		}
 	});
-
 }
 
 export function init(element) {
-
 	return player(element);
-
 }

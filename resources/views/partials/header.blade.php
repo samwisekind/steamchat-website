@@ -43,7 +43,7 @@
 			@endif
 			<link rel="last" href="{{ $last }}">
 		@endif
- 		<link rel="alternate" href="{{ route('feed') }}" type="application/rss+xml" title="RSS">
+ 		<link rel="alternate" href="{{ route('feed-mp3') }}" type="application/rss+xml" title="RSS">
 
 		<!-- Favicons -->
 		<link href="{{ asset('images/seo/favicon-16x16.png') }}?v=1499313450" rel="icon" type="image/png" sizes="16x16" />
