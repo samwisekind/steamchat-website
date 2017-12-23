@@ -1,12 +1,12 @@
-const sidebar = require('./modules/sidebar.js');
+const archive = require('./modules/archive.js');
 const player = require('./modules/player.js');
 const listen = require('./modules/listen.js');
 
 (function(){
 	// Bind the archive behaviours
-	const $sidebar = document.getElementsByClassName('js-archives');
-	if ($sidebar.length > 0) {
-		sidebar.init($sidebar[0]);
+	const $archive = document.getElementsByClassName('js-archives');
+	if ($archive.length > 0) {
+		archive.init($archive[0]);
 	}
 
 	// Bind the player

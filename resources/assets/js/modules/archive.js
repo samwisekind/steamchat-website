@@ -45,12 +45,17 @@ function createCache() {
 }
 
 function searchBehaviour() {
-	const value = this.value;
+	let value = this.value;
+
+	// Ignore non-alphanumeric and whitespace characters
+	value = value.replace(/[^a-zA-Z0-9\s]/gi, '');
+
 	const regex = new RegExp(value, 'gi');
 
 	for (let i = 0; i < $archives.$episodes.length; i++) {
 		const targetElement = $archives.$episodes[i];
-		if (targetElement.getAttribute('data-description').search(regex) < 0) {
+		let description = targetElement.getAttribute('data-description');
+		if (description.search(regex) < 0) {
 			targetElement.classList.add('filter-description');
 		}
 		else {

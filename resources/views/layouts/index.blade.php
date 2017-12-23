@@ -69,7 +69,8 @@
 
 			@foreach($episodes as $episode)
 
-				<div class="episode js-episode" data-description="{{ $episode->description }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
+				<div class="episode js-episode"
+					data-description="{{ preg_replace('/[^a-zA-Z0-9\s]/i', '', $episode->description) }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
 					<a href="#" class="play js-play" data-id="{{ $episode->id }}"></a>
 					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle(false) }}</a></h2>
 					<h3>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }} – {{ $episode->file_duration }} @isset($episode->transcript_url)– <a href="{{ $episode->transcript_url }}" class="transcript">Transcript avaliable</a> @endisset</h3>
