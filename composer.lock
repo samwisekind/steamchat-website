@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1cae6beacabbf92528e5f3b3aef29cf0",
+    "content-hash": "a227793fb94a414365706d2a530b7e23",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2116,56 +2116,6 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2016-09-20T12:50:39+00:00"
-        },
-        {
-            "name": "torann/podcastfeed",
-            "version": "0.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Torann/podcastfeed.git",
-                "reference": "6c4bd157a3eaaaa62aa71f665566ed2050973664"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Torann/podcastfeed/zipball/6c4bd157a3eaaaa62aa71f665566ed2050973664",
-                "reference": "6c4bd157a3eaaaa62aa71f665566ed2050973664",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.1",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Torann\\PodcastFeed\\": "src/Torann/PodcastFeed/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Stainback",
-                    "email": "daniel@lyften.com"
-                }
-            ],
-            "description": "Generate RSS feeds for podcasts in Laravel 5.",
-            "keywords": [
-                "feed",
-                "laravel",
-                "podcast",
-                "podcast generator",
-                "rss",
-                "xml"
-            ],
-            "time": "2016-09-01T20:24:17+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
