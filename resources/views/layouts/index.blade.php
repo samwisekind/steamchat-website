@@ -12,51 +12,73 @@
 
 		<section class="small left sidebar js-sidebar">
 
-			<a href="#" class="show js-show">
-				<div class="wrapper">
-					<span class="text open">Show filters</span>
-					<span class="text close">Hide &amp; reset filters</span>
-				</div>
-			</a>
-
 			<div class="container">
 
-				<h2>Search</h2>
-				<input type="input" placeholder="Filter descriptions..." class="search js-search" />
+				<a href="#" class="show js-show">
+					<div class="wrapper">
+						<span class="text open">Show filters</span>
+						<span class="text close">Hide &amp; reset filters</span>
+					</div>
+				</a>
 
-				<h2>Filter years</h2>
-				<ul class="filter years">
-					@foreach($years as $year)
-						<li>
-							<input type="checkbox" id="year-{{ $year["YEAR(release_date)"] }}" value="{{ $year["YEAR(release_date)"] }}" class="input js-year" checked />
-							<label for="year-{{ $year["YEAR(release_date)"] }}" class="label">{{ $year["YEAR(release_date)"] }}</label>
+				<div class="filters">
+
+					<h2>Search</h2>
+					<input type="input" placeholder="Filter descriptions..." class="search js-search" />
+
+					<h2>Filter years</h2>
+					<ul class="filter years">
+						@foreach($years as $year)
+							<li>
+								<input type="checkbox" id="year-{{ $year["YEAR(release_date)"] }}" value="{{ $year["YEAR(release_date)"] }}" class="input js-year" checked />
+								<label for="year-{{ $year["YEAR(release_date)"] }}" class="label">{{ $year["YEAR(release_date)"] }}</label>
+							</li>
+						@endforeach
+					</ul>
+
+					<h2>Filter type</h2>
+					<ul class="filter categories">
+						<li class="category all">
+							<input type="radio" name="category" id="category-all" value="all" class="input js-category" checked />
+							<label for="category-all" class="label">All</label>
 						</li>
-					@endforeach
-				</ul>
+						<li class="category interview">
+							<input type="radio" name="category" id="category-interview" value="interview" class="input js-category" />
+							<label for="category-interview" class="label"><span class="container">Interview</span></label>
+						</li>
+						<li class="category game">
+							<input type="radio" name="category" id="category-game" value="game-special" class="input js-category" />
+							<label for="category-game" class="label"><span class="container">Game Special</span></label>
+						</li>
+						<li class="category event">
+							<input type="radio" name="category" id="category-event" value="event-special" class="input js-category" />
+							<label for="category-event" class="label"><span class="container">Event Special</span></label>
+						</li>
+					</ul>
 
-				<h2>Filter type</h2>
-				<ul class="filter categories">
-					<li class="category all">
-						<input type="radio" name="category" id="category-all" value="all" class="input js-category" checked />
-						<label for="category-all" class="label">All</label>
+				</div>
+
+				<a href="#" class="reset js-reset">Reset filters</a>
+
+			</div>
+
+			<div class="more">
+
+				<p>More ways to listen:</p>
+
+				<ul class="list">
+					<li class="rss">
+						<a href="{{ route('feed-mp3') }}">RSS Feed</a>
 					</li>
-					<li class="category interview">
-						<input type="radio" name="category" id="category-interview" value="interview" class="input js-category" />
-						<label for="category-interview" class="label"><span class="container">Interview</span></label>
+					<li class="itunes">
+						<a href="#" target="_blank" rel="noopener noreferrer">iTunes Store</a>
 					</li>
-					<li class="category game">
-						<input type="radio" name="category" id="category-game" value="game-special" class="input js-category" />
-						<label for="category-game" class="label"><span class="container">Game Special</span></label>
-					</li>
-					<li class="category event">
-						<input type="radio" name="category" id="category-event" value="event-special" class="input js-category" />
-						<label for="category-event" class="label"><span class="container">Event Special</span></label>
+					<li class="google">
+						<a href="#" target="_blank" rel="noopener noreferrer">Google Play</a>
 					</li>
 				</ul>
 
 			</div>
-
-			<a href="#" class="reset js-reset">Reset filters</a>
 
 		</section>
 

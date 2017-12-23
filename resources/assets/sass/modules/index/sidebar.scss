@@ -1,4 +1,8 @@
 .archives > .sidebar > .container {
+	padding-top: $paddingSmall;
+}
+
+.archives > .sidebar .filters {
 	padding: 0 $paddingSmall $paddingSmall $paddingSmall;
 }
 
@@ -9,9 +13,13 @@
 	line-height: 18px;
 }
 
+.archives > .sidebar h2:first-child {
+	margin-top: 0;
+}
+
 /* SHOW */
 
-.archives > .sidebar > .show {
+.archives > .sidebar .show {
 	display: none;
 }
 
@@ -169,12 +177,68 @@ $circleSize: $inputSize - 10px;
 
 
 
+/* MORE */
+
+.archives .sidebar .more {
+	margin-top: $paddingSmall;
+}
+
+.archives .sidebar .more,
+.archives .sidebar .more a {
+	color: $colour-grey;
+}
+
+.archives .sidebar .more p,
+.archives .sidebar .more a {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.archives .sidebar .more p {
+	margin-top: 0;
+}
+
+.archives .sidebar .more a:hover {
+	color: $colour-greyDark;
+}
+
+.archives .sidebar .more .list {
+	margin-top: 10px;
+}
+
+.archives .sidebar .more .list > li {
+	margin-bottom: 10px;
+}
+
+.archives .sidebar .more .list > li:last-child {
+	margin-bottom: 0;
+}
+
+.archives .sidebar .more .list > li > a {
+	display: block;
+	padding-left: 15px + 5px;
+	background: left center no-repeat transparent;
+	background-size: contain;
+}
+
+$list: "rss", "itunes", "google";
+
+@each $service in $list {
+
+	.archives .sidebar .more .list > li.#{$service} > a {
+		background-image: url("../../images/global/more-icon-#{$service}.svg");
+	}
+
+}
+
+
+
 /* RESPONSIVE */
 
 @media (max-width: $breakpointSmall) {
 
-	.archives > .sidebar {
-		margin-bottom: $paddingSmall;
+	.archives > .sidebar > .container {
+		padding-top: 0;
 	}
 
 	.archives > .sidebar h2 {
@@ -184,17 +248,13 @@ $circleSize: $inputSize - 10px;
 		line-height: 14px;
 	}
 
-	.archives > .sidebar > .container {
-		display: none;
-	}
-
 	/* SHOW */
 
-	.archives > .sidebar > .container {
+	.archives > .sidebar .filters {
 		display: none;
 	}
 
-	.archives > .sidebar.active > .container {
+	.archives > .sidebar.active .filters {
 		display: block;
 	}
 
@@ -202,7 +262,7 @@ $circleSize: $inputSize - 10px;
 	$showIconWidth: 12px;
 	$showIconHeight: 14px;
 
-	.archives > .sidebar > .show {
+	.archives > .sidebar .show {
 		position: relative;
 		display: block;
 		padding: 0 ($paddingSmall + $showIconWidth) 0 $paddingSmall;
@@ -210,30 +270,30 @@ $circleSize: $inputSize - 10px;
 		color: inherit;
 	}
 
-	.archives > .sidebar.active > .show {
+	.archives > .sidebar.active .show {
 		margin-bottom: 10px;
 	}
 
-	.archives > .sidebar > .show > .wrapper {
+	.archives > .sidebar .show > .wrapper {
 		position: relative;
 	}
 
-	.archives > .sidebar.active > .show .text.open,
-	.archives > .sidebar > .show .text.close {
+	.archives > .sidebar.active .show .text.open,
+	.archives > .sidebar .show .text.close {
 		display: none;
 	}
 
-	.archives > .sidebar.active > .show .text.close {
+	.archives > .sidebar.active .show .text.close {
 		display: block;
 	}
 
-	.archives > .sidebar > .show:after,
-	.archives > .sidebar > .show > .wrapper {
+	.archives > .sidebar .show:after,
+	.archives > .sidebar .show > .wrapper {
 		top: 50%;
 		@include transform(translateY(-50%));
 	}
 
-	.archives > .sidebar > .show:after {
+	.archives > .sidebar .show:after {
 		content: "";
 		position: absolute;
 		right: $paddingSmall;
@@ -338,6 +398,32 @@ $circleSize: $inputSize - 10px;
 		height: $circleSize;
 	}
 
+	/* MORE */
+
+	.archives .sidebar .more {
+		margin-bottom: $paddingSmall;
+	}
+
+	.archives .sidebar .more p,
+	.archives .sidebar .more .list {
+		text-align: center;
+	}
+
+	.archives .sidebar .more .list {
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.archives .sidebar .more .list > li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+
+	.archives .sidebar .more .list > li:last-child {
+		margin-right: 0;
+	}
+
 }
 
 
@@ -365,8 +451,10 @@ $circleSize: $inputSize - 10px;
 @media (min-width: $breakpointSmall + 1px) {
 
 	.archives > .sidebar.sticky {
+		z-index: 0;
 		position: fixed;
 		top: $paddingLarge;
+		height: 100%;
 		@include calc(max-height, "100% - #{$paddingLarge * 2}");
 		overflow: hidden;
 		overflow-y: scroll;

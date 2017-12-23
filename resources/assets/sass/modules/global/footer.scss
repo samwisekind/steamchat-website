@@ -1,4 +1,6 @@
 .global-footer {
+	z-index: 10;
+	position: relative;
 	margin: 0 auto 0 auto;
 	padding: 0 $paddingLarge $paddingLarge $paddingLarge;
 	width: 100%;
