@@ -48,7 +48,10 @@ function searchBehaviour() {
 	let value = this.value;
 
 	// Ignore non-alphanumeric and whitespace characters
-	value = value.replace(/[^a-zA-Z0-9\s]/gi, '');
+	value = value.replace(/[^a-zA-Z0-9]/gi, ' ');
+
+	// Then replace multiple spaces with a single space
+	value = value.replace(/\s\s+/g, ' ');
 
 	const regex = new RegExp(value, 'gi');
 
