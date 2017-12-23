@@ -112,7 +112,7 @@ Route::get('/about', function () {
 })->name('about');
 
 // RSS feed XML (MP3)
-Route::get('/steamchat_feed_mp3.xml', function () {
+Route::get('/steamchat_feed.xml', function () {
 
 	$episodes = Episode::orderBy('release_date', 'desc')
 		->where('active', true)
@@ -126,11 +126,18 @@ Route::get('/steamchat_feed_mp3.xml', function () {
 		'Content-Type' => 'text/xml'
 	]);
 
+})->name('feed');
+
+// RSS feed XML (MP3) redirect
+Route::get('/steamchat_feed_mp3.xml', function () {
+
+	return redirect()->route('feed');
+
 })->name('feed-mp3');
 
-// RSS feed XML (M4A)
+// RSS feed XML (M4A) redirect
 Route::get('/steamchat_feed_m4a.xml', function () {
 
-	return redirect()->route('feed-mp3');
+	return redirect()->route('feed');
 
 })->name('feed-m4a');
