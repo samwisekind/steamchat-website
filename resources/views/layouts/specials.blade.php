@@ -6,7 +6,7 @@
 
 		<h1>Specials</h1>
 
-		<p>We have been fortunate enough have had the opportunity to produce and publish a number of interviews and special episodes since starting the podcast. Below are a number of the episodes we are most proud of.</p>
+		<p>We have been fortunate enough have had the opportunity to produce and publish a number of interviews and special episodes since starting the podcast. Below are a number of episodes we are most proud of.</p>
 
 		<div class="columns">
 
@@ -35,14 +35,14 @@
 
 				<ul class="list-special">
 					<li>
-						Community Specials
+						<span class="strong">Community Specials</span>
 						<ul>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 16]) }}">Left 4 Dead 2 Community Special</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 58]) }}">Portal 2 Community Special</a></li>
 						</ul>
 					</li>
 					<li>
-						Game Specials
+						<span class="strong">Game Specials</span>
 						<ul>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 57]) }}">Portal 2 Launch Party</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 67]) }}">Black Mesa Team Special</a></li>
@@ -52,7 +52,7 @@
 						</ul>
 					</li>
 					<li>
-						Others
+						<span class="strong">Others</span>
 						<ul>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 28]) }}">LOST Special</a></li>
 							<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 23]) }}">April Fools' 2010</a></li>
