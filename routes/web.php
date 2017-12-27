@@ -97,6 +97,23 @@ Route::get('/{type}/{number}', function ($type, $number) {
 
 })->name('episode');
 
+Route::get('/{type}/{number}/download', function ($type, $number) {
+
+	// Get episode by its type, number, and active state
+	$episode = Episode::where('active', true)
+		->where('type', $type)
+		->where('number', $number)
+		->first();
+
+	$path = $episode->file_url;
+	header('Content-Type: application/octet-stream');
+	header('Content-Transfer-Encoding: Binary');
+	header('Content-disposition: attachment; filename=\'' . basename($path) . '\'');
+
+	return readfile($path);
+
+})->name('episode-download');
+
 // Specials page route
 Route::get('/specials', function () {
 

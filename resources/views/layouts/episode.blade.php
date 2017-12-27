@@ -48,8 +48,8 @@
 				<ul class="tools">
 					<li class="title">Episode Tools</li>
 					<li><a href="#" class="js-listen">Listen Now</a></li>
-					<li><a href="{{ $episode->file_url }}">Direct Link</a></li>
-					<li><a href="{{ $episode->file_url }}">Download MP3</a></li>
+					<li><a href="{{ $episode->file_url }}" target="_blank" rel="noopener noreferrer">Direct Link</a></li>
+					<li><a href="{{ route('episode-download', ['type' => $episode->type, 'number' => $episode->number]) }}" download>Download MP3</a></li>
 				</ul>
 
 				<ul class="more">
