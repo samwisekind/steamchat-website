@@ -68,7 +68,7 @@
 
 				<ul class="list">
 					<li class="rss">
-						<a href="{{ route('feed-mp3') }}">RSS Feed</a>
+						<a href="{{ route('feed') }}">RSS Feed</a>
 					</li>
 					<li class="itunes">
 						<a href="#" target="_blank" rel="noopener noreferrer">iTunes Store</a>
@@ -94,7 +94,7 @@
 				<div class="episode js-episode" data-description="{{ preg_replace('/[^a-zA-Z0-9\s]/i', ' ', $episode->description) }}" data-year="{{ date_format(new DateTime($episode->release_date), 'Y') }}" data-category="{{ $episode->category }}">
 					<a href="#" class="play js-play" data-id="{{ $episode->id }}"></a>
 					<h2><a href="{{ $episode->getURL() }}">{{ $episode->getTitle(false) }}</a></h2>
-					<h3>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }} – {{ $episode->file_duration }} @isset($episode->transcript_url)– <a href="{{ $episode->transcript_url }}" class="transcript">Transcript avaliable</a> @endisset</h3>
+					<h3>{{ date_format(new DateTime($episode->release_date), 'jS F Y') }} – {{ $episode->file_duration }} @isset($episode->transcript_url)– <a href="{{ $episode->transcript_url }}" class="transcript" target="_blank" rel="noopener noreferrer">Transcript avaliable</a> @endisset</h3>
 					<p>{{ $episode->description }}</p>
 					@isset($episode->category)
 						<ul class="categories active">
