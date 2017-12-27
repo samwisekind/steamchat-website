@@ -169,6 +169,10 @@ $smallSize: 200px;
 	margin-bottom: 0;
 }
 
+.list-special li .strong {
+	font-weight: 700;
+}
+
 @media (max-width: $breakpointSmall) {
 
 	.list-special ul {

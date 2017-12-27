@@ -14,7 +14,7 @@
 
 		</footer>
 
-		<script src="{{ asset('js/scripts.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('js/scripts.js') }}" type="text/javascript" async></script>
 
 	</body>
 

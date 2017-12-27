@@ -19,7 +19,7 @@ For more information on how the website is structured, [check out the wiki](http
 
 ### Database Data
 
-You can find an occasionally-updated [MySQL database dump here](https://gist.github.com/Flamov/d0fbca7ec66783027b14b244d086af73). Episode audio files and artwork are hosted elsewhere.
+You can find an occasionally-updated [MySQL database dump here](https://gist.github.com/Flamov/d0fbca7ec66783027b14b244d086af73). Episode audio files, artwork, and transcripts are hosted elsewhere.
 
 ### SVG Support
 
@@ -28,6 +28,7 @@ The website makes use of SVG files. Make sure your web server is configured to p
 ### Things Not Included In This Repository:
 * Episode MP3 and M4A files
 * Episode artwork
+* Episode transcripts
 * ~~Backup of the Half-Life 3 beta (removed per Valve's request)~~
 
 ### Contributors:

@@ -97,6 +97,23 @@ Route::get('/{type}/{number}', function ($type, $number) {
 
 })->name('episode');
 
+Route::get('/{type}/{number}/download', function ($type, $number) {
+
+	// Get episode by its type, number, and active state
+	$episode = Episode::where('active', true)
+		->where('type', $type)
+		->where('number', $number)
+		->first();
+
+	$path = $episode->file_url;
+	header('Content-Type: application/octet-stream');
+	header('Content-Transfer-Encoding: Binary');
+	header('Content-disposition: attachment; filename=\'' . basename($path) . '\'');
+
+	return readfile($path);
+
+})->name('episode-download');
+
 // Specials page route
 Route::get('/specials', function () {
 
@@ -112,7 +129,7 @@ Route::get('/about', function () {
 })->name('about');
 
 // RSS feed XML (MP3)
-Route::get('/steamchat_feed_mp3.xml', function () {
+Route::get('/steamchat_feed.xml', function () {
 
 	$episodes = Episode::orderBy('release_date', 'desc')
 		->where('active', true)
@@ -126,11 +143,18 @@ Route::get('/steamchat_feed_mp3.xml', function () {
 		'Content-Type' => 'text/xml'
 	]);
 
+})->name('feed');
+
+// RSS feed XML (MP3) redirect
+Route::get('/steamchat_feed_mp3.xml', function () {
+
+	return redirect()->route('feed');
+
 })->name('feed-mp3');
 
-// RSS feed XML (M4A)
+// RSS feed XML (M4A) redirect
 Route::get('/steamchat_feed_m4a.xml', function () {
 
-	return redirect()->route('feed-mp3');
+	return redirect()->route('feed');
 
 })->name('feed-m4a');
