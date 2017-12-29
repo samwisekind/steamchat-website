@@ -128,7 +128,7 @@ Route::get('/about', function () {
 
 })->name('about');
 
-// RSS feed XML (MP3)
+// RSS feed XML
 Route::get('/steamchat_feed.xml', function () {
 
 	$episodes = Episode::orderBy('release_date', 'desc')
