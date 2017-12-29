@@ -5,10 +5,10 @@
 		<link>https://www.thesteamchat.com</link>
 		<language>en-us</language>
 		<copyright>&#xA9; Steamchat</copyright>
-		<itunes:subtitle>Steamchat is a podcast on all things Valve</itunes:subtitle>
+		<itunes:subtitle>A podcast on all things Valve</itunes:subtitle>
 		<itunes:author>Sam, Saurabh, Brad</itunes:author>
-		<itunes:summary>Steamchat is a podcast that hosts discussions about Valve, Steam, digital distribution, PC games and other related subjects such as the art and design of video games and other topical video game-related subjects.</itunes:summary>
-		<description>Steamchat is a podcast that hosts discussions about Valve, Steam, digital distribution, PC games and other related subjects such as the art and design of video games and other topical video game-related subjects.</description>
+		<itunes:summary>Steamchat is a podcast that hosts discussions about Valve, Steam, digital distribution, video games and other related subjects such as art and design.</itunes:summary>
+		<description>Steamchat is a podcast that hosts discussions about Valve, Steam, digital distribution, video games and other related subjects such as art and design.</description>
 		<itunes:owner>
 			<itunes:name>Samuel Kindler</itunes:name>
 			<itunes:email>sam@flamov.com</itunes:email>

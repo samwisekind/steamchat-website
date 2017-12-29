@@ -1,15 +1,16 @@
 @php
 
-	$meta_title_default = 'Steamchat';
-	$meta_description_default = 'A Podcast On All Things Valve';
+	$meta_title_base = 'Steamchat';
+	$meta_description_short = 'A Podcast On All Things Valve';
+	$meta_description_long = 'Steamchat is a podcast that hosts discussions about Valve, Steam, digital distribution, video games and other related subjects such as art and design.';
 
 	if (Route::current()->getName() === 'episode') {
-		$meta_title = $meta_title_default . ' ' . $episode->getTitle(false);
+		$meta_title = $meta_title_base . ' ' . $episode->getTitle(false);
 		$meta_description = '(Released ' . date_format(new DateTime($episode->release_date), 'j/m/Y') . ') '. $episode->description;
 	}
 	else {
-		$meta_title = $meta_title_default . ': ' . $meta_description_default;
-		$meta_description = $meta_description_default;
+		$meta_title = $meta_title_base . ': ' . $meta_description_short;
+		$meta_description = $meta_description_long;
 	};
 
 @endphp
@@ -25,7 +26,7 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 		<title>{{ $meta_title }}</title>
 		<meta name="description" content="{{ $meta_description }}" />
-		<meta name="subject" content="{{ $meta_description_default }}">
+		<meta name="subject" content="{{ $meta_description_short }}">
 
 		<!-- Link -->
 		<link href="{{ asset('css/global.css') }}" rel="stylesheet" type="text/css">
@@ -65,7 +66,7 @@
 		<!-- Open Graph -->
 		<meta property="og:url" content="{{ Request::url() }}" />
 		<meta property="og:title" content="{{ $meta_title }}" />
-		<meta property="og:site_name" content="{{ $meta_title_default }}">
+		<meta property="og:site_name" content="{{ $meta_title_base }}">
 		<meta property="og:description" content="{{ $meta_description }}" />
 		@isset($episode->background)
 			<meta property="og:image" content="{{ asset($episode->background) }}">
