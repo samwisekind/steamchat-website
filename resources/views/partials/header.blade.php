@@ -150,14 +150,6 @@
 								</svg>
 							</a>
 						</li>
-						<li>
-							<a href="https://www.youtube.com/Steamchat" target="_blank" rel="noopener noreferrer">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14.07" class="icon">
-									<path d="M7.93 4l4.74 3.16.66-.35z" fill-rule="evenodd" opacity=".12" class="icon-layer" />
-									<path d="M19.8 3a4.33 4.33 0 0 0-.8-2 2.86 2.86 0 0 0-2-.8C14.2 0 10 0 10 0S5.8 0 3 .2A2.86 2.86 0 0 0 1 1a4.33 4.33 0 0 0-.8 2A30.25 30.25 0 0 0 0 6.27v1.52A30.25 30.25 0 0 0 .2 11a4.33 4.33 0 0 0 .8 2 3.39 3.39 0 0 0 2.21.85c1.6.15 6.8.2 6.8.2s4.2 0 7-.21A2.86 2.86 0 0 0 19 13a4.33 4.33 0 0 0 .8-2 30.28 30.28 0 0 0 .2-3.21V6.27A30.28 30.28 0 0 0 19.8 3zM7.94 9.63V4l5.4 2.82z" fill="#0064BF" class="icon-layer" />
-								</svg>
-							</a>
-						</li>
 					</ul>
 
 				</div>
