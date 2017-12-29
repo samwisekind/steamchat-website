@@ -20,6 +20,7 @@
 		<itunes:category text="Technology">
 			<itunes:category text="Tech News" />
 		</itunes:category>
+		<itunes:explicit>no</itunes:explicit>
 		<itunes:type>episodic</itunes:type>
 
 		@foreach ($episodes as $episode)
@@ -34,7 +35,8 @@
 				<pubDate>{{ date_format(new \DateTime($episode->release_date), 'D, j M o') }} 00:00:00 GMT</pubDate>
 				<itunes:duration>{{ $episode->file_duration }}</itunes:duration>
 				<itunes:keywords>Steam, Steampowered, Steam Powered, Valve, Video Games, Computer Games, Half-Life 2, Half-Life 2 Episode 1, Half-Life 2: Episode 2, Half-Life 2: Episode 3, Team Fortress 2, Left 4 Dead, Left 4 Dead 2</itunes:keywords>
-				<itunes:explicit>no</itunes:explicit>
+				<itunes:explicit>yes</itunes:explicit>
+				<itunes:isClosedCaptioned>no</itunes:isClosedCaptioned>
 				<itunes:episode>{{ $episode->number }}</itunes:episode>
 				@if($episode->type === 'episode')
 					<itunes:title>{{ $episode->title }}</itunes:title>
