@@ -159,7 +159,7 @@ $buttonWidth: 100px;
 	background-size: contain;
 }
 
-$list: "rss", "itunes", "google";
+$list: "rss", "itunes";
 
 @each $service in $list {
 

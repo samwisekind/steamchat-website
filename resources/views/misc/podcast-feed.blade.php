@@ -1,7 +1,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 
 	<channel>
-		<title>Steamchat</title>
+		<title>Steamchat Podcast</title>
 		<link>https://www.thesteamchat.com</link>
 		<language>en-us</language>
 		<copyright>&#xA9; Steamchat</copyright>
@@ -20,7 +20,6 @@
 		<itunes:category text="Technology">
 			<itunes:category text="Tech News" />
 		</itunes:category>
-		<itunes:explicit>no</itunes:explicit>
 
 		@foreach ($episodes as $episode)
 
@@ -34,6 +33,7 @@
 				<pubDate>{{ date_format(new \DateTime($episode->release_date), 'D, j M o') }} 00:00:00 GMT</pubDate>
 				<itunes:duration>{{ $episode->file_duration }}</itunes:duration>
 				<itunes:keywords>Steam, Steampowered, Steam Powered, Valve, Video Games, Computer Games, Half-Life 2, Half-Life 2 Episode 1, Half-Life 2: Episode 2, Half-Life 2: Episode 3, Team Fortress 2, Left 4 Dead, Left 4 Dead 2</itunes:keywords>
+				<itunes:explicit>no</itunes:explicit>
 			</item>
 
 		@endforeach

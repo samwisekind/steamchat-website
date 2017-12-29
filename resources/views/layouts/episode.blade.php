@@ -55,13 +55,10 @@
 				<ul class="more">
 					<li class="title">More Episodes</li>
 					<li class="rss">
-						<a href="{{ route('feed-mp3') }}">RSS Feed</a>
+						<a href="{{ route('feed') }}">RSS Feed</a>
 					</li>
 					<li class="itunes">
-						<a href="#" target="_blank" rel="noopener noreferrer">iTunes Store</a>
-					</li>
-					<li class="google">
-						<a href="#" target="_blank" rel="noopener noreferrer">Google Play</a>
+						<a href="https://itunes.apple.com/us/podcast/steamchat-podcast/id1330011170" target="_blank" rel="noopener noreferrer">iTunes Store</a>
 					</li>
 				</ul>
 

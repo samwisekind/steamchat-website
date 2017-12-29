@@ -8,7 +8,7 @@
 
 		<p>Steamchat (formerly "Steamcast") is a podcast that hosts discussions about Valve, Steam, digital distribution, PC games and other related subjects such as the art and design of video games and other topical video game-related subjects.</p>
 
-		<p>Steamchat is an audio-only podcast, with episodes lasting for around an hour in length. New episodes are published on <a href="{{ route('index') }}">our website</a>, our <a href="{{ route('feed-mp3') }}">RSS feed</a>, the <a href="#" target="_blank" rel="noopener noreferrer">iTunes Store</a>, and the <a href="#" target="_blank" rel="noopener noreferrer">Google Play Store</a>.</p>
+		<p>Steamchat is an audio-only podcast, with episodes lasting for around an hour in length. New episodes are published on <a href="{{ route('index') }}">our website</a>, our <a href="{{ route('feed') }}">RSS feed</a>, and the <a href="https://itunes.apple.com/us/podcast/steamchat-podcast/id1330011170" target="_blank" rel="noopener noreferrer">iTunes Store</a>.</p>
 
 		<h2>History</h2>
 
