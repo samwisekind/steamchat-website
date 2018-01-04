@@ -6,11 +6,11 @@
 
 		<h1>Specials</h1>
 
-		<p>We have been fortunate enough have had the opportunity to produce and publish a number of interviews and special episodes since starting the podcast. Below are a number of episodes we are most proud of.</p>
+		<p>We have been fortunate enough have had the opportunity to produce and publish a number of interviews and special episodes since starting the podcast. Here are a number of episodes we are most proud of:</p>
 
 		<div class="columns">
 
-			<div class="left even">
+			<div class="left">
 
 				<h2>Interviews</h2>
 
@@ -18,13 +18,14 @@
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 9]) }}">Gabe Newell 2009</a></li>
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 47]) }}">Gabe Newell 2011 (Part 1)</a></li>
 					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 48]) }}">Gabe Newell 2011 (Part 2)</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Marc Laidlaw</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Al&eacute;sia Glidewell</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 5]) }}">Ellen McLain</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 2]) }}">Harry Robins </a></li>
+					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 106]) }}">Marc Laidlaw</a></li>
+					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 106]) }}">Ellen McLain</a></li>
+					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 106]) }}">Jeep Barnett</a></li>
+					<li><a href="{{ route('episode', ['type' => 'episode', 'number' => 106]) }}">Al&eacute;sia Glidewell</a></li>
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 2]) }}">Harry Robins</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 3]) }}">Jonathan Coulton</a></li>
 					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 4]) }}">Black Mesa Team</a></li>
-					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 1]) }}">LambdaGeneration</a></li
+					<li><a href="{{ route('episode', ['type' => 'snack', 'number' => 1]) }}">LambdaGeneration</a></li>
 				</ul>
 
 			</div>
