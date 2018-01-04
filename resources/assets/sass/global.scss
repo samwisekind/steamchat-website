@@ -112,10 +112,6 @@ $smallSize: 200px;
 	@include calc(width, "100% - #{$smallSize + $paddingLarge}");
 }
 
-.columns > .even {
-	@include calc(width, "50% - #{$paddingSmall}");
-}
-
 .columns > .left {
 	float: left;
 }
@@ -135,8 +131,7 @@ $smallSize: 200px;
 @media (max-width: $breakpointSmall) {
 
 	.columns > .large,
-	.columns > .small,
-	.columns > .even {
+	.columns > .small {
 		width: 100%;
 	}
 

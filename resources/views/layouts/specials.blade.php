@@ -30,7 +30,7 @@
 
 			</div>
 
-			<div class="right even">
+			<div class="right">
 
 				<h2>Specials</h2>
 
