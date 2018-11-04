@@ -2,9 +2,7 @@
 
 This is the website for the Steamchat Podcast. It is made up of the following:
 
-* *Backend*: Node 10, Express, MongoDB
-* *Frontend*: React, SASS
-* *Testing*: Mocha, Chai
+* Node (v10), Express, MongoDB,  React, SASS, Mocha, Chai
 
 ## Contents
 
