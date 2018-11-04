@@ -1,5 +1,13 @@
 # Steamchat Podcast Website
 
+This is the website for the Steamchat Podcast. It is made up of the following:
+
+* *Backend*: Node 10, Express, MongoDB
+* *Frontend*: React, SASS
+* *Testing*: Mocha, Chai
+
+## Contents
+
 1. [Installation](#markdown-header-installation)
 2. [Database](#markdown-header-database)
 3. [Deployment](#markdown-header-deployment)
@@ -20,13 +28,12 @@
 
 ```.properties
 NODE_ENV=
-NODE_ENC_KEY=
 NODE_MONGO_URL=
 NODE_MONGO_USER=
 NODE_MONGO_PASS=
 ```
 
-_Note:_ There is a `postinstall` script which builds both the server and assets. If this does not happen, run `npm run build`.
+_Note:_ There is a `postinstall` script which builds the app. If this does not happen, run `npm run build`.
 
 ## Database
 
