@@ -7,12 +7,12 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "nodemon server",
+    "start": "node server",
     "postinstall": "npm run build",
     "build": "npm run server:build && npm run assets:build",
     "watch": "npm run server:watch & npm run assets:watch",
     "server:build": "babel --require @babel/polyfill --require @babel/register src -d dist --ignore 'src/assets' --source-maps inline",
-    "server:watch": "nodemon --watch src --exec 'npm run server:build && node --inspect server.js'",
+    "server:watch": "nodemon --watch src --ignore src/assets --exec 'npm run server:build && node --inspect server.js'",
     "assets:build": "webpack --config webpack.config.js --progress",
     "assets:watch": "npm run assets:build -- -w",
     "test": "npm run build && mocha --require @babel/polyfill --require @babel/register './tests/**/*.spec.js' --exit",
