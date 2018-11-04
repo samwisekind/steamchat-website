@@ -26,16 +26,11 @@ NODE_MONGO_USER=
 NODE_MONGO_PASS=
 ```
 
-The following variables require a value that is decryptable using the `NODE_ENC_KEY` value (an encrypted empty string will work):
-
-* `NODE_MONGO_USER`
-* `NODE_MONGO_PASS`
-
-_Note:_ There is a `postinstall` script which builds both the server and assets. If this does not happen, simply run `npm run build`.
+_Note:_ There is a `postinstall` script which builds both the server and assets. If this does not happen, run `npm run build`.
 
 ## Database
 
-The app will attempt to connect to a MongoDB database with the URI of `steamchat_website`.
+The app will attempt to connect to a MongoDB database with the URL as defined by `NODE_MONGO_URL` in the `.env` file.
 
 ## Deployment
 
@@ -65,7 +60,7 @@ The application is made up of the following parts:
 
 * [`/config`](/config) contains configuration files
 * [`/src`](/src) contains the server files which are transpiled by Babel to [`/dist`](/dist)
-* [`/src/assets`](/assets) contains SCSS and JavaScript frontend assets which are compiled to [`/dist/public`](/dist/public)
+* [`/src/assets`](/src/assets) contains SCSS and JavaScript frontend assets which are compiled to [`/dist/public`](/dist/public)
 * [`/tests`](/tests) contains unit and integration tests
 
 ### Quick Start
@@ -109,7 +104,7 @@ The following scripts run tests and generate coverage reports:
 
 ## VSCode Config
 
-Since the app builds compiled server and asset files to `dist/` and `public/`, it may pollute the sidebar in VSCode. You can hide files and folders from the sidebar by adding the `.vscode/settings.json` file with the following:
+Since the app builds compiled server and asset files to `dist/`, it may pollute the sidebar in VSCode. You can hide files and folders from the sidebar by adding the `.vscode/settings.json` file with the following:
 
 ```json
 {
