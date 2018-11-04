@@ -1,6 +1,8 @@
 # Steamchat Podcast Website
 
-This is the website for the Steamchat Podcast. It is made up of the following:
+[![codebeat badge](https://codebeat.co/badges/714c3b1a-bcb9-4e10-8644-b875be03ec89)](https://codebeat.co/projects/github-com-flamov-steamchat-website-master) [![Code Climate](https://codeclimate.com/github/Flamov/steamchat-website/badges/gpa.svg)](https://codeclimate.com/github/Flamov/steamchat-website) [![Issue Count](https://codeclimate.com/github/Flamov/steamchat-website/badges/issue_count.svg)](https://codeclimate.com/github/Flamov/steamchat-website)
+
+These are the source files for the [Steamchat Podcast website](http://www.thesteamchat.com/). It is made up of:
 
 * Node (v10), Express, MongoDB,  React, SASS, Mocha, Chai
 
