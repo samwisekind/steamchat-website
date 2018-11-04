@@ -1,0 +1,93 @@
+{
+  "name": "steamchat-website",
+  "version": "3.0.0",
+  "description": "Steamchat Podcast Website",
+  "main": "dist/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "nodemon server",
+    "postinstall": "npm run build",
+    "build": "npm run server:build && npm run assets:build",
+    "watch": "npm run server:watch & npm run assets:watch",
+    "server:build": "babel --require @babel/polyfill --require @babel/register src -d dist --ignore 'src/assets' --source-maps inline",
+    "server:watch": "nodemon --watch src --exec 'npm run server:build && node --inspect server.js'",
+    "assets:build": "webpack --config webpack.config.js --progress",
+    "assets:watch": "npm run assets:build -- -w",
+    "test": "npm run build && mocha --require @babel/polyfill --require @babel/register './tests/**/*.spec.js' --exit",
+    "test:watch": "npm run build && mocha --require @babel/polyfill --require @babel/register './tests/**/*.spec.js' -w",
+    "coverage": "nyc --reporter=lcov npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Flamov@github.com/Flamov/steamchat-website.git"
+  },
+  "keywords": [
+    "steamchat",
+    "website",
+    "podcast"
+  ],
+  "author": "Samuel Kindler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flamov/steamchat-website/issues"
+  },
+  "homepage": "https://github.com/Flamov/steamchat-website#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "config": "^2.0.1",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-minify-html": "^0.12.0",
+    "mongo-sanitize": "^1.0.0",
+    "mongoose": "^5.3.9",
+    "nodemon": "^1.18.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-destructuring": "^7.1.3",
+    "@babel/plugin-transform-parameters": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-istanbul": "^5.1.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.2",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.7",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "mocha": "^5.2.0",
+    "mockgoose": "^7.3.5",
+    "node-sass": "^4.9.4",
+    "nyc": "^13.1.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.7.1",
+    "stylelint-config-airbnb": "0.0.0",
+    "supertest": "^3.3.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-notifier": "^1.7.0"
+  }
+}
