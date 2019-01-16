@@ -41,8 +41,11 @@ jspm_packages
 .vscode/
 *.code-workspace
 
-# Ignore assets
+# Assets
 public/
 
 # Environment variables
 .env
+
+# Parcel cache
+.cache

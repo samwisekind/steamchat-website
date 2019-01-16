@@ -11,8 +11,8 @@
     "postinstall": "npm run assets:build",
     "watch": "npm run server:watch & npm run assets:watch",
     "server:watch": "nodemon server.js --inspect",
-    "assets:build": "webpack --config webpack.config.js --progress",
-    "assets:watch": "npm run assets:build -- -w",
+    "assets:build": "parcel build src/assets/js/index.js src/assets/sass/index.scss --out-dir src/public",
+    "assets:watch": "parcel watch src/assets/js/index.js src/assets/sass/index.scss --out-dir src/public",
     "test": "mocha ./tests/**/*.spec.js --exit",
     "test:watch": "npm run assets:build && mocha --require @babel/polyfill --require @babel/register './tests/**/*.spec.js' -w",
     "coverage": "nyc --reporter=lcov npm test"
@@ -55,7 +55,9 @@
     "eslint-plugin-react": "^7.12.3",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
+    "parcel-bundler": "^1.11.0",
     "path": "^0.12.7",
+    "sass": "^1.16.0",
     "stylelint": "^9.10.0",
     "stylelint-config-airbnb": "0.0.0",
     "supertest": "^3.4.1"
