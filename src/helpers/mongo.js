@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-import { mongo } from 'config';
+const { mongo } = require('config');
 
 mongoose.Promise = global.Promise;
 mongoose.set('debug', process.env.DEBUG === true);
@@ -43,4 +43,4 @@ process.on('SIGINT', () => {
   });
 });
 
-export default { open, close };
+module.exports = { open, close };

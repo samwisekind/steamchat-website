@@ -1,9 +1,9 @@
-import { Router } from 'express';
+const { Router } = require('express');
 
-import { getPodcast } from '/controllers';
+const { getPodcast } = require('../controllers');
 
 const router = Router();
 
 router.get('/podcast/:number', getPodcast);
 
-export default router;
+module.exports = router;

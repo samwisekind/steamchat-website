@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const PodcastSchema = new mongoose.Schema({
   active: Boolean,
@@ -22,4 +22,4 @@ const PodcastSchema = new mongoose.Schema({
 
 const Podcast = mongoose.model('podcast', PodcastSchema);
 
-export default Podcast;
+module.exports = Podcast;

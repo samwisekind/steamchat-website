@@ -1,4 +1,4 @@
-import { ERRORS } from 'helpers/constants';
+const { ERRORS } = require('../helpers/constants');
 
 const errorHandler = (status = 500) => {
   let message;
@@ -23,4 +23,4 @@ const errorHandler = (status = 500) => {
   return { message, code };
 };
 
-export default errorHandler;
+module.exports = errorHandler;

@@ -1,16 +1,19 @@
-import express from 'express';
-import cors from 'cors';
-import compression from 'compression';
-import minifyHTML from 'express-minify-html';
+const path = require('path');
+const express = require('express');
+const cors = require('cors');
+const compression = require('compression');
+const minifyHTML = require('express-minify-html');
 
-import errorHandler from 'helpers/errorHandler';
-import { version } from '../package.json';
-import routes from './routes';
+const errorHandler = require('./helpers/errorHandler');
+const { version } = require('../package.json');
+const routes = require('./routes');
 
 const app = express();
 
 app.use(cors());
 app.use(compression());
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 app.use(minifyHTML({
   override: true,
   htmlMinifier: {
@@ -21,7 +24,7 @@ app.use(minifyHTML({
   },
 }));
 
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
@@ -38,4 +41,4 @@ app.use((error, req, res, next) => {
   }
 });
 
-export default app;
+module.exports = app;

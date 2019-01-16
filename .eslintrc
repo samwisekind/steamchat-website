@@ -7,13 +7,5 @@
     "node": true,
     "mocha": true,
     "browser": true
-  },
-  "settings": {
-    "import/resolver": {
-      "babel-module": {},
-      "node": {
-        "paths": ["src"]
-      }
-    }
   }
 }

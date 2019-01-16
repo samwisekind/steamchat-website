@@ -41,8 +41,8 @@ jspm_packages
 .vscode/
 *.code-workspace
 
-# Ignore compiled files
-dist/
+# Ignore assets
+public/
 
 # Environment variables
 .env

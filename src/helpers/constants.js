@@ -6,4 +6,4 @@ const ERRORS = {
   INVALID_REQUEST: 'Your request was invalid and could not be completed.',
 };
 
-export { QUERYFILTER, ERRORS };
+module.exports = { QUERYFILTER, ERRORS };

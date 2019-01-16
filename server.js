@@ -1,9 +1,9 @@
 const { port } = require('config');
 const { name } = require('./package.json');
-const database = require('./dist/helpers/mongo');
-const app = require('./dist/app').default;
+const database = require('./src/helpers/mongo');
+const app = require('./src/app');
 
-database.default.open();
+database.open();
 
 app.listen(port, () => {
   console.log(`${name} listening on port ${port}`);

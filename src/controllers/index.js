@@ -1,9 +1,9 @@
-import sanitize from 'mongo-sanitize';
+const sanitize = require('mongo-sanitize');
 
-import Podcast from 'models/podcast';
+const Podcast = require('../models/podcast');
 
-import { QUERYFILTER } from 'helpers/constants';
-import errorHandler from 'helpers/errorHandler';
+const { QUERYFILTER } = require('../helpers/constants');
+const errorHandler = require('../helpers/errorHandler');
 
 const getPodcast = async (req, res) => {
   try {
@@ -14,10 +14,10 @@ const getPodcast = async (req, res) => {
       throw new Error(404);
     }
 
-    res.json(podcast);
+    res.render('index');
   } catch (error) {
     res.status(error.message).json(errorHandler(error.message));
   }
 };
 
-export { getPodcast };
+module.exports = { getPodcast };

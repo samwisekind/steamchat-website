@@ -1,9 +1,9 @@
-import request from 'supertest';
-import { expect } from 'chai';
+const request = require('supertest');
+const { expect } = require('chai');
 
-import app from 'app';
+const app = require('../src/app');
 
-import packageFile from '../package.json';
+const packageFile = require('../package.json');
 
 describe('App info', () => {
   it('Got version number', (done) => {
