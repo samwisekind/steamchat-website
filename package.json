@@ -13,6 +13,7 @@
     "server:watch": "nodemon server.js --inspect",
     "assets:build": "parcel build src/assets/js/index.js src/assets/sass/index.scss --out-dir src/public",
     "assets:watch": "parcel watch src/assets/js/index.js src/assets/sass/index.scss --out-dir src/public",
+    "lint": "eslint *.js",
     "test": "mocha ./tests/**/*.spec.js --exit",
     "test:watch": "npm run assets:build && mocha --require @babel/polyfill --require @babel/register './tests/**/*.spec.js' -w",
     "coverage": "nyc --reporter=lcov npm test"

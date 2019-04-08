@@ -4,7 +4,6 @@ const cors = require('cors');
 const compression = require('compression');
 const minifyHTML = require('express-minify-html');
 
-const errorHandler = require('./helpers/errorHandler');
 const { version } = require('../package.json');
 const routes = require('./routes');
 
