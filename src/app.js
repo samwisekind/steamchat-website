@@ -28,17 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-app.get('/versionNum', (req, res) => {
-  res.json({ version });
-});
-
-app.use((error, req, res, next) => {
-  if (error instanceof SyntaxError) {
-    console.warn(`SyntaxError thrown from ${req.method} request to ${req.originalUrl}`);
-    res.status(400).json(errorHandler(400));
-  } else {
-    next();
-  }
-});
+app.get('/version', (req, res) => res.json({
+  version,
+  environment: app.get('env'),
+  viewCache: app.get('view cache') || false,
+}));
 
 module.exports = app;

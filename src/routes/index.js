@@ -1,9 +1,10 @@
 const { Router } = require('express');
 
-const { getPodcast } = require('../controllers');
+const { getPodcastsList, getPodcastDetail } = require('../controllers/api');
 
 const router = Router();
 
-router.get('/podcast/:number', getPodcast);
+router.get('/api/podcasts', getPodcastsList);
+router.get('/api/podcasts/:number', getPodcastDetail);
 
 module.exports = router;

@@ -1,26 +1,29 @@
 const { ERRORS } = require('../helpers/constants');
 
-const errorHandler = (status = 500) => {
-  let message;
-  let code;
+/**
+ * Returns HTTP status code and message based on error message
+ * @param {Object}
+ * @returns {Object}
+ */
+const errorHandler = ({ message = '500' }) => {
+  let text;
+  let status = message;
 
   switch (parseInt(status, 10)) {
     case 400:
-      message = 'Invalid Request';
-      code = ERRORS.INVALID_REQUEST;
+      text = ERRORS.INVALID_REQUEST;
       break;
     case 404:
-      message = 'Not Found';
-      code = ERRORS.NOT_FOUND;
+      text = ERRORS.NOT_FOUND;
       break;
     case 500:
     default:
-      message = 'Internal Server Error';
-      code = ERRORS.SERVER_ERROR;
+      text = ERRORS.SERVER_ERROR;
+      status = 500;
       break;
   }
 
-  return { message, code };
+  return { status, message: text };
 };
 
 module.exports = errorHandler;
