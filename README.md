@@ -2,11 +2,11 @@
 
 [![codebeat badge](https://codebeat.co/badges/714c3b1a-bcb9-4e10-8644-b875be03ec89)](https://codebeat.co/projects/github-com-flamov-steamchat-website-master) [![Code Climate](https://codeclimate.com/github/Flamov/steamchat-website/badges/gpa.svg)](https://codeclimate.com/github/Flamov/steamchat-website) [![Issue Count](https://codeclimate.com/github/Flamov/steamchat-website/badges/issue_count.svg)](https://codeclimate.com/github/Flamov/steamchat-website)
 
-These are the source files for the [Steamchat Podcast website](http://www.thesteamchat.com/).
+These are the source files for the [Steamchat Podcast website](https://www.thesteamchat.com).
 
 ### Requirements
 
-The website uses [Laravel](https://www.laravel.com/), which has its own [set of requirements that you can find here](https://laravel.com/docs/5.4/installation#server-requirements). Additionally, CSS is compiled using Sass, and JavaScript is written in a mixture of vanilla JavaScript and Vue.
+The website uses [Laravel](https://www.laravel.com), which has its own [set of requirements that you can find here](https://laravel.com/docs/5.4/installation#server-requirements). Additionally, CSS is compiled using Sass, and JavaScript is written in a mixture of vanilla JavaScript and Vue.
 
 For more information on how the website is structured, [check out the wiki](https://github.com/Flamov/steamchat-website/wiki).
 
@@ -14,7 +14,7 @@ For more information on how the website is structured, [check out the wiki](http
 
 | Branch Name | Notes |
 |---|---|
-| `master` | Used for deployment of the [production website](http://www.thesteamchat.com/). |
+| `master` | Used for deployment of the [production website](https://www.thesteamchat.com). |
 | `dev` | Development branch. |
 
 ### Database Data
