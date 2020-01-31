@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   environment: process.env.NODE_ENV,
-  port: 8888,
+  port: 40,
   mongo: {
     URL: process.env.NODE_MONGO_URL,
     replicaSet: process.env.NODE_MONGO_RS,

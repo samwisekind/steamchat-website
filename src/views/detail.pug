@@ -1,0 +1,37 @@
+main.content.wide.episode
+  section.columns
+    section.large.left.main
+      h1=episode.title
+      h2=episode.release_date
+      p=episode.description
+      if episode.transcript_url
+        .transcript A transcript for this episode is avaliable
+          a(href=episode.transcript_url target="_blank" rel="noopener noreferrer").transcript-view
+            .wrapper View
+      audio(controls preload="none").audio.js-audio
+        source(src=episode.file_url type="audio/mp3")
+    section.small.right.sidebar
+      ul.info
+        li.title Episode Info
+        li
+          span.subtitle Duration:
+          =episode.file_duration
+        li
+          span.subtitle Size:
+          =episode.file_size
+        li
+          span.subtitle Format:
+      ul.tools
+        li.title Episode Tools
+        li
+          a(href="#").js-listen Listen Now
+        li
+          a(href=episode.file_url target="_blank" rel="noopener noreferrer") Direct Link
+        li
+          a(href=episode.file_url download) Download MP3
+      ul.more
+        li.title More Episodes
+        li
+          a(href="#").js-listen RSS Feed
+        li
+          a(href="#" target="_blank" rel="noopener noreferrer") iTunes
